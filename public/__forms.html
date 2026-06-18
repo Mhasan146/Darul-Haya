@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Netlify Forms</title>
+  </head>
+  <body>
+    <!--
+      Hidden static form so Netlify's build bot detects and registers the
+      "registration" form and its fields. The real, styled form lives in
+      components/RegisterForm.jsx and submits via fetch to "/".
+    -->
+    <form name="registration" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="registration" />
+      <input name="bot-field" />
+      <input type="text" name="student-name" />
+      <input type="text" name="guardian-name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <select name="grade">
+        <option>Grade 3</option>
+        <option>Grade 4</option>
+        <option>Grade 5</option>
+        <option>Grade 6</option>
+        <option>Grade 7</option>
+        <option>Grade 8</option>
+      </select>
+      <select name="program">
+        <option>Full-Live Schooling</option>
+        <option>Homeschooling Portal</option>
+      </select>
+      <textarea name="message"></textarea>
+    </form>
+  </body>
+</html>
