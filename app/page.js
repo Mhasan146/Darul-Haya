@@ -48,11 +48,17 @@ export default function HomePage() {
       {/* Hero */}
       <section id="about" className="max-w-4xl mx-auto px-6 pt-20 pb-16 text-center scroll-mt-24">
         <h1 className="flex justify-center">
-          <img
-            src="/logo.png"
-            alt="Darul Haya — Academy of Learning"
-            className="w-60 sm:w-72 h-auto"
-          />
+          <div className="flex flex-col items-center">
+            <img
+              src="/logo.png"
+              alt="Darul Haya — Academy of Learning"
+              className="w-60 sm:w-72 h-auto"
+              style={{ clipPath: 'inset(0 0 20% 0)' }}
+            />
+            <p className="text-[10px] font-semibold tracking-[0.25em] text-clay/60 -mt-12 uppercase">
+              Knowledge · Character
+            </p>
+          </div>
         </h1>
         <p className="mt-5 text-lg text-clay/60 max-w-2xl mx-auto leading-relaxed">
           A structured, values-driven education for boys and girls in Grades 3–8 — live,
@@ -80,6 +86,17 @@ export default function HomePage() {
               <p className="text-sm text-clay/50 mt-1">{s.label}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Trust bar */}
+      <section className="py-10 border-b border-clay/10">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <p className="text-xs font-semibold uppercase tracking-widest text-clay/40 mb-6">Curriculum aligned with</p>
+          <div className="flex items-center justify-center gap-12 flex-wrap">
+            <img src="/ontario-edu.png" alt="Ontario Ministry of Education" className="h-14 w-auto opacity-80 grayscale hover:grayscale-0 hover:opacity-100 transition-all" />
+            <img src="/canada.png" alt="Government of Canada" className="h-10 w-auto opacity-80 grayscale hover:grayscale-0 hover:opacity-100 transition-all" />
+          </div>
         </div>
       </section>
 
