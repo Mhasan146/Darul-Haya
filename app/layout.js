@@ -1,5 +1,7 @@
 import './globals.css'
 import Navbar from '@/components/Navbar'
+import WhatsAppButton from '@/components/WhatsAppButton'
+import LeadPopup from '@/components/LeadPopup'
 
 export const metadata = {
   title: 'Darul Haya — Online School',
@@ -12,6 +14,8 @@ export default function RootLayout({ children }) {
       <body className="bg-beige min-h-screen">
         <Navbar />
         <main>{children}</main>
+        <WhatsAppButton />
+        <LeadPopup />
       </body>
     </html>
   )
