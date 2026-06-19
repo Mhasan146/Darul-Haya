@@ -105,12 +105,13 @@ export default function HomePage() {
         <h2 className="text-3xl font-bold text-clay text-center mb-10">
           Everything in one place
         </h2>
-        <div className="grid sm:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
           {[
             { icon: '🎓', title: 'Live Classes', body: 'Daily instruction delivered through Moodle, with recordings available any time.' },
             { icon: '📋', title: 'Structured Curriculum', body: 'Age-appropriate lesson plans rooted in our values.' },
             { icon: '💻', title: 'LMS Access', body: 'Everything in one place — lessons, assignments, materials, and progress tracking through our learning platform.' },
-
+            { icon: '📦', title: 'Pencil to Paper', body: 'Physical books and materials shipped directly to every enrolled student — no printing required.' },
+            { icon: '🌙', title: 'Arabic Language', body: 'Dedicated Arabic language classes woven into the weekly schedule for all grade levels.' },
           ].map((f) => (
             <div key={f.title} className="bg-white rounded-2xl p-6 border border-beige-dark shadow-sm">
               <div className="text-3xl mb-3">{f.icon}</div>

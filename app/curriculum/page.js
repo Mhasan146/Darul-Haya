@@ -23,6 +23,10 @@ export default function CurriculumPage() {
           heading: 'Core Subjects',
           body: 'Language Arts (reading, writing, grammar, and comprehension), Mathematics, Science, and Social Studies — with additional enrichment and skills woven in across the year.',
         },
+        {
+          heading: 'Arabic Language',
+          body: 'Arabic language classes are part of every student\'s weekly schedule from Grade 3 through Grade 8. Classes are taught live by a dedicated teacher and progress through reading, writing, and conversational Arabic in a structured, grade-appropriate sequence.',
+        },
       ]}
       cta={{ label: 'View Plans', href: '/#pricing' }}
     />

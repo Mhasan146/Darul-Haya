@@ -42,6 +42,14 @@ export default function FaqPage() {
           body: 'Full-Live Schooling is $300/month, or $249/month for founding families (first 50 families). A 15% sibling discount applies for additional children enrolled.',
         },
         {
+          heading: 'Do you offer Arabic classes?',
+          body: 'Yes. Arabic language is part of every student\'s weekly schedule from Grade 3 through Grade 8, taught live by a dedicated teacher. Classes progress through reading, writing, and conversational Arabic in a structured, grade-appropriate sequence.',
+        },
+        {
+          heading: 'Do students receive physical books?',
+          body: 'Yes. Every enrolled student receives a set of physical books and materials shipped directly to their home — no printing needed.',
+        },
+        {
           heading: 'How do we enroll?',
           body: "Reach out through our Contact page and we'll walk you through enrollment and answer any questions about fit, schedule, and start dates.",
         },
