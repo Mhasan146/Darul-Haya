@@ -110,8 +110,25 @@ export default function HomePage() {
             { icon: '🎓', title: 'Live Classes', body: 'Daily instruction delivered through Moodle, with recordings available any time.' },
             { icon: '📋', title: 'Structured Curriculum', body: 'Age-appropriate lesson plans rooted in our values.' },
             { icon: '💻', title: 'LMS Access', body: 'Everything in one place — lessons, assignments, materials, and progress tracking through our learning platform.' },
-            { icon: '📦', title: 'Pencil to Paper', body: 'Physical books and materials shipped directly to every enrolled student — no printing required.' },
-            { icon: '🌙', title: 'Arabic Language', body: 'Dedicated Arabic language classes woven into the weekly schedule for all grade levels.' },
+            { icon: (
+                <svg viewBox="0 0 24 24" className="w-8 h-8" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="2" y="1" width="14" height="18" rx="2" fill="#E6F4F1" stroke="#0D9488" strokeWidth="1.5"/>
+                  <line x1="5" y1="6" x2="13" y2="6" stroke="#0D9488" strokeWidth="1" strokeLinecap="round" opacity="0.5"/>
+                  <line x1="5" y1="9" x2="13" y2="9" stroke="#0D9488" strokeWidth="1" strokeLinecap="round" opacity="0.5"/>
+                  <line x1="5" y1="12" x2="13" y2="12" stroke="#0D9488" strokeWidth="1" strokeLinecap="round" opacity="0.5"/>
+                  <line x1="5" y1="15" x2="9" y2="15" stroke="#0D9488" strokeWidth="1" strokeLinecap="round" opacity="0.5"/>
+                  <g transform="translate(18,17) rotate(225)">
+                    <rect x="-1.5" y="-7" width="3" height="8" rx="0.5" fill="#C99A33"/>
+                    <polygon points="-1.5,1 1.5,1 0,4" fill="#134E4A"/>
+                    <rect x="-1.5" y="-9" width="3" height="2" rx="0.5" fill="#999"/>
+                  </g>
+                </svg>
+              ), title: 'Pencil to Paper', body: 'Physical books and materials shipped directly to every enrolled student — no printing required.' },
+            { icon: (
+                <svg viewBox="0 0 32 32" className="w-8 h-8" xmlns="http://www.w3.org/2000/svg">
+                  <text x="16" y="25" textAnchor="middle" fontSize="26" fill="#0D9488" fontFamily="serif">ج</text>
+                </svg>
+              ), title: 'Arabic Language', body: 'Dedicated Arabic language classes woven into the weekly schedule for all grade levels.' },
           ].map((f) => (
             <div key={f.title} className="bg-white rounded-2xl p-6 border border-beige-dark shadow-sm">
               <div className="text-3xl mb-3">{f.icon}</div>
