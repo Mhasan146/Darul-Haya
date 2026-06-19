@@ -123,7 +123,7 @@ export default function HomePage() {
                     <rect x="-1.5" y="-9" width="3" height="2" rx="0.5" fill="#999"/>
                   </g>
                 </svg>
-              ), title: 'Pencil to Paper', body: 'Physical books and materials shipped directly to every enrolled student — no printing required.' },
+              ), title: 'Pencil to Paper', body: 'Physical books and materials shipped directly to every enrolled student.' },
             { icon: (
                 <svg viewBox="0 0 32 32" className="w-8 h-8" xmlns="http://www.w3.org/2000/svg">
                   <text x="16" y="25" textAnchor="middle" fontSize="26" fill="#0D9488" fontFamily="serif">ج</text>
