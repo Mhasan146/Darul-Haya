@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import PricingCard from '@/components/PricingCard'
 import Benefits from '@/components/Benefits'
+import SafetyTools from '@/components/SafetyTools'
 
 const PLANS = [
   {
@@ -141,6 +142,9 @@ export default function HomePage() {
 
       {/* Benefits of Online Schooling */}
       <Benefits />
+
+      {/* Safety tools */}
+      <SafetyTools />
 
       {/* Pricing */}
       <section id="pricing" className="max-w-4xl mx-auto px-6 py-20 scroll-mt-4">
