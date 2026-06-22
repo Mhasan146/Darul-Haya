@@ -6,7 +6,7 @@ import SafetyTools from '@/components/SafetyTools'
 const PLANS = [
   {
     name: 'Homeschooling Portal',
-    price: '67',
+    price: '150',
     plan: 'homeschool',
     highlight: false,
     description:
