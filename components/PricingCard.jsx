@@ -28,6 +28,19 @@ export default function PricingCard({ name, price, description, features, highli
               <span className={`text-sm mb-1 ${highlight ? 'text-white/60' : 'text-clay/50'}`}>/month</span>
             </div>
             <p className={`mt-1 text-xs font-semibold ${highlight ? 'text-amber' : 'text-teal'}`}>{founding.note}</p>
+            {founding.total != null && (
+              <div className="mt-3">
+                <div className={`h-1.5 w-full rounded-full overflow-hidden ${highlight ? 'bg-white/15' : 'bg-clay/10'}`}>
+                  <div
+                    className="h-full rounded-full bg-amber transition-all"
+                    style={{ width: `${Math.min(100, Math.round((founding.claimed / founding.total) * 100))}%` }}
+                  />
+                </div>
+                <p className={`mt-1.5 text-[11px] ${highlight ? 'text-white/60' : 'text-clay/50'}`}>
+                  {founding.claimed} of {founding.total} spots claimed
+                </p>
+              </div>
+            )}
           </>
         ) : (
           <div className="flex items-end gap-1">

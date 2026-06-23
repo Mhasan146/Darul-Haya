@@ -3,6 +3,13 @@ import PricingCard from '@/components/PricingCard'
 import Benefits from '@/components/Benefits'
 import SafetyTools from '@/components/SafetyTools'
 
+// ── FOUNDING SPOTS ───────────────────────────────────────────────
+// Update this number as families enroll at the founding rate (out of 50).
+// e.g. once 12 families have joined, change to 12.
+const FOUNDING_CLAIMED = 0
+const FOUNDING_TOTAL = 50
+// ─────────────────────────────────────────────────────────────────
+
 const PLANS = [
   {
     name: 'Homeschooling Portal',
@@ -24,7 +31,7 @@ const PLANS = [
     price: '300',
     plan: 'full_live',
     highlight: true,
-    founding: { price: '249', note: 'Founding rate — first 50 families' },
+    founding: { price: '249', note: 'Founding rate — first 50 families', claimed: FOUNDING_CLAIMED, total: FOUNDING_TOTAL },
     description:
       'A complete online school experience with daily live classes, recordings, and a structured faith-based curriculum.',
     features: [
