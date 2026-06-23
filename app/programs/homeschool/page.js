@@ -19,7 +19,7 @@ export default function HomeschoolPage() {
         },
         {
           heading: "What's Included",
-          body: "Everything you need to run a structured, confident school year at home:\n\n• Access to our LMS (Moodle) — the portal where all curriculum, materials, and assignments are organized by grade and subject\n• Full curriculum across all core subjects\n• Lesson plans, readings, worksheets, and assignments — all downloadable\n• Assessments and answer keys\n• Progress tracking so you can see what's been completed\n• Step-by-step guidance on how to use the portal day to day\n• Email support",
+          body: "Everything you need to run a structured, confident school year at home:\n\n• Access to our LMS — the portal where all curriculum, materials, and assignments are organized by grade and subject\n• Full curriculum across all core subjects\n• Lesson plans, readings, worksheets, and assignments — all downloadable\n• Assessments and answer keys\n• Progress tracking so you can see what's been completed\n• Step-by-step guidance on how to use the portal day to day\n• Email support",
         },
         {
           heading: "Who It's For",

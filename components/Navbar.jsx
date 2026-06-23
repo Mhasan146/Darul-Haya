@@ -26,7 +26,7 @@ const MENUS = [
   {
     label: 'Student Services',
     items: [
-      { label: 'Student Login (Moodle)', href: MOODLE, external: true },
+      { label: 'Student Login', href: MOODLE, external: true },
       { label: 'Help & Support', href: '/contact' },
     ],
   },

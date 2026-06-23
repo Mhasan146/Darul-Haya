@@ -10,9 +10,9 @@ const PLANS = [
     plan: 'homeschool',
     highlight: false,
     description:
-      'A complete digital curriculum for families educating their children at home. Access structured lesson plans, worksheets, and video lessons through Moodle.',
+      'A complete digital curriculum for families educating their children at home. Access structured lesson plans, worksheets, and video lessons through our learning platform.',
     features: [
-      'Full Moodle curriculum access',
+      'Full curriculum access',
       'Downloadable worksheets and materials',
       'Weekly lesson roadmaps',
       'Elementary and Middle School',
@@ -28,7 +28,7 @@ const PLANS = [
     description:
       'A complete online school experience with daily live classes, recordings, and a structured faith-based curriculum.',
     features: [
-      'Daily live classes via Moodle',
+      'Daily live classes',
       'Full recording library',
       'Complete curriculum',
       'Elementary and Middle School tracks',
@@ -108,7 +108,7 @@ export default function HomePage() {
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
           {[
-            { icon: '🎓', title: 'Live Classes', body: 'Daily instruction delivered through Moodle, with recordings available any time.' },
+            { icon: '🎓', title: 'Live Classes', body: 'Daily instruction delivered through our learning platform, with recordings available any time.' },
             { icon: '📋', title: 'Structured Curriculum', body: 'Age-appropriate lesson plans rooted in our values.' },
             { icon: '💻', title: 'LMS Access', body: 'Everything in one place — lessons, assignments, materials, and progress tracking through our learning platform.' },
             { icon: (

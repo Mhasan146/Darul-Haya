@@ -19,7 +19,7 @@ export default function FullLivePage() {
         },
         {
           heading: "What's Included",
-          body: "Everything your child needs for the full school year:\n\n• Access to our LMS (Moodle) — your child's online classroom where all lessons, assignments, and resources live in one place\n• Daily live classes across all core subjects\n• Full lesson recordings to review or catch up on missed sessions\n• A complete, structured daily timetable\n• All learning materials and worksheets, available through the LMS\n• Assignment submission and grading through the platform\n• Regular assessments and progress reports\n• A parent-facing dashboard so you always know where your child stands\n• Direct teacher support\n\nTuition is $300/month, or $249/month for founding families (first 50 families). A 15% sibling discount applies for additional children enrolled.",
+          body: "Everything your child needs for the full school year:\n\n• Access to our LMS — your child's online classroom where all lessons, assignments, and resources live in one place\n• Daily live classes across all core subjects\n• Full lesson recordings to review or catch up on missed sessions\n• A complete, structured daily timetable\n• All learning materials and worksheets, available through the LMS\n• Assignment submission and grading through the platform\n• Regular assessments and progress reports\n• A parent-facing dashboard so you always know where your child stands\n• Direct teacher support\n\nTuition is $300/month, or $249/month for founding families (first 50 families). A 15% sibling discount applies for additional children enrolled.",
         },
         {
           heading: "Who It's For",
