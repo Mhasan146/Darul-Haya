@@ -5,7 +5,7 @@ const inputCls =
   'w-full border border-beige-dark rounded-lg px-4 py-2.5 text-clay text-sm focus:outline-none focus:ring-2 focus:ring-teal/40 focus:border-teal'
 
 export default function ContactForm() {
-  const [form, setForm] = useState({ name: '', email: '', message: '' })
+  const [form, setForm] = useState({ name: '', email: '', message: '', company: '' })
   const [status, setStatus] = useState('idle') // idle | sending | sent | error
   const [error, setError] = useState('')
 
@@ -45,6 +45,17 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+      {/* Honeypot — hidden from real users; bots that fill it are rejected */}
+      <input
+        type="text"
+        name="company"
+        value={form.company}
+        onChange={update('company')}
+        className="hidden"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+      />
       <div>
         <label className="text-sm font-medium text-clay/70 block mb-1">Name</label>
         <input className={inputCls} value={form.name} onChange={update('name')} required placeholder="Your name" />
