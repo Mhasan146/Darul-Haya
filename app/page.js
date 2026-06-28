@@ -2,6 +2,7 @@ import Link from 'next/link'
 import PricingCard from '@/components/PricingCard'
 import Benefits from '@/components/Benefits'
 import SafetyTools from '@/components/SafetyTools'
+import ValueComparison from '@/components/ValueComparison'
 import { WHATSAPP_URL } from '@/lib/siteConfig'
 
 // ── FOUNDING SPOTS ───────────────────────────────────────────────
@@ -184,6 +185,9 @@ export default function HomePage() {
 
       {/* Safety tools */}
       <SafetyTools />
+
+      {/* Value vs tutoring */}
+      <ValueComparison />
 
       {/* Pricing */}
       <section id="pricing" className="max-w-4xl mx-auto px-6 py-20 scroll-mt-4">
