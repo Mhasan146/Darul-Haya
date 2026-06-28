@@ -206,8 +206,40 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* CTA band */}
+      <section className="relative overflow-hidden bg-clay text-white">
+        <div aria-hidden className="absolute inset-0 bg-gradient-to-br from-[#10544e] via-clay to-[#0b3a36]" />
+        <div aria-hidden className="absolute inset-0 bg-ornament-light opacity-[0.06]" />
+        <div aria-hidden className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-72 w-[36rem] rounded-full bg-teal-light/10 blur-3xl" />
+        <div className="relative max-w-2xl mx-auto px-6 py-20 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
+            Ready to give your child a better school day?
+          </h2>
+          <div className="mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
+          <p className="mt-5 text-white/70 leading-relaxed">
+            Apply in minutes and we'll personally help you get enrolled — or reach out on WhatsApp with any questions.
+          </p>
+          <div className="mt-8 flex items-center justify-center gap-4 flex-wrap">
+            <Link
+              href="/register"
+              className="bg-amber text-clay px-8 py-3.5 rounded-full font-semibold shadow-lg shadow-black/20 hover:bg-amber-dark transition-all"
+            >
+              Apply Now
+            </Link>
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white font-medium px-6 py-3.5 rounded-full border border-white/25 hover:bg-white/10 transition-colors"
+            >
+              Chat on WhatsApp →
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
-      <footer className="bg-clay text-white">
+      <footer className="bg-[#0b3a36] text-white border-t border-white/10">
         <div className="max-w-5xl mx-auto px-6 py-14">
           <div className="grid gap-10 sm:grid-cols-3">
             {/* Brand */}

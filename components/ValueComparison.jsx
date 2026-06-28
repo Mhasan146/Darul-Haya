@@ -37,14 +37,18 @@ const SAVINGS = [
 
 export default function ValueComparison() {
   return (
-    <section id="value" className="relative overflow-hidden bg-beige-dark border-y border-clay/5 scroll-mt-24">
-      <div aria-hidden className="absolute inset-0 bg-ornament opacity-[0.035]" />
+    <section id="value" className="relative overflow-hidden bg-clay text-white scroll-mt-24">
+      <div aria-hidden className="absolute inset-0 bg-gradient-to-br from-[#10544e] via-clay to-[#0b3a36]" />
+      <div aria-hidden className="absolute inset-0 bg-ornament-light opacity-[0.06]" />
+      <div aria-hidden className="absolute -top-32 -left-24 h-80 w-80 rounded-full bg-teal-light/15 blur-3xl" />
+      <div aria-hidden className="absolute -bottom-32 -right-24 h-80 w-80 rounded-full bg-amber/10 blur-3xl" />
+
       <div className="relative max-w-5xl mx-auto px-6 py-20">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">The Real Value</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-clay">A full education, for a fraction of the cost</h2>
+          <p className="text-amber text-sm font-semibold uppercase tracking-widest mb-3">The Real Value</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white">A full education, for a fraction of the cost</h2>
           <div className="mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
-          <p className="mt-5 text-clay/60 leading-relaxed">
+          <p className="mt-5 text-white/70 leading-relaxed">
             Traditional Islamic day schools run roughly $8,400–$9,550 a year for one child. Darul Haya
             delivers a complete, faith-centered education — live, every day — for about a third of that.
           </p>
@@ -53,54 +57,54 @@ export default function ValueComparison() {
         {/* Price comparison cards */}
         <div className="grid sm:grid-cols-3 gap-5 max-w-4xl mx-auto">
           {SCHOOLS.map((s) => (
-            <div key={s.name} className="bg-white rounded-2xl p-6 border border-beige-dark shadow-sm text-center flex flex-col">
-              <h3 className="font-bold text-clay text-lg">{s.name}</h3>
+            <div key={s.name} className="bg-white/5 ring-1 ring-white/10 rounded-2xl p-6 text-center flex flex-col">
+              <h3 className="font-bold text-white text-lg">{s.name}</h3>
               <div className="mt-3 flex items-end justify-center gap-1">
-                <span className="text-3xl font-bold text-clay/70">{s.monthly}</span>
-                <span className="text-sm text-clay/40 mb-1">/mo</span>
+                <span className="text-3xl font-bold text-white/85">{s.monthly}</span>
+                <span className="text-sm text-white/40 mb-1">/mo</span>
               </div>
-              <p className="text-xs text-clay/40 mt-1">{s.annual}</p>
-              <p className="text-sm text-clay/60 mt-4">{s.detail}</p>
-              <p className="text-[11px] text-clay/40 mt-auto pt-4">{s.year}</p>
+              <p className="text-xs text-white/40 mt-1">{s.annual}</p>
+              <p className="text-sm text-white/60 mt-4">{s.detail}</p>
+              <p className="text-[11px] text-white/40 mt-auto pt-4">{s.year}</p>
             </div>
           ))}
 
-          {/* Darul Haya — highlighted */}
-          <div className="bg-clay text-white rounded-2xl p-6 shadow-xl shadow-clay/20 text-center flex flex-col ring-2 ring-amber">
-            <h3 className="font-bold text-amber text-lg">Darul Haya</h3>
+          {/* Darul Haya — cream highlight */}
+          <div className="bg-beige text-clay rounded-2xl p-6 text-center flex flex-col ring-2 ring-amber shadow-2xl shadow-black/30">
+            <h3 className="font-bold text-teal text-lg">Darul Haya</h3>
             <div className="mt-3 flex items-end justify-center gap-1">
-              <span className="text-4xl font-bold">{DH.monthly}</span>
-              <span className="text-sm text-white/60 mb-1">/mo</span>
+              <span className="text-4xl font-bold text-clay">{DH.monthly}</span>
+              <span className="text-sm text-clay/50 mb-1">/mo</span>
             </div>
-            <p className="text-xs text-white/50 mt-1">{DH.note}</p>
-            <p className="text-sm text-white/80 mt-4">{DH.detail}</p>
-            <p className="text-[11px] text-amber font-semibold mt-auto pt-4">Best value</p>
+            <p className="text-xs text-clay/50 mt-1">{DH.note}</p>
+            <p className="text-sm text-clay/70 mt-4">{DH.detail}</p>
+            <p className="text-[11px] text-teal font-semibold mt-auto pt-4">★ Best value</p>
           </div>
         </div>
 
-        <p className="text-center text-xs text-clay/40 mt-4 max-w-2xl mx-auto">
+        <p className="text-center text-xs text-white/40 mt-4 max-w-2xl mx-auto">
           School figures are each institution's published tuition for one child, paid over 10 monthly
           installments. Darul Haya keeps it simple: a flat {MATERIAL_FEE} material fee and {TECH_FEE} technology
           fee at the start of each year — no per-book charges.
         </p>
 
         {/* Tutoring callout */}
-        <div className="max-w-3xl mx-auto mt-8 rounded-2xl bg-clay text-white p-6 sm:p-7 text-center">
-          <p className="text-sm sm:text-base leading-relaxed">
+        <div className="max-w-3xl mx-auto mt-8 rounded-2xl bg-white/5 ring-1 ring-white/10 p-6 sm:p-7 text-center">
+          <p className="text-sm sm:text-base leading-relaxed text-white/80">
             <span className="font-semibold text-amber">Even compared to tutoring:</span> a single subject at an
             after-school centre often costs ~$150–$200 a month for about an hour a week. Darul Haya is
-            <span className="font-semibold"> every subject, taught live, all day.</span>
+            <span className="font-semibold text-white"> every subject, taught live, all day.</span>
           </p>
         </div>
 
         {/* Savings list */}
         <div className="max-w-3xl mx-auto mt-10">
-          <p className="text-center text-clay font-semibold mb-5">And the everyday savings add up:</p>
+          <p className="text-center text-white font-semibold mb-5">And the everyday savings add up:</p>
           <div className="grid sm:grid-cols-2 gap-3">
             {SAVINGS.map((s) => (
-              <div key={s} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-beige-dark shadow-sm">
-                <span className="text-teal mt-0.5 shrink-0" aria-hidden="true">✓</span>
-                <span className="text-sm text-clay/70 leading-relaxed">{s}</span>
+              <div key={s} className="flex items-start gap-3 bg-white/5 ring-1 ring-white/10 rounded-xl p-4">
+                <span className="text-amber mt-0.5 shrink-0" aria-hidden="true">✓</span>
+                <span className="text-sm text-white/75 leading-relaxed">{s}</span>
               </div>
             ))}
           </div>
