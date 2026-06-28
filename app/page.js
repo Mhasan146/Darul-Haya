@@ -48,51 +48,53 @@ export default function HomePage() {
     <div className="min-h-screen bg-beige">
 
       {/* Hero */}
-      <section id="about" className="relative overflow-hidden scroll-mt-24">
+      <section id="about" className="relative overflow-hidden scroll-mt-24 bg-clay">
         {/* Layered premium backdrop */}
-        <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-beige-dark/60 via-beige to-beige" />
-        <div aria-hidden className="absolute inset-0 bg-ornament opacity-[0.04]" />
-        <div aria-hidden className="absolute -top-24 left-1/2 -translate-x-1/2 h-72 w-72 rounded-full bg-teal/10 blur-3xl" />
+        <div aria-hidden className="absolute inset-0 bg-gradient-to-br from-[#10544e] via-clay to-[#0b3a36]" />
+        <div aria-hidden className="absolute inset-0 bg-ornament-light opacity-[0.07]" />
+        <div aria-hidden className="absolute -top-32 left-1/2 -translate-x-1/2 h-96 w-96 rounded-full bg-teal-light/20 blur-3xl" />
+        <div aria-hidden className="absolute -bottom-32 -right-24 h-80 w-80 rounded-full bg-amber/10 blur-3xl" />
 
-        <div className="relative max-w-4xl mx-auto px-6 pt-16 pb-20 text-center">
-          <span className="inline-block mb-6 text-[11px] font-semibold uppercase tracking-[0.2em] text-teal bg-teal/10 px-4 py-1.5 rounded-full">
+        <div className="relative max-w-4xl mx-auto px-6 pt-14 pb-20 text-center">
+          <span className="inline-block mb-7 text-[11px] font-semibold uppercase tracking-[0.2em] text-amber bg-amber/15 ring-1 ring-amber/30 px-4 py-1.5 rounded-full">
             Online School · Grades 3–8
           </span>
 
-          <div className="flex flex-col items-center">
+          {/* Framed cream crest */}
+          <div className="mx-auto w-fit flex flex-col items-center bg-beige rounded-3xl px-8 pt-6 pb-5 shadow-2xl shadow-black/30">
             <img
               src="/logo.png"
               alt="Darul Haya — Academy of Learning"
-              className="w-52 sm:w-60 h-auto"
+              className="w-44 sm:w-52 h-auto"
               style={{ clipPath: 'inset(0 0 20% 0)' }}
             />
-            <p className="text-[10px] font-semibold tracking-[0.25em] text-clay/60 -mt-12 uppercase">
+            <p className="text-[10px] font-semibold tracking-[0.25em] text-clay/60 -mt-10 uppercase">
               Knowledge · Character
             </p>
           </div>
 
-          <h1 className="mt-8 text-4xl sm:text-5xl font-bold text-clay leading-[1.1] max-w-3xl mx-auto">
+          <h1 className="mt-9 text-4xl sm:text-5xl font-bold text-white leading-[1.1] max-w-3xl mx-auto">
             A smaller, safer school — taught live, every day.
           </h1>
 
-          <p className="mt-5 text-lg text-clay/60 max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-5 text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
             A structured, values-driven education for boys and girls in Grades 3–8 — live,
             teacher-led instruction and a complete curriculum, all in one safe online classroom.
           </p>
 
-          <div className="mt-8 flex items-center justify-center gap-4 flex-wrap">
+          <div className="mt-9 flex items-center justify-center gap-4 flex-wrap">
             <Link
               href="/register"
-              className="bg-teal text-white px-8 py-3.5 rounded-full font-semibold shadow-lg shadow-teal/20 hover:bg-teal-dark hover:shadow-xl transition-all"
+              className="bg-amber text-clay px-8 py-3.5 rounded-full font-semibold shadow-lg shadow-black/20 hover:bg-amber-dark transition-all"
             >
               Apply Now
             </Link>
-            <a href="#pricing" className="text-clay font-medium px-4 py-3.5 hover:text-teal transition-colors">
+            <a href="#pricing" className="text-white font-medium px-6 py-3.5 rounded-full border border-white/25 hover:bg-white/10 transition-colors">
               View Plans →
             </a>
           </div>
 
-          <p className="mt-8 text-xs text-clay/40 tracking-wide">
+          <p className="mt-9 text-xs text-white/45 tracking-wide">
             Aligned with the Ontario curriculum · Live teacher-led classes · Books shipped to your door
           </p>
         </div>
