@@ -27,7 +27,7 @@ export default function FaqPage() {
         },
         {
           heading: 'How are students supervised?',
-          body: 'Classes are small, attendance and participation are tracked, and teachers are present throughout every session. There is no unsupervised private messaging between students and teachers — all communication happens in monitored class spaces. Because the environment is small and fully supervised, the social pressures and distractions common in larger settings aren\'t part of your child\'s day.',
+          body: 'Classes are small, attendance and participation are tracked, and teachers are present throughout every session. To protect your child\'s privacy, classes are audio-only — there are no cameras. There is no unsupervised private messaging between students and teachers — all communication happens in monitored class spaces. Because the environment is small and fully supervised, the social pressures and distractions common in larger settings aren\'t part of your child\'s day.',
         },
         {
           heading: 'Is the curriculum aligned to provincial standards?',

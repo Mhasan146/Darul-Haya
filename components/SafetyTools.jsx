@@ -17,7 +17,7 @@ export default function SafetyTools() {
         <h2 className="text-3xl sm:text-4xl font-bold text-clay">Tools we use to keep your child safe</h2>
         <div className="mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
         <p className="text-clay/60 max-w-2xl mx-auto mt-5 mb-10 leading-relaxed">
-          Every class is actively supervised with trusted, education-grade safety technology — so you can have peace of mind about what your child sees and does online.
+          Every class is audio-only — no cameras — and actively supervised with trusted, education-grade safety technology, so you can have peace of mind about what your child sees and does online.
         </p>
 
         <div className="flex flex-wrap justify-center gap-6">
