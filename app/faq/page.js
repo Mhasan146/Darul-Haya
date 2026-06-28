@@ -39,7 +39,7 @@ export default function FaqPage() {
         },
         {
           heading: 'What does it cost?',
-          body: 'Full-Live Schooling is $300/month, or $249/month for founding families (first 50 families). A 15% sibling discount applies for additional children enrolled.',
+          body: 'Full-Live Schooling is $300/month. A 15% sibling discount applies for additional children enrolled. There is also a $150 material fee and a $100 technology fee at the start of each year.',
         },
         {
           heading: 'Do you offer Arabic classes?',

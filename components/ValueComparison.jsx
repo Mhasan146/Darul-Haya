@@ -1,21 +1,32 @@
-// "The real value" comparison.
-// All figures are editable constants. The comparable-school range is based on
-// published 2025–26 tuition at Ontario Islamic schools for one child in
-// Grades 3–8, paid over 10 months (kept unnamed on purpose).
+// "The real value" comparison. Figures are editable constants.
+// School tuition is taken from each school's published fee schedule for one
+// child in the Grades 3–8 range, paid over 10 monthly installments.
 
-const DH_MONTHLY = '$249–$300'            // founding–regular Full-Live monthly
-const SCHOOL_MONTHLY = '$840–$955'        // comparable Islamic day schools, per month
-const SCHOOL_ANNUAL = '$8,400–$9,550'     // …per year
-const MATERIAL_FEE = '$150'               // annual material fee
-const TECH_FEE = '$100'                   // annual technology fee
-
-const ROWS = [
-  { label: 'Monthly tuition (1 child)', school: `~${SCHOOL_MONTHLY}`, dh: DH_MONTHLY },
-  { label: 'Format', school: 'In-person, fixed hours', dh: 'Live online, every day' },
-  { label: 'Class environment', school: 'Large classes', dh: 'Small, closely supervised' },
-  { label: 'Books & materials', school: 'Often billed on top', dh: `Flat ${MATERIAL_FEE}/yr — no per-book fees` },
-  { label: 'Technology', school: 'Device / tech fees common', dh: `Flat ${TECH_FEE}/yr` },
+const SCHOOLS = [
+  {
+    name: 'ISNA Schools',
+    monthly: '~$843',
+    annual: '≈ $8,427 / year',
+    detail: 'In-person · Grades 3–8',
+    year: '2025–26 published rates',
+  },
+  {
+    name: 'Olive Grove School',
+    monthly: '~$955',
+    annual: '≈ $9,550 / year',
+    detail: 'In-person · Grades 1–8',
+    year: '2026–27 published rates',
+  },
 ]
+
+const DH = {
+  monthly: '$300',
+  detail: 'Live online · Grades 3–8',
+  note: 'Books & technology via flat annual fees',
+}
+
+const MATERIAL_FEE = '$150'
+const TECH_FEE = '$100'
 
 const SAVINGS = [
   'No daily commute — save on gas, time, and the school-run stress',
@@ -32,43 +43,43 @@ export default function ValueComparison() {
           <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">The Real Value</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-clay">A full education, for a fraction of the cost</h2>
           <p className="mt-4 text-clay/60 leading-relaxed">
-            A traditional Islamic day school runs roughly {SCHOOL_ANNUAL} a year for one child.
-            Darul Haya delivers a complete, faith-centered education — live, every day — for about a third of that.
+            Traditional Islamic day schools run roughly $8,400–$9,550 a year for one child. Darul Haya
+            delivers a complete, faith-centered education — live, every day — for about a third of that.
           </p>
         </div>
 
-        {/* Comparison card */}
-        <div className="bg-white rounded-2xl border border-beige-dark shadow-sm overflow-hidden max-w-3xl mx-auto">
-          <div className="grid grid-cols-3 text-sm">
-            {/* Header row */}
-            <div className="p-4 sm:p-5" />
-            <div className="p-4 sm:p-5 text-center border-l border-beige-dark">
-              <p className="text-xs font-semibold uppercase tracking-wider text-clay/40">Comparable Islamic school</p>
-            </div>
-            <div className="p-4 sm:p-5 text-center border-l border-beige-dark bg-teal/5">
-              <p className="text-xs font-semibold uppercase tracking-wider text-teal">Darul Haya</p>
-            </div>
-
-            {/* Data rows */}
-            {ROWS.map((r, i) => (
-              <div key={r.label} className="contents">
-                <div className={`p-4 sm:p-5 font-semibold text-clay ${i > 0 ? 'border-t border-beige-dark' : ''}`}>
-                  {r.label}
-                </div>
-                <div className={`p-4 sm:p-5 text-center text-clay/50 border-l border-beige-dark ${i > 0 ? 'border-t' : ''}`}>
-                  {r.school}
-                </div>
-                <div className={`p-4 sm:p-5 text-center font-medium text-clay border-l border-beige-dark bg-teal/5 ${i > 0 ? 'border-t' : ''}`}>
-                  {r.dh}
-                </div>
+        {/* Price comparison cards */}
+        <div className="grid sm:grid-cols-3 gap-5 max-w-4xl mx-auto">
+          {SCHOOLS.map((s) => (
+            <div key={s.name} className="bg-white rounded-2xl p-6 border border-beige-dark shadow-sm text-center flex flex-col">
+              <h3 className="font-bold text-clay text-lg">{s.name}</h3>
+              <div className="mt-3 flex items-end justify-center gap-1">
+                <span className="text-3xl font-bold text-clay/70">{s.monthly}</span>
+                <span className="text-sm text-clay/40 mb-1">/mo</span>
               </div>
-            ))}
+              <p className="text-xs text-clay/40 mt-1">{s.annual}</p>
+              <p className="text-sm text-clay/60 mt-4">{s.detail}</p>
+              <p className="text-[11px] text-clay/40 mt-auto pt-4">{s.year}</p>
+            </div>
+          ))}
+
+          {/* Darul Haya — highlighted */}
+          <div className="bg-clay text-white rounded-2xl p-6 shadow-xl shadow-clay/20 text-center flex flex-col ring-2 ring-amber">
+            <h3 className="font-bold text-amber text-lg">Darul Haya</h3>
+            <div className="mt-3 flex items-end justify-center gap-1">
+              <span className="text-4xl font-bold">{DH.monthly}</span>
+              <span className="text-sm text-white/60 mb-1">/mo</span>
+            </div>
+            <p className="text-xs text-white/50 mt-1">{DH.note}</p>
+            <p className="text-sm text-white/80 mt-4">{DH.detail}</p>
+            <p className="text-[11px] text-amber font-semibold mt-auto pt-4">Best value</p>
           </div>
         </div>
 
         <p className="text-center text-xs text-clay/40 mt-4 max-w-2xl mx-auto">
-          Comparison based on published tuition at comparable Ontario Islamic schools for one child in Grades 3–8.
-          Darul Haya also keeps it simple: a flat {MATERIAL_FEE} material fee and {TECH_FEE} technology fee at the start of each year.
+          School figures are each institution's published tuition for one child, paid over 10 monthly
+          installments. Darul Haya keeps it simple: a flat {MATERIAL_FEE} material fee and {TECH_FEE} technology
+          fee at the start of each year — no per-book charges.
         </p>
 
         {/* Tutoring callout */}
