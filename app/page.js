@@ -101,19 +101,20 @@ export default function HomePage() {
       </section>
 
       {/* Grade stats banner */}
-      <section id="grades" className="bg-clay/5 border-y border-clay/10 py-8 scroll-mt-24">
-        <div className="max-w-4xl mx-auto px-6 grid grid-cols-2 gap-6 text-center max-w-sm mx-auto">
+      <section id="grades" className="relative overflow-hidden bg-beige-dark border-y border-clay/10 py-12 scroll-mt-24">
+        <div aria-hidden className="absolute inset-0 bg-ornament opacity-[0.04]" />
+        <div className="relative max-w-md mx-auto px-6 grid grid-cols-2 gap-6 text-center divide-x divide-clay/10">
           {STATS.map((s) => (
             <div key={s.value}>
-              <p className="text-2xl font-bold text-teal">{s.value}</p>
-              <p className="text-sm text-clay/50 mt-1">{s.label}</p>
+              <p className="font-display text-4xl font-bold text-teal">{s.value}</p>
+              <p className="text-xs uppercase tracking-widest text-clay/50 mt-2">{s.label}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* Trust bar */}
-      <section className="py-10 border-b border-clay/10">
+      <section className="bg-beige py-12 border-b border-clay/10">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <p className="text-xs font-semibold uppercase tracking-widest text-clay/40 mb-6">Curriculum aligned with</p>
           <div className="flex items-center justify-center gap-12 flex-wrap">
@@ -124,10 +125,13 @@ export default function HomePage() {
       </section>
 
       {/* Features */}
-      <section id="features" className="max-w-5xl mx-auto px-6 py-20 scroll-mt-24">
+      <section id="features" className="relative overflow-hidden scroll-mt-24">
+        <div aria-hidden className="absolute inset-0 bg-ornament opacity-[0.03]" />
+        <div className="relative max-w-5xl mx-auto px-6 py-20">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">What's Included</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-clay">Everything in one place</h2>
+          <div className="mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5">
           {[
@@ -172,6 +176,7 @@ export default function HomePage() {
             </div>
           ))}
         </div>
+        </div>
       </section>
 
       {/* Benefits of Online Schooling */}
@@ -184,16 +189,20 @@ export default function HomePage() {
       <ValueComparison />
 
       {/* Pricing */}
-      <section id="pricing" className="max-w-4xl mx-auto px-6 py-20 scroll-mt-4">
-        <div className="text-center mb-12 max-w-2xl mx-auto">
-          <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">Tuition</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-clay">Choose Your Program</h2>
-          <p className="text-clay/50 mt-3">Pick a program, apply in minutes, and we will help you get enrolled.</p>
-        </div>
-        <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
-          {PLANS.map((p) => (
-            <PricingCard key={p.plan} {...p} />
-          ))}
+      <section id="pricing" className="relative overflow-hidden scroll-mt-4 bg-gradient-to-b from-beige to-beige-dark/50">
+        <div aria-hidden className="absolute inset-0 bg-ornament opacity-[0.03]" />
+        <div className="relative max-w-4xl mx-auto px-6 py-20">
+          <div className="text-center mb-12 max-w-2xl mx-auto">
+            <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">Tuition</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-clay">Choose Your Program</h2>
+            <div className="mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
+            <p className="text-clay/50 mt-5">Pick a program, apply in minutes, and we will help you get enrolled.</p>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
+            {PLANS.map((p) => (
+              <PricingCard key={p.plan} {...p} />
+            ))}
+          </div>
         </div>
       </section>
 

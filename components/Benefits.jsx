@@ -67,8 +67,9 @@ const BENEFITS = [
 
 export default function Benefits() {
   return (
-    <section id="benefits" className="bg-beige-dark border-y border-clay/5 scroll-mt-24">
-      <div className="max-w-6xl mx-auto px-6 py-20">
+    <section id="benefits" className="relative overflow-hidden bg-beige-dark border-y border-clay/5 scroll-mt-24">
+      <div aria-hidden className="absolute inset-0 bg-ornament opacity-[0.035]" />
+      <div className="relative max-w-6xl mx-auto px-6 py-20">
         {/* Heading */}
         <div className="text-center max-w-2xl mx-auto mb-12">
           <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">
@@ -77,7 +78,8 @@ export default function Benefits() {
           <h2 className="text-3xl sm:text-4xl font-bold text-clay">
             Benefits of Online Schooling
           </h2>
-          <p className="mt-4 text-clay/60 leading-relaxed">
+          <div className="mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
+          <p className="mt-5 text-clay/60 leading-relaxed">
             A better school day for your child — and a calmer, more connected life for
             your whole family.
           </p>

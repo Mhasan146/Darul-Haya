@@ -37,12 +37,14 @@ const SAVINGS = [
 
 export default function ValueComparison() {
   return (
-    <section id="value" className="bg-beige-dark border-y border-clay/5 scroll-mt-24">
-      <div className="max-w-5xl mx-auto px-6 py-20">
+    <section id="value" className="relative overflow-hidden bg-beige-dark border-y border-clay/5 scroll-mt-24">
+      <div aria-hidden className="absolute inset-0 bg-ornament opacity-[0.035]" />
+      <div className="relative max-w-5xl mx-auto px-6 py-20">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">The Real Value</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-clay">A full education, for a fraction of the cost</h2>
-          <p className="mt-4 text-clay/60 leading-relaxed">
+          <div className="mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
+          <p className="mt-5 text-clay/60 leading-relaxed">
             Traditional Islamic day schools run roughly $8,400–$9,550 a year for one child. Darul Haya
             delivers a complete, faith-centered education — live, every day — for about a third of that.
           </p>
