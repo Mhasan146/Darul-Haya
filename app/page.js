@@ -2,6 +2,7 @@ import Link from 'next/link'
 import PricingCard from '@/components/PricingCard'
 import Benefits from '@/components/Benefits'
 import SafetyTools from '@/components/SafetyTools'
+import { WHATSAPP_URL } from '@/lib/siteConfig'
 
 // ── FOUNDING SPOTS ───────────────────────────────────────────────
 // Update this number as families enroll at the founding rate (out of 50).
@@ -54,34 +55,53 @@ export default function HomePage() {
     <div className="min-h-screen bg-beige">
 
       {/* Hero */}
-      <section id="about" className="max-w-4xl mx-auto px-6 pt-20 pb-16 text-center scroll-mt-24">
-        <h1 className="flex justify-center">
+      <section id="about" className="relative overflow-hidden scroll-mt-24">
+        {/* Layered premium backdrop */}
+        <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-beige-dark/60 via-beige to-beige" />
+        <div aria-hidden className="absolute inset-0 bg-ornament opacity-[0.04]" />
+        <div aria-hidden className="absolute -top-24 left-1/2 -translate-x-1/2 h-72 w-72 rounded-full bg-teal/10 blur-3xl" />
+
+        <div className="relative max-w-4xl mx-auto px-6 pt-16 pb-20 text-center">
+          <span className="inline-block mb-6 text-[11px] font-semibold uppercase tracking-[0.2em] text-teal bg-teal/10 px-4 py-1.5 rounded-full">
+            Online School · Grades 3–8
+          </span>
+
           <div className="flex flex-col items-center">
             <img
               src="/logo.png"
               alt="Darul Haya — Academy of Learning"
-              className="w-60 sm:w-72 h-auto"
+              className="w-52 sm:w-60 h-auto"
               style={{ clipPath: 'inset(0 0 20% 0)' }}
             />
             <p className="text-[10px] font-semibold tracking-[0.25em] text-clay/60 -mt-12 uppercase">
               Knowledge · Character
             </p>
           </div>
-        </h1>
-        <p className="mt-5 text-lg text-clay/60 max-w-2xl mx-auto leading-relaxed">
-          A structured, values-driven education for boys and girls in Grades 3–8 — live,
-          teacher-led instruction and a complete curriculum, all in one safe online classroom.
-        </p>
-        <div className="mt-8 flex items-center justify-center gap-4 flex-wrap">
-          <Link
-            href="/register"
-            className="bg-teal text-white px-7 py-3 rounded-full font-semibold hover:bg-teal-dark transition-colors"
-          >
-            Apply Now
-          </Link>
-          <a href="#pricing" className="text-clay font-medium hover:text-teal transition-colors">
-            View Plans →
-          </a>
+
+          <h1 className="mt-8 text-4xl sm:text-5xl font-bold text-clay leading-[1.1] max-w-3xl mx-auto">
+            A smaller, safer school — taught live, every day.
+          </h1>
+
+          <p className="mt-5 text-lg text-clay/60 max-w-2xl mx-auto leading-relaxed">
+            A structured, values-driven education for boys and girls in Grades 3–8 — live,
+            teacher-led instruction and a complete curriculum, all in one safe online classroom.
+          </p>
+
+          <div className="mt-8 flex items-center justify-center gap-4 flex-wrap">
+            <Link
+              href="/register"
+              className="bg-teal text-white px-8 py-3.5 rounded-full font-semibold shadow-lg shadow-teal/20 hover:bg-teal-dark hover:shadow-xl transition-all"
+            >
+              Apply Now
+            </Link>
+            <a href="#pricing" className="text-clay font-medium px-4 py-3.5 hover:text-teal transition-colors">
+              View Plans →
+            </a>
+          </div>
+
+          <p className="mt-8 text-xs text-clay/40 tracking-wide">
+            Aligned with the Ontario curriculum · Live teacher-led classes · Books shipped to your door
+          </p>
         </div>
       </section>
 
@@ -109,39 +129,51 @@ export default function HomePage() {
       </section>
 
       {/* Features */}
-      <section id="features" className="max-w-4xl mx-auto px-6 py-16 scroll-mt-24">
-        <h2 className="text-3xl font-bold text-clay text-center mb-10">
-          Everything in one place
-        </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+      <section id="features" className="max-w-5xl mx-auto px-6 py-20 scroll-mt-24">
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">What's Included</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-clay">Everything in one place</h2>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5">
           {[
-            { icon: '🎓', title: 'Live Classes', body: 'Daily instruction delivered through our learning platform, with recordings available any time.' },
-            { icon: '📋', title: 'Structured Curriculum', body: 'Age-appropriate lesson plans rooted in our values.' },
-            { icon: '💻', title: 'LMS Access', body: 'Everything in one place — lessons, assignments, materials, and progress tracking through our learning platform.' },
-            { icon: (
-                <svg viewBox="0 0 24 24" className="w-8 h-8" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="2" y="1" width="14" height="18" rx="2" fill="#E6F4F1" stroke="#0D9488" strokeWidth="1.5"/>
-                  <line x1="5" y1="6" x2="13" y2="6" stroke="#0D9488" strokeWidth="1" strokeLinecap="round" opacity="0.5"/>
-                  <line x1="5" y1="9" x2="13" y2="9" stroke="#0D9488" strokeWidth="1" strokeLinecap="round" opacity="0.5"/>
-                  <line x1="5" y1="12" x2="13" y2="12" stroke="#0D9488" strokeWidth="1" strokeLinecap="round" opacity="0.5"/>
-                  <line x1="5" y1="15" x2="9" y2="15" stroke="#0D9488" strokeWidth="1" strokeLinecap="round" opacity="0.5"/>
-                  <g transform="translate(18,17) rotate(225)">
-                    <rect x="-1.5" y="-7" width="3" height="8" rx="0.5" fill="#C99A33"/>
-                    <polygon points="-1.5,1 1.5,1 0,4" fill="#134E4A"/>
-                    <rect x="-1.5" y="-9" width="3" height="2" rx="0.5" fill="#999"/>
-                  </g>
-                </svg>
-              ), title: 'Pencil to Paper', body: 'Physical books and materials shipped directly to every enrolled student.' },
-            { icon: (
-                <svg viewBox="0 0 32 32" className="w-8 h-8" xmlns="http://www.w3.org/2000/svg">
-                  <text x="16" y="25" textAnchor="middle" fontSize="26" fill="#0D9488" fontFamily="serif">ج</text>
-                </svg>
-              ), title: 'Arabic Language', body: 'Dedicated Arabic language classes woven into the weekly schedule for all grade levels.' },
+            {
+              title: 'Live Classes',
+              body: 'Daily instruction delivered live, with recordings available any time.',
+              icon: <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z" />,
+            },
+            {
+              title: 'Structured Curriculum',
+              body: 'Age-appropriate lesson plans rooted in our values.',
+              icon: <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />,
+            },
+            {
+              title: 'LMS Access',
+              body: 'Lessons, assignments, materials, and progress tracking in one platform.',
+              icon: <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />,
+            },
+            {
+              title: 'Pencil to Paper',
+              body: 'Physical books and materials shipped directly to every enrolled student.',
+              icon: <path strokeLinecap="round" strokeLinejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />,
+            },
+            {
+              title: 'Arabic Language',
+              body: 'Dedicated Arabic classes woven into the weekly schedule for all grades.',
+              arabic: true,
+            },
           ].map((f) => (
-            <div key={f.title} className="bg-white rounded-2xl p-6 border border-beige-dark shadow-sm">
-              <div className="text-3xl mb-3">{f.icon}</div>
-              <h3 className="font-bold text-clay mb-1">{f.title}</h3>
-              <p className="text-clay/50 text-sm leading-relaxed">{f.body}</p>
+            <div key={f.title} className="bg-white rounded-2xl p-6 border border-beige-dark shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all text-center flex flex-col items-center">
+              <div className="h-12 w-12 rounded-xl bg-teal/10 text-teal flex items-center justify-center mb-4">
+                {f.arabic ? (
+                  <span className="font-display text-2xl leading-none">ج</span>
+                ) : (
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-6 w-6" aria-hidden="true">
+                    {f.icon}
+                  </svg>
+                )}
+              </div>
+              <h3 className="font-bold text-clay mb-1 text-sm">{f.title}</h3>
+              <p className="text-clay/50 text-xs leading-relaxed">{f.body}</p>
             </div>
           ))}
         </div>
@@ -155,9 +187,10 @@ export default function HomePage() {
 
       {/* Pricing */}
       <section id="pricing" className="max-w-4xl mx-auto px-6 py-20 scroll-mt-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-clay">Choose Your Program</h2>
-          <p className="text-clay/50 mt-2">Pick a program, apply in minutes, and we will help you get enrolled.</p>
+        <div className="text-center mb-12 max-w-2xl mx-auto">
+          <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">Tuition</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-clay">Choose Your Program</h2>
+          <p className="text-clay/50 mt-3">Pick a program, apply in minutes, and we will help you get enrolled.</p>
         </div>
         <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
           {PLANS.map((p) => (
@@ -167,9 +200,45 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-clay/10 py-8">
-        <div className="max-w-4xl mx-auto px-6 text-center text-sm text-clay/40">
-          <p>© {new Date().getFullYear()} Darul Haya. All rights reserved.</p>
+      <footer className="bg-clay text-white">
+        <div className="max-w-5xl mx-auto px-6 py-14">
+          <div className="grid gap-10 sm:grid-cols-3">
+            {/* Brand */}
+            <div>
+              <p className="font-display text-2xl font-bold tracking-wide">Darul Haya</p>
+              <p className="text-xs uppercase tracking-[0.25em] text-amber mt-1">Knowledge · Character</p>
+              <p className="text-white/60 text-sm mt-4 leading-relaxed max-w-xs">
+                A structured, values-driven online school for boys and girls in Grades 3–8.
+              </p>
+            </div>
+
+            {/* Explore */}
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-4">Explore</p>
+              <ul className="space-y-2.5 text-sm">
+                <li><Link href="/about" className="text-white/80 hover:text-amber transition-colors">About</Link></li>
+                <li><Link href="/programs/full-live" className="text-white/80 hover:text-amber transition-colors">Full-Live Schooling</Link></li>
+                <li><Link href="/programs/homeschool" className="text-white/80 hover:text-amber transition-colors">Homeschooling Portal</Link></li>
+                <li><Link href="/curriculum" className="text-white/80 hover:text-amber transition-colors">Curriculum</Link></li>
+                <li><Link href="/faq" className="text-white/80 hover:text-amber transition-colors">FAQ</Link></li>
+              </ul>
+            </div>
+
+            {/* Contact */}
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-4">Get in Touch</p>
+              <ul className="space-y-2.5 text-sm">
+                <li><a href="mailto:info@darulhaya.com" className="text-white/80 hover:text-amber transition-colors">info@darulhaya.com</a></li>
+                <li><a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-amber transition-colors">Chat on WhatsApp</a></li>
+                <li><Link href="/contact" className="text-white/80 hover:text-amber transition-colors">Contact Us</Link></li>
+                <li><Link href="/register" className="text-amber font-semibold hover:text-amber-dark transition-colors">Apply Now →</Link></li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="border-t border-white/10 mt-10 pt-6 text-center text-xs text-white/40">
+            © {new Date().getFullYear()} Darul Haya. All rights reserved.
+          </div>
         </div>
       </footer>
 
