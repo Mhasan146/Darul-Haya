@@ -1,4 +1,5 @@
 import './globals.css'
+import Link from 'next/link'
 import { Playfair_Display, Inter } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 import WhatsAppButton from '@/components/WhatsAppButton'
@@ -46,6 +47,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <body className="bg-beige min-h-screen">
+        <div className="bg-clay text-white text-center text-xs sm:text-sm py-2 px-4">
+          <span className="text-amber font-semibold">Now enrolling</span> for Grades 3–8 — spaces are limited.{' '}
+          <Link href="/register" className="underline underline-offset-2 hover:text-amber transition-colors">Apply today →</Link>
+        </div>
         <Navbar />
         <main>{children}</main>
         <WhatsAppButton />

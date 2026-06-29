@@ -38,9 +38,11 @@ const PLANS = [
   },
 ]
 
-const STATS = [
-  { value: '3 – 5', label: 'Elementary' },
-  { value: '6 – 8', label: 'Middle School' },
+const FACTS = [
+  { value: 'Grades 3–8', label: 'Elementary & Middle School' },
+  { value: 'Live, daily', label: 'Real teachers, set timetable' },
+  { value: 'Small classes', label: 'Known by name, fully supervised' },
+  { value: 'Ontario-aligned', label: 'On track with standards' },
 ]
 
 export default function HomePage() {
@@ -56,8 +58,8 @@ export default function HomePage() {
         <div aria-hidden className="absolute -bottom-32 -right-24 h-80 w-80 rounded-full bg-amber/10 blur-3xl" />
 
         <div className="relative max-w-4xl mx-auto px-6 pt-14 pb-20 text-center">
-          <span className="inline-block mb-7 text-[11px] font-semibold uppercase tracking-[0.2em] text-amber bg-amber/15 ring-1 ring-amber/30 px-4 py-1.5 rounded-full">
-            Online School · Grades 3–8
+          <span className="inline-flex items-center gap-2 mb-7 text-[11px] font-semibold uppercase tracking-[0.2em] text-amber bg-amber/15 ring-1 ring-amber/30 px-4 py-1.5 rounded-full">
+            <span className="h-1.5 w-1.5 rounded-full bg-amber" /> Now enrolling · Grades 3–8
           </span>
 
           {/* Framed cream crest */}
@@ -79,8 +81,8 @@ export default function HomePage() {
           </h1>
 
           <p className="mt-5 text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
-            A structured, values-driven education for boys and girls in Grades 3–8 — live,
-            teacher-led instruction and a complete curriculum, all in one safe online classroom.
+            Live, teacher-led classes for boys and girls in Grades 3–8 — small, closely
+            supervised, Ontario-aligned, with physical books shipped to your door.
           </p>
 
           <div className="mt-9 flex items-center justify-center gap-4 flex-wrap">
@@ -90,25 +92,25 @@ export default function HomePage() {
             >
               Apply Now
             </Link>
-            <a href="#pricing" className="text-white font-medium px-6 py-3.5 rounded-full border border-white/25 hover:bg-white/10 transition-colors">
-              View Plans →
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white font-medium px-6 py-3.5 rounded-full border border-white/25 hover:bg-white/10 transition-colors"
+            >
+              Chat with us →
             </a>
           </div>
-
-          <p className="mt-9 text-xs text-white/45 tracking-wide">
-            Aligned with the Ontario curriculum · Live teacher-led classes · Books shipped to your door
-          </p>
         </div>
       </section>
 
-      {/* Grade stats banner */}
-      <section id="grades" className="relative overflow-hidden bg-beige-dark border-y border-clay/10 py-12 scroll-mt-24">
-        <div aria-hidden className="absolute inset-0 bg-ornament opacity-[0.04]" />
-        <div className="relative max-w-md mx-auto px-6 grid grid-cols-2 gap-6 text-center divide-x divide-clay/10">
-          {STATS.map((s) => (
-            <div key={s.value}>
-              <p className="font-display text-4xl font-bold text-teal">{s.value}</p>
-              <p className="text-xs uppercase tracking-widest text-clay/50 mt-2">{s.label}</p>
+      {/* Facts strip */}
+      <section id="grades" className="bg-beige border-b border-clay/10 py-8 scroll-mt-24">
+        <div className="max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-8 text-center md:divide-x divide-clay/10">
+          {FACTS.map((f) => (
+            <div key={f.value} className="md:px-4">
+              <p className="text-lg font-bold text-clay">{f.value}</p>
+              <p className="text-xs text-clay/50 mt-1.5 leading-snug">{f.label}</p>
             </div>
           ))}
         </div>
@@ -138,8 +140,8 @@ export default function HomePage() {
           {[
             {
               title: 'Live Classes',
-              body: 'Daily live instruction delivered audio-only — no cameras — for your child\'s safety and privacy.',
-              icon: <path strokeLinecap="round" strokeLinejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />,
+              body: 'Daily instruction delivered live, with recordings available any time.',
+              icon: <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z" />,
             },
             {
               title: 'Structured Curriculum',
