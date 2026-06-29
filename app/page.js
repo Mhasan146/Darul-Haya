@@ -62,13 +62,14 @@ export default function HomePage() {
 
           {/* Framed cream crest */}
           <div className="mx-auto w-fit flex flex-col items-center bg-beige rounded-3xl px-8 pt-6 pb-5 shadow-2xl shadow-black/30">
-            <img
-              src="/logo.png"
-              alt="Darul Haya — Academy of Learning"
-              className="w-44 sm:w-52 h-auto"
-              style={{ clipPath: 'inset(0 0 20% 0)' }}
-            />
-            <p className="text-[10px] font-semibold tracking-[0.25em] text-clay/60 -mt-10 uppercase">
+            <div className="overflow-hidden aspect-[5/4] w-44 sm:w-52">
+              <img
+                src="/logo.png"
+                alt="Darul Haya — Academy of Learning"
+                className="w-full h-auto"
+              />
+            </div>
+            <p className="text-[10px] font-semibold tracking-[0.25em] text-clay/60 mt-1 uppercase">
               Knowledge · Character
             </p>
           </div>
@@ -161,8 +162,8 @@ export default function HomePage() {
               arabic: true,
             },
           ].map((f) => (
-            <div key={f.title} className="bg-white rounded-2xl p-6 border border-beige-dark shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all text-center flex flex-col items-center">
-              <div className="h-12 w-12 rounded-xl bg-teal/10 text-teal flex items-center justify-center mb-4">
+            <div key={f.title} className="bg-white rounded-2xl p-6 border border-beige-dark shadow-md hover:shadow-xl hover:-translate-y-1 transition-all text-center flex flex-col items-center">
+              <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-teal to-teal-light text-white flex items-center justify-center mb-4 shadow-lg shadow-teal/30">
                 {f.arabic ? (
                   <span className="font-display text-2xl leading-none">ج</span>
                 ) : (
