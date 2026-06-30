@@ -61,11 +61,11 @@ export default function ValueComparison() {
               <h3 className="font-bold text-white text-lg">{s.name}</h3>
               <div className="mt-3 flex items-end justify-center gap-1">
                 <span className="text-3xl font-bold text-white/85">{s.monthly}</span>
-                <span className="text-sm text-white/40 mb-1">/mo</span>
+                <span className="text-sm text-white/60 mb-1">/mo</span>
               </div>
-              <p className="text-xs text-white/40 mt-1">{s.annual}</p>
+              <p className="text-xs text-white/60 mt-1">{s.annual}</p>
               <p className="text-sm text-white/60 mt-4">{s.detail}</p>
-              <p className="text-[11px] text-white/40 mt-auto pt-4">{s.year}</p>
+              <p className="text-[11px] text-white/60 mt-auto pt-4">{s.year}</p>
             </div>
           ))}
 
@@ -74,15 +74,15 @@ export default function ValueComparison() {
             <h3 className="font-bold text-teal text-lg">Darul Haya</h3>
             <div className="mt-3 flex items-end justify-center gap-1">
               <span className="text-4xl font-bold text-clay">{DH.monthly}</span>
-              <span className="text-sm text-clay/50 mb-1">/mo</span>
+              <span className="text-sm text-clay/70 mb-1">/mo</span>
             </div>
-            <p className="text-xs text-clay/50 mt-1">{DH.note}</p>
+            <p className="text-xs text-clay/70 mt-1">{DH.note}</p>
             <p className="text-sm text-clay/70 mt-4">{DH.detail}</p>
             <p className="text-[11px] text-teal font-semibold mt-auto pt-4">★ Best value</p>
           </div>
         </div>
 
-        <p className="text-center text-xs text-white/40 mt-4 max-w-2xl mx-auto">
+        <p className="text-center text-xs text-white/60 mt-4 max-w-2xl mx-auto">
           School figures are each institution's published tuition for one child, paid over 10 monthly
           installments. Darul Haya keeps it simple: a flat {MATERIAL_FEE} material fee and {TECH_FEE} technology
           fee at the start of each year — no per-book charges.

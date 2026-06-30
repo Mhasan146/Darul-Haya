@@ -15,7 +15,7 @@ export default function PricingCard({ name, price, description, features, highli
         </p>
         <div className="flex items-end gap-1">
           <span className="text-4xl font-bold">${price}</span>
-          <span className={`text-sm mb-1 ${highlight ? 'text-white/60' : 'text-clay/50'}`}>/month</span>
+          <span className={`text-sm mb-1 ${highlight ? 'text-white/60' : 'text-clay/70'}`}>/month</span>
         </div>
         <p className={`mt-2 text-sm leading-relaxed ${highlight ? 'text-white/70' : 'text-clay/60'}`}>
           {description}

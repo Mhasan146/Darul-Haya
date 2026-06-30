@@ -21,7 +21,7 @@ export default function RegisterPage() {
           <RegisterForm />
         </div>
 
-        <p className="text-center text-sm text-clay/50 mt-6">
+        <p className="text-center text-sm text-clay/70 mt-6">
           Already a student?{' '}
           <a
             href={process.env.NEXT_PUBLIC_MOODLE_URL || 'https://learn.darulhaya.com'}

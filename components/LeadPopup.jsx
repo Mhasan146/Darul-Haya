@@ -55,10 +55,30 @@ export default function LeadPopup() {
     }
   }, [trigger])
 
-  // ESC to close
+  // ESC to close + Tab focus trap (keeps keyboard focus inside the dialog)
   useEffect(() => {
     if (!visible) return
-    const onKey = (e) => { if (e.key === 'Escape') close() }
+    const onKey = (e) => {
+      if (e.key === 'Escape') {
+        close()
+        return
+      }
+      if (e.key === 'Tab' && dialogRef.current) {
+        const focusable = dialogRef.current.querySelectorAll(
+          'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        )
+        if (focusable.length === 0) return
+        const first = focusable[0]
+        const last = focusable[focusable.length - 1]
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault()
+          last.focus()
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault()
+          first.focus()
+        }
+      }
+    }
     document.addEventListener('keydown', onKey)
     return () => document.removeEventListener('keydown', onKey)
   }, [visible])
@@ -139,7 +159,7 @@ export default function LeadPopup() {
         <button
           onClick={close}
           aria-label="Close"
-          className="absolute top-4 right-4 text-clay/40 hover:text-clay text-lg leading-none"
+          className="absolute top-4 right-4 text-clay/60 hover:text-clay text-lg leading-none"
         >
           ✕
         </button>
@@ -172,7 +192,7 @@ export default function LeadPopup() {
 
             <div className="flex items-center gap-3 mb-4">
               <div className="flex-1 h-px bg-clay/10" />
-              <span className="text-clay/40 text-xs">or leave your details</span>
+              <span className="text-clay/60 text-xs">or leave your details</span>
               <div className="flex-1 h-px bg-clay/10" />
             </div>
 
@@ -252,7 +272,7 @@ export default function LeadPopup() {
                 {loading ? 'Sending…' : 'Send my details'}
               </button>
 
-              <p className="text-center text-[10px] text-clay/40 mt-3">
+              <p className="text-center text-[10px] text-clay/60 mt-3">
                 We'll only use this to contact you about admissions.
               </p>
             </form>

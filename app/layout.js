@@ -47,12 +47,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <body className="bg-beige min-h-screen">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:top-3 focus:left-3 focus:bg-clay focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold"
+        >
+          Skip to content
+        </a>
         <div className="bg-clay text-white text-center text-xs sm:text-sm py-2 px-4">
           <span className="text-amber font-semibold">Now enrolling</span> for Grades 3–8 — spaces are limited.{' '}
           <Link href="/register" className="underline underline-offset-2 hover:text-amber transition-colors">Apply today →</Link>
         </div>
         <Navbar />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <WhatsAppButton />
         <LeadPopup />
       </body>

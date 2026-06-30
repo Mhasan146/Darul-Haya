@@ -27,7 +27,7 @@ export default function SafetyTools() {
                 <img src={t.logo} alt={t.name} className="h-full w-full object-contain" />
               </div>
               <h3 className="font-bold text-clay mb-1">{t.name}</h3>
-              <p className="text-clay/50 text-sm leading-relaxed">{t.body}</p>
+              <p className="text-clay/70 text-sm leading-relaxed">{t.body}</p>
             </div>
           ))}
         </div>

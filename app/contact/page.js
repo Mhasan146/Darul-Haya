@@ -15,7 +15,7 @@ export default function ContactPage() {
         <ContactForm />
       </div>
 
-      <p className="text-center text-sm text-clay/50">
+      <p className="text-center text-sm text-clay/70">
         Prefer email?{' '}
         <a href="mailto:info@darulhaya.com" className="text-teal font-medium hover:underline">info@darulhaya.com</a>
       </p>

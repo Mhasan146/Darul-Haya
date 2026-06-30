@@ -110,7 +110,7 @@ export default function HomePage() {
           {FACTS.map((f) => (
             <div key={f.value} className="md:px-4">
               <p className="text-lg font-bold text-clay">{f.value}</p>
-              <p className="text-xs text-clay/50 mt-1.5 leading-snug">{f.label}</p>
+              <p className="text-xs text-clay/70 mt-1.5 leading-snug">{f.label}</p>
             </div>
           ))}
         </div>
@@ -119,7 +119,7 @@ export default function HomePage() {
       {/* Trust bar */}
       <section className="bg-beige py-12 border-b border-clay/10">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <p className="text-xs font-semibold uppercase tracking-widest text-clay/40 mb-6">Curriculum aligned with</p>
+          <p className="text-xs font-semibold uppercase tracking-widest text-clay/60 mb-6">Curriculum aligned with</p>
           <div className="flex items-center justify-center gap-12 flex-wrap">
             <img src="/ontario-edu.png" alt="Ontario Ministry of Education" className="h-14 w-auto opacity-80 grayscale hover:grayscale-0 hover:opacity-100 transition-all" />
             <img src="/canada.png" alt="Government of Canada" className="h-10 w-auto opacity-80 grayscale hover:grayscale-0 hover:opacity-100 transition-all" />
@@ -175,7 +175,7 @@ export default function HomePage() {
                 )}
               </div>
               <h3 className="font-bold text-clay mb-1 text-sm">{f.title}</h3>
-              <p className="text-clay/50 text-xs leading-relaxed">{f.body}</p>
+              <p className="text-clay/70 text-xs leading-relaxed">{f.body}</p>
             </div>
           ))}
         </div>
@@ -199,7 +199,7 @@ export default function HomePage() {
             <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">Tuition</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-clay">Choose Your Program</h2>
             <div className="mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
-            <p className="text-clay/50 mt-5">Pick a program, apply in minutes, and we will help you get enrolled.</p>
+            <p className="text-clay/70 mt-5">Pick a program, apply in minutes, and we will help you get enrolled.</p>
           </div>
           <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
             {PLANS.map((p) => (
@@ -256,7 +256,7 @@ export default function HomePage() {
 
             {/* Explore */}
             <div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-4">Explore</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-white/60 mb-4">Explore</p>
               <ul className="space-y-2.5 text-sm">
                 <li><Link href="/about" className="text-white/80 hover:text-amber transition-colors">About</Link></li>
                 <li><Link href="/programs/full-live" className="text-white/80 hover:text-amber transition-colors">Full-Live Schooling</Link></li>
@@ -268,7 +268,7 @@ export default function HomePage() {
 
             {/* Contact */}
             <div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-4">Get in Touch</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-white/60 mb-4">Get in Touch</p>
               <ul className="space-y-2.5 text-sm">
                 <li><a href="mailto:info@darulhaya.com" className="text-white/80 hover:text-amber transition-colors">info@darulhaya.com</a></li>
                 <li><a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-amber transition-colors">Chat on WhatsApp</a></li>
@@ -278,7 +278,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="border-t border-white/10 mt-10 pt-6 text-center text-xs text-white/40">
+          <div className="border-t border-white/10 mt-10 pt-6 text-center text-xs text-white/60">
             © {new Date().getFullYear()} Darul Haya. All rights reserved.
           </div>
         </div>
