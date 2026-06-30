@@ -8,7 +8,7 @@ import { WHATSAPP_URL } from '@/lib/siteConfig'
 
 const PLANS = [
   {
-    name: 'Homeschooling Portal',
+    name: 'Self-Paced Homeschool',
     price: '150',
     plan: 'homeschool',
     highlight: false,
@@ -23,7 +23,7 @@ const PLANS = [
     ],
   },
   {
-    name: 'Full-Live Schooling',
+    name: 'Daily Live School',
     price: '300',
     plan: 'full_live',
     highlight: true,
@@ -89,7 +89,7 @@ export default function HomePage() {
             supervised, Ontario-aligned, with physical books shipped to your door.
           </p>
 
-          <div className="mt-9 flex items-center justify-center gap-4 flex-wrap">
+          <div className="mt-9 flex items-center justify-center gap-6 flex-wrap">
             <Link
               href="/register"
               className="bg-amber text-clay px-8 py-3.5 rounded-full font-semibold shadow-lg shadow-black/20 hover:bg-amber-dark transition-all"
@@ -100,10 +100,25 @@ export default function HomePage() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white font-medium px-6 py-3.5 rounded-full border border-white/25 hover:bg-white/10 transition-colors"
+              className="text-white/80 text-sm font-medium hover:text-white transition-colors"
             >
-              Chat with us →
+              Chat on WhatsApp →
             </a>
+          </div>
+
+          {/* How it works — 3-step process */}
+          <div className="mt-8 flex items-center justify-center gap-2 sm:gap-3 flex-wrap text-white/55 text-xs">
+            {[
+              'Apply online (5 min)',
+              'Personal call from our team',
+              'Start your first class',
+            ].map((step, i) => (
+              <span key={step} className="flex items-center gap-1.5 sm:gap-2">
+                {i > 0 && <span aria-hidden className="text-white/25 hidden sm:inline">→</span>}
+                <span className="h-4 w-4 rounded-full bg-amber/20 text-amber text-[9px] font-bold inline-flex items-center justify-center shrink-0">{i + 1}</span>
+                <span>{step}</span>
+              </span>
+            ))}
           </div>
         </div>
       </section>
@@ -213,6 +228,18 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Decision summary strip */}
+      <section aria-label="Program highlights" className="bg-beige border-y border-clay/10 py-5">
+        <ul className="max-w-3xl mx-auto px-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-clay/70 list-none">
+          {['Grades 3–8', '$300 / month', 'Live daily classes', 'Ontario-aligned', 'Books included'].map((item) => (
+            <li key={item} className="flex items-center gap-1.5">
+              <span className="text-teal font-bold" aria-hidden>✓</span>
+              {item}
+            </li>
+          ))}
+        </ul>
+      </section>
+
       {/* CTA band */}
       <section className="relative overflow-hidden bg-clay text-white">
         <div aria-hidden className="absolute inset-0 bg-gradient-to-br from-[#10544e] via-clay to-[#0b3a36]" />
@@ -226,7 +253,7 @@ export default function HomePage() {
           <p className="mt-5 text-white/70 leading-relaxed">
             Apply in minutes and we'll personally help you get enrolled — or reach out on WhatsApp with any questions.
           </p>
-          <div className="mt-8 flex items-center justify-center gap-4 flex-wrap">
+          <div className="mt-8 flex items-center justify-center gap-6 flex-wrap">
             <Link
               href="/register"
               className="bg-amber text-clay px-8 py-3.5 rounded-full font-semibold shadow-lg shadow-black/20 hover:bg-amber-dark transition-all"
@@ -237,7 +264,7 @@ export default function HomePage() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white font-medium px-6 py-3.5 rounded-full border border-white/25 hover:bg-white/10 transition-colors"
+              className="text-white/80 text-sm font-medium hover:text-white transition-colors"
             >
               Chat on WhatsApp →
             </a>
@@ -263,8 +290,8 @@ export default function HomePage() {
               <p className="text-xs font-semibold uppercase tracking-widest text-white/60 mb-4">Explore</p>
               <ul className="space-y-2.5 text-sm">
                 <li><Link href="/about" className="text-white/80 hover:text-amber transition-colors">About</Link></li>
-                <li><Link href="/programs/full-live" className="text-white/80 hover:text-amber transition-colors">Full-Live Schooling</Link></li>
-                <li><Link href="/programs/homeschool" className="text-white/80 hover:text-amber transition-colors">Homeschooling Portal</Link></li>
+                <li><Link href="/programs/full-live" className="text-white/80 hover:text-amber transition-colors">Daily Live School</Link></li>
+                <li><Link href="/programs/homeschool" className="text-white/80 hover:text-amber transition-colors">Self-Paced Homeschool</Link></li>
                 <li><Link href="/curriculum" className="text-white/80 hover:text-amber transition-colors">Curriculum</Link></li>
                 <li><Link href="/faq" className="text-white/80 hover:text-amber transition-colors">FAQ</Link></li>
               </ul>

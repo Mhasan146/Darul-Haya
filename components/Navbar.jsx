@@ -18,8 +18,8 @@ const MENUS = [
   {
     label: 'Programs & Classes',
     items: [
-      { label: 'Full-Live Schooling', href: '/programs/full-live' },
-      { label: 'Homeschooling Portal', href: '/programs/homeschool' },
+      { label: 'Daily Live School', href: '/programs/full-live' },
+      { label: 'Self-Paced Homeschool', href: '/programs/homeschool' },
       { label: 'Grade Levels', href: '/curriculum#grades' },
       { label: 'Curriculum', href: '/curriculum#islamic' },
     ],
