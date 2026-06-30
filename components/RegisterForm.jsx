@@ -1,12 +1,18 @@
 'use client'
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 
 const inputCls =
   'w-full border border-beige-dark rounded-lg px-4 py-2.5 text-clay text-sm focus:outline-none focus:ring-2 focus:ring-teal/40 focus:border-teal'
 
 const GRADES = ['Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8']
-const PROGRAMS = ['Full-Live Schooling', 'Homeschooling Portal']
+const PROGRAMS = ['Daily Live School', 'Self-Paced Homeschool']
+
+// Maps ?plan= URL param values to program names
+const PLAN_MAP = {
+  full_live: 'Daily Live School',
+  homeschool: 'Self-Paced Homeschool',
+}
 
 function encode(data) {
   return Object.keys(data)
@@ -15,13 +21,16 @@ function encode(data) {
 }
 
 export default function RegisterForm() {
+  const searchParams = useSearchParams()
+  const defaultProgram = PLAN_MAP[searchParams.get('plan')] || ''
+
   const [form, setForm] = useState({
     'student-name': '',
     'guardian-name': '',
     email: '',
     phone: '',
     grade: '',
-    program: '',
+    program: defaultProgram,
     message: '',
     'bot-field': '',
   })
@@ -117,12 +126,12 @@ export default function RegisterForm() {
         <textarea id="message" name="message" rows={4} className={`${inputCls} resize-y`} value={form.message} onChange={update('message')} placeholder="Questions, your child's needs, anything helpful…" />
       </div>
 
-      {error && <p className="text-red-600 text-sm">{error}</p>}
+      {error && <p role="alert" className="text-red-600 text-sm">{error}</p>}
 
       <button
         type="submit"
         disabled={status === 'sending'}
-        className="bg-teal text-white py-3 rounded-full font-semibold text-sm hover:bg-teal-dark transition-colors disabled:opacity-60"
+        className="bg-amber text-clay py-3 rounded-full font-semibold text-sm hover:bg-amber-dark transition-colors disabled:opacity-60"
       >
         {status === 'sending' ? 'Submitting…' : 'Submit application'}
       </button>

@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import RegisterForm from '@/components/RegisterForm'
 
 export const metadata = {
@@ -18,7 +19,9 @@ export default function RegisterPage() {
         </div>
 
         <div className="bg-white rounded-2xl border border-beige-dark shadow-sm p-6 sm:p-8">
-          <RegisterForm />
+          <Suspense fallback={<div className="h-80 animate-pulse rounded-xl bg-beige-dark" />}>
+            <RegisterForm />
+          </Suspense>
         </div>
 
         <p className="text-center text-sm text-clay/70 mt-6">

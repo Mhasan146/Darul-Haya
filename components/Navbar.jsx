@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
+import ThemeToggle from '@/components/ThemeToggle'
 
 const MOODLE = process.env.NEXT_PUBLIC_MOODLE_URL || 'https://learn.darulhaya.com'
 
@@ -87,12 +88,13 @@ export default function Navbar() {
 
   const actions = (stacked = false) => (
     <div className={stacked ? 'flex flex-col gap-2' : 'flex items-center gap-3'}>
+      {!stacked && <ThemeToggle />}
       <a
         href={MOODLE}
         target="_blank"
         rel="noopener noreferrer"
         onClick={() => setMobileOpen(false)}
-        className="text-sm font-medium text-clay hover:text-teal transition-colors text-center"
+        className="text-sm font-medium text-clay hover:text-teal transition-colors text-center dark:text-white/70 dark:hover:text-white"
       >
         Student Login
       </a>
@@ -107,7 +109,7 @@ export default function Navbar() {
   )
 
   return (
-    <nav ref={navRef} className="bg-beige border-b border-amber/30 relative z-40">
+    <nav ref={navRef} className="bg-beige dark:bg-[#0e2826] border-b border-amber/30 dark:border-white/10 relative z-40">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
         {/* Logo */}
         <Link href="/" className="flex items-center shrink-0" onClick={() => setMobileOpen(false)}>

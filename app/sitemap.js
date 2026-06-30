@@ -9,6 +9,7 @@ const ROUTES = [
   '/faq',
   '/contact',
   '/register',
+  '/privacy',
 ]
 
 export default function sitemap() {

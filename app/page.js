@@ -83,6 +83,10 @@ const FAQS = [
   },
 ]
 
+const HERO_HEADLINE_A = 'A smaller, safer school — taught live, every day.'
+const HERO_HEADLINE_B = 'A complete Islamic education. Live, every day.'
+const HERO_HEADLINE = process.env.NEXT_PUBLIC_HERO_VARIANT === 'B' ? HERO_HEADLINE_B : HERO_HEADLINE_A
+
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-beige">
@@ -118,7 +122,7 @@ export default function HomePage() {
           </div>
 
           <h1 className="mt-9 text-4xl sm:text-5xl font-bold text-white leading-[1.1] max-w-3xl mx-auto">
-            A smaller, safer school — taught live, every day.
+            {HERO_HEADLINE}
           </h1>
 
           <p className="mt-5 text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
@@ -191,6 +195,7 @@ export default function HomePage() {
           <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">What's Included</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-clay">Everything in one place</h2>
           <div className="mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
+          <p className="mt-4 text-clay/70 leading-relaxed">Curriculum, technology, and physical materials — all included from day one.</p>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5">
           {[
@@ -245,7 +250,7 @@ export default function HomePage() {
       <SafetyTools />
 
       {/* Testimonials */}
-      <section className="bg-beige py-20 border-b border-clay/10">
+      <section id="testimonials" className="bg-beige py-20 border-b border-clay/10">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">Parent Voices</p>
@@ -337,7 +342,7 @@ export default function HomePage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-beige py-16 border-b border-clay/10">
+      <section id="faq" className="bg-beige py-16 border-b border-clay/10">
         <div className="max-w-3xl mx-auto px-6">
           <div className="text-center mb-10">
             <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">Common Questions</p>

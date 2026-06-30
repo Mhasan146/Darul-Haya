@@ -8,6 +8,13 @@ const TOOLS = [
     name: 'Classroom.cloud',
     body: 'Lets teachers see and guide student screens in real time, with built-in safeguarding and content monitoring throughout every class.',
   },
+  {
+    // TODO: Replace with the second safety tool your school actually uses.
+    // Drop its logo PNG into /public/safety/ and update name + body below.
+    logo: '/safety/classroom-cloud.png',
+    name: '[ Second Safety Tool ]',
+    body: '[ Describe the second tool used to monitor and protect students during online classes — e.g. content filtering, attendance tracking, or screen monitoring. ]',
+  },
 ]
 
 export default function SafetyTools() {

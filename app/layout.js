@@ -47,17 +47,43 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
-      <body className="bg-beige min-h-screen">
-        <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:top-3 focus:left-3 focus:bg-clay focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold"
+      <head>
+        {/* Prevent flash of unstyled theme on load — runs before paint */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var t=localStorage.getItem('dh_theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark')}}catch{}`,
+          }}
+        />
+      </head>
+      <body className="bg-beige dark:bg-[#0a1f1d] min-h-screen">
+        {/* Skip navigation — visible on keyboard focus */}
+        <nav
+          aria-label="Skip navigation"
+          className="sr-only focus-within:not-sr-only focus-within:fixed focus-within:top-3 focus-within:left-3 focus-within:z-[100] focus-within:flex focus-within:gap-2"
         >
-          Skip to content
-        </a>
+          {[
+            { href: '#main-content', label: 'Skip to content' },
+            { href: '#pricing',      label: 'Skip to pricing' },
+            { href: '#faq',          label: 'Skip to FAQ' },
+          ].map(({ href, label }) => (
+            <a
+              key={href}
+              href={href}
+              className="bg-clay text-white px-4 py-2 rounded-lg font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-amber"
+            >
+              {label}
+            </a>
+          ))}
+        </nav>
+
+        {/* Announcement banner — update text + date each enrolment cycle */}
         <div className="bg-clay text-white text-center text-xs sm:text-sm py-2 px-4">
-          <span className="text-amber font-semibold">Now enrolling</span> for Grades 3–8 — spaces are limited.{' '}
-          <Link href="/register" className="underline underline-offset-2 hover:text-amber transition-colors">Apply today →</Link>
+          {/* TODO: Update enrolment deadline before each intake — e.g. "September 2027" */}
+          <span className="text-amber font-semibold">Enrolment open for September 2026</span>
+          {' '}— seats fill quickly.{' '}
+          <Link href="/register" className="underline underline-offset-2 hover:text-amber transition-colors">Apply Now →</Link>
         </div>
+
         <Navbar />
         <main id="main-content">{children}</main>
         <MobileApplyBar />

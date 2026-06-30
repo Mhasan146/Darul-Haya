@@ -17,6 +17,14 @@ const SCHOOLS = [
     detail: 'In-person · Grades 1–8',
     year: '2026–27 published rates',
   },
+  {
+    // TODO: Confirm tutoring estimate with local provider rates before publishing
+    name: 'Private Tutoring',
+    monthly: '~$600',
+    annual: '≈ $6,000+ / year',
+    detail: '4 subjects · ~1 hr/wk each',
+    year: 'Toronto area typical rates',
+  },
 ]
 
 const DH = {
@@ -49,29 +57,30 @@ export default function ValueComparison() {
           <h2 className="text-3xl sm:text-4xl font-bold text-white">A full education, for a fraction of the cost</h2>
           <div className="mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <p className="mt-5 text-white/70 leading-relaxed">
-            Traditional Islamic day schools run roughly $8,400–$9,550 a year for one child. Darul Haya
-            delivers a complete, faith-centered education — live, every day — for about a third of that.
+            Traditional Islamic day schools run roughly $8,400–$9,550 a year. Even after-school tutoring for
+            four subjects adds up to $6,000+. Darul Haya delivers a complete, faith-centered education —
+            live, every day — for less than half the cost.
           </p>
         </div>
 
-        {/* Price comparison cards */}
-        <div className="grid sm:grid-cols-3 gap-5 max-w-4xl mx-auto">
+        {/* Price comparison grid — 3 competitors + Darul Haya */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
           {SCHOOLS.map((s) => (
             <div key={s.name} className="bg-white/5 ring-1 ring-white/10 rounded-2xl p-6 text-center flex flex-col">
-              <h3 className="font-bold text-white text-lg">{s.name}</h3>
+              <h3 className="font-bold text-white text-base">{s.name}</h3>
               <div className="mt-3 flex items-end justify-center gap-1">
                 <span className="text-3xl font-bold text-white/85">{s.monthly}</span>
                 <span className="text-sm text-white/60 mb-1">/mo</span>
               </div>
               <p className="text-xs text-white/60 mt-1">{s.annual}</p>
               <p className="text-sm text-white/60 mt-4">{s.detail}</p>
-              <p className="text-[11px] text-white/60 mt-auto pt-4">{s.year}</p>
+              <p className="text-[11px] text-white/50 mt-auto pt-4">{s.year}</p>
             </div>
           ))}
 
           {/* Darul Haya — cream highlight */}
           <div className="bg-beige text-clay rounded-2xl p-6 text-center flex flex-col ring-2 ring-amber shadow-2xl shadow-black/30">
-            <h3 className="font-bold text-teal text-lg">Darul Haya</h3>
+            <h3 className="font-bold text-teal text-base">Darul Haya</h3>
             <div className="mt-3 flex items-end justify-center gap-1">
               <span className="text-4xl font-bold text-clay">{DH.monthly}</span>
               <span className="text-sm text-clay/70 mb-1">/mo</span>
@@ -82,20 +91,11 @@ export default function ValueComparison() {
           </div>
         </div>
 
-        <p className="text-center text-xs text-white/60 mt-4 max-w-2xl mx-auto">
+        <p className="text-center text-xs text-white/50 mt-4 max-w-2xl mx-auto">
           School figures are each institution's published tuition for one child, paid over 10 monthly
           installments. Darul Haya keeps it simple: a flat {MATERIAL_FEE} material fee and {TECH_FEE} technology
           fee at the start of each year — no per-book charges.
         </p>
-
-        {/* Tutoring callout */}
-        <div className="max-w-3xl mx-auto mt-8 rounded-2xl bg-white/5 ring-1 ring-white/10 p-6 sm:p-7 text-center">
-          <p className="text-sm sm:text-base leading-relaxed text-white/80">
-            <span className="font-semibold text-amber">Even compared to tutoring:</span> a single subject at an
-            after-school centre often costs ~$150–$200 a month for about an hour a week. Darul Haya is
-            <span className="font-semibold text-white"> every subject, taught live, all day.</span>
-          </p>
-        </div>
 
         {/* Savings list */}
         <div className="max-w-3xl mx-auto mt-10">

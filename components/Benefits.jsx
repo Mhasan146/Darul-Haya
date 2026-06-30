@@ -76,12 +76,12 @@ export default function Benefits() {
             The Darul Haya Advantage
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-clay">
-            Benefits of Online Schooling
+            How Darul Haya changes your family's everyday
           </h2>
           <div className="mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <p className="mt-5 text-clay/60 leading-relaxed">
-            A better school day for your child — and a calmer, more connected life for
-            your whole family.
+            The practical, day-to-day differences families notice most — beyond what's
+            in the curriculum.
           </p>
         </div>
 
