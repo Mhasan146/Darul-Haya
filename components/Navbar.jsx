@@ -1,7 +1,8 @@
 'use client'
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 
 const MOODLE = process.env.NEXT_PUBLIC_MOODLE_URL || 'https://learn.darulhaya.com'
 
@@ -49,11 +50,19 @@ const ChevronDown = ({ className = '' }) => (
 )
 
 function MenuLink({ item, onClick }) {
-  const cls = 'block px-4 py-2.5 text-sm text-clay hover:bg-beige-dark hover:text-teal transition-colors'
+  const pathname = usePathname()
+  const basePath = item.href.split('#')[0]
+  const isActive = !item.external &&
+    !item.href.startsWith('/#') &&
+    !item.href.startsWith('mailto:') &&
+    (pathname === basePath || (basePath.length > 1 && pathname.startsWith(basePath)))
+  const cls = `block px-4 py-2.5 text-sm transition-colors ${
+    isActive ? 'text-teal font-semibold bg-beige/80' : 'text-clay hover:bg-beige-dark hover:text-teal'
+  }`
   return item.external ? (
     <a href={item.href} target="_blank" rel="noopener noreferrer" className={cls} onClick={onClick}>{item.label}</a>
   ) : (
-    <Link href={item.href} className={cls} onClick={onClick}>{item.label}</Link>
+    <Link href={item.href} className={cls} onClick={onClick} aria-current={isActive ? 'page' : undefined}>{item.label}</Link>
   )
 }
 
@@ -61,6 +70,20 @@ export default function Navbar() {
   const [openMenu, setOpenMenu] = useState(null)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [mobileSection, setMobileSection] = useState(null)
+  const navRef = useRef(null)
+
+  useEffect(() => {
+    if (!mobileOpen) return
+    const close = (e) => {
+      if (navRef.current && !navRef.current.contains(e.target)) setMobileOpen(false)
+    }
+    document.addEventListener('mousedown', close)
+    document.addEventListener('touchstart', close)
+    return () => {
+      document.removeEventListener('mousedown', close)
+      document.removeEventListener('touchstart', close)
+    }
+  }, [mobileOpen])
 
   const actions = (stacked = false) => (
     <div className={stacked ? 'flex flex-col gap-2' : 'flex items-center gap-3'}>
@@ -76,7 +99,7 @@ export default function Navbar() {
       <Link
         href="/register"
         onClick={() => setMobileOpen(false)}
-        className="text-sm bg-teal text-white px-4 py-1.5 rounded-full hover:bg-teal-dark transition-colors text-center"
+        className="text-sm bg-amber text-clay px-4 py-2 rounded-full font-semibold hover:bg-amber-dark transition-colors text-center"
       >
         Apply Now
       </Link>
@@ -84,12 +107,12 @@ export default function Navbar() {
   )
 
   return (
-    <nav className="bg-beige border-b border-amber/30 relative z-40">
+    <nav ref={navRef} className="bg-beige border-b border-amber/30 relative z-40">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
         {/* Logo */}
         <Link href="/" className="flex items-center shrink-0" onClick={() => setMobileOpen(false)}>
           <span className="block h-12 w-[3.75rem] overflow-hidden">
-            <Image src="/logo.png" alt="Darul Haya — Academy of Learning" width={60} height={48} className="w-full h-auto" />
+            <Image src="/logo.png" alt="Darul Haya — Academy of Learning" width={60} height={48} priority className="w-full h-auto" />
           </span>
         </Link>
 
@@ -101,20 +124,20 @@ export default function Navbar() {
               className="relative"
               onMouseEnter={() => setOpenMenu(menu.label)}
               onMouseLeave={() => setOpenMenu(null)}
+              onKeyDown={(e) => { if (e.key === 'Escape') setOpenMenu(null) }}
             >
               <button
                 type="button"
-                aria-haspopup="true"
                 aria-expanded={openMenu === menu.label}
+                aria-controls={`nav-${menu.label.replace(/\s+/g, '-').toLowerCase()}`}
                 onClick={() => setOpenMenu(openMenu === menu.label ? null : menu.label)}
-                onKeyDown={(e) => { if (e.key === 'Escape') setOpenMenu(null) }}
                 className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-clay hover:text-teal transition-colors"
               >
                 {menu.label}
                 <ChevronDown className={`h-4 w-4 transition-transform ${openMenu === menu.label ? 'rotate-180' : ''}`} />
               </button>
               {openMenu === menu.label && (
-                <div className="absolute left-0 top-full pt-2 w-56">
+                <div id={`nav-${menu.label.replace(/\s+/g, '-').toLowerCase()}`} className="absolute left-0 top-full pt-2 w-56">
                   <div className="bg-white rounded-xl shadow-lg ring-1 ring-clay/5 py-2 overflow-hidden">
                     {menu.items.map((item) => (
                       <MenuLink key={item.label} item={item} onClick={() => setOpenMenu(null)} />
@@ -152,6 +175,8 @@ export default function Navbar() {
             <div key={menu.label} className="border-b border-beige-dark/60">
               <button
                 type="button"
+                aria-expanded={mobileSection === menu.label}
+                aria-controls={`mobile-${menu.label.replace(/\s+/g, '-').toLowerCase()}`}
                 onClick={() => setMobileSection(mobileSection === menu.label ? null : menu.label)}
                 className="w-full flex items-center justify-between py-3 text-sm font-semibold text-clay"
               >
@@ -159,7 +184,7 @@ export default function Navbar() {
                 <ChevronDown className={`h-4 w-4 transition-transform ${mobileSection === menu.label ? 'rotate-180' : ''}`} />
               </button>
               {mobileSection === menu.label && (
-                <div className="pb-2 -mx-2">
+                <div id={`mobile-${menu.label.replace(/\s+/g, '-').toLowerCase()}`} className="pb-2 -mx-2">
                   {menu.items.map((item) => (
                     <MenuLink key={item.label} item={item} onClick={() => setMobileOpen(false)} />
                   ))}

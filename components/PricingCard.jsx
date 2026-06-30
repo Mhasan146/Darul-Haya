@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default function PricingCard({ name, price, description, features, highlight }) {
+export default function PricingCard({ name, price, plan, description, features, highlight }) {
   return (
     <div
       className={`rounded-2xl p-8 flex flex-col gap-6 border-2 transition-all ${
@@ -32,7 +32,7 @@ export default function PricingCard({ name, price, description, features, highli
       </ul>
 
       <Link
-        href="/register"
+        href={`/register?plan=${plan}`}
         className={`w-full py-3 rounded-xl font-semibold text-sm text-center transition-colors ${
           highlight ? 'bg-amber text-clay hover:bg-amber/90' : 'bg-teal text-white hover:bg-teal-dark'
         }`}

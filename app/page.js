@@ -168,7 +168,7 @@ export default function HomePage() {
               icon: <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />,
             },
             {
-              title: 'LMS Access',
+              title: 'Student Dashboard',
               body: 'Lessons, assignments, materials, and progress tracking in one platform.',
               icon: <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />,
             },
@@ -211,7 +211,7 @@ export default function HomePage() {
       <ValueComparison />
 
       {/* Pricing */}
-      <section id="pricing" className="relative overflow-hidden scroll-mt-4 bg-gradient-to-b from-beige to-beige-dark/50">
+      <section id="pricing" className="relative overflow-hidden scroll-mt-24 bg-gradient-to-b from-beige to-beige-dark/50">
         <div aria-hidden className="absolute inset-0 bg-ornament opacity-[0.03]" />
         <div className="relative max-w-4xl mx-auto px-6 py-20">
           <div className="text-center mb-12 max-w-2xl mx-auto">
@@ -294,6 +294,7 @@ export default function HomePage() {
                 <li><Link href="/programs/homeschool" className="text-white/80 hover:text-amber transition-colors">Self-Paced Homeschool</Link></li>
                 <li><Link href="/curriculum" className="text-white/80 hover:text-amber transition-colors">Curriculum</Link></li>
                 <li><Link href="/faq" className="text-white/80 hover:text-amber transition-colors">FAQ</Link></li>
+                <li><Link href="/register" className="text-amber font-semibold hover:text-amber-dark transition-colors">Apply Now →</Link></li>
               </ul>
             </div>
 
@@ -304,7 +305,6 @@ export default function HomePage() {
                 <li><a href="mailto:info@darulhaya.com" className="text-white/80 hover:text-amber transition-colors">info@darulhaya.com</a></li>
                 <li><a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-amber transition-colors">Chat on WhatsApp</a></li>
                 <li><Link href="/contact" className="text-white/80 hover:text-amber transition-colors">Contact Us</Link></li>
-                <li><Link href="/register" className="text-amber font-semibold hover:text-amber-dark transition-colors">Apply Now →</Link></li>
               </ul>
             </div>
           </div>

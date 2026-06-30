@@ -22,14 +22,16 @@ export default function SafetyTools() {
           Every class is actively supervised with trusted, education-grade safety technology — so you can have peace of mind about what your child sees and does online.
         </p>
 
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="flex flex-col items-center gap-6 max-w-2xl mx-auto">
           {TOOLS.map((t) => (
-            <div key={t.name} className="bg-white rounded-2xl p-6 border border-beige-dark shadow-sm flex flex-col items-center text-center w-full sm:w-72">
-              <div className="mb-4 mx-auto h-16 w-40">
+            <div key={t.name} className="bg-white rounded-2xl p-6 border border-beige-dark shadow-sm flex flex-col sm:flex-row items-center gap-6 w-full">
+              <div className="shrink-0 h-16 w-40">
                 <Image src={t.logo} alt={t.name} width={160} height={64} className="h-full w-full object-contain" />
               </div>
-              <h3 className="font-bold text-clay mb-1">{t.name}</h3>
-              <p className="text-clay/70 text-sm leading-relaxed">{t.body}</p>
+              <div className="text-center sm:text-left">
+                <h3 className="font-bold text-clay mb-1">{t.name}</h3>
+                <p className="text-clay/70 text-sm leading-relaxed">{t.body}</p>
+              </div>
             </div>
           ))}
         </div>
