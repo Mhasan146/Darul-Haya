@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 // Safety tools shown to reassure parents. To add a tool: drop its logo PNG in
 // /public/safety/ and add an entry below (logo path, name, what it does).
 const TOOLS = [
@@ -24,7 +26,7 @@ export default function SafetyTools() {
           {TOOLS.map((t) => (
             <div key={t.name} className="bg-white rounded-2xl p-6 border border-beige-dark shadow-sm flex flex-col items-center text-center w-full sm:w-72">
               <div className="mb-4 mx-auto h-16 w-40">
-                <img src={t.logo} alt={t.name} className="h-full w-full object-contain" />
+                <Image src={t.logo} alt={t.name} width={160} height={64} className="h-full w-full object-contain" />
               </div>
               <h3 className="font-bold text-clay mb-1">{t.name}</h3>
               <p className="text-clay/70 text-sm leading-relaxed">{t.body}</p>

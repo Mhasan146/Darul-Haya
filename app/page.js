@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import PricingCard from '@/components/PricingCard'
 import Benefits from '@/components/Benefits'
 import SafetyTools from '@/components/SafetyTools'
@@ -65,9 +66,12 @@ export default function HomePage() {
           {/* Framed cream crest */}
           <div className="mx-auto w-fit flex flex-col items-center bg-beige rounded-3xl px-8 pt-6 pb-5 shadow-2xl shadow-black/30">
             <div className="overflow-hidden aspect-[5/4] w-44 sm:w-52">
-              <img
+              <Image
                 src="/logo.png"
                 alt="Darul Haya — Academy of Learning"
+                width={208}
+                height={166}
+                priority
                 className="w-full h-auto"
               />
             </div>
@@ -121,8 +125,8 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <p className="text-xs font-semibold uppercase tracking-widest text-clay/60 mb-6">Curriculum aligned with</p>
           <div className="flex items-center justify-center gap-12 flex-wrap">
-            <img src="/ontario-edu.png" alt="Ontario Ministry of Education" className="h-14 w-auto opacity-80 grayscale hover:grayscale-0 hover:opacity-100 transition-all" />
-            <img src="/canada.png" alt="Government of Canada" className="h-10 w-auto opacity-80 grayscale hover:grayscale-0 hover:opacity-100 transition-all" />
+            <Image src="/ontario-edu.png" alt="Ontario Ministry of Education" width={200} height={56} className="h-14 w-auto opacity-90 hover:opacity-100 transition-all" />
+            <Image src="/canada.png" alt="Government of Canada" width={200} height={40} className="h-10 w-auto opacity-90 hover:opacity-100 transition-all" />
           </div>
         </div>
       </section>
@@ -280,6 +284,8 @@ export default function HomePage() {
 
           <div className="border-t border-white/10 mt-10 pt-6 text-center text-xs text-white/60">
             © {new Date().getFullYear()} Darul Haya. All rights reserved.
+            {' · '}
+            <Link href="/privacy" className="hover:text-amber transition-colors">Privacy Policy</Link>
           </div>
         </div>
       </footer>

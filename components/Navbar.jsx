@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const MOODLE = process.env.NEXT_PUBLIC_MOODLE_URL || 'https://learn.darulhaya.com'
 
@@ -88,7 +89,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center shrink-0" onClick={() => setMobileOpen(false)}>
           <span className="block h-12 w-[3.75rem] overflow-hidden">
-            <img src="/logo.png" alt="Darul Haya — Academy of Learning" className="w-full h-auto" />
+            <Image src="/logo.png" alt="Darul Haya — Academy of Learning" width={60} height={48} className="w-full h-auto" />
           </span>
         </Link>
 
@@ -102,7 +103,11 @@ export default function Navbar() {
               onMouseLeave={() => setOpenMenu(null)}
             >
               <button
+                type="button"
+                aria-haspopup="true"
+                aria-expanded={openMenu === menu.label}
                 onClick={() => setOpenMenu(openMenu === menu.label ? null : menu.label)}
+                onKeyDown={(e) => { if (e.key === 'Escape') setOpenMenu(null) }}
                 className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-clay hover:text-teal transition-colors"
               >
                 {menu.label}
@@ -125,7 +130,8 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <div className="hidden lg:flex">{actions()}</div>
           <button
-            className="lg:hidden text-clay p-1"
+            type="button"
+            className="lg:hidden text-clay p-3 -m-2"
             onClick={() => setMobileOpen((o) => !o)}
             aria-label="Toggle menu"
             aria-expanded={mobileOpen}
@@ -145,6 +151,7 @@ export default function Navbar() {
           {MENUS.map((menu) => (
             <div key={menu.label} className="border-b border-beige-dark/60">
               <button
+                type="button"
                 onClick={() => setMobileSection(mobileSection === menu.label ? null : menu.label)}
                 className="w-full flex items-center justify-between py-3 text-sm font-semibold text-clay"
               >
