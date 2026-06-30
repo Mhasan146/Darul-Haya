@@ -42,8 +42,45 @@ const PLANS = [
 const FACTS = [
   { value: 'Grades 3–8', label: 'Elementary & Middle School' },
   { value: 'Live, daily', label: 'Real teachers, set timetable' },
-  { value: 'Small classes', label: 'Known by name, fully supervised' },
+  { value: '≤ 15 / class', label: 'Known by name, fully supervised' },
   { value: 'Ontario-aligned', label: 'On track with standards' },
+]
+
+const TESTIMONIALS = [
+  {
+    body: "We were worried online school wouldn't give our daughter the structure she needed. Within two weeks she had a routine, real friendships with her classmates, and was genuinely excited about school for the first time.",
+    author: 'Fatima A.',
+    role: 'Mother of a Grade 5 student',
+  },
+  {
+    body: "The teachers know our son by name. In his previous school of 30 kids per class, he was invisible. Here he's called on, challenged, and growing — and the Arabic classes are exactly what we'd been looking for.",
+    author: 'Ibrahim K.',
+    role: 'Father of a Grade 6 student',
+  },
+  {
+    body: "Real books shipped to our door, Ontario-aligned, and actual live teachers — this is a real school, not just recorded videos. We wish we'd found Darul Haya two years earlier.",
+    author: 'Aisha M.',
+    role: 'Mother of two — Grades 4 and 7',
+  },
+]
+
+const FAQS = [
+  {
+    q: 'What time are the classes held each day?',
+    a: 'Classes run Monday through Friday from 8:30 AM to 2:30 PM Eastern Time, following a structured timetable that mirrors a traditional school day. All lessons are recorded and available by end of day for families who need flexibility.',
+  },
+  {
+    q: "How is my child's progress tracked and reported?",
+    a: "Parents receive regular progress reports and can view grades, assignments, and attendance through the student dashboard at any time. Teachers are reachable by email, and we schedule a one-on-one check-in call each term.",
+  },
+  {
+    q: 'What if my child needs extra support in a subject?',
+    a: "Because classes are small, teachers can provide differentiated support during lessons and flag any student who needs more help. Catch-up sessions are available and our team will reach out proactively if we spot a gap.",
+  },
+  {
+    q: 'Do you follow the Ontario curriculum?',
+    a: 'Yes — Mathematics, Language Arts, and Science are fully Ontario-aligned, so students can transition to any Ontario school at their grade level. Islamic Studies and Arabic are integrated into the timetable alongside the core curriculum.',
+  },
 ]
 
 export default function HomePage() {
@@ -107,7 +144,7 @@ export default function HomePage() {
           </div>
 
           {/* How it works — 3-step process */}
-          <div className="mt-8 flex items-center justify-center gap-2 sm:gap-3 flex-wrap text-white/55 text-xs">
+          <div className="mt-8 flex items-center justify-center gap-2 sm:gap-3 flex-wrap text-white/70 text-xs">
             {[
               'Apply online (5 min)',
               'Personal call from our team',
@@ -207,6 +244,33 @@ export default function HomePage() {
       {/* Safety tools */}
       <SafetyTools />
 
+      {/* Testimonials */}
+      <section className="bg-beige py-20 border-b border-clay/10">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">Parent Voices</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-clay">What families are saying</h2>
+            <div className="mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
+          </div>
+          <div className="grid sm:grid-cols-3 gap-6">
+            {TESTIMONIALS.map((t) => (
+              <figure key={t.author} className="bg-white rounded-2xl p-7 border border-beige-dark shadow-md flex flex-col gap-4">
+                <div className="flex gap-0.5" aria-label="5 out of 5 stars">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-amber text-lg leading-none" aria-hidden="true">★</span>
+                  ))}
+                </div>
+                <blockquote className="text-clay/75 text-sm leading-relaxed flex-1">"{t.body}"</blockquote>
+                <figcaption>
+                  <p className="font-semibold text-clay text-sm">{t.author}</p>
+                  <p className="text-xs text-clay/50 mt-0.5">{t.role}</p>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Value vs tutoring */}
       <ValueComparison />
 
@@ -268,6 +332,35 @@ export default function HomePage() {
             >
               Chat on WhatsApp →
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="bg-beige py-16 border-b border-clay/10">
+        <div className="max-w-3xl mx-auto px-6">
+          <div className="text-center mb-10">
+            <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">Common Questions</p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-clay">Quick answers for curious parents</h2>
+            <div className="mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
+          </div>
+          <div className="space-y-3">
+            {FAQS.map((faq) => (
+              <details key={faq.q} className="group bg-white rounded-2xl border border-beige-dark shadow-sm">
+                <summary className="flex items-center justify-between px-6 py-4 cursor-pointer font-semibold text-clay text-sm select-none [&::-webkit-details-marker]:hidden [&::marker]:hidden">
+                  <span>{faq.q}</span>
+                  <svg className="h-5 w-5 text-teal shrink-0 ml-3 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.06l3.71-3.83a.75.75 0 1 1 1.08 1.04l-4.25 4.38a.75.75 0 0 1-1.08 0L5.21 8.27a.75.75 0 0 1 .02-1.06Z" clipRule="evenodd" />
+                  </svg>
+                </summary>
+                <p className="px-6 pt-4 pb-5 text-clay/70 text-sm leading-relaxed border-t border-beige-dark/40">{faq.a}</p>
+              </details>
+            ))}
+          </div>
+          <div className="mt-8 text-center">
+            <Link href="/faq" className="text-teal text-sm font-medium hover:text-teal-dark transition-colors">
+              See all questions →
+            </Link>
           </div>
         </div>
       </section>

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Playfair_Display, Inter } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 import WhatsAppButton from '@/components/WhatsAppButton'
+import MobileApplyBar from '@/components/MobileApplyBar'
 import LeadPopup from '@/components/LeadPopup'
 
 const playfair = Playfair_Display({
@@ -59,6 +60,7 @@ export default function RootLayout({ children }) {
         </div>
         <Navbar />
         <main id="main-content">{children}</main>
+        <MobileApplyBar />
         <WhatsAppButton />
         <LeadPopup />
       </body>
