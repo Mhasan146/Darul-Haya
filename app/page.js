@@ -252,7 +252,7 @@ export default function HomePage() {
             <div key={f.title} className="bg-white rounded-2xl p-6 border border-beige-dark shadow-md hover:shadow-xl hover:-translate-y-1 transition-all text-center flex flex-col items-center">
               <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-teal to-teal-light text-white flex items-center justify-center mb-4 shadow-lg shadow-teal/30">
                 {f.arabic ? (
-                  <span className="font-display text-2xl leading-none">ج</span>
+                  <span className="font-display text-2xl leading-none -translate-y-1">ج</span>
                 ) : (
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-6 w-6" aria-hidden="true">
                     {f.icon}
