@@ -115,12 +115,13 @@ export default function LeadPopup() {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams({
           'form-name': 'darul-haya-lead',
+          'bot-field': form.honeypot,
           name: form.name,
           email: form.email,
           phone: form.phone,
           grade: form.grade,
           source: 'popup',
-          page_url: window.location.href,
+          page_url: window.location.href.slice(0, 500).replace(/[<>"']/g, ''),
         }).toString(),
       })
       if (!res.ok) throw new Error()

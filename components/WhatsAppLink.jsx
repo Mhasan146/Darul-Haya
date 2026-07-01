@@ -8,6 +8,7 @@
 import { trackEvent } from '@/lib/analytics'
 
 export default function WhatsAppLink({ href, source, className, children }) {
+  if (!href?.startsWith('https://')) return null
   return (
     <a
       href={href}

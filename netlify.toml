@@ -1,9 +1,9 @@
 # Security headers applied to every response.
-# CSP is intentionally omitted for now — a strict policy needs tuning against
-# Next.js inline scripts; add it later once tested.
+# unsafe-inline required for Next.js hydration scripts; tighten with nonces after testing.
 [[headers]]
   for = "/*"
   [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self'; font-src 'self' https://fonts.gstatic.com; frame-ancestors 'none'"
     X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
