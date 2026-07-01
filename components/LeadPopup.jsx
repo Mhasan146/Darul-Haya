@@ -197,7 +197,7 @@ export default function LeadPopup() {
               <div className="flex-1 h-px bg-clay/10" />
             </div>
 
-            <form onSubmit={handleSubmit} noValidate>
+            <form onSubmit={handleSubmit} noValidate data-netlify="true" data-netlify-recaptcha="true" name="darul-haya-lead">
               {/* Honeypot — hidden from real users */}
               <input
                 type="text"
@@ -262,6 +262,8 @@ export default function LeadPopup() {
                   </select>
                 </div>
               </div>
+
+              <div data-netlify-recaptcha="true" className="mt-3" />
 
               {error && <p className="text-red-500 text-xs mt-3" role="alert">{error}</p>}
 

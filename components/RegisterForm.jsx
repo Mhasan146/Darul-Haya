@@ -64,6 +64,7 @@ export default function RegisterForm() {
       method="POST"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
+      data-netlify-recaptcha="true"
       onSubmit={handleSubmit}
       className="flex flex-col gap-4"
     >
@@ -125,6 +126,8 @@ export default function RegisterForm() {
         <label htmlFor="message" className="text-sm font-medium text-clay/70 block mb-1">Anything we should know?</label>
         <textarea id="message" name="message" rows={4} className={`${inputCls} resize-y`} value={form.message} onChange={update('message')} placeholder="Questions, your child's needs, anything helpful…" />
       </div>
+
+      <div data-netlify-recaptcha="true" />
 
       {error && <p role="alert" className="text-red-600 text-sm">{error}</p>}
 
