@@ -91,6 +91,30 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-beige">
 
+      {/* Hidden forms — required for Netlify to detect and process form submissions.
+          These are never visible; the real forms are in RegisterForm.jsx and LeadPopup.jsx. */}
+      <form name="registration" data-netlify="true" data-netlify-honeypot="bot-field" data-netlify-recaptcha="true" hidden>
+        <input type="hidden" name="form-name" value="registration" />
+        <input name="bot-field" />
+        <input name="student-name" />
+        <input name="guardian-name" />
+        <input name="email" />
+        <input name="phone" />
+        <input name="grade" />
+        <input name="program" />
+        <textarea name="message" />
+      </form>
+      <form name="darul-haya-lead" data-netlify="true" data-netlify-honeypot="bot-field" data-netlify-recaptcha="true" hidden>
+        <input type="hidden" name="form-name" value="darul-haya-lead" />
+        <input name="bot-field" />
+        <input name="name" />
+        <input name="email" />
+        <input name="phone" />
+        <input name="grade" />
+        <input name="source" />
+        <input name="page_url" />
+      </form>
+
       {/* Hero */}
       <section id="about" className="relative overflow-hidden scroll-mt-24 bg-clay">
         {/* Layered premium backdrop */}
