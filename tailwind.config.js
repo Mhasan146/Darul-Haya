@@ -14,9 +14,9 @@ module.exports = {
           dark: '#E6F4F1',    // light aqua tint (section bands, card borders)
         },
         teal: {
-          DEFAULT: '#0D9488', // vibrant aqua-teal (primary: buttons, accents, icons)
+          DEFAULT: '#0F766E', // accessible aqua-teal — 4.98:1 on white (WCAG AA)
           light: '#2DD4BF',   // bright aqua
-          dark: '#0F766E',    // deep aqua (hover states)
+          dark: '#0A5852',    // deep aqua (hover states)
         },
         amber: {
           DEFAULT: '#C99A33', // gold accent — complements aqua, also in the logo

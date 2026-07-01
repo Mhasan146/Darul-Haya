@@ -79,7 +79,7 @@ export default function Benefits() {
             How Darul Haya changes your family's everyday
           </h2>
           <div className="mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
-          <p className="mt-5 text-clay/60 leading-relaxed">
+          <p className="mt-5 text-clay/80 leading-relaxed">
             The practical, day-to-day differences families notice most — beyond what's
             in the curriculum.
           </p>
@@ -106,7 +106,7 @@ export default function Benefits() {
                 </svg>
               </div>
               <h3 className="mt-5 text-lg font-bold text-clay">{b.title}</h3>
-              <p className="mt-2 text-sm text-clay/60 leading-relaxed">{b.body}</p>
+              <p className="mt-2 text-sm text-clay/80 leading-relaxed">{b.body}</p>
             </div>
           ))}
 
@@ -115,12 +115,12 @@ export default function Benefits() {
             <h3 className="text-xl font-bold leading-snug">
               Ready for a better school day?
             </h3>
-            <p className="mt-2 text-sm text-white/70 leading-relaxed">
+            <p className="mt-2 text-sm text-white/80 leading-relaxed">
               Pick the plan that fits your family and enroll in minutes.
             </p>
             <a
               href="#pricing"
-              className="mt-5 self-start inline-flex items-center gap-2 bg-amber text-clay font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-amber/90 transition-colors"
+              className="mt-5 self-start inline-flex items-center gap-2 bg-white text-clay font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-beige transition-colors"
             >
               View Plans
               <span aria-hidden="true">→</span>

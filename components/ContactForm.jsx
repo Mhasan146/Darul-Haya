@@ -38,13 +38,13 @@ export default function ContactForm() {
     return (
       <div className="rounded-xl border border-teal/30 bg-teal/5 p-6 text-center">
         <p className="text-teal font-semibold">Thank you for reaching out! 🌙</p>
-        <p className="text-clay/60 text-sm mt-1">We've received your message and will get back to you soon.</p>
+        <p className="text-clay/80 text-sm mt-1">We've received your message and will get back to you soon.</p>
       </div>
     )
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4" aria-describedby="contact-required-note">
       {/* Honeypot — hidden from real users; bots that fill it are rejected */}
       <input
         type="text"
@@ -56,20 +56,62 @@ export default function ContactForm() {
         autoComplete="off"
         aria-hidden="true"
       />
+      <p id="contact-required-note" className="text-xs text-clay/80 -mb-1">
+        Fields marked <span aria-hidden="true" className="text-teal">*</span>
+        <span className="sr-only"> with an asterisk</span> are required.
+      </p>
       <div>
-        <label className="text-sm font-medium text-clay/70 block mb-1">Name</label>
-        <input className={inputCls} value={form.name} onChange={update('name')} required placeholder="Your name" />
+        <label htmlFor="contact-name" className="text-sm font-medium text-clay/80 block mb-1">
+          Name <span aria-hidden="true" className="text-teal">*</span>
+        </label>
+        <input
+          id="contact-name"
+          name="name"
+          className={inputCls}
+          value={form.name}
+          onChange={update('name')}
+          required
+          aria-required="true"
+          placeholder="Your name"
+        />
       </div>
       <div>
-        <label className="text-sm font-medium text-clay/70 block mb-1">Email</label>
-        <input type="email" className={inputCls} value={form.email} onChange={update('email')} required placeholder="you@example.com" />
+        <label htmlFor="contact-email" className="text-sm font-medium text-clay/80 block mb-1">
+          Email <span aria-hidden="true" className="text-teal">*</span>
+        </label>
+        <input
+          id="contact-email"
+          name="email"
+          type="email"
+          className={inputCls}
+          value={form.email}
+          onChange={update('email')}
+          required
+          aria-required="true"
+          placeholder="you@example.com"
+        />
       </div>
       <div>
-        <label className="text-sm font-medium text-clay/70 block mb-1">Message</label>
-        <textarea className={`${inputCls} min-h-[130px] resize-y`} value={form.message} onChange={update('message')} required placeholder="How can we help your family?" />
+        <label htmlFor="contact-message" className="text-sm font-medium text-clay/80 block mb-1">
+          Message <span aria-hidden="true" className="text-teal">*</span>
+        </label>
+        <textarea
+          id="contact-message"
+          name="message"
+          className={`${inputCls} min-h-[130px] resize-y`}
+          value={form.message}
+          onChange={update('message')}
+          required
+          aria-required="true"
+          placeholder="How can we help your family?"
+        />
       </div>
 
-      {error && <p className="text-red-600 text-sm">{error}</p>}
+      {error && (
+        <p id="contact-error" role="alert" aria-live="assertive" className="text-red-600 text-sm">
+          {error}
+        </p>
+      )}
 
       <button
         type="submit"

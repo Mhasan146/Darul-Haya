@@ -61,7 +61,10 @@ function MenuLink({ item, onClick }) {
     isActive ? 'text-teal font-semibold bg-beige/80' : 'text-clay hover:bg-beige-dark hover:text-teal'
   }`
   return item.external ? (
-    <a href={item.href} target="_blank" rel="noopener noreferrer" className={cls} onClick={onClick}>{item.label}</a>
+    <a href={item.href} target="_blank" rel="noopener noreferrer" className={cls} onClick={onClick}>
+      {item.label}
+      <span className="sr-only"> (opens in a new tab)</span>
+    </a>
   ) : (
     <Link href={item.href} className={cls} onClick={onClick} aria-current={isActive ? 'page' : undefined}>{item.label}</Link>
   )
@@ -97,11 +100,12 @@ export default function Navbar() {
         className="text-sm font-medium text-clay hover:text-teal transition-colors text-center dark:text-white/70 dark:hover:text-white"
       >
         Student Login
+        <span className="sr-only"> (opens in a new tab)</span>
       </a>
       <Link
         href="/register"
         onClick={() => setMobileOpen(false)}
-        className="text-sm bg-amber text-clay px-4 py-2 rounded-full font-semibold hover:bg-amber-dark transition-colors text-center"
+        className="text-sm bg-clay text-white px-4 py-2 rounded-full font-semibold hover:bg-clay/80 transition-colors text-center"
       >
         Apply Now
       </Link>
@@ -109,7 +113,7 @@ export default function Navbar() {
   )
 
   return (
-    <nav ref={navRef} className="bg-beige dark:bg-[#0e2826] border-b border-amber/30 dark:border-white/10 relative z-40">
+    <nav ref={navRef} aria-label="Main" className="bg-beige dark:bg-[#0e2826] border-b border-amber/30 dark:border-white/10 relative z-40">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
         {/* Logo */}
         <Link href="/" className="flex items-center shrink-0" onClick={() => setMobileOpen(false)}>
@@ -138,15 +142,18 @@ export default function Navbar() {
                 {menu.label}
                 <ChevronDown className={`h-4 w-4 transition-transform ${openMenu === menu.label ? 'rotate-180' : ''}`} />
               </button>
-              {openMenu === menu.label && (
-                <div id={`nav-${menu.label.replace(/\s+/g, '-').toLowerCase()}`} className="absolute left-0 top-full pt-2 w-56">
-                  <div className="bg-white rounded-xl shadow-lg ring-1 ring-clay/5 py-2 overflow-hidden">
-                    {menu.items.map((item) => (
-                      <MenuLink key={item.label} item={item} onClick={() => setOpenMenu(null)} />
-                    ))}
-                  </div>
+              {/* Always in DOM so aria-controls target always exists */}
+              <div
+                id={`nav-${menu.label.replace(/\s+/g, '-').toLowerCase()}`}
+                hidden={openMenu !== menu.label}
+                className="absolute left-0 top-full pt-2 w-56"
+              >
+                <div className="bg-white rounded-xl shadow-lg ring-1 ring-clay/5 py-2 overflow-hidden">
+                  {menu.items.map((item) => (
+                    <MenuLink key={item.label} item={item} onClick={() => setOpenMenu(null)} />
+                  ))}
                 </div>
-              )}
+              </div>
             </div>
           ))}
         </div>
@@ -160,43 +167,49 @@ export default function Navbar() {
             onClick={() => setMobileOpen((o) => !o)}
             aria-label="Toggle menu"
             aria-expanded={mobileOpen}
+            aria-controls="mobile-menu-panel"
           >
             {mobileOpen ? (
-              <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M6 6l12 12M18 6L6 18" /></svg>
+              <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
             ) : (
-              <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+              <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
             )}
           </button>
         </div>
       </div>
 
-      {/* Mobile panel */}
-      {mobileOpen && (
-        <div className="lg:hidden border-t border-beige-dark bg-beige px-6 py-2">
-          {MENUS.map((menu) => (
-            <div key={menu.label} className="border-b border-beige-dark/60">
-              <button
-                type="button"
-                aria-expanded={mobileSection === menu.label}
-                aria-controls={`mobile-${menu.label.replace(/\s+/g, '-').toLowerCase()}`}
-                onClick={() => setMobileSection(mobileSection === menu.label ? null : menu.label)}
-                className="w-full flex items-center justify-between py-3 text-sm font-semibold text-clay"
-              >
-                {menu.label}
-                <ChevronDown className={`h-4 w-4 transition-transform ${mobileSection === menu.label ? 'rotate-180' : ''}`} />
-              </button>
-              {mobileSection === menu.label && (
-                <div id={`mobile-${menu.label.replace(/\s+/g, '-').toLowerCase()}`} className="pb-2 -mx-2">
-                  {menu.items.map((item) => (
-                    <MenuLink key={item.label} item={item} onClick={() => setMobileOpen(false)} />
-                  ))}
-                </div>
-              )}
+      {/* Mobile panel — always in DOM so aria-controls target always exists */}
+      <div
+        id="mobile-menu-panel"
+        hidden={!mobileOpen}
+        className="lg:hidden border-t border-beige-dark bg-beige px-6 py-2"
+      >
+        {MENUS.map((menu) => (
+          <div key={menu.label} className="border-b border-beige-dark/60">
+            <button
+              type="button"
+              aria-expanded={mobileSection === menu.label}
+              aria-controls={`mobile-${menu.label.replace(/\s+/g, '-').toLowerCase()}`}
+              onClick={() => setMobileSection(mobileSection === menu.label ? null : menu.label)}
+              className="w-full flex items-center justify-between py-3 text-sm font-semibold text-clay"
+            >
+              {menu.label}
+              <ChevronDown className={`h-4 w-4 transition-transform ${mobileSection === menu.label ? 'rotate-180' : ''}`} />
+            </button>
+            {/* Always in DOM so aria-controls target always exists */}
+            <div
+              id={`mobile-${menu.label.replace(/\s+/g, '-').toLowerCase()}`}
+              hidden={mobileSection !== menu.label}
+              className="pb-2 -mx-2"
+            >
+              {menu.items.map((item) => (
+                <MenuLink key={item.label} item={item} onClick={() => setMobileOpen(false)} />
+              ))}
             </div>
-          ))}
-          <div className="pt-4 pb-2">{actions(true)}</div>
-        </div>
-      )}
+          </div>
+        ))}
+        <div className="pt-4 pb-2">{actions(true)}</div>
+      </div>
     </nav>
   )
 }

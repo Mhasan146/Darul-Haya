@@ -25,7 +25,7 @@ export default function SafetyTools() {
         <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">Safety First</p>
         <h2 className="text-3xl sm:text-4xl font-bold text-clay">Tools we use to keep your child safe</h2>
         <div className="mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
-        <p className="text-clay/60 max-w-2xl mx-auto mt-5 mb-10 leading-relaxed">
+        <p className="text-clay/80 max-w-2xl mx-auto mt-5 mb-10 leading-relaxed">
           Every class is actively supervised with trusted, education-grade safety technology — so you can have peace of mind about what your child sees and does online.
         </p>
 
@@ -37,7 +37,7 @@ export default function SafetyTools() {
               </div>
               <div className="text-center sm:text-left">
                 <h3 className="font-bold text-clay mb-1">{t.name}</h3>
-                <p className="text-clay/70 text-sm leading-relaxed">{t.body}</p>
+                <p className="text-clay/80 text-sm leading-relaxed">{t.body}</p>
               </div>
             </div>
           ))}

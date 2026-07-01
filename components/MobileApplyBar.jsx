@@ -33,13 +33,14 @@ export default function MobileApplyBar() {
         href={WHATSAPP_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-white/70 text-sm hover:text-white transition-colors truncate"
+        className="text-white/80 text-sm hover:text-white transition-colors min-w-0"
       >
         Chat on WhatsApp
+        <span className="sr-only"> (opens in a new tab)</span>
       </a>
       <Link
         href="/register"
-        className="shrink-0 bg-amber text-clay px-5 py-2 rounded-full font-semibold text-sm hover:bg-amber-dark transition-colors"
+        className="shrink-0 bg-white text-clay px-5 py-2 rounded-full font-semibold text-sm hover:bg-beige transition-colors"
       >
         Apply Now
       </Link>

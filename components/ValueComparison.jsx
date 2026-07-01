@@ -53,7 +53,7 @@ export default function ValueComparison() {
 
       <div className="relative max-w-5xl mx-auto px-6 py-20">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <p className="text-amber text-sm font-semibold uppercase tracking-widest mb-3">The Real Value</p>
+          <p className="text-white text-sm font-semibold uppercase tracking-widest mb-3">The Real Value</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white">A full education, for a fraction of the cost</h2>
           <div className="mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <p className="mt-5 text-white/70 leading-relaxed">
@@ -74,7 +74,7 @@ export default function ValueComparison() {
               </div>
               <p className="text-xs text-white/60 mt-1">{s.annual}</p>
               <p className="text-sm text-white/60 mt-4">{s.detail}</p>
-              <p className="text-[11px] text-white/50 mt-auto pt-4">{s.year}</p>
+              <p className="text-[11px] text-white/70 mt-auto pt-4">{s.year}</p>
             </div>
           ))}
 
@@ -83,10 +83,10 @@ export default function ValueComparison() {
             <h3 className="font-bold text-teal text-base">Darul Haya</h3>
             <div className="mt-3 flex items-end justify-center gap-1">
               <span className="text-4xl font-bold text-clay">{DH.monthly}</span>
-              <span className="text-sm text-clay/70 mb-1">/mo</span>
+              <span className="text-sm text-clay/80 mb-1">/mo</span>
             </div>
-            <p className="text-xs text-clay/70 mt-1">{DH.note}</p>
-            <p className="text-sm text-clay/70 mt-4">{DH.detail}</p>
+            <p className="text-xs text-clay/80 mt-1">{DH.note}</p>
+            <p className="text-sm text-clay/80 mt-4">{DH.detail}</p>
             <p className="text-[11px] text-teal font-semibold mt-auto pt-4">★ Best value</p>
           </div>
         </div>

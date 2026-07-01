@@ -79,14 +79,14 @@ export default function RegisterForm() {
       </p>
 
       <div>
-        <label htmlFor="student-name" className="text-sm font-medium text-clay/70 block mb-1">
+        <label htmlFor="student-name" className="text-sm font-medium text-clay/80 block mb-1">
           Student's full name <span className="text-teal">*</span>
         </label>
         <input id="student-name" name="student-name" className={inputCls} value={form['student-name']} onChange={update('student-name')} required placeholder="Student's name" />
       </div>
 
       <div>
-        <label htmlFor="guardian-name" className="text-sm font-medium text-clay/70 block mb-1">
+        <label htmlFor="guardian-name" className="text-sm font-medium text-clay/80 block mb-1">
           Parent / guardian name <span className="text-teal">*</span>
         </label>
         <input id="guardian-name" name="guardian-name" className={inputCls} value={form['guardian-name']} onChange={update('guardian-name')} required placeholder="Your name" />
@@ -94,27 +94,27 @@ export default function RegisterForm() {
 
       <div className="grid sm:grid-cols-2 gap-4">
         <div>
-          <label htmlFor="email" className="text-sm font-medium text-clay/70 block mb-1">
+          <label htmlFor="email" className="text-sm font-medium text-clay/80 block mb-1">
             Email <span className="text-teal">*</span>
           </label>
           <input id="email" type="email" name="email" className={inputCls} value={form.email} onChange={update('email')} required placeholder="you@example.com" />
         </div>
         <div>
-          <label htmlFor="phone" className="text-sm font-medium text-clay/70 block mb-1">Phone</label>
+          <label htmlFor="phone" className="text-sm font-medium text-clay/80 block mb-1">Phone</label>
           <input id="phone" type="tel" name="phone" className={inputCls} value={form.phone} onChange={update('phone')} placeholder="(optional)" />
         </div>
       </div>
 
       <div className="grid sm:grid-cols-2 gap-4">
         <div>
-          <label htmlFor="grade" className="text-sm font-medium text-clay/70 block mb-1">Student's grade level</label>
+          <label htmlFor="grade" className="text-sm font-medium text-clay/80 block mb-1">Student's grade level</label>
           <select id="grade" name="grade" className={inputCls} value={form.grade} onChange={update('grade')}>
             <option value="">Select…</option>
             {GRADES.map((g) => <option key={g}>{g}</option>)}
           </select>
         </div>
         <div>
-          <label htmlFor="program" className="text-sm font-medium text-clay/70 block mb-1">Program of interest</label>
+          <label htmlFor="program" className="text-sm font-medium text-clay/80 block mb-1">Program of interest</label>
           <select id="program" name="program" className={inputCls} value={form.program} onChange={update('program')}>
             <option value="">Select…</option>
             {PROGRAMS.map((p) => <option key={p}>{p}</option>)}
@@ -123,7 +123,7 @@ export default function RegisterForm() {
       </div>
 
       <div>
-        <label htmlFor="message" className="text-sm font-medium text-clay/70 block mb-1">Anything we should know?</label>
+        <label htmlFor="message" className="text-sm font-medium text-clay/80 block mb-1">Anything we should know?</label>
         <textarea id="message" name="message" rows={4} className={`${inputCls} resize-y`} value={form.message} onChange={update('message')} placeholder="Questions, your child's needs, anything helpful…" />
       </div>
 

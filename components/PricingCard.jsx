@@ -10,14 +10,19 @@ export default function PricingCard({ name, price, plan, description, features, 
       }`}
     >
       <div>
-        <p className={`text-xs font-semibold uppercase tracking-widest mb-1 ${highlight ? 'text-amber' : 'text-teal'}`}>
+        {highlight && (
+          <span className="inline-block mb-2 text-[10px] font-bold uppercase tracking-widest text-white bg-white/20 px-2 py-0.5 rounded-full">
+            Most Popular
+          </span>
+        )}
+        <p className={`text-xs font-semibold uppercase tracking-widest mb-1 ${highlight ? 'text-white' : 'text-teal'}`}>
           {name}
         </p>
         <div className="flex items-end gap-1">
           <span className="text-4xl font-bold">${price}</span>
-          <span className={`text-sm mb-1 ${highlight ? 'text-white/60' : 'text-clay/70'}`}>/month</span>
+          <span className={`text-sm mb-1 ${highlight ? 'text-white/80' : 'text-clay/80'}`}>/month</span>
         </div>
-        <p className={`mt-2 text-sm leading-relaxed ${highlight ? 'text-white/70' : 'text-clay/60'}`}>
+        <p className={`mt-2 text-sm leading-relaxed ${highlight ? 'text-white/80' : 'text-clay/80'}`}>
           {description}
         </p>
       </div>
@@ -25,8 +30,8 @@ export default function PricingCard({ name, price, plan, description, features, 
       <ul className="flex flex-col gap-3 flex-1">
         {features.map((f, i) => (
           <li key={i} className="flex items-start gap-2 text-sm">
-            <span className={`mt-0.5 ${highlight ? 'text-amber' : 'text-teal'}`}>✓</span>
-            <span className={highlight ? 'text-white/80' : 'text-clay/70'}>{f}</span>
+            <span className={`mt-0.5 ${highlight ? 'text-amber' : 'text-teal'}`} aria-hidden="true">✓</span>
+            <span className={highlight ? 'text-white/80' : 'text-clay/80'}>{f}</span>
           </li>
         ))}
       </ul>
@@ -34,7 +39,9 @@ export default function PricingCard({ name, price, plan, description, features, 
       <Link
         href={`/register?plan=${plan}`}
         className={`w-full py-3 rounded-xl font-semibold text-sm text-center transition-colors ${
-          highlight ? 'bg-amber text-clay hover:bg-amber/90' : 'border-2 border-amber text-amber hover:bg-amber hover:text-clay'
+          highlight
+            ? 'bg-white text-clay hover:bg-beige'
+            : 'border-2 border-clay text-clay hover:bg-clay hover:text-white'
         }`}
       >
         Apply Now
