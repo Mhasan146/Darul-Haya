@@ -42,50 +42,49 @@ const PLANS = [
 const FACTS = [
   { value: 'Grades 3–8', label: 'Elementary & Middle School' },
   { value: 'Live, daily', label: 'Real teachers, set timetable' },
-  { value: '≤ 15 / class', label: 'Known by name, fully supervised' },
+  { value: 'Small classes', label: 'Known by name, fully supervised' },
   { value: 'Ontario-aligned', label: 'On track with standards' },
 ]
 
+// [ Placeholder ] Swap in real parent reviews as founding families share feedback.
 const TESTIMONIALS = [
   {
-    body: "We were worried online school wouldn't give our daughter the structure she needed. Within two weeks she had a routine, real friendships with her classmates, and was genuinely excited about school for the first time.",
-    author: 'Fatima A.',
-    role: 'Mother of a Grade 5 student',
+    body: '[ Placeholder ] A real review from one of our founding families will appear here.',
+    author: 'Founding parent',
+    role: 'Elementary (Grades 3–5)',
   },
   {
-    body: "The teachers know our son by name. In his previous school of 30 kids per class, he was invisible. Here he's called on, challenged, and growing — and the Arabic classes are exactly what we'd been looking for.",
-    author: 'Ibrahim K.',
-    role: 'Father of a Grade 6 student',
+    body: '[ Placeholder ] A real review from one of our founding families will appear here.',
+    author: 'Founding parent',
+    role: 'Middle School (Grades 6–8)',
   },
   {
-    body: "Real books shipped to our door, Ontario-aligned, and actual live teachers — this is a real school, not just recorded videos. We wish we'd found Darul Haya two years earlier.",
-    author: 'Aisha M.',
-    role: 'Mother of two — Grades 4 and 7',
+    body: '[ Placeholder ] A real review from one of our founding families will appear here.',
+    author: 'Founding parent',
+    role: 'Elementary (Grades 3–5)',
   },
 ]
 
 const FAQS = [
   {
     q: 'What time are the classes held each day?',
-    a: 'Classes run Monday through Friday from 8:30 AM to 2:30 PM Eastern Time, following a structured timetable that mirrors a traditional school day. All lessons are recorded and available by end of day for families who need flexibility.',
+    a: 'Classes run on a set weekday timetable during regular school hours (Eastern Time), mirroring a traditional school day. The finalized daily schedule is shared with enrolled families before the school year begins, and all lessons are recorded for families who need flexibility.',
   },
   {
     q: "How is my child's progress tracked and reported?",
-    a: "Parents receive regular progress reports and can view grades, assignments, and attendance through the student dashboard at any time. Teachers are reachable by email, and we schedule a one-on-one check-in call each term.",
+    a: "Parents can view grades, assignments, and attendance through the student dashboard at any time, and teachers are reachable by email whenever questions come up.",
   },
   {
     q: 'What if my child needs extra support in a subject?',
-    a: "Because classes are small, teachers can provide differentiated support during lessons and flag any student who needs more help. Catch-up sessions are available and our team will reach out proactively if we spot a gap.",
+    a: "Because classes are small, teachers can give each student individual attention during lessons and work with parents whenever a child needs extra help in a subject.",
   },
   {
     q: 'Do you follow the Ontario curriculum?',
-    a: 'Yes — Mathematics, Language Arts, and Science are fully Ontario-aligned, so students can transition to any Ontario school at their grade level. Islamic Studies and Arabic are integrated into the timetable alongside the core curriculum.',
+    a: 'Yes — core academic subjects are Ontario-aligned, so students can transition to any Ontario school at their grade level. Arabic is integrated into the timetable alongside the core curriculum.',
   },
 ]
 
-const HERO_HEADLINE_A = 'A smaller, safer school — taught live, every day.'
-const HERO_HEADLINE_B = 'A complete Islamic education. Live, every day.'
-const HERO_HEADLINE = process.env.NEXT_PUBLIC_HERO_VARIANT === 'B' ? HERO_HEADLINE_B : HERO_HEADLINE_A
+const HERO_HEADLINE = 'A smaller, safer school — taught live, every day.'
 
 export default function HomePage() {
   return (
@@ -284,14 +283,9 @@ export default function HomePage() {
             <div className="mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           </div>
           <div className="grid sm:grid-cols-3 gap-6">
-            {TESTIMONIALS.map((t) => (
-              <figure key={t.author} className="bg-white rounded-2xl p-7 border border-beige-dark shadow-md flex flex-col gap-4">
-                <div className="flex gap-0.5" aria-label="5 out of 5 stars">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-amber text-lg leading-none" aria-hidden="true">★</span>
-                  ))}
-                </div>
-                <blockquote className="text-clay/80 text-sm leading-relaxed flex-1">"{t.body}"</blockquote>
+            {TESTIMONIALS.map((t, i) => (
+              <figure key={i} className="bg-white rounded-2xl p-7 border border-dashed border-clay/25 shadow-sm flex flex-col gap-4">
+                <blockquote className="text-clay/60 text-sm leading-relaxed flex-1 italic">{t.body}</blockquote>
                 <figcaption>
                   <p className="font-semibold text-clay text-sm">{t.author}</p>
                   <p className="text-xs text-clay/80 mt-0.5">{t.role}</p>
