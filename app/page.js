@@ -129,7 +129,7 @@ export default function HomePage() {
           </span>
 
           {/* Framed cream crest */}
-          <div className="mx-auto w-fit flex flex-col items-center bg-beige rounded-3xl px-8 pt-6 pb-5 shadow-2xl shadow-black/30">
+          <div className="mx-auto w-fit flex flex-col items-center bg-beige rounded-3xl px-8 pt-6 pb-5 shadow-2xl shadow-black/25 ring-1 ring-white/20">
             <div className="overflow-hidden aspect-[5/4] w-44 sm:w-52">
               <Image
                 src="/logo.png"
@@ -145,7 +145,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <h1 className="mt-9 text-4xl sm:text-5xl font-bold text-white leading-[1.1] max-w-3xl mx-auto">
+          <h1 className="mt-9 text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.08] tracking-tight text-balance max-w-3xl mx-auto">
             {HERO_HEADLINE}
           </h1>
 
@@ -157,7 +157,7 @@ export default function HomePage() {
           <div className="mt-9 flex items-center justify-center gap-6 flex-wrap">
             <Link
               href="/register"
-              className="bg-white text-clay px-8 py-3.5 rounded-full font-semibold shadow-lg shadow-black/20 hover:bg-beige transition-all"
+              className="bg-white text-clay px-8 py-3.5 rounded-full font-semibold shadow-lg shadow-black/20 hover:bg-beige hover:shadow-xl active:scale-[0.98] transition-all duration-200"
             >
               Apply Now
             </Link>
@@ -195,7 +195,7 @@ export default function HomePage() {
         <div className="max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-8 text-center md:divide-x divide-clay/10">
           {FACTS.map((f) => (
             <div key={f.value} className="md:px-4">
-              <p className="text-lg font-bold text-clay">{f.value}</p>
+              <p className="font-display text-xl sm:text-2xl font-bold text-clay">{f.value}</p>
               <p className="text-xs text-clay/80 mt-1.5 leading-snug">{f.label}</p>
             </div>
           ))}
@@ -341,7 +341,7 @@ export default function HomePage() {
         <div aria-hidden className="absolute inset-0 bg-ornament-light opacity-[0.06]" />
         <div aria-hidden className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-72 w-[36rem] rounded-full bg-teal-light/10 blur-3xl" />
         <div className="relative max-w-2xl mx-auto px-6 py-20 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight text-balance">
             Ready to give your child a better school day?
           </h2>
           <div className="mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
@@ -351,7 +351,7 @@ export default function HomePage() {
           <div className="mt-8 flex items-center justify-center gap-6 flex-wrap">
             <Link
               href="/register"
-              className="bg-white text-clay px-8 py-3.5 rounded-full font-semibold shadow-lg shadow-black/20 hover:bg-beige transition-all"
+              className="bg-white text-clay px-8 py-3.5 rounded-full font-semibold shadow-lg shadow-black/20 hover:bg-beige hover:shadow-xl active:scale-[0.98] transition-all duration-200"
             >
               Apply Now
             </Link>
@@ -399,7 +399,8 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#0b3a36] text-white border-t border-white/10">
+      <footer className="bg-[#0b3a36] text-white">
+        <div aria-hidden className="h-px bg-gradient-to-r from-transparent via-amber/60 to-transparent" />
         <div className="max-w-5xl mx-auto px-6 py-14">
           <div className="grid gap-10 sm:grid-cols-3">
             {/* Brand */}

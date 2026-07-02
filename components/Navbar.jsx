@@ -113,7 +113,7 @@ export default function Navbar() {
   )
 
   return (
-    <nav ref={navRef} aria-label="Main" className="bg-beige dark:bg-[#0e2826] border-b border-amber/30 dark:border-white/10 relative z-40">
+    <nav ref={navRef} aria-label="Main" className="sticky top-0 z-40 bg-beige/85 dark:bg-[#0e2826]/85 backdrop-blur-md border-b border-amber/30 dark:border-white/10">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
         {/* Logo */}
         <Link href="/" className="flex items-center shrink-0" onClick={() => setMobileOpen(false)}>
