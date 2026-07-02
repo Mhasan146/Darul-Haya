@@ -92,7 +92,7 @@ export default function Benefits() {
               key={b.title}
               className="bg-white rounded-2xl p-7 shadow-md ring-1 ring-clay/5 transition-all duration-200 hover:shadow-xl hover:-translate-y-1"
             >
-              <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-amber to-amber-dark text-white flex items-center justify-center shadow-lg shadow-amber/30">
+              <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-clay to-[#0b3a36] text-amber flex items-center justify-center shadow-lg shadow-clay/25">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
