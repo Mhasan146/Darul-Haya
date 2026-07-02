@@ -289,6 +289,23 @@ export default function HomePage() {
       {/* Safety tools */}
       <SafetyTools />
 
+      {/* Founder's note */}
+      <section aria-label="A note from our founder" className="relative overflow-hidden bg-beige-dark/60 border-y border-clay/10">
+        <div aria-hidden className="absolute inset-0 bg-ornament opacity-[0.035]" />
+        <div className="relative max-w-3xl mx-auto px-6 py-16 text-center">
+          <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-6">Why Darul Haya Exists</p>
+          <span aria-hidden="true" className="block font-display text-6xl leading-none text-amber select-none">&ldquo;</span>
+          <blockquote className="font-display text-2xl sm:text-3xl font-semibold text-clay leading-snug text-balance -mt-4">
+            I taught for over fifteen years, and I kept seeing the same thing: bright children who
+            weren&rsquo;t truly learning, because no one had the time to teach them with focus.
+            Darul Haya is the school I always wished I could give my students.
+          </blockquote>
+          <div className="mx-auto mt-7 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
+          <p className="mt-5 text-sm font-semibold text-clay">Founder, Darul Haya</p>
+          <p className="text-xs text-clay/70 mt-1">Classroom teacher for over 15 years</p>
+        </div>
+      </section>
+
       {/* Testimonials */}
       <section id="testimonials" className="bg-beige py-20 border-b border-clay/10">
         <div className="max-w-5xl mx-auto px-6">
