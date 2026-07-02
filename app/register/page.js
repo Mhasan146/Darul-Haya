@@ -2,8 +2,10 @@ import { Suspense } from 'react'
 import RegisterForm from '@/components/RegisterForm'
 
 export const metadata = {
-  title: 'Apply — Darul Haya',
-  description: 'Apply to Darul Haya. Tell us about your family and we will follow up to help you enroll.',
+  title: 'Apply Now — Enrolling for September 2026',
+  description:
+    'Apply to Darul Haya online school for Grades 3–8. A five-minute application — tell us about your family and we will personally help you enroll.',
+  alternates: { canonical: '/register' },
 }
 
 export default function RegisterPage() {

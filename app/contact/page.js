@@ -1,7 +1,12 @@
 import PagePlaceholder from '@/components/PagePlaceholder'
 import ContactForm from '@/components/ContactForm'
 
-export const metadata = { title: 'Contact — Darul Haya' }
+export const metadata = {
+  title: 'Contact Us',
+  description:
+    'Questions about our online school or homeschool program for Grades 3–8? Message us, email info@darulhaya.com, or chat on WhatsApp.',
+  alternates: { canonical: '/contact' },
+}
 
 export default function ContactPage() {
   return (

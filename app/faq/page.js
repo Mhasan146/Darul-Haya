@@ -1,6 +1,11 @@
 import PagePlaceholder from '@/components/PagePlaceholder'
 
-export const metadata = { title: 'FAQ — Darul Haya' }
+export const metadata = {
+  title: 'Frequently Asked Questions',
+  description:
+    'Answers about our online school for Grades 3–8 — live classes, homeschool program, supervision, tuition, Arabic, and how to enroll.',
+  alternates: { canonical: '/faq' },
+}
 
 export default function FaqPage() {
   return (

@@ -1,6 +1,11 @@
 import PagePlaceholder from '@/components/PagePlaceholder'
 
-export const metadata = { title: 'Homeschooling Portal — Darul Haya' }
+export const metadata = {
+  title: 'Online Homeschool Program (Grades 3–8)',
+  description:
+    'A complete homeschooling curriculum for Grades 3–8: structured lesson plans, worksheets, assessments, and progress tracking — everything a home school family needs, for $150/month.',
+  alternates: { canonical: '/programs/homeschool' },
+}
 
 export default function HomeschoolPage() {
   return (

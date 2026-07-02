@@ -1,6 +1,11 @@
 import PagePlaceholder from '@/components/PagePlaceholder'
 
-export const metadata = { title: 'Curriculum — Darul Haya' }
+export const metadata = {
+  title: 'Curriculum — Ontario-Aligned Core Subjects + Arabic',
+  description:
+    'What students learn at our online school: Ontario-aligned Language Arts, Math, Science, and Social Studies for Grades 3–8, with Arabic in every weekly timetable.',
+  alternates: { canonical: '/curriculum' },
+}
 
 export default function CurriculumPage() {
   return (

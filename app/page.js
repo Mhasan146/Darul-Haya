@@ -86,9 +86,24 @@ const FAQS = [
 
 const HERO_HEADLINE = 'A smaller, safer school — taught live, every day.'
 
+// FAQ rich-result markup — mirrors the on-page FAQ section below.
+const FAQ_LD = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQS.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+}
+
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-beige">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_LD) }}
+      />
 
       {/* Hidden forms — required for Netlify to detect and process form submissions.
           These are never visible; the real forms are in RegisterForm.jsx and LeadPopup.jsx. */}

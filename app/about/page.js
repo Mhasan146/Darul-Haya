@@ -1,6 +1,11 @@
 import PagePlaceholder from '@/components/PagePlaceholder'
 
-export const metadata = { title: 'About — Darul Haya' }
+export const metadata = {
+  title: 'About Us — A Smaller, Safer Online School',
+  description:
+    'Why we founded Darul Haya: an online school for boys and girls in Grades 3–8 with small live classes, Arabic, and an Ontario-aligned curriculum.',
+  alternates: { canonical: '/about' },
+}
 
 export default function AboutPage() {
   return (

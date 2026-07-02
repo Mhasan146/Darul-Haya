@@ -19,14 +19,29 @@ const inter = Inter({
 })
 
 const SITE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://darulhaya.com'
-const TITLE = 'Darul Haya — Online School (Grades 3–8)'
+const TITLE = 'Darul Haya — Online School for Grades 3–8 | Live Classes & Homeschool'
 const DESCRIPTION =
-  'A structured, values-driven education for boys and girls in Grades 3–8 — live, teacher-led classes and a complete curriculum in one safe online classroom.'
+  'Darul Haya is an online Islamic school for boys and girls in Grades 3–8 — live, teacher-led classes, a self-paced homeschool program, Arabic, and an Ontario-aligned curriculum. Enrolling now for September 2026.'
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
-  title: TITLE,
+  title: {
+    default: TITLE,
+    template: '%s | Darul Haya Online School',
+  },
   description: DESCRIPTION,
+  keywords: [
+    'online school',
+    'online Islamic school',
+    'homeschool',
+    'homeschooling',
+    'online homeschool program',
+    'Muslim homeschool',
+    'virtual school Canada',
+    'Ontario online school',
+    'live online classes Grades 3-8',
+  ],
+  alternates: { canonical: '/' },
   openGraph: {
     title: TITLE,
     description: DESCRIPTION,
@@ -44,6 +59,21 @@ export const metadata = {
   },
 }
 
+// Structured data so search engines index Darul Haya as an online school.
+const SCHOOL_LD = {
+  '@context': 'https://schema.org',
+  '@type': 'School',
+  name: 'Darul Haya — Academy of Learning',
+  alternateName: 'Darul Haya Online Islamic School',
+  description: DESCRIPTION,
+  url: SITE_URL,
+  logo: `${SITE_URL}/logo.png`,
+  email: 'info@darulhaya.com',
+  areaServed: { '@type': 'Country', name: 'Canada' },
+  educationalLevel: 'Grades 3–8',
+  keywords: 'online school, homeschool, online Islamic school, Arabic classes, Ontario curriculum',
+}
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
@@ -53,6 +83,10 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{
             __html: `try{var t=localStorage.getItem('dh_theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark')}}catch{}`,
           }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHOOL_LD) }}
         />
       </head>
       <body className="bg-beige dark:bg-[#0a1f1d] min-h-screen">
