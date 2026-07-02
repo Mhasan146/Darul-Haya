@@ -18,7 +18,7 @@ const inter = Inter({
   display: 'swap',
 })
 
-const SITE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://darulhaya.com'
+const SITE_URL = (process.env.NEXT_PUBLIC_APP_URL || 'https://darulhaya.com').replace(/\/+$/, '')
 const TITLE = 'Darul Haya — Online School for Grades 3–8 | Live Classes & Homeschool'
 const DESCRIPTION =
   'Darul Haya is an online Islamic school for boys and girls in Grades 3–8 — live, teacher-led classes, a self-paced homeschool program, Arabic, and an Ontario-aligned curriculum. Enrolling now for September 2026.'

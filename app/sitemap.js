@@ -1,4 +1,4 @@
-const SITE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://darulhaya.com'
+const SITE_URL = (process.env.NEXT_PUBLIC_APP_URL || 'https://darulhaya.com').replace(/\/+$/, '')
 
 const ROUTES = [
   '',
