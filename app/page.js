@@ -296,9 +296,9 @@ export default function HomePage() {
           <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-6">Why Darul Haya Exists</p>
           <span aria-hidden="true" className="block font-display text-6xl leading-none text-amber select-none">&ldquo;</span>
           <blockquote className="font-display text-2xl sm:text-3xl font-semibold text-clay leading-snug text-balance -mt-4">
-            I taught for over fifteen years, and I kept seeing the same thing: bright children who
-            weren&rsquo;t truly learning, because no one had the time to teach them with focus.
-            Darul Haya is the school I always wished I could give my students.
+            Fifteen years in the classroom taught me exactly how children thrive: small classes,
+            real attention, and truly focused learning. Darul Haya is everything I&rsquo;ve
+            learned, built into one school.
           </blockquote>
           <div className="mx-auto mt-7 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <p className="mt-5 text-sm font-semibold text-clay">Founder, Darul Haya</p>
