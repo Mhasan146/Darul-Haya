@@ -3,7 +3,7 @@ import PagePlaceholder from '@/components/PagePlaceholder'
 export const metadata = {
   title: 'Frequently Asked Questions',
   description:
-    'Answers about our online school for Grades 3–8 — live classes, homeschool program, supervision, tuition, Arabic, and how to enroll.',
+    'Answers about our online school for Grades 3–8 — live classes, supervision, tuition, Arabic, and how to enroll.',
   alternates: { canonical: '/faq' },
 }
 
@@ -44,7 +44,7 @@ export default function FaqPage() {
         },
         {
           heading: 'What does it cost?',
-          body: 'Full-Live Schooling is $300/month. A 15% sibling discount applies for additional children enrolled. There is also a $150 material fee and a $100 technology fee at the start of each year.',
+          body: 'Tuition is a flat $300/month — one program, everything included. A 15% sibling discount applies for additional children enrolled, and there is a one-time $150 material fee and $100 technology fee at the start of each year.',
         },
         {
           heading: 'Do you offer Arabic classes?',

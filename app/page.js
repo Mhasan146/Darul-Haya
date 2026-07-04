@@ -1,42 +1,17 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import PricingCard from '@/components/PricingCard'
 import Benefits from '@/components/Benefits'
 import SafetyTools from '@/components/SafetyTools'
 import ValueComparison from '@/components/ValueComparison'
 import { WHATSAPP_URL } from '@/lib/siteConfig'
 
-const PLANS = [
-  {
-    name: 'Self-Paced Homeschool',
-    price: '150',
-    plan: 'homeschool',
-    highlight: false,
-    description:
-      'A complete digital curriculum for families educating their children at home. Access structured lesson plans, worksheets, and video lessons through our learning platform.',
-    features: [
-      'Full curriculum access',
-      'Downloadable worksheets and materials',
-      'Weekly lesson roadmaps',
-      'Elementary and Middle School',
-      'Email support',
-    ],
-  },
-  {
-    name: 'Daily Live School',
-    price: '300',
-    plan: 'full_live',
-    highlight: true,
-    description:
-      'A complete online school experience with daily live classes, recordings, and a structured faith-based curriculum.',
-    features: [
-      'Daily live classes',
-      'Full recording library',
-      'Complete curriculum',
-      'Elementary and Middle School tracks',
-      'Priority support',
-    ],
-  },
+const INCLUDED = [
+  'Daily live classes with real teachers',
+  'Complete Ontario-aligned curriculum, plus Arabic',
+  'Full recording library — never miss a lesson',
+  'Physical books shipped to your door',
+  'Student dashboard & progress tracking',
+  'Priority teacher support',
 ]
 
 const FACTS = [
@@ -348,14 +323,39 @@ export default function HomePage() {
         <div className="relative max-w-4xl mx-auto px-6 py-20">
           <div className="text-center mb-12 max-w-2xl mx-auto">
             <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">Tuition</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-clay">Choose Your Program</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-clay">One school. One simple price.</h2>
             <div className="mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
-            <p className="text-clay/80 mt-5">Pick a program, apply in minutes, and we will help you get enrolled.</p>
+            <p className="text-clay/80 mt-5">A complete online school for Grades 3–8 — everything included, no add-on tiers.</p>
           </div>
-          <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
-            {PLANS.map((p) => (
-              <PricingCard key={p.plan} {...p} />
-            ))}
+
+          <div className="max-w-md mx-auto rounded-3xl bg-clay text-white p-8 sm:p-10 shadow-xl shadow-clay/20">
+            <p className="text-xs font-semibold uppercase tracking-widest text-amber mb-2">Online School · Grades 3–8</p>
+            <div className="flex items-end gap-1.5">
+              <span className="font-display text-6xl font-bold">$300</span>
+              <span className="text-white/80 mb-2">/month</span>
+            </div>
+            <p className="text-white/80 text-sm mt-3 leading-relaxed">
+              Daily live, teacher-led classes with a complete Ontario-aligned curriculum, Arabic, recordings, and physical books shipped to your door.
+            </p>
+
+            <ul className="mt-6 flex flex-col gap-3 text-sm">
+              {INCLUDED.map((f) => (
+                <li key={f} className="flex items-start gap-2">
+                  <span className="text-amber mt-0.5" aria-hidden="true">✓</span>
+                  <span className="text-white/80">{f}</span>
+                </li>
+              ))}
+            </ul>
+
+            <Link
+              href="/register"
+              className="mt-8 block w-full bg-white text-clay py-3.5 rounded-xl font-semibold text-center hover:bg-beige active:scale-[0.98] transition-all duration-200"
+            >
+              Apply Now
+            </Link>
+            <p className="text-white/60 text-xs text-center mt-4 leading-relaxed">
+              Plus a one-time $150 material fee &amp; $100 technology fee each year · 15% sibling discount
+            </p>
           </div>
         </div>
       </section>
@@ -454,8 +454,7 @@ export default function HomePage() {
               <h2 className="text-xs font-semibold uppercase tracking-widest text-white/60 mb-4">Explore</h2>
               <ul className="space-y-2.5 text-sm">
                 <li><Link href="/about" className="text-white/80 hover:text-amber transition-colors">About</Link></li>
-                <li><Link href="/programs/full-live" className="text-white/80 hover:text-amber transition-colors">Daily Live School</Link></li>
-                <li><Link href="/programs/homeschool" className="text-white/80 hover:text-amber transition-colors">Self-Paced Homeschool</Link></li>
+                <li><Link href="/programs/full-live" className="text-white/80 hover:text-amber transition-colors">Our Online School</Link></li>
                 <li><Link href="/curriculum" className="text-white/80 hover:text-amber transition-colors">Curriculum</Link></li>
                 <li><Link href="/faq" className="text-white/80 hover:text-amber transition-colors">FAQ</Link></li>
                 <li><Link href="/register" className="text-amber font-semibold hover:text-amber-dark transition-colors">Apply Now <span aria-hidden="true">→</span></Link></li>

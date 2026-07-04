@@ -22,8 +22,7 @@ const MENUS = [
   {
     label: 'Programs & Classes',
     items: [
-      { label: 'Daily Live School', href: '/programs/full-live' },
-      { label: 'Self-Paced Homeschool', href: '/programs/homeschool' },
+      { label: 'Our Online School', href: '/programs/full-live' },
       { label: 'Grade Levels', href: '/curriculum#grades' },
       { label: 'Curriculum', href: '/curriculum#islamic' },
     ],

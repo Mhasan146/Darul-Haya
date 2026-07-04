@@ -19,9 +19,9 @@ const inter = Inter({
 })
 
 const SITE_URL = (process.env.NEXT_PUBLIC_APP_URL || 'https://darulhaya.com').replace(/\/+$/, '')
-const TITLE = 'Darul Haya — Online School for Grades 3–8 | Live Classes & Homeschool'
+const TITLE = 'Darul Haya — Online School for Grades 3–8 | Live Daily Classes'
 const DESCRIPTION =
-  'Darul Haya is an online Islamic school for boys and girls in Grades 3–8 — live, teacher-led classes, a self-paced homeschool program, Arabic, and an Ontario-aligned curriculum. Enrolling now for September 2026.'
+  'Darul Haya is an online Islamic school for boys and girls in Grades 3–8 — live, teacher-led classes every day, Arabic, and an Ontario-aligned curriculum. Enrolling now for September 2026.'
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -33,13 +33,11 @@ export const metadata = {
   keywords: [
     'online school',
     'online Islamic school',
-    'homeschool',
-    'homeschooling',
-    'online homeschool program',
-    'Muslim homeschool',
+    'Muslim online school',
     'virtual school Canada',
     'Ontario online school',
     'live online classes Grades 3-8',
+    'online school for Muslim kids',
   ],
   alternates: { canonical: '/' },
   openGraph: {
@@ -71,7 +69,7 @@ const SCHOOL_LD = {
   email: 'info@darulhaya.com',
   areaServed: { '@type': 'Country', name: 'Canada' },
   educationalLevel: 'Grades 3–8',
-  keywords: 'online school, homeschool, online Islamic school, Arabic classes, Ontario curriculum',
+  keywords: 'online school, online Islamic school, live online classes, Arabic classes, Ontario curriculum',
 }
 
 export default function RootLayout({ children }) {

@@ -4,7 +4,6 @@ const ROUTES = [
   '',
   '/about',
   '/programs/full-live',
-  '/programs/homeschool',
   '/curriculum',
   '/faq',
   '/contact',

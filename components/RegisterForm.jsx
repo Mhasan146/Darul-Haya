@@ -1,18 +1,11 @@
 'use client'
 import { useState } from 'react'
-import { useRouter, useSearchParams } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 
 const inputCls =
   'w-full border border-beige-dark rounded-lg px-4 py-2.5 text-clay text-sm focus:outline-none focus:ring-2 focus:ring-teal/40 focus:border-teal'
 
 const GRADES = ['Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8']
-const PROGRAMS = ['Daily Live School', 'Self-Paced Homeschool']
-
-// Maps ?plan= URL param values to program names
-const PLAN_MAP = {
-  full_live: 'Daily Live School',
-  homeschool: 'Self-Paced Homeschool',
-}
 
 function encode(data) {
   return Object.keys(data)
@@ -21,16 +14,13 @@ function encode(data) {
 }
 
 export default function RegisterForm() {
-  const searchParams = useSearchParams()
-  const defaultProgram = PLAN_MAP[searchParams.get('plan')] || ''
-
   const [form, setForm] = useState({
     'student-name': '',
     'guardian-name': '',
     email: '',
     phone: '',
     grade: '',
-    program: defaultProgram,
+    program: 'Online School (Grades 3–8)',
     message: '',
     'bot-field': '',
   })
@@ -105,22 +95,15 @@ export default function RegisterForm() {
         </div>
       </div>
 
-      <div className="grid sm:grid-cols-2 gap-4">
-        <div>
-          <label htmlFor="grade" className="text-sm font-medium text-clay/80 block mb-1">Student's grade level</label>
-          <select id="grade" name="grade" className={inputCls} value={form.grade} onChange={update('grade')}>
-            <option value="">Select…</option>
-            {GRADES.map((g) => <option key={g}>{g}</option>)}
-          </select>
-        </div>
-        <div>
-          <label htmlFor="program" className="text-sm font-medium text-clay/80 block mb-1">Program of interest</label>
-          <select id="program" name="program" className={inputCls} value={form.program} onChange={update('program')}>
-            <option value="">Select…</option>
-            {PROGRAMS.map((p) => <option key={p}>{p}</option>)}
-          </select>
-        </div>
+      <div>
+        <label htmlFor="grade" className="text-sm font-medium text-clay/80 block mb-1">Student's grade level</label>
+        <select id="grade" name="grade" className={inputCls} value={form.grade} onChange={update('grade')}>
+          <option value="">Select…</option>
+          {GRADES.map((g) => <option key={g}>{g}</option>)}
+        </select>
       </div>
+      {/* Program is fixed (online school only) — submitted as a hidden field for the notification email */}
+      <input type="hidden" name="program" value={form.program} />
 
       <div>
         <label htmlFor="message" className="text-sm font-medium text-clay/80 block mb-1">Anything we should know?</label>

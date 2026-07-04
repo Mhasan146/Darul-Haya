@@ -10,9 +10,9 @@ export const metadata = {
 export default function FullLivePage() {
   return (
     <PagePlaceholder
-      eyebrow="Programs & Classes"
-      title="Full-Live Schooling"
-      intro="Full-Live Schooling is our complete online program: your child joins live, teacher-led classes every school day, following a structured timetable across all their subjects. It's a full education delivered in real time — the structure and accountability of a traditional school, with the safety and focus of a small, supervised online classroom."
+      eyebrow="Our Online School"
+      title="Daily Live School"
+      intro="Darul Haya is a complete online school: your child joins live, teacher-led classes every school day, following a structured timetable across all their subjects. It's a full education delivered in real time — the structure and accountability of a traditional school, with the safety and focus of a small, supervised online classroom."
       sections={[
         {
           heading: 'Daily Live Classes',
@@ -28,7 +28,7 @@ export default function FullLivePage() {
         },
         {
           heading: "Who It's For",
-          body: "Full-Live Schooling is for families who want the structure and accountability of a real school day, delivered in a small, safe, closely supervised online setting. It's ideal for parents who want to know exactly what their child is learning, who want them kept clear of the distractions and pressures of larger environments, and who value steady routine, strong academics, and a calm place to grow.",
+          body: "Darul Haya is for families who want the structure and accountability of a real school day, delivered in a small, safe, closely supervised online setting. It's ideal for parents who want to know exactly what their child is learning, who want them kept clear of the distractions and pressures of larger environments, and who value steady routine, strong academics, and a calm place to grow.",
         },
       ]}
       cta={{ label: 'Apply Now', href: '/register' }}
