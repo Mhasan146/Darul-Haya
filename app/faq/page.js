@@ -3,7 +3,7 @@ import PagePlaceholder from '@/components/PagePlaceholder'
 export const metadata = {
   title: 'Frequently Asked Questions',
   description:
-    'Answers about our online school for Grades 3–8 — live classes, supervision, tuition, Arabic, and how to enroll.',
+    'Answers about our online school for Grades 3–8 — live classes and homeschooling from home, supervision, tuition, Arabic, and how to enroll.',
   alternates: { canonical: '/faq' },
 }
 
