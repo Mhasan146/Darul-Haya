@@ -214,7 +214,7 @@ export default function HomePage() {
         <div className="text-center max-w-2xl mx-auto mb-12">
           <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">What's Included</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-clay">Everything in one place</h2>
-          <div className="mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
+          <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <p className="mt-4 text-clay/80 leading-relaxed">Curriculum, technology, and physical materials — all included from day one.</p>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5">
@@ -280,7 +280,7 @@ export default function HomePage() {
             real attention, and truly focused learning. Darul Haya is everything I&rsquo;ve
             learned, built into one school.
           </blockquote>
-          <div className="mx-auto mt-7 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
+          <div className="gold-rule mx-auto mt-7 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <p className="mt-5 text-sm font-semibold text-clay">Founder, Darul Haya</p>
           <p className="text-xs text-clay/70 mt-1">Classroom teacher for over 15 years</p>
         </div>
@@ -293,7 +293,7 @@ export default function HomePage() {
             <div className="text-center max-w-2xl mx-auto mb-12">
               <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">Parent Voices</p>
               <h2 className="text-3xl sm:text-4xl font-bold text-clay">What families are saying</h2>
-              <div className="mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
+              <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
             </div>
             <div className="grid sm:grid-cols-3 gap-6">
               {REAL_TESTIMONIALS.map((t, i) => (
@@ -325,7 +325,7 @@ export default function HomePage() {
           <div className="text-center mb-12 max-w-2xl mx-auto">
             <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">Tuition</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-clay">One school. One simple price.</h2>
-            <div className="mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
+            <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
             <p className="text-clay/80 mt-5">A complete online school for Grades 3–8 — everything included, no add-on tiers.</p>
           </div>
 
@@ -384,7 +384,7 @@ export default function HomePage() {
           <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight text-balance">
             Ready to give your child a better school day?
           </h2>
-          <div className="mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
+          <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <p className="mt-5 text-white/70 leading-relaxed">
             Apply in minutes and we'll personally help you get enrolled — or reach out on WhatsApp with any questions.
           </p>
@@ -415,7 +415,7 @@ export default function HomePage() {
           <div className="text-center mb-10">
             <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">Common Questions</p>
             <h2 className="text-2xl sm:text-3xl font-bold text-clay">Quick answers for curious parents</h2>
-            <div className="mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
+            <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           </div>
           <div className="space-y-3">
             {FAQS.map((faq) => (

@@ -18,7 +18,7 @@ export default function PagePlaceholder({ eyebrow, title, intro, sections = [], 
             <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">{eyebrow}</p>
           )}
           <h1 className="text-4xl sm:text-5xl font-bold text-clay leading-tight">{title}</h1>
-          <div className="mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
+          <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           {intro && (
             <p className="mt-5 text-lg text-clay/60 max-w-2xl mx-auto leading-relaxed">{intro}</p>
           )}
