@@ -51,7 +51,7 @@ export const metadata = {
     description: DESCRIPTION,
     url: SITE_URL,
     siteName: 'Darul Haya',
-    images: [{ url: '/logo.png', width: 1200, height: 1200, alt: 'Darul Haya' }],
+    images: [{ url: '/logo.png', width: 512, height: 512, alt: 'Darul Haya' }],
     locale: 'en_CA',
     type: 'website',
   },
