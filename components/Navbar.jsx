@@ -5,7 +5,9 @@ import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import ThemeToggle from '@/components/ThemeToggle'
 
-const MOODLE = process.env.NEXT_PUBLIC_MOODLE_URL || 'https://learn.darulhaya.com'
+// Only render Student Login once the learning platform URL is configured.
+// Set NEXT_PUBLIC_MOODLE_URL in Netlify and the link appears automatically.
+const MOODLE = process.env.NEXT_PUBLIC_MOODLE_URL
 
 const MENUS = [
   {
@@ -29,7 +31,7 @@ const MENUS = [
   {
     label: 'Student Services',
     items: [
-      { label: 'Student Login', href: MOODLE, external: true },
+      ...(MOODLE ? [{ label: 'Student Login', href: MOODLE, external: true }] : []),
       { label: 'Help & Support', href: '/contact' },
     ],
   },
@@ -92,16 +94,18 @@ export default function Navbar() {
   const actions = (stacked = false) => (
     <div className={stacked ? 'flex flex-col gap-2' : 'flex items-center gap-3'}>
       {!stacked && <ThemeToggle />}
-      <a
-        href={MOODLE}
-        target="_blank"
-        rel="noopener noreferrer"
-        onClick={() => setMobileOpen(false)}
-        className="text-sm font-medium text-clay hover:text-teal transition-colors text-center dark:text-white/70 dark:hover:text-white"
-      >
-        Student Login
-        <span className="sr-only"> (opens in a new tab)</span>
-      </a>
+      {MOODLE && (
+        <a
+          href={MOODLE}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => setMobileOpen(false)}
+          className="text-sm font-medium text-clay hover:text-teal transition-colors text-center dark:text-white/70 dark:hover:text-white"
+        >
+          Student Login
+          <span className="sr-only"> (opens in a new tab)</span>
+        </a>
+      )}
       <Link
         href="/register"
         onClick={() => setMobileOpen(false)}

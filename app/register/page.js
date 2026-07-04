@@ -26,17 +26,19 @@ export default function RegisterPage() {
           </Suspense>
         </div>
 
-        <p className="text-center text-sm text-clay/70 mt-6">
-          Already a student?{' '}
-          <a
-            href={process.env.NEXT_PUBLIC_MOODLE_URL || 'https://learn.darulhaya.com'}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-teal font-medium hover:underline"
-          >
-            Student Login →
-          </a>
-        </p>
+        {process.env.NEXT_PUBLIC_MOODLE_URL && (
+          <p className="text-center text-sm text-clay/70 mt-6">
+            Already a student?{' '}
+            <a
+              href={process.env.NEXT_PUBLIC_MOODLE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-teal font-medium hover:underline"
+            >
+              Student Login →
+            </a>
+          </p>
+        )}
       </section>
     </div>
   )

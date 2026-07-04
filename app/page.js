@@ -46,7 +46,9 @@ const FACTS = [
   { value: 'Ontario-aligned', label: 'On track with standards' },
 ]
 
-// [ Placeholder ] Swap in real parent reviews as founding families share feedback.
+// Swap the placeholder bodies below for real parent reviews as founding families
+// share feedback. The "What families are saying" section stays hidden until at
+// least one real review (a body without the [ Placeholder ] marker) exists.
 const TESTIMONIALS = [
   {
     body: '[ Placeholder ] A real review from one of our founding families will appear here.',
@@ -64,6 +66,8 @@ const TESTIMONIALS = [
     role: 'Elementary (Grades 3–5)',
   },
 ]
+
+const REAL_TESTIMONIALS = TESTIMONIALS.filter((t) => !t.body.startsWith('[ Placeholder ]'))
 
 const FAQS = [
   {
@@ -306,27 +310,34 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section id="testimonials" className="bg-beige py-20 border-b border-clay/10">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">Parent Voices</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-clay">What families are saying</h2>
-            <div className="mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
+      {/* Testimonials — only shown once real reviews exist */}
+      {REAL_TESTIMONIALS.length > 0 && (
+        <section id="testimonials" className="bg-beige py-20 border-b border-clay/10">
+          <div className="max-w-5xl mx-auto px-6">
+            <div className="text-center max-w-2xl mx-auto mb-12">
+              <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">Parent Voices</p>
+              <h2 className="text-3xl sm:text-4xl font-bold text-clay">What families are saying</h2>
+              <div className="mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
+            </div>
+            <div className="grid sm:grid-cols-3 gap-6">
+              {REAL_TESTIMONIALS.map((t, i) => (
+                <figure key={i} className="bg-white rounded-2xl p-7 border border-beige-dark shadow-md flex flex-col gap-4">
+                  <div className="flex gap-0.5" aria-label="5 out of 5 stars">
+                    {[...Array(5)].map((_, s) => (
+                      <span key={s} className="text-amber text-lg leading-none" aria-hidden="true">★</span>
+                    ))}
+                  </div>
+                  <blockquote className="text-clay/80 text-sm leading-relaxed flex-1">&ldquo;{t.body}&rdquo;</blockquote>
+                  <figcaption>
+                    <p className="font-semibold text-clay text-sm">{t.author}</p>
+                    <p className="text-xs text-clay/80 mt-0.5">{t.role}</p>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
           </div>
-          <div className="grid sm:grid-cols-3 gap-6">
-            {TESTIMONIALS.map((t, i) => (
-              <figure key={i} className="bg-white rounded-2xl p-7 border border-dashed border-clay/25 shadow-sm flex flex-col gap-4">
-                <blockquote className="text-clay/60 text-sm leading-relaxed flex-1 italic">{t.body}</blockquote>
-                <figcaption>
-                  <p className="font-semibold text-clay text-sm">{t.author}</p>
-                  <p className="text-xs text-clay/80 mt-0.5">{t.role}</p>
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Value vs tutoring */}
       <ValueComparison />
