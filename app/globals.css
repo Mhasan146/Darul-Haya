@@ -77,6 +77,32 @@ h3,
   background-size: 80px 80px;
 }
 
+/* Hover/tap-flip subject cards */
+.flip-card {
+  perspective: 1200px;
+}
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.flip-card:hover .flip-inner,
+.flip-card:focus-visible .flip-inner,
+.flip-card.is-flipped .flip-inner {
+  transform: rotateY(180deg);
+}
+.flip-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.flip-back {
+  transform: rotateY(180deg);
+}
+
 /* Parallax: the geometric star patterns stay anchored to the viewport so they
    drift slower than the content scrolling over them. Desktop only — mobile
    browsers fall back to a normal scrolling pattern (no harm). */
