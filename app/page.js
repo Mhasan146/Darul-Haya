@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Benefits from '@/components/Benefits'
 import SafetyTools from '@/components/SafetyTools'
 import ValueComparison from '@/components/ValueComparison'
+import TuitionCalculator from '@/components/TuitionCalculator'
 import { WHATSAPP_URL } from '@/lib/siteConfig'
 
 const INCLUDED = [
@@ -357,6 +358,8 @@ export default function HomePage() {
               Plus a one-time $150 material fee &amp; $100 technology fee each year · 15% sibling discount
             </p>
           </div>
+
+          <TuitionCalculator />
         </div>
       </section>
 

@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar'
 import WhatsAppButton from '@/components/WhatsAppButton'
 import MobileApplyBar from '@/components/MobileApplyBar'
 import LeadPopup from '@/components/LeadPopup'
+import ScrollReveal from '@/components/ScrollReveal'
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -133,6 +134,7 @@ export default function RootLayout({ children }) {
           <Navbar />
         </header>
         <main id="main-content">{children}</main>
+        <ScrollReveal />
         <MobileApplyBar />
         <WhatsAppButton />
         <LeadPopup />
