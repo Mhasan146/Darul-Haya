@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Netlify Forms</title></head>
+<body>
+  <!-- Static form definitions for Netlify's build-time crawler.
+       The actual forms are React components; these teach Netlify what fields to expect. -->
+
+  <form name="registration" data-netlify="true" data-netlify-honeypot="bot-field" data-netlify-recaptcha="true" hidden>
+    <input type="hidden" name="form-name" value="registration" />
+    <input name="bot-field" />
+    <input name="student-name" />
+    <input name="guardian-name" />
+    <input name="email" />
+    <input name="phone" />
+    <input name="grade" />
+    <input name="program" />
+    <textarea name="message"></textarea>
+  </form>
+
+  <form name="darul-haya-lead" data-netlify="true" data-netlify-honeypot="bot-field" data-netlify-recaptcha="true" hidden>
+    <input type="hidden" name="form-name" value="darul-haya-lead" />
+    <input name="bot-field" />
+    <input name="name" />
+    <input name="email" />
+    <input name="phone" />
+    <input name="grade" />
+    <input name="source" />
+    <input name="page_url" />
+  </form>
+</body>
+</html>
