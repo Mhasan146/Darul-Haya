@@ -6,6 +6,11 @@ import WhatsAppButton from '@/components/WhatsAppButton'
 import MobileApplyBar from '@/components/MobileApplyBar'
 import LeadPopup from '@/components/LeadPopup'
 import ScrollReveal from '@/components/ScrollReveal'
+import CookieConsent from '@/components/CookieConsent'
+
+// Google Analytics 4 — set NEXT_PUBLIC_GA_ID (e.g. G-XXXXXXXXXX) in your
+// hosting env to enable. When unset, no GA script and no cookie banner load.
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -93,6 +98,21 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHOOL_LD) }}
         />
+        {/* Google Analytics 4 — starts with consent denied; the cookie banner
+            grants analytics_storage only after the visitor accepts. */}
+        {GA_ID && (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});try{if(localStorage.getItem('dh_consent')==='granted'){gtag('consent','update',{analytics_storage:'granted'})}}catch(e){}gtag('js',new Date());gtag('config','${GA_ID}',{anonymize_ip:true});`,
+              }}
+            />
+          </>
+        )}
       </head>
       <body className="bg-beige dark:bg-[#0a1f1d] min-h-screen">
         {/* Skip navigation — visible on keyboard focus */}
@@ -138,6 +158,7 @@ export default function RootLayout({ children }) {
         <MobileApplyBar />
         <WhatsAppButton />
         <LeadPopup />
+        {GA_ID && <CookieConsent />}
       </body>
     </html>
   )
