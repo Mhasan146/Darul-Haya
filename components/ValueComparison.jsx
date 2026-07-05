@@ -19,14 +19,6 @@ const SCHOOLS = [
     detail: 'In-person · Grades 1–8',
     year: '2026–27 published rates',
   },
-  {
-    // TODO: Confirm tutoring estimate with local provider rates before publishing
-    name: 'Private Tutoring',
-    monthly: '~$600',
-    annual: '~$6,000',
-    detail: '4 subjects · ~1 hr/wk each',
-    year: 'Toronto area typical rates',
-  },
 ]
 
 const DH = {
