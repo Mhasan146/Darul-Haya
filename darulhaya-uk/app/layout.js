@@ -19,10 +19,10 @@ const inter = Inter({
   display: 'swap',
 })
 
-const SITE_URL = (process.env.NEXT_PUBLIC_APP_URL || 'https://darulhaya.com').replace(/\/+$/, '')
-const TITLE = 'Darul Haya — Online School for Grades 3–8 | Live Classes & Homeschooling'
+const SITE_URL = (process.env.NEXT_PUBLIC_APP_URL || 'https://darulhaya.org').replace(/\/+$/, '')
+const TITLE = 'Darul Haya UK — Online School for Years 4–9 | Live Classes & Home Education'
 const DESCRIPTION =
-  'Darul Haya is an online Islamic school for boys and girls in Grades 3–8 — live, teacher-led classes every day, Arabic, and an Ontario-aligned curriculum. A structured, faith-centered alternative to homeschooling, all from the comfort of home. Enrolling now for September 2026.'
+  'Darul Haya UK is an online Islamic school for boys and girls in Years 4–9 — live, teacher-led classes every day, Arabic, and a National Curriculum–aligned programme. A structured, faith-centred alternative to home education, all from the comfort of home. Enrolling now for September 2026.'
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -32,28 +32,28 @@ export const metadata = {
   },
   description: DESCRIPTION,
   keywords: [
-    'online school',
-    'online Islamic school',
-    'homeschool',
-    'homeschooling',
-    'online homeschool',
-    'online homeschool program',
-    'Muslim homeschool',
-    'homeschool alternative',
+    'online school UK',
+    'online Islamic school UK',
+    'home education',
+    'home schooling UK',
+    'online home education',
+    'online home education programme',
+    'Muslim home education',
+    'home education alternative',
     'Muslim online school',
-    'virtual school Canada',
-    'Ontario online school',
-    'live online classes Grades 3-8',
-    'online school for Muslim kids',
+    'virtual school UK',
+    'National Curriculum online school',
+    'live online classes Years 4-9',
+    'online school for Muslim kids UK',
   ],
   alternates: { canonical: '/' },
   openGraph: {
     title: TITLE,
     description: DESCRIPTION,
     url: SITE_URL,
-    siteName: 'Darul Haya',
-    images: [{ url: '/logo.png', width: 512, height: 512, alt: 'Darul Haya' }],
-    locale: 'en_CA',
+    siteName: 'Darul Haya UK',
+    images: [{ url: '/logo.png', width: 512, height: 512, alt: 'Darul Haya UK' }],
+    locale: 'en_GB',
     type: 'website',
   },
   twitter: {
@@ -68,15 +68,15 @@ export const metadata = {
 const SCHOOL_LD = {
   '@context': 'https://schema.org',
   '@type': 'School',
-  name: 'Darul Haya — Academy of Learning',
-  alternateName: 'Darul Haya Online Islamic School',
+  name: 'Darul Haya UK — Academy of Learning',
+  alternateName: 'Darul Haya UK Online Islamic School',
   description: DESCRIPTION,
   url: SITE_URL,
   logo: `${SITE_URL}/logo.png`,
-  email: 'info@darulhaya.com',
-  areaServed: { '@type': 'Country', name: 'Canada' },
-  educationalLevel: 'Grades 3–8',
-  keywords: 'online school, online Islamic school, homeschool, homeschooling, online homeschool program, Muslim homeschool, live online classes, Arabic classes, Ontario curriculum',
+  email: 'info@darulhaya.org',
+  areaServed: { '@type': 'Country', name: 'United Kingdom' },
+  educationalLevel: 'Years 4–9',
+  keywords: 'online school UK, online Islamic school, home education, home schooling, online home education programme, Muslim home education, live online classes, Arabic classes, National Curriculum',
 }
 
 export default function RootLayout({ children }) {
@@ -94,7 +94,7 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHOOL_LD) }}
         />
       </head>
-      <body className="bg-beige dark:bg-[#0a1f1d] min-h-screen">
+      <body className="bg-beige dark:bg-[#1B1C21] min-h-screen">
         {/* Skip navigation — visible on keyboard focus */}
         <nav
           aria-label="Skip navigation"

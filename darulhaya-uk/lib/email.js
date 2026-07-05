@@ -1,6 +1,6 @@
 import { Resend } from 'resend'
 
-const DEFAULT_FROM = process.env.FROM_EMAIL || 'noreply@darulhaya.com'
+const DEFAULT_FROM = process.env.FROM_EMAIL || 'noreply@darulhaya.org'
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
 
 export async function sendEmail({ to, subject, html, from = DEFAULT_FROM }) {
@@ -37,12 +37,12 @@ export async function sendContactEmail({ name, email, message }) {
     to,
     replyTo: email,
     subject: `New website message from ${name}`,
-    html: `<div style="font-family:Arial,Helvetica,sans-serif;max-width:520px;color:#134E4A">
-      <h2 style="color:#0D9488">New message from the website</h2>
+    html: `<div style="font-family:Arial,Helvetica,sans-serif;max-width:520px;color:#26282E">
+      <h2 style="color:#26282E">New message from the website</h2>
       <p><strong>Name:</strong> ${escapeHtml(name)}</p>
       <p><strong>Email:</strong> ${escapeHtml(email)}</p>
       <p style="margin-top:16px"><strong>Message:</strong></p>
-      <p style="white-space:pre-line;background:#FCF8F4;border-radius:8px;padding:16px">${escapeHtml(message)}</p>
+      <p style="white-space:pre-line;background:#FAF6EE;border-radius:8px;padding:16px">${escapeHtml(message)}</p>
     </div>`,
   })
 }
@@ -56,9 +56,9 @@ function escapeHtml(str = '') {
 // ─── Templates ───────────────────────────────────────────────────────────────
 
 function welcomeEmailHtml({ firstName }) {
-  const aqua = '#0D9488'
-  const ink = '#134E4A'
-  const cream = '#FCF8F4'
+  const aqua = '#26282E'
+  const ink = '#26282E'
+  const cream = '#FAF6EE'
   const year = new Date().getFullYear()
 
   return `<!DOCTYPE html>
@@ -79,7 +79,7 @@ function welcomeEmailHtml({ firstName }) {
                 <h1 style="margin:0 0 16px;font-size:22px;color:${ink};">Welcome, ${firstName}! 🌙</h1>
                 <p style="margin:0 0 16px;font-size:15px;line-height:1.6;color:#475a57;">
                   We're so glad your family is joining Darul Haya. You've taken a
-                  wonderful step toward a structured, faith-centered education for your child.
+                  wonderful step toward a structured, faith-centred education for your child.
                 </p>
                 <p style="margin:0 0 24px;font-size:15px;line-height:1.6;color:#475a57;">
                   Here's what's next: choose your plan, and we'll get your child set up with their

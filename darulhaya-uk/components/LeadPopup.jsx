@@ -4,7 +4,7 @@ import { WHATSAPP_URL } from '@/lib/siteConfig'
 
 const STORAGE_KEY = 'dh_lead_popup'
 const SUPPRESS_DAYS = 14
-const GRADES = ['Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8', 'Not sure']
+const GRADES = ['Year 4', 'Year 5', 'Year 6', 'Year 7', 'Year 8', 'Year 9', 'Not sure']
 
 function shouldShow() {
   try {
@@ -254,20 +254,20 @@ export default function LeadPopup() {
                     type="tel"
                     value={form.phone}
                     onChange={set('phone')}
-                    placeholder="+1 (416) 555-1234"
+                    placeholder="07123 456789"
                     className="w-full border border-clay/20 rounded-lg px-3 py-2 text-sm text-clay bg-white focus:outline-none focus:ring-2 focus:ring-teal/30"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="lead-grade" className="block text-xs font-semibold text-clay/80 mb-1">Child's Grade <span className="font-normal">(optional)</span></label>
+                  <label htmlFor="lead-grade" className="block text-xs font-semibold text-clay/80 mb-1">Child's Year Group <span className="font-normal">(optional)</span></label>
                   <select
                     id="lead-grade"
                     value={form.grade}
                     onChange={set('grade')}
                     className="w-full border border-clay/20 rounded-lg px-3 py-2 text-sm text-clay bg-white focus:outline-none focus:ring-2 focus:ring-teal/30"
                   >
-                    <option value="">Select a grade</option>
+                    <option value="">Select a year group</option>
                     {GRADES.map((g) => <option key={g} value={g}>{g}</option>)}
                   </select>
                 </div>

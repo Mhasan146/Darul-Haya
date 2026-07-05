@@ -8,11 +8,11 @@ export const metadata = {
 const SECTIONS = [
   {
     heading: 'Information We Collect',
-    body: `We collect information you provide directly when you register, contact us, or use our learning platform — including your name, email address, your child's name and grade level, and communication preferences.`,
+    body: `We collect information you provide directly when you register, contact us, or use our learning platform — including your name, email address, your child's name and year group, and communication preferences.`,
   },
   {
     heading: 'How We Use Your Information',
-    body: `We use your information solely to manage enrolment, communicate about your child's education, provide access to our learning platform (learn.darulhaya.com), and respond to support requests. We do not sell or share your personal information with third parties for marketing purposes.`,
+    body: `We use your information solely to manage enrolment, communicate about your child's education, provide access to our learning platform (learn.darulhaya.org), and respond to support requests. We do not sell or share your personal information with third parties for marketing purposes.`,
   },
   {
     heading: 'Data Storage & Security',
@@ -20,15 +20,15 @@ const SECTIONS = [
   },
   {
     heading: "Children's Privacy",
-    body: `Darul Haya serves students in Grades 3–8. We collect only the minimum information required to provide educational services to your child. We do not share student data with advertisers or unrelated third parties.`,
+    body: `Darul Haya UK serves students in Years 4–9. We collect only the minimum information required to provide educational services to your child. We do not share student data with advertisers or unrelated third parties.`,
   },
   {
     heading: 'Your Rights',
-    body: `You may request access to, correction of, or deletion of your personal information at any time by contacting us at info@darulhaya.com. Canadian residents have rights under PIPEDA (Personal Information Protection and Electronic Documents Act).`,
+    body: `You may request access to, correction of, or deletion of your personal information at any time by contacting us at info@darulhaya.org. UK residents have rights under the UK GDPR and the Data Protection Act 2018, including the right to access, rectify, erase, and restrict the processing of their personal data, and the right to complain to the Information Commissioner's Office (ICO).`,
   },
   {
     heading: 'Contact',
-    body: `For any privacy questions or concerns, please email info@darulhaya.com or use the contact form at darulhaya.com/contact. We will respond within five business days.`,
+    body: `For any privacy questions or concerns, please email info@darulhaya.org or use the contact form at darulhaya.org/contact. We will respond within five business days.`,
   },
 ]
 

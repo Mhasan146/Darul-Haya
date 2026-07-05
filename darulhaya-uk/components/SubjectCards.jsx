@@ -2,12 +2,12 @@
 import { useState } from 'react'
 
 // Front = subject; back = what it covers. Descriptions reflect the public
-// Ontario curriculum strands — kept general and accurate.
+// National Curriculum (England) strands — kept general and accurate.
 const SUBJECTS = [
-  { name: 'Mathematics', tag: 'Core Subject', back: 'Number sense, algebra, data, and spatial reasoning — aligned to the Ontario curriculum.' },
-  { name: 'English Language Arts', tag: 'Core Subject', back: 'Reading, writing, grammar, and oral communication, built on the Ontario language curriculum.' },
-  { name: 'Science', tag: 'Core Subject', back: 'Life systems, matter and energy, structures, and earth and space — following Ontario expectations.' },
-  { name: 'Social Studies', tag: 'Core Subject', back: 'History, geography, and citizenship through the Ontario social studies curriculum.' },
+  { name: 'Mathematics', tag: 'Core Subject', back: 'Number, algebra, ratio, geometry, and statistics — aligned to the National Curriculum.' },
+  { name: 'English', tag: 'Core Subject', back: 'Reading, writing, grammar, and spoken language, built on the National Curriculum for English.' },
+  { name: 'Science', tag: 'Core Subject', back: 'Biology, chemistry, and physics — working scientifically, following National Curriculum expectations.' },
+  { name: 'Humanities', tag: 'Core Subject', back: 'History, geography, and citizenship through the National Curriculum.' },
   { name: 'Arabic', tag: 'Language', back: 'Reading, writing, and conversational Arabic — taught live and woven into the weekly timetable.' },
   { name: 'Character & Values', tag: 'Every Day', back: 'Good character, manners, and values reinforced gently throughout the school day.' },
 ]
@@ -37,7 +37,7 @@ function SubjectCard({ subject }) {
         {/* Back */}
         <div className="flip-face flip-back rounded-2xl bg-clay text-white p-6 flex flex-col justify-center text-left">
           <p className="text-sm leading-relaxed text-white/85">{subject.back}</p>
-          <span className="mt-3 text-[11px] text-amber font-semibold">Grades 3–8 · Ontario-aligned</span>
+          <span className="mt-3 text-[11px] text-amber font-semibold">Years 4–9 · National Curriculum</span>
         </div>
       </div>
     </button>

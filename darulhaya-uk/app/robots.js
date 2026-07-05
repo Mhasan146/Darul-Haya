@@ -1,4 +1,4 @@
-const SITE_URL = (process.env.NEXT_PUBLIC_APP_URL || 'https://darulhaya.com').replace(/\/+$/, '')
+const SITE_URL = (process.env.NEXT_PUBLIC_APP_URL || 'https://darulhaya.org').replace(/\/+$/, '')
 
 export default function robots() {
   return {

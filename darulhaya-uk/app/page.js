@@ -9,7 +9,7 @@ import { WHATSAPP_URL } from '@/lib/siteConfig'
 
 const INCLUDED = [
   'Daily live classes with real teachers',
-  'Complete Ontario-aligned curriculum, plus Arabic',
+  'Complete National Curriculum–aligned programme, plus Arabic',
   'Full recording library — never miss a lesson',
   'Physical books shipped to your door',
   'Student dashboard & progress tracking',
@@ -17,10 +17,10 @@ const INCLUDED = [
 ]
 
 const FACTS = [
-  { value: 'Grades 3–8', label: 'Elementary & Middle School' },
+  { value: 'Years 4–9', label: 'Primary & Secondary' },
   { value: 'Live, daily', label: 'Real teachers, set timetable' },
   { value: 'Small classes', label: 'Known by name, fully supervised' },
-  { value: 'Ontario-aligned', label: 'On track with standards' },
+  { value: 'Curriculum-aligned', label: 'On track with standards' },
 ]
 
 // Swap the placeholder bodies below for real parent reviews as founding families
@@ -30,17 +30,17 @@ const TESTIMONIALS = [
   {
     body: '[ Placeholder ] A real review from one of our founding families will appear here.',
     author: 'Founding parent',
-    role: 'Elementary (Grades 3–5)',
+    role: 'Primary (Years 4–6)',
   },
   {
     body: '[ Placeholder ] A real review from one of our founding families will appear here.',
     author: 'Founding parent',
-    role: 'Middle School (Grades 6–8)',
+    role: 'Secondary (Years 7–9)',
   },
   {
     body: '[ Placeholder ] A real review from one of our founding families will appear here.',
     author: 'Founding parent',
-    role: 'Elementary (Grades 3–5)',
+    role: 'Primary (Years 4–6)',
   },
 ]
 
@@ -49,7 +49,7 @@ const REAL_TESTIMONIALS = TESTIMONIALS.filter((t) => !t.body.startsWith('[ Place
 const FAQS = [
   {
     q: 'What time are the classes held each day?',
-    a: 'Classes run on a set weekday timetable during regular school hours (Eastern Time), mirroring a traditional school day. The finalized daily schedule is shared with enrolled families before the school year begins, and all lessons are recorded for families who need flexibility.',
+    a: 'Classes run on a set weekday timetable during regular school hours (UK time, GMT/BST), mirroring a traditional school day. The finalised daily schedule is shared with enrolled families before the school year begins, and all lessons are recorded for families who need flexibility.',
   },
   {
     q: "How is my child's progress tracked and reported?",
@@ -60,8 +60,8 @@ const FAQS = [
     a: "Because classes are small, teachers can give each student individual attention during lessons and work with parents whenever a child needs extra help in a subject.",
   },
   {
-    q: 'Do you follow the Ontario curriculum?',
-    a: 'Yes — core academic subjects are Ontario-aligned, so students can transition to any Ontario school at their grade level. Arabic is integrated into the timetable alongside the core curriculum.',
+    q: 'Do you follow the National Curriculum?',
+    a: 'Yes — core academic subjects are aligned to the National Curriculum (England), so students can transition to any UK school at their year group. Arabic is integrated into the timetable alongside the core curriculum.',
   },
 ]
 
@@ -113,14 +113,14 @@ export default function HomePage() {
       {/* Hero */}
       <section id="about" className="relative overflow-hidden scroll-mt-24 bg-clay">
         {/* Layered premium backdrop */}
-        <div aria-hidden className="absolute inset-0 bg-gradient-to-br from-[#10544e] via-clay to-[#0b3a36]" />
+        <div aria-hidden className="absolute inset-0 bg-gradient-to-br from-[#34373F] via-clay to-[#1F2126]" />
         <div aria-hidden className="absolute inset-0 bg-ornament-light opacity-[0.07]" />
         <div aria-hidden className="absolute -top-32 left-1/2 -translate-x-1/2 h-96 w-96 rounded-full bg-teal-light/20 blur-3xl" />
         <div aria-hidden className="absolute -bottom-32 -right-24 h-80 w-80 rounded-full bg-amber/10 blur-3xl" />
 
         <div className="relative max-w-4xl mx-auto px-6 pt-14 pb-20 text-center">
           <span className="inline-flex items-center gap-2 mb-7 text-[11px] font-semibold uppercase tracking-[0.2em] text-white bg-white/15 ring-1 ring-white/30 px-4 py-1.5 rounded-full">
-            <span className="h-1.5 w-1.5 rounded-full bg-white" aria-hidden="true" /> Now enrolling · Grades 3–8
+            <span className="h-1.5 w-1.5 rounded-full bg-white" aria-hidden="true" /> Now enrolling · Years 4–9
           </span>
 
           {/* Framed cream crest */}
@@ -145,8 +145,8 @@ export default function HomePage() {
           </h1>
 
           <p className="mt-5 text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
-            Live, teacher-led classes for boys and girls in Grades 3–8 — small, closely
-            supervised, Ontario-aligned, with physical books shipped to your door.
+            Live, teacher-led classes for boys and girls in Years 4–9 — small, closely
+            supervised, National Curriculum–aligned, with physical books shipped to your door.
           </p>
 
           <div className="mt-9 flex items-center justify-center gap-6 flex-wrap">
@@ -199,12 +199,13 @@ export default function HomePage() {
 
       {/* Trust bar */}
       <section aria-label="Curriculum alignment" className="bg-beige py-12 border-b border-clay/10">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <p className="text-xs font-semibold uppercase tracking-widest text-clay/60 mb-6">Curriculum aligned with</p>
-          <div className="flex items-center justify-center gap-12 flex-wrap">
-            <Image src="/ontario-edu.png" alt="Ontario Ministry of Education" width={200} height={56} className="h-14 w-auto opacity-90 hover:opacity-100 transition-all" />
-            <Image src="/canada.png" alt="Government of Canada" width={200} height={40} className="h-10 w-auto opacity-90 hover:opacity-100 transition-all" />
-          </div>
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <p className="text-xs font-semibold uppercase tracking-widest text-clay/60 mb-4">Curriculum aligned with</p>
+          <p className="font-display text-xl sm:text-2xl font-bold text-clay">The National Curriculum for England</p>
+          <p className="text-sm text-clay/70 mt-3 leading-relaxed max-w-xl mx-auto">
+            Core academic subjects follow the National Curriculum, keeping your child on track
+            with their year group and ready to transition to any UK school.
+          </p>
         </div>
       </section>
 
@@ -330,17 +331,18 @@ export default function HomePage() {
             <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">Tuition</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-clay">One school. One simple price.</h2>
             <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
-            <p className="text-clay/80 mt-5">A complete online school for Grades 3–8 — everything included, no add-on tiers.</p>
+            <p className="text-clay/80 mt-5">A complete online school for Years 4–9 — everything included, no add-on tiers.</p>
           </div>
 
           <div className="max-w-md mx-auto rounded-3xl bg-clay text-white p-8 sm:p-10 shadow-xl shadow-clay/20">
-            <p className="text-xs font-semibold uppercase tracking-widest text-amber mb-2">Online School · Grades 3–8</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-amber mb-2">Online School · Years 4–9</p>
             <div className="flex items-end gap-1.5">
-              <span className="font-display text-6xl font-bold">$300</span>
+              {/* TODO(UK pricing): confirm real GBP tuition — figure carried over from the .com site */}
+              <span className="font-display text-6xl font-bold">£300</span>
               <span className="text-white/80 mb-2">/month</span>
             </div>
             <p className="text-white/80 text-sm mt-3 leading-relaxed">
-              Daily live, teacher-led classes with a complete Ontario-aligned curriculum, Arabic, recordings, and physical books shipped to your door.
+              Daily live, teacher-led classes with a complete National Curriculum–aligned programme, Arabic, recordings, and physical books shipped to your door.
             </p>
 
             <ul className="mt-6 flex flex-col gap-3 text-sm">
@@ -359,7 +361,7 @@ export default function HomePage() {
               Apply Now
             </Link>
             <p className="text-white/60 text-xs text-center mt-4 leading-relaxed">
-              Plus a one-time $150 material fee &amp; $100 technology fee each year · 15% sibling discount
+              Plus a one-time £150 material fee &amp; £100 technology fee each year · 15% sibling discount
             </p>
           </div>
 
@@ -370,7 +372,7 @@ export default function HomePage() {
       {/* Decision summary strip */}
       <section aria-label="Program highlights" className="bg-beige border-y border-clay/10 py-5">
         <ul className="max-w-3xl mx-auto px-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-clay/80 list-none">
-          {['Grades 3–8', '$300 / month', 'Live daily classes', 'Ontario-aligned', 'Books included'].map((item) => (
+          {['Years 4–9', '£300 / month', 'Live daily classes', 'National Curriculum', 'Books included'].map((item) => (
             <li key={item} className="flex items-center gap-1.5">
               <span className="text-teal font-bold" aria-hidden>✓</span>
               {item}
@@ -381,7 +383,7 @@ export default function HomePage() {
 
       {/* CTA band */}
       <section aria-label="Enrolment call to action" className="relative overflow-hidden bg-clay text-white">
-        <div aria-hidden className="absolute inset-0 bg-gradient-to-br from-[#10544e] via-clay to-[#0b3a36]" />
+        <div aria-hidden className="absolute inset-0 bg-gradient-to-br from-[#34373F] via-clay to-[#1F2126]" />
         <div aria-hidden className="absolute inset-0 bg-ornament-light opacity-[0.06]" />
         <div aria-hidden className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-72 w-[36rem] rounded-full bg-teal-light/10 blur-3xl" />
         <div className="relative max-w-2xl mx-auto px-6 py-20 text-center">
@@ -443,16 +445,16 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#0b3a36] text-white">
+      <footer className="bg-[#1F2126] text-white">
         <div aria-hidden className="h-px bg-gradient-to-r from-transparent via-amber/60 to-transparent" />
         <div className="max-w-5xl mx-auto px-6 py-14">
           <div className="grid gap-10 sm:grid-cols-3">
             {/* Brand */}
             <div>
-              <h2 className="font-display text-2xl font-bold tracking-wide">Darul Haya</h2>
+              <h2 className="font-display text-2xl font-bold tracking-wide">Darul Haya UK</h2>
               <p className="text-xs uppercase tracking-[0.25em] text-amber mt-1">Knowledge · Character</p>
               <p className="text-white/60 text-sm mt-4 leading-relaxed max-w-xs">
-                A structured, values-driven online school for boys and girls in Grades 3–8.
+                A structured, values-driven online school for boys and girls in Years 4–9.
               </p>
             </div>
 
@@ -472,7 +474,7 @@ export default function HomePage() {
             <div>
               <h2 className="text-xs font-semibold uppercase tracking-widest text-white/60 mb-4">Get in Touch</h2>
               <ul className="space-y-2.5 text-sm">
-                <li><a href="mailto:info@darulhaya.com" className="text-white/80 hover:text-amber transition-colors">info@darulhaya.com</a></li>
+                <li><a href="mailto:info@darulhaya.org" className="text-white/80 hover:text-amber transition-colors">info@darulhaya.org</a></li>
                 <li><a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-amber transition-colors">Chat on WhatsApp<span className="sr-only"> (opens in a new tab)</span></a></li>
                 <li><Link href="/contact" className="text-white/80 hover:text-amber transition-colors">Contact Us</Link></li>
               </ul>
@@ -480,7 +482,7 @@ export default function HomePage() {
           </div>
 
           <div className="border-t border-white/10 mt-10 pt-6 text-center text-xs text-white/60">
-            © {new Date().getFullYear()} Darul Haya. All rights reserved.
+            © {new Date().getFullYear()} Darul Haya UK. All rights reserved.
             {' · '}
             <Link href="/privacy" className="hover:text-amber transition-colors">Privacy Policy</Link>
           </div>

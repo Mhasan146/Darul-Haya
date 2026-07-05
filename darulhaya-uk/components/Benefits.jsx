@@ -6,7 +6,7 @@ const BENEFITS = [
   {
     title: 'Reclaim Your Time & Budget',
     body:
-      'Cut the gas money, the chaotic school-zone runs, and the white-knuckle winter drives. With zero commute, those lost hours — and dollars — go straight back to your family.',
+      'Cut the petrol money, the chaotic school-run, and the stressful winter drives. With zero commute, those lost hours — and pounds — go straight back to your family.',
     icon: (
       <path
         strokeLinecap="round"
@@ -30,7 +30,7 @@ const BENEFITS = [
   {
     title: 'Mastery-Based Learning Pace',
     body:
-      'Our learning platform lets your child pause, rewind, or race ahead through the Ontario-standard curriculum — so they are never bored waiting, and never left behind.',
+      'Our learning platform lets your child pause, rewind, or race ahead through the National Curriculum — so they are never bored waiting, and never left behind.',
     icon: (
       <path
         strokeLinecap="round"
@@ -116,7 +116,7 @@ export default function Benefits() {
               Ready for a better school day?
             </h3>
             <p className="mt-2 text-sm text-white/80 leading-relaxed">
-              Pick the plan that fits your family and enroll in minutes.
+              Pick the plan that fits your family and enrol in minutes.
             </p>
             <a
               href="#pricing"

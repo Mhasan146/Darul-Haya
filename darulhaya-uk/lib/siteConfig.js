@@ -1,10 +1,12 @@
 // ── SITE-WIDE CONFIG ─────────────────────────────────────────────
 // WhatsApp number: international format, digits only (no +, no spaces)
-// e.g. Canada 416-555-1234 → 14165551234
-export const WHATSAPP_NUMBER = '14374234787'
+// e.g. UK 07700 900123 → 447700900123 (drop the leading 0, prefix 44)
+// TODO(UK): replace with the real UK WhatsApp number. The value below is a
+// reserved Ofcom fictional number — a safe placeholder that reaches no one.
+export const WHATSAPP_NUMBER = '447700900123'
 
 export const WHATSAPP_MESSAGE = encodeURIComponent(
-  "Assalamu alaikum, I'd like to learn more about Darul Haya admissions (Grades 3–8)."
+  "Assalamu alaikum, I'd like to learn more about Darul Haya UK admissions (Years 4–9)."
 )
 
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`

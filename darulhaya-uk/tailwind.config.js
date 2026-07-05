@@ -8,22 +8,27 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Aqua-forward palette (shifted from the logo's deep teal toward turquoise)
+        // ── Charcoal Ink · Ivory · Saffron Ochre ──────────────────────────
+        // Modern, minimal, typography-led palette. Charcoal carries the
+        // structure (buttons, dark sections, headings), ivory is the canvas,
+        // saffron is the single warm accent.
+        // The semantic token names (teal/clay/amber/beige) are kept so the
+        // existing markup keeps working — only their values change.
         beige: {
-          DEFAULT: '#FCF8F4', // warm cream — kept to match the logo's background so it blends
-          dark: '#E6F4F1',    // light aqua tint (section bands, card borders)
+          DEFAULT: '#FAF6EE', // ivory — page canvas
+          dark: '#F1E8D6',    // warm ivory band (section bands, card borders)
         },
         teal: {
-          DEFAULT: '#0F766E', // accessible aqua-teal — 4.98:1 on white (WCAG AA)
-          light: '#2DD4BF',   // bright aqua
-          dark: '#0A5852',    // deep aqua (hover states)
+          DEFAULT: '#26282E', // charcoal ink — primary brand / buttons / dark sections
+          light: '#3A3D45',   // lifted charcoal (gradients, glows)
+          dark: '#17181C',    // deep charcoal (hover states)
         },
         amber: {
-          DEFAULT: '#C99A33', // gold accent — complements aqua, also in the logo
-          dark: '#A87E27',
+          DEFAULT: '#C98A2E', // saffron ochre — the accent
+          dark: '#A5701F',    // deep saffron (hover / better contrast on light)
         },
         clay: {
-          DEFAULT: '#134E4A', // dark aqua-teal (headings + body text)
+          DEFAULT: '#26282E', // charcoal ink — headings + body text
         },
       },
     },

@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 const inputCls =
   'w-full border border-beige-dark rounded-lg px-4 py-2.5 text-clay text-sm focus:outline-none focus:ring-2 focus:ring-teal/40 focus:border-teal'
 
-const GRADES = ['Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8']
+const GRADES = ['Year 4', 'Year 5', 'Year 6', 'Year 7', 'Year 8', 'Year 9']
 
 function encode(data) {
   return Object.keys(data)
@@ -20,7 +20,7 @@ export default function RegisterForm() {
     email: '',
     phone: '',
     grade: '',
-    program: 'Online School (Grades 3–8)',
+    program: 'Online School (Years 4–9)',
     message: '',
     'bot-field': '',
   })
@@ -43,7 +43,7 @@ export default function RegisterForm() {
       if (!res.ok) throw new Error('Submit failed')
       router.push('/thank-you')
     } catch {
-      setError('Sorry — we could not submit your application. Please try again, or email us at info@darulhaya.com.')
+      setError('Sorry — we could not submit your application. Please try again, or email us at info@darulhaya.org.')
       setStatus('idle')
     }
   }
@@ -96,7 +96,7 @@ export default function RegisterForm() {
       </div>
 
       <div>
-        <label htmlFor="grade" className="text-sm font-medium text-clay/80 block mb-1">Student's grade level</label>
+        <label htmlFor="grade" className="text-sm font-medium text-clay/80 block mb-1">Student's year group</label>
         <select id="grade" name="grade" className={inputCls} value={form.grade} onChange={update('grade')}>
           <option value="">Select…</option>
           {GRADES.map((g) => <option key={g}>{g}</option>)}

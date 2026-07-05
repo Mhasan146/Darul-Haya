@@ -20,10 +20,10 @@ const MENUS = [
     ],
   },
   {
-    label: 'Programs & Classes',
+    label: 'Programmes & Classes',
     items: [
       { label: 'Our Online School', href: '/programs/full-live' },
-      { label: 'Grade Levels', href: '/curriculum#grades' },
+      { label: 'Year Groups', href: '/curriculum#grades' },
       { label: 'Curriculum', href: '/curriculum#islamic' },
     ],
   },
@@ -39,7 +39,7 @@ const MENUS = [
     items: [
       { label: 'Contact & Info', href: '/contact' },
       { label: 'FAQs', href: '/faq' },
-      { label: 'Email Us', href: 'mailto:info@darulhaya.com', external: true },
+      { label: 'Email Us', href: 'mailto:info@darulhaya.org', external: true },
       { label: 'Apply Now', href: '/register' },
     ],
   },
@@ -116,7 +116,7 @@ export default function Navbar() {
   )
 
   return (
-    <nav ref={navRef} aria-label="Main" className="sticky top-0 z-40 bg-beige/85 dark:bg-[#0e2826]/85 backdrop-blur-md border-b border-amber/30 dark:border-white/10">
+    <nav ref={navRef} aria-label="Main" className="sticky top-0 z-40 bg-beige/85 dark:bg-[#1F2126]/85 backdrop-blur-md border-b border-amber/30 dark:border-white/10">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
         {/* Logo */}
         <Link href="/" className="flex items-center shrink-0" onClick={() => setMobileOpen(false)}>

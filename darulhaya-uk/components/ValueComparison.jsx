@@ -2,42 +2,45 @@
 import { useState } from 'react'
 
 // "The real value" comparison. Figures are editable constants.
-// School tuition is each school's published fee for one child in the Grades
-// 3–8 range, paid over 10 monthly installments (annual = monthly × 10).
+// TODO(UK): all comparison figures below are PLACEHOLDERS. Replace with real,
+// verifiable UK figures (e.g. from published independent-school fee pages and
+// local tutor rates) before publishing — do not present these as fact until confirmed.
+// School tuition is each school's published fee for one child in the Years 4–9
+// range, paid over 10 monthly instalments (annual = monthly × 10).
 const SCHOOLS = [
   {
-    name: 'ISNA Schools',
-    monthly: '~$843',
-    annual: '~$8,427',
-    detail: 'In-person · Grades 3–8',
-    year: '2025–26 published rates',
+    name: 'Independent Islamic school',
+    monthly: '~£420',
+    annual: '~£4,200',
+    detail: 'In-person · Years 4–9',
+    year: 'Typical UK day-school fees',
   },
   {
-    name: 'Olive Grove School',
-    monthly: '~$955',
-    annual: '~$9,550',
-    detail: 'In-person · Grades 1–8',
-    year: '2026–27 published rates',
+    name: 'Independent faith school',
+    monthly: '~£480',
+    annual: '~£4,800',
+    detail: 'In-person · Years 3–9',
+    year: 'Typical UK day-school fees',
   },
   {
-    // TODO: Confirm tutoring estimate with local provider rates before publishing
-    name: 'Private Tutoring',
-    monthly: '~$600',
-    annual: '~$6,000',
+    // TODO: Confirm tutoring estimate with real UK provider rates before publishing
+    name: 'Private tutoring',
+    monthly: '~£520',
+    annual: '~£5,200',
     detail: '4 subjects · ~1 hr/wk each',
-    year: 'Toronto area typical rates',
+    year: 'UK average tutor rates',
   },
 ]
 
 const DH = {
-  monthly: '$300',
-  annual: '$3,600',
-  detail: 'Live online · Grades 3–8',
+  monthly: '£300',
+  annual: '£3,600',
+  detail: 'Live online · Years 4–9',
   note: 'Books & technology via flat annual fees',
 }
 
-const MATERIAL_FEE = '$150'
-const TECH_FEE = '$100'
+const MATERIAL_FEE = '£150'
+const TECH_FEE = '£100'
 
 const SAVINGS = [
   'No daily commute — save on gas, time, and the school-run stress',
@@ -55,7 +58,7 @@ export default function ValueComparison() {
 
   return (
     <section id="value" className="relative overflow-hidden bg-clay text-white scroll-mt-24">
-      <div aria-hidden className="absolute inset-0 bg-gradient-to-br from-[#10544e] via-clay to-[#0b3a36]" />
+      <div aria-hidden className="absolute inset-0 bg-gradient-to-br from-[#34373F] via-clay to-[#1F2126]" />
       <div aria-hidden className="absolute inset-0 bg-ornament-light opacity-[0.06]" />
       <div aria-hidden className="absolute -top-32 -left-24 h-80 w-80 rounded-full bg-teal-light/15 blur-3xl" />
       <div aria-hidden className="absolute -bottom-32 -right-24 h-80 w-80 rounded-full bg-amber/10 blur-3xl" />
@@ -66,9 +69,9 @@ export default function ValueComparison() {
           <h2 className="text-3xl sm:text-4xl font-bold text-white">A full education, for a fraction of the cost</h2>
           <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <p className="mt-5 text-white/70 leading-relaxed">
-            Traditional Islamic day schools run roughly $8,400–$9,550 a year. Even after-school tutoring for
-            four subjects adds up to $6,000+. Darul Haya delivers a complete, faith-centered education —
-            live, every day — for less than half the cost.
+            Independent Islamic day schools in the UK often run several thousand pounds a year. Even weekly
+            tutoring across four subjects adds up fast. Darul Haya UK delivers a complete, faith-centred
+            education — live, every day — for a fraction of the cost.
           </p>
         </div>
 

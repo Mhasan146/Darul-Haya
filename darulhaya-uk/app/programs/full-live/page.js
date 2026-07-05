@@ -1,9 +1,9 @@
 import PagePlaceholder from '@/components/PagePlaceholder'
 
 export const metadata = {
-  title: 'Daily Live School — Online Classes for Grades 3–8',
+  title: 'Daily Live School — Online Classes for Years 4–9',
   description:
-    'A complete online school: live, teacher-led classes every school day for Grades 3–8, with recordings, Arabic, Ontario-aligned curriculum, and books shipped to your door. $300/month.',
+    'A complete online school: live, teacher-led classes every school day for Years 4–9, with recordings, Arabic, National Curriculum–aligned lessons, and books shipped to your door. £300/month.',
   alternates: { canonical: '/programs/full-live' },
 }
 
@@ -12,7 +12,7 @@ export default function FullLivePage() {
     <PagePlaceholder
       eyebrow="Our Online School"
       title="Daily Live School"
-      intro="Darul Haya is a complete online school: your child joins live, teacher-led classes every school day, following a structured timetable across all their subjects. It's a full education delivered in real time — the structure and accountability of a traditional school, with the safety and focus of a small, supervised online classroom."
+      intro="Darul Haya UK is a complete online school: your child joins live, teacher-led classes every school day, following a structured timetable across all their subjects. It's a full education delivered in real time — the structure and accountability of a traditional school, with the safety and focus of a small, supervised online classroom."
       sections={[
         {
           heading: 'Daily Live Classes',
@@ -20,11 +20,11 @@ export default function FullLivePage() {
         },
         {
           heading: 'The Curriculum',
-          body: 'The program covers a full course load: language arts, mathematics, science, and social studies, alongside our character and values education and additional enrichment. Academic subjects are aligned to the Ontario curriculum so students stay on track with provincial expectations, while our broader program supports each child\'s growth into a thoughtful, well-rounded young person.',
+          body: 'The programme covers a full course load: English, mathematics, science, and humanities, alongside our character and values education and additional enrichment. Academic subjects are aligned to the National Curriculum for England so students stay on track with their year group, while our broader programme supports each child\'s growth into a thoughtful, well-rounded young person.',
         },
         {
           heading: "What's Included",
-          body: "Everything your child needs for the full school year:\n\n• Access to our LMS — your child's online classroom where all lessons, assignments, and resources live in one place\n• Daily live classes across all core subjects\n• Full lesson recordings to review or catch up on missed sessions\n• A complete, structured daily timetable\n• All learning materials and worksheets, available through the LMS\n• Assignment submission and grading through the platform\n• Regular assessments and progress reports\n• A parent-facing dashboard so you always know where your child stands\n• Direct teacher support\n\nTuition is $300/month. A 15% sibling discount applies for additional children enrolled. There is also a $150 material fee and a $100 technology fee at the start of each year.",
+          body: "Everything your child needs for the full school year:\n\n• Access to our LMS — your child's online classroom where all lessons, assignments, and resources live in one place\n• Daily live classes across all core subjects\n• Full lesson recordings to review or catch up on missed sessions\n• A complete, structured daily timetable\n• All learning materials and worksheets, available through the LMS\n• Assignment submission and grading through the platform\n• Regular assessments and progress reports\n• A parent-facing dashboard so you always know where your child stands\n• Direct teacher support\n\nTuition is £300/month. A 15% sibling discount applies for additional children enrolled. There is also a £150 material fee and a £100 technology fee at the start of each year.",
         },
         {
           heading: "Who It's For",
