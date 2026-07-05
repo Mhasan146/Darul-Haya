@@ -1,3 +1,16 @@
+# Build config for the Darul Haya UK site. This file is read from the
+# `darulhaya-uk` base directory set in the Netlify site settings, so the paths
+# below are relative to that folder.
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+# Official Next.js runtime — required for Netlify to serve the App Router pages
+# and the /api/contact route. Without it, Netlify serves an empty directory and
+# every URL returns a "Page not found" 404.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
 # Security headers applied to every response.
 # unsafe-inline required for Next.js hydration scripts; tighten with nonces after testing.
 [[headers]]
