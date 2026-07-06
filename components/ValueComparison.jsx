@@ -86,7 +86,7 @@ export default function ValueComparison() {
         </div>
 
         {/* Price comparison grid — comparable schools + Darul Haya */}
-        <div className="grid sm:grid-cols-3 gap-5 max-w-3xl mx-auto">
+        <div className="mx-auto grid w-full max-w-3xl grid-cols-1 justify-center gap-5 sm:grid-cols-3">
           {SCHOOLS.map((s) => (
             <div key={s.name} className="bg-white/5 ring-1 ring-white/10 rounded-2xl p-6 text-center flex flex-col">
               <h3 className="font-bold text-white text-base">{s.name}</h3>
