@@ -58,9 +58,8 @@ export default function ValueComparison() {
           <h2 className="text-3xl sm:text-4xl font-bold text-white">A full education, for a fraction of the cost</h2>
           <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <p className="mt-5 text-white/70 leading-relaxed">
-            Traditional Islamic day schools run roughly $8,400–$9,550 a year. Even after-school tutoring for
-            four subjects adds up to $6,000+. Darul Haya delivers a complete, faith-centered education —
-            live, every day — for less than half the cost.
+            Comparable Islamic day schools run roughly $8,400–$9,550 a year. Darul Haya delivers a complete,
+            faith-centered education — live, every day — for less than half the cost.
           </p>
         </div>
 
@@ -86,8 +85,8 @@ export default function ValueComparison() {
           </div>
         </div>
 
-        {/* Price comparison grid — 3 competitors + Darul Haya */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
+        {/* Price comparison grid — comparable schools + Darul Haya */}
+        <div className="grid sm:grid-cols-3 gap-5 max-w-3xl mx-auto">
           {SCHOOLS.map((s) => (
             <div key={s.name} className="bg-white/5 ring-1 ring-white/10 rounded-2xl p-6 text-center flex flex-col">
               <h3 className="font-bold text-white text-base">{s.name}</h3>
