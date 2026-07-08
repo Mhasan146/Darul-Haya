@@ -5,6 +5,7 @@ import SafetyTools from '@/components/SafetyTools'
 import ValueComparison from '@/components/ValueComparison'
 import TuitionCalculator from '@/components/TuitionCalculator'
 import SubjectCards from '@/components/SubjectCards'
+import StudentDashboard from '@/components/StudentDashboard'
 import { WHATSAPP_URL } from '@/lib/siteConfig'
 
 const INCLUDED = [
@@ -267,6 +268,9 @@ export default function HomePage() {
 
       {/* Subject cards */}
       <SubjectCards />
+
+      {/* Learning platform / student dashboard preview */}
+      <StudentDashboard />
 
       {/* Benefits of Online Schooling */}
       <Benefits />
