@@ -1,9 +1,12 @@
 'use client'
 import { useState, useEffect, useCallback, useRef } from 'react'
+import { usePathname } from 'next/navigation'
 import { WHATSAPP_URL } from '@/lib/siteConfig'
 
 const STORAGE_KEY = 'dh_lead_popup'
 const SUPPRESS_DAYS = 14
+// Routes with their own dedicated lead form — don't pop the global lead form there.
+const SUPPRESS_ON_ROUTES = ['/assessment', '/register']
 const GRADES = ['Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8', 'Not sure']
 
 function shouldShow() {
@@ -28,6 +31,7 @@ export default function LeadPopup() {
   const triggered = useRef(false)
   const dialogRef = useRef(null)
   const prevFocus = useRef(null)
+  const pathname = usePathname()
 
   const trigger = useCallback(() => {
     if (triggered.current || !shouldShow()) return
@@ -38,6 +42,9 @@ export default function LeadPopup() {
 
   // Triggers: 30s, 50% scroll, exit-intent (desktop only)
   useEffect(() => {
+    // Pages with their own dedicated lead form shouldn't also show the popup.
+    if (SUPPRESS_ON_ROUTES.includes(pathname)) return
+
     const timer = setTimeout(trigger, 30_000)
 
     const onScroll = () => {
@@ -55,7 +62,7 @@ export default function LeadPopup() {
       window.removeEventListener('scroll', onScroll)
       document.removeEventListener('mouseleave', onMouseLeave)
     }
-  }, [trigger])
+  }, [trigger, pathname])
 
   // ESC to close + Tab focus trap (keeps keyboard focus inside the dialog)
   useEffect(() => {
@@ -178,13 +185,13 @@ export default function LeadPopup() {
           <div className="text-center py-6">
             <p className="text-3xl mb-3" aria-hidden="true">🤍</p>
             <p className="font-bold text-clay text-lg">Jazak Allahu khairan</p>
-            <p className="text-clay/80 text-sm mt-1">We'll be in touch shortly.</p>
+            <p className="text-clay/80 text-sm mt-1">We&rsquo;ll be in touch shortly.</p>
           </div>
         ) : (
           <>
             <h2 id="lead-popup-title" className="text-xl font-bold text-clay mb-1 pr-6">Questions about enrolment?</h2>
             <p className="text-clay/80 text-sm mb-5">
-              Reach us on WhatsApp, or leave your details and we'll be in touch.
+              Reach us on WhatsApp, or leave your details and we&rsquo;ll be in touch.
             </p>
 
             {/* WhatsApp CTA */}
@@ -260,7 +267,7 @@ export default function LeadPopup() {
                 </div>
 
                 <div>
-                  <label htmlFor="lead-grade" className="block text-xs font-semibold text-clay/80 mb-1">Child's Grade <span className="font-normal">(optional)</span></label>
+                  <label htmlFor="lead-grade" className="block text-xs font-semibold text-clay/80 mb-1">Child&rsquo;s Grade <span className="font-normal">(optional)</span></label>
                   <select
                     id="lead-grade"
                     value={form.grade}
@@ -286,7 +293,7 @@ export default function LeadPopup() {
               </button>
 
               <p className="text-center text-[10px] text-clay/80 mt-3">
-                We'll only use this to contact you about admissions.
+                We&rsquo;ll only use this to contact you about admissions.
               </p>
             </form>
           </>

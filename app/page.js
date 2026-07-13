@@ -226,7 +226,7 @@ export default function HomePage() {
         <div aria-hidden className="absolute inset-0 bg-ornament opacity-[0.03]" />
         <div className="relative max-w-5xl mx-auto px-6 py-20">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">What's Included</p>
+          <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">What&rsquo;s Included</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-clay">Everything in one place</h2>
           <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <p className="mt-4 text-clay/80 leading-relaxed">Curriculum, technology, and physical materials — all included from day one.</p>
@@ -403,7 +403,7 @@ export default function HomePage() {
           </h2>
           <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <p className="mt-5 text-white/70 leading-relaxed">
-            Book a free assessment and we'll personally help you decide if it's the right fit — or reach out on WhatsApp with any questions.
+            Book a free assessment and we&rsquo;ll personally help you decide if it&rsquo;s the right fit — or reach out on WhatsApp with any questions.
           </p>
           <div className="mt-8 flex items-center justify-center gap-6 flex-wrap">
             <Link
