@@ -16,7 +16,7 @@ export default function RegisterPage() {
           <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">Admissions</p>
           <h1 className="text-4xl sm:text-5xl font-bold text-clay leading-tight">Apply to Darul Haya</h1>
           <p className="mt-4 text-clay/60 leading-relaxed">
-            Tell us about your family and we'll follow up by email to help you get enrolled. It only takes a minute.
+            Tell us about your family and we&rsquo;ll follow up by email to help you get enrolled. It only takes a minute.
           </p>
         </div>
 

@@ -38,7 +38,7 @@ export default function ContactForm() {
     return (
       <div className="rounded-xl border border-teal/30 bg-teal/5 p-6 text-center">
         <p className="text-teal font-semibold">Thank you for reaching out! 🌙</p>
-        <p className="text-clay/80 text-sm mt-1">We've received your message and will get back to you soon.</p>
+        <p className="text-clay/80 text-sm mt-1">We&rsquo;ve received your message and will get back to you soon.</p>
       </div>
     )
   }

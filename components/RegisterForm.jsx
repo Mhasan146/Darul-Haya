@@ -70,7 +70,7 @@ export default function RegisterForm() {
 
       <div>
         <label htmlFor="student-name" className="text-sm font-medium text-clay/80 block mb-1">
-          Student's full name <span className="text-teal">*</span>
+          Student&rsquo;s full name <span className="text-teal">*</span>
         </label>
         <input id="student-name" name="student-name" className={inputCls} value={form['student-name']} onChange={update('student-name')} required placeholder="Student's name" />
       </div>
@@ -96,7 +96,7 @@ export default function RegisterForm() {
       </div>
 
       <div>
-        <label htmlFor="grade" className="text-sm font-medium text-clay/80 block mb-1">Student's grade level</label>
+        <label htmlFor="grade" className="text-sm font-medium text-clay/80 block mb-1">Student&rsquo;s grade level</label>
         <select id="grade" name="grade" className={inputCls} value={form.grade} onChange={update('grade')}>
           <option value="">Select…</option>
           {GRADES.map((g) => <option key={g}>{g}</option>)}

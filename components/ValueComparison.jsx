@@ -86,8 +86,8 @@ export default function ValueComparison() {
           </div>
         </div>
 
-        {/* Price comparison grid — 3 competitors + Darul Haya */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
+        {/* Price comparison grid — comparison schools + Darul Haya */}
+        <div className="grid sm:grid-cols-3 gap-5 max-w-4xl mx-auto">
           {SCHOOLS.map((s) => (
             <div key={s.name} className="bg-white/5 ring-1 ring-white/10 rounded-2xl p-6 text-center flex flex-col">
               <h3 className="font-bold text-white text-base">{s.name}</h3>
@@ -115,7 +115,7 @@ export default function ValueComparison() {
         </div>
 
         <p className="text-center text-xs text-white/50 mt-4 max-w-2xl mx-auto">
-          School figures are each institution's published tuition for one child, paid over 10 monthly
+          School figures are each institution&rsquo;s published tuition for one child, paid over 10 monthly
           installments. Darul Haya keeps it simple: a flat {MATERIAL_FEE} material fee and {TECH_FEE} technology
           fee at the start of each year — no per-book charges.
         </p>
