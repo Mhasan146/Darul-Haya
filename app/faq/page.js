@@ -35,6 +35,26 @@ export default function FaqPage() {
           body: 'Classes are small, attendance and participation are tracked, and teachers are present throughout every session. There is no unsupervised private messaging between students and teachers — all communication happens in monitored class spaces. Because the environment is small and fully supervised, the social pressures and distractions common in larger settings aren\'t part of your child\'s day.',
         },
         {
+          heading: 'Is online school really as effective as in-person?',
+          body: 'For many children, it can be more effective. Classes are live and small, so teachers give each student real attention and notice right away when someone needs help — something that is hard to do in a crowded classroom. Participation and attendance are tracked every day, and every lesson is recorded so nothing is missed.',
+        },
+        {
+          heading: 'Will my child be socially isolated?',
+          body: 'No. Your child learns alongside classmates every day in a live, moderated setting — seeing and speaking with their teacher and peers throughout each class. It is a calmer, kinder social circle than many larger schools, without the bullying, cliques, and pressures that worry so many families.',
+        },
+        {
+          heading: 'Isn\'t this too much screen time?',
+          body: 'It is more balanced than parents expect. Live classes happen on screen, but much of the work is done off it: every enrolled student receives physical books and materials shipped to their home, so reading, writing, and assignments happen on paper — not only on a device.',
+        },
+        {
+          heading: 'Can my child return to a regular school later?',
+          body: 'Yes. Core academic subjects are aligned to the Ontario curriculum, so your child stays on track with provincial expectations and can transition to any Ontario school at their grade level.',
+        },
+        {
+          heading: 'What if it\'s not the right fit for us?',
+          body: 'That is exactly what the free assessment is for — a short, no-commitment call where we get to know your child, walk you through a typical school day, and answer your questions, so you can decide with confidence before enrolling.',
+        },
+        {
           heading: 'Is the curriculum aligned to provincial standards?',
           body: 'Yes. Core academic subjects are aligned to the Ontario curriculum so your child stays on track with provincial expectations.',
         },

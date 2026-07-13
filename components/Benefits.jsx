@@ -1,6 +1,7 @@
 // Conversion-focused "Benefits of Online Schooling" section.
 // Server component (no client JS needed) — uses the shared brand tokens
 // (clay / teal / amber / beige) and the same card language as the rest of the site.
+import Link from 'next/link'
 
 const BENEFITS = [
   {
@@ -76,11 +77,11 @@ export default function Benefits() {
             The Darul Haya Advantage
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-clay">
-            How Darul Haya changes your family's everyday
+            How Darul Haya changes your family&rsquo;s everyday
           </h2>
           <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <p className="mt-5 text-clay/80 leading-relaxed">
-            The practical, day-to-day differences families notice most — beyond what's
+            The practical, day-to-day differences families notice most — beyond what&rsquo;s
             in the curriculum.
           </p>
         </div>
@@ -113,18 +114,18 @@ export default function Benefits() {
           {/* Conversion CTA tile — also completes the 3×2 grid */}
           <div className="rounded-2xl p-7 bg-clay text-white shadow-md flex flex-col justify-center">
             <h3 className="text-xl font-bold leading-snug">
-              Ready for a better school day?
+              Not sure yet? Start with a free assessment.
             </h3>
             <p className="mt-2 text-sm text-white/80 leading-relaxed">
-              Pick the plan that fits your family and enroll in minutes.
+              A short, no-commitment call to see if Darul Haya is the right fit for your child.
             </p>
-            <a
-              href="#pricing"
+            <Link
+              href="/assessment"
               className="mt-5 self-start inline-flex items-center gap-2 bg-white text-clay font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-beige transition-colors"
             >
-              View Plans
+              Book a Free Assessment
               <span aria-hidden="true">→</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

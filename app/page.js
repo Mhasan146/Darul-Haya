@@ -48,8 +48,20 @@ const REAL_TESTIMONIALS = TESTIMONIALS.filter((t) => !t.body.startsWith('[ Place
 
 const FAQS = [
   {
+    q: 'Is online school really as effective as in-person?',
+    a: 'For many children, it can be more effective. Classes are live and small, so teachers give each student real attention and notice right away when someone needs help — something that is hard to do in a crowded classroom. Participation and attendance are tracked every day, and every lesson is recorded so nothing is missed.',
+  },
+  {
+    q: 'Will my child be socially isolated?',
+    a: 'No. Your child learns alongside classmates every day in a live, moderated setting — seeing and speaking with their teacher and peers throughout each class. It is a calmer, kinder social circle than many larger schools, without the bullying, cliques, and pressures that worry so many families.',
+  },
+  {
     q: 'What time are the classes held each day?',
     a: 'Classes run on a set weekday timetable during regular school hours (Eastern Time), mirroring a traditional school day. The finalized daily schedule is shared with enrolled families before the school year begins, and all lessons are recorded for families who need flexibility.',
+  },
+  {
+    q: "Isn't this too much screen time?",
+    a: 'It is more balanced than parents expect. Live classes happen on screen, but much of the work is done off it: every enrolled student receives physical books and materials shipped to their home, so reading, writing, and assignments happen on paper — not only on a device.',
   },
   {
     q: "How is my child's progress tracked and reported?",
@@ -60,8 +72,12 @@ const FAQS = [
     a: "Because classes are small, teachers can give each student individual attention during lessons and work with parents whenever a child needs extra help in a subject.",
   },
   {
-    q: 'Do you follow the Ontario curriculum?',
-    a: 'Yes — core academic subjects are Ontario-aligned, so students can transition to any Ontario school at their grade level. Arabic is integrated into the timetable alongside the core curriculum.',
+    q: 'Do you follow the Ontario curriculum, and can my child return to a regular school later?',
+    a: 'Yes — core academic subjects are Ontario-aligned, so your child stays on track with provincial expectations and can transition to any Ontario school at their grade level. Arabic is integrated into the timetable alongside the core curriculum.',
+  },
+  {
+    q: "What if it's not the right fit for us?",
+    a: 'That is exactly what the free assessment is for. It is a short, no-commitment call where we get to know your child, walk you through a typical school day, and answer your questions — so you can decide with confidence before enrolling.',
   },
 ]
 
@@ -120,7 +136,7 @@ export default function HomePage() {
 
         <div className="relative max-w-4xl mx-auto px-6 pt-14 pb-20 text-center">
           <span className="inline-flex items-center gap-2 mb-7 text-[11px] font-semibold uppercase tracking-[0.2em] text-white bg-white/15 ring-1 ring-white/30 px-4 py-1.5 rounded-full">
-            <span className="h-1.5 w-1.5 rounded-full bg-white" aria-hidden="true" /> Now enrolling · Grades 3–8
+            <span className="h-1.5 w-1.5 rounded-full bg-white" aria-hidden="true" /> Founding cohort · Grades 3–8
           </span>
 
           {/* Framed cream crest */}
@@ -151,27 +167,24 @@ export default function HomePage() {
 
           <div className="mt-9 flex items-center justify-center gap-6 flex-wrap">
             <Link
-              href="/register"
+              href="/assessment"
               className="bg-white text-clay px-8 py-3.5 rounded-full font-semibold shadow-lg shadow-black/20 hover:bg-beige hover:shadow-xl active:scale-[0.98] transition-all duration-200"
             >
-              Apply Now
+              Book a Free Assessment
             </Link>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/register"
               className="text-white/80 text-sm font-medium hover:text-white transition-colors"
             >
-              Chat on WhatsApp
-              <span className="sr-only"> (opens in a new tab)</span>
+              or apply now
               <span aria-hidden="true"> →</span>
-            </a>
+            </Link>
           </div>
 
           {/* How it works — 3-step process */}
           <div className="mt-8 flex items-center justify-center gap-2 sm:gap-3 flex-wrap text-white/70 text-xs">
             {[
-              'Apply online (5 min)',
+              'Book a free assessment (2 min)',
               'Personal call from our team',
               'Start your first class',
             ].map((step, i) => (
@@ -213,7 +226,7 @@ export default function HomePage() {
         <div aria-hidden className="absolute inset-0 bg-ornament opacity-[0.03]" />
         <div className="relative max-w-5xl mx-auto px-6 py-20">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">What's Included</p>
+          <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">What&rsquo;s Included</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-clay">Everything in one place</h2>
           <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <p className="mt-4 text-clay/80 leading-relaxed">Curriculum, technology, and physical materials — all included from day one.</p>
@@ -330,7 +343,7 @@ export default function HomePage() {
             <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">Tuition</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-clay">One school. One simple price.</h2>
             <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
-            <p className="text-clay/80 mt-5">A complete online school for Grades 3–8 — everything included, no add-on tiers.</p>
+            <p className="text-clay/80 mt-5">A complete online school for Grades 3–8 — everything included, no add-on tiers. We&rsquo;re enrolling a limited founding cohort for September 2026.</p>
           </div>
 
           <div className="max-w-md mx-auto rounded-3xl bg-clay text-white p-8 sm:p-10 shadow-xl shadow-clay/20">
@@ -390,14 +403,14 @@ export default function HomePage() {
           </h2>
           <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <p className="mt-5 text-white/70 leading-relaxed">
-            Apply in minutes and we'll personally help you get enrolled — or reach out on WhatsApp with any questions.
+            Book a free assessment and we&rsquo;ll personally help you decide if it&rsquo;s the right fit — or reach out on WhatsApp with any questions.
           </p>
           <div className="mt-8 flex items-center justify-center gap-6 flex-wrap">
             <Link
-              href="/register"
+              href="/assessment"
               className="bg-white text-clay px-8 py-3.5 rounded-full font-semibold shadow-lg shadow-black/20 hover:bg-beige hover:shadow-xl active:scale-[0.98] transition-all duration-200"
             >
-              Apply Now
+              Book a Free Assessment
             </Link>
             <a
               href={WHATSAPP_URL}

@@ -10,7 +10,7 @@ export default function ThankYouPage() {
         <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">Application received</p>
         <h1 className="text-4xl font-bold text-clay">Thank you!</h1>
         <p className="mt-4 text-clay/60 leading-relaxed">
-          We've received your application for Darul Haya. Our team will review it and reach out by
+          We&rsquo;ve received your application for Darul Haya. Our team will review it and reach out by
           email within a few days with the next steps to get your child enrolled.
         </p>
         <p className="mt-2 text-clay/60 leading-relaxed">
