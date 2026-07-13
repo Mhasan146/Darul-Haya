@@ -114,7 +114,7 @@ export default function ValueComparison() {
         </div>
 
         <p className="text-center text-xs text-white/50 mt-4 max-w-2xl mx-auto">
-          School figures are each institution's published tuition for one child, paid over 10 monthly
+          School figures are each institution&rsquo;s published tuition for one child, paid over 10 monthly
           installments. Darul Haya keeps it simple: a flat {MATERIAL_FEE} material fee and {TECH_FEE} technology
           fee at the start of each year — no per-book charges.
         </p>
