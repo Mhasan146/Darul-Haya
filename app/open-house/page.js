@@ -16,7 +16,7 @@ const OPEN_HOUSE = {
 const AGENDA = [
   {
     title: 'Meet the Principal',
-    body: 'Hear directly from Mohammad Haaris Siddiqui — 15+ years in the classroom — on why Darul Haya exists and how it teaches.',
+    body: 'Hear directly from Principal Mohammad Haaris Siddiqui on the calm, respectful environment Darul Haya creates for your child.',
   },
   {
     title: 'See how a school day works',
