@@ -146,17 +146,21 @@ export default function HomePage() {
             <span className="h-1.5 w-1.5 rounded-full bg-teal" aria-hidden="true" /> Founding cohort · Grades 3–8
           </span>
 
-          {/* Full crest — transparent background so the hero pattern flows through
-              seamlessly (no cream square). Falls back to nothing broken; /logo.png
-              stays the boxed version used by the nav and social share. */}
-          <div className="mx-auto w-60 sm:w-72">
+          {/* Full crest (transparent bg) on a soft cream halo, so it reads
+              cleanly over the photo without a hard square box. /logo.png stays
+              the boxed version used by the nav and social share. */}
+          <div className="relative mx-auto w-60 sm:w-72">
+            <div
+              aria-hidden
+              className="absolute inset-0 -m-8 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(252,248,244,0.94)_40%,rgba(252,248,244,0)_72%)]"
+            />
             <Image
               src="/hero-logo.png"
               alt="Darul Haya — Academy of Learning"
               width={512}
               height={512}
               priority
-              className="w-full h-auto"
+              className="relative w-full h-auto"
             />
           </div>
 
