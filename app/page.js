@@ -77,7 +77,7 @@ const FAQS = [
   },
   {
     q: "What if it's not the right fit for us?",
-    a: 'That is exactly what the free assessment is for. It is a short, no-commitment call where we get to know your child, walk you through a typical school day, and answer your questions — so you can decide with confidence before enrolling.',
+    a: 'Reach out before you enrol — we are glad to talk through whether Darul Haya suits your child, answer your questions, and walk you through a typical school day, so you can decide with confidence.',
   },
 ]
 
@@ -167,24 +167,27 @@ export default function HomePage() {
 
           <div className="mt-9 flex items-center justify-center gap-6 flex-wrap">
             <Link
-              href="/assessment"
+              href="/register"
               className="bg-white text-clay px-8 py-3.5 rounded-full font-semibold shadow-lg shadow-black/20 hover:bg-beige hover:shadow-xl active:scale-[0.98] transition-all duration-200"
             >
-              Book a Free Assessment
+              Apply Now
             </Link>
-            <Link
-              href="/register"
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-white/80 text-sm font-medium hover:text-white transition-colors"
             >
-              or apply now
+              Chat on WhatsApp
+              <span className="sr-only"> (opens in a new tab)</span>
               <span aria-hidden="true"> →</span>
-            </Link>
+            </a>
           </div>
 
           {/* How it works — 3-step process */}
           <div className="mt-8 flex items-center justify-center gap-2 sm:gap-3 flex-wrap text-white/70 text-xs">
             {[
-              'Book a free assessment (2 min)',
+              'Apply online (5 min)',
               'Personal call from our team',
               'Start your first class',
             ].map((step, i) => (
@@ -403,14 +406,14 @@ export default function HomePage() {
           </h2>
           <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <p className="mt-5 text-white/70 leading-relaxed">
-            Book a free assessment and we&rsquo;ll personally help you decide if it&rsquo;s the right fit — or reach out on WhatsApp with any questions.
+            Apply in minutes and we&rsquo;ll personally help you get enrolled — or reach out on WhatsApp with any questions.
           </p>
           <div className="mt-8 flex items-center justify-center gap-6 flex-wrap">
             <Link
-              href="/assessment"
+              href="/register"
               className="bg-white text-clay px-8 py-3.5 rounded-full font-semibold shadow-lg shadow-black/20 hover:bg-beige hover:shadow-xl active:scale-[0.98] transition-all duration-200"
             >
-              Book a Free Assessment
+              Apply Now
             </Link>
             <a
               href={WHATSAPP_URL}

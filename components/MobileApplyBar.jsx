@@ -25,7 +25,7 @@ export default function MobileApplyBar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  if (!visible || pathname === '/register' || pathname === '/assessment') return null
+  if (!visible || pathname === '/register') return null
 
   return (
     <div className="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-clay/95 backdrop-blur-sm border-t border-white/10 px-5 py-3 flex items-center justify-between gap-4">
@@ -39,10 +39,10 @@ export default function MobileApplyBar() {
         <span className="sr-only"> (opens in a new tab)</span>
       </a>
       <Link
-        href="/assessment"
-        className="shrink-0 bg-amber text-clay px-5 py-2 rounded-full font-semibold text-sm hover:bg-amber-dark transition-colors"
+        href="/register"
+        className="shrink-0 bg-white text-clay px-5 py-2 rounded-full font-semibold text-sm hover:bg-beige transition-colors"
       >
-        Book Free Assessment
+        Apply Now
       </Link>
     </div>
   )

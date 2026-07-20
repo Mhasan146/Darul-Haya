@@ -106,11 +106,11 @@ export default function Navbar() {
         </a>
       )}
       <Link
-        href="/assessment"
+        href="/register"
         onClick={() => setMobileOpen(false)}
         className="text-sm bg-clay text-white px-4 py-2 rounded-full font-semibold hover:bg-clay/80 transition-colors text-center"
       >
-        Free Assessment
+        Apply Now
       </Link>
     </div>
   )

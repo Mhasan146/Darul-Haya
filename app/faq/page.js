@@ -52,7 +52,7 @@ export default function FaqPage() {
         },
         {
           heading: 'What if it\'s not the right fit for us?',
-          body: 'That is exactly what the free assessment is for — a short, no-commitment call where we get to know your child, walk you through a typical school day, and answer your questions, so you can decide with confidence before enrolling.',
+          body: 'Reach out before you enrol — we are glad to talk through whether Darul Haya suits your child, answer your questions, and walk you through a typical school day, so you can decide with confidence.',
         },
         {
           heading: 'Is the curriculum aligned to provincial standards?',
