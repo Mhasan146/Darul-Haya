@@ -126,21 +126,32 @@ export default function HomePage() {
         <input name="page_url" />
       </form>
 
-      {/* Hero */}
-      <section id="about" className="relative overflow-hidden scroll-mt-24 bg-clay">
-        {/* Layered premium backdrop */}
-        <div aria-hidden className="absolute inset-0 bg-gradient-to-br from-[#10544e] via-clay to-[#0b3a36]" />
-        <div aria-hidden className="absolute inset-0 bg-ornament-light opacity-[0.07]" />
-        <div aria-hidden className="absolute -top-32 left-1/2 -translate-x-1/2 h-96 w-96 rounded-full bg-teal-light/20 blur-3xl" />
-        <div aria-hidden className="absolute -bottom-32 -right-24 h-80 w-80 rounded-full bg-amber/10 blur-3xl" />
+      {/* Hero — light & photo-led. To add a background photo (no people),
+          drop a file at /public/hero.jpg. Until then, the warm cream + gold
+          geometric treatment below shows on its own, so nothing looks broken. */}
+      <section id="about" className="relative overflow-hidden scroll-mt-24 bg-beige">
+        {/* Warm light base */}
+        <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-white via-beige to-beige-dark/50" />
+        {/* Optional background photo (no people) — soft, so dark text stays readable */}
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-cover bg-center opacity-40"
+          style={{ backgroundImage: "url('/hero.jpg')" }}
+        />
+        {/* Cream wash over the photo for legibility */}
+        <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-beige/75 via-beige/55 to-beige/85" />
+        {/* Gold Islamic-geometric pattern + soft glows */}
+        <div aria-hidden className="absolute inset-0 bg-ornament opacity-[0.06]" />
+        <div aria-hidden className="absolute -top-32 left-1/2 -translate-x-1/2 h-96 w-96 rounded-full bg-amber/15 blur-3xl" />
+        <div aria-hidden className="absolute -bottom-32 -right-24 h-80 w-80 rounded-full bg-teal/10 blur-3xl" />
 
         <div className="relative max-w-4xl mx-auto px-6 pt-14 pb-20 text-center">
-          <span className="inline-flex items-center gap-2 mb-7 text-[11px] font-semibold uppercase tracking-[0.2em] text-white bg-white/15 ring-1 ring-white/30 px-4 py-1.5 rounded-full">
-            <span className="h-1.5 w-1.5 rounded-full bg-white" aria-hidden="true" /> Founding cohort · Grades 3–8
+          <span className="inline-flex items-center gap-2 mb-7 text-[11px] font-semibold uppercase tracking-[0.2em] text-teal bg-teal/10 ring-1 ring-teal/20 px-4 py-1.5 rounded-full">
+            <span className="h-1.5 w-1.5 rounded-full bg-teal" aria-hidden="true" /> Founding cohort · Grades 3–8
           </span>
 
-          {/* Framed cream crest */}
-          <div className="mx-auto w-fit flex flex-col items-center bg-beige rounded-3xl px-8 pt-6 pb-5 shadow-2xl shadow-black/25 ring-1 ring-white/20">
+          {/* Framed crest */}
+          <div className="mx-auto w-fit flex flex-col items-center bg-white rounded-3xl px-8 pt-6 pb-5 shadow-xl shadow-clay/10 ring-1 ring-clay/5">
             <div className="overflow-hidden aspect-[5/4] w-44 sm:w-52">
               <Image
                 src="/logo.png"
@@ -156,11 +167,11 @@ export default function HomePage() {
             </p>
           </div>
 
-          <h1 className="mt-9 text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.08] tracking-tight text-balance max-w-3xl mx-auto">
+          <h1 className="mt-9 text-4xl sm:text-5xl lg:text-6xl font-bold text-clay leading-[1.08] tracking-tight text-balance max-w-3xl mx-auto">
             {HERO_HEADLINE}
           </h1>
 
-          <p className="mt-5 text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-5 text-lg text-clay/70 max-w-2xl mx-auto leading-relaxed">
             Live, teacher-led classes for boys and girls in Grades 3–8 — small, closely
             supervised, Ontario-aligned, with physical books shipped to your door.
           </p>
@@ -168,7 +179,7 @@ export default function HomePage() {
           <div className="mt-9 flex items-center justify-center gap-6 flex-wrap">
             <Link
               href="/register"
-              className="bg-white text-clay px-8 py-3.5 rounded-full font-semibold shadow-lg shadow-black/20 hover:bg-beige hover:shadow-xl active:scale-[0.98] transition-all duration-200"
+              className="bg-clay text-white px-8 py-3.5 rounded-full font-semibold shadow-lg shadow-clay/20 hover:bg-clay/90 hover:shadow-xl active:scale-[0.98] transition-all duration-200"
             >
               Apply Now
             </Link>
@@ -176,7 +187,7 @@ export default function HomePage() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/80 text-sm font-medium hover:text-white transition-colors"
+              className="text-clay/70 text-sm font-medium hover:text-clay transition-colors"
             >
               Chat on WhatsApp
               <span className="sr-only"> (opens in a new tab)</span>
@@ -185,15 +196,15 @@ export default function HomePage() {
           </div>
 
           {/* How it works — 3-step process */}
-          <div className="mt-8 flex items-center justify-center gap-2 sm:gap-3 flex-wrap text-white/70 text-xs">
+          <div className="mt-8 flex items-center justify-center gap-2 sm:gap-3 flex-wrap text-clay/60 text-xs">
             {[
               'Apply online (5 min)',
               'Personal call from our team',
               'Start your first class',
             ].map((step, i) => (
               <span key={step} className="flex items-center gap-1.5 sm:gap-2">
-                {i > 0 && <span aria-hidden="true" className="text-white/25 hidden sm:inline">→</span>}
-                <span className="h-4 w-4 rounded-full bg-white/20 text-white text-[9px] font-bold inline-flex items-center justify-center shrink-0" aria-hidden="true">{i + 1}</span>
+                {i > 0 && <span aria-hidden="true" className="text-clay/25 hidden sm:inline">→</span>}
+                <span className="h-4 w-4 rounded-full bg-clay/10 text-clay text-[9px] font-bold inline-flex items-center justify-center shrink-0" aria-hidden="true">{i + 1}</span>
                 <span>{step}</span>
               </span>
             ))}
