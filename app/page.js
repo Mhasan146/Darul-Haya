@@ -156,7 +156,7 @@ export default function HomePage() {
           <div className="mx-auto w-60 sm:w-72">
             <Image
               src="/hero-logo.png"
-              alt="Darul Haya — Academy of Learning · Faith, Knowledge, Character"
+              alt="Darul Haya — Academy of Learning"
               width={512}
               height={512}
               priority
