@@ -67,9 +67,7 @@ const BENEFITS = [
 
 export default function Benefits() {
   return (
-    <section id="benefits" className="relative overflow-hidden bg-beige-dark border-y border-clay/5 scroll-mt-24">
-      <div aria-hidden className="absolute inset-0 bg-ornament opacity-[0.035]" />
-      <div className="relative max-w-6xl mx-auto px-6 py-20">
+    <section id="benefits" className="relative overflow-hidden bg-beige-dark border-y border-clay/5 scroll-mt-24">      <div className="relative max-w-6xl mx-auto px-6 py-20">
         {/* Heading */}
         <div className="text-center max-w-2xl mx-auto mb-12">
           <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">

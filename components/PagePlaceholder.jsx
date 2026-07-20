@@ -10,9 +10,7 @@ export default function PagePlaceholder({ eyebrow, title, intro, sections = [], 
     <div className="min-h-screen bg-beige">
       {/* Premium page header */}
       <section className="relative overflow-hidden">
-        <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-beige-dark/60 via-beige to-beige" />
-        <div aria-hidden className="absolute inset-0 bg-ornament opacity-[0.04]" />
-        <div aria-hidden className="absolute -top-24 left-1/2 -translate-x-1/2 h-64 w-64 rounded-full bg-teal/10 blur-3xl" />
+        <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-beige-dark/60 via-beige to-beige" />        <div aria-hidden className="absolute -top-24 left-1/2 -translate-x-1/2 h-64 w-64 rounded-full bg-teal/10 blur-3xl" />
         <div className="relative max-w-4xl mx-auto px-6 pt-20 pb-12 text-center">
           {eyebrow && (
             <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">{eyebrow}</p>

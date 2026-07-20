@@ -47,9 +47,7 @@ export default function ValueComparison() {
 
   return (
     <section id="value" className="relative overflow-hidden bg-clay text-white scroll-mt-24">
-      <div aria-hidden className="absolute inset-0 bg-gradient-to-br from-[#10544e] via-clay to-[#0b3a36]" />
-      <div aria-hidden className="absolute inset-0 bg-ornament-light opacity-[0.06]" />
-      <div aria-hidden className="absolute -top-32 -left-24 h-80 w-80 rounded-full bg-teal-light/15 blur-3xl" />
+      <div aria-hidden className="absolute inset-0 bg-gradient-to-br from-[#10544e] via-clay to-[#0b3a36]" />      <div aria-hidden className="absolute -top-32 -left-24 h-80 w-80 rounded-full bg-teal-light/15 blur-3xl" />
       <div aria-hidden className="absolute -bottom-32 -right-24 h-80 w-80 rounded-full bg-amber/10 blur-3xl" />
 
       <div className="relative max-w-5xl mx-auto px-6 py-20">

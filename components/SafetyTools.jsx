@@ -12,9 +12,7 @@ const TOOLS = [
 
 export default function SafetyTools() {
   return (
-    <section id="safety" className="relative overflow-hidden bg-beige border-y border-clay/10 py-20 scroll-mt-24">
-      <div aria-hidden className="absolute inset-0 bg-ornament opacity-[0.03]" />
-      <div className="relative max-w-4xl mx-auto px-6 text-center">
+    <section id="safety" className="relative overflow-hidden bg-beige border-y border-clay/10 py-20 scroll-mt-24">      <div className="relative max-w-4xl mx-auto px-6 text-center">
         <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">Safety First</p>
         <h2 className="text-3xl sm:text-4xl font-bold text-clay">Tools we use to keep your child safe</h2>
         <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />

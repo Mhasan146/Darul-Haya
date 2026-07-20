@@ -44,7 +44,7 @@ export default function FaqPage() {
         },
         {
           heading: 'Isn\'t this too much screen time?',
-          body: 'It is more balanced than parents expect. Live classes happen on screen, but much of the work is done off it: every enrolled student receives physical books and materials shipped to their home, so reading, writing, and assignments happen on paper — not only on a device.',
+          body: 'It is more balanced than parents expect, and the screen time that remains is purposeful. Guided, active online learning builds the mental pathways for using a screen to focus, think, and create — the opposite of the passive, endless scrolling that hooks so many children elsewhere. And much of the work happens off-screen entirely: every enrolled student receives physical books and materials shipped to their home, so reading, writing, and assignments happen on paper, not only on a device.',
         },
         {
           heading: 'Can my child return to a regular school later?',

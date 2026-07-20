@@ -61,7 +61,7 @@ const FAQS = [
   },
   {
     q: "Isn't this too much screen time?",
-    a: 'It is more balanced than parents expect. Live classes happen on screen, but much of the work is done off it: every enrolled student receives physical books and materials shipped to their home, so reading, writing, and assignments happen on paper — not only on a device.',
+    a: 'It is more balanced than parents expect, and the screen time that remains is purposeful. Guided, active online learning builds the mental pathways for using a screen to focus, think, and create — the opposite of the passive, endless scrolling that hooks so many children elsewhere. And much of the work happens off-screen entirely: every enrolled student receives physical books and materials shipped to their home, so reading, writing, and assignments happen on paper, not only on a device.',
   },
   {
     q: "How is my child's progress tracked and reported?",
@@ -126,22 +126,18 @@ export default function HomePage() {
         <input name="page_url" />
       </form>
 
-      {/* Hero — light & photo-led. To add a background photo (no people),
-          drop a file at /public/hero.jpg. Until then, the warm cream + gold
-          geometric treatment below shows on its own, so nothing looks broken. */}
+      {/* Hero — light & photo-led (public/hero.jpg). */}
       <section id="about" className="relative overflow-hidden scroll-mt-24 bg-beige">
-        {/* Warm light base — beige so the logo's cream background blends seamlessly */}
+        {/* Warm light base — beige so the logo's transparent background blends */}
         <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-beige via-beige to-beige-dark/40" />
-        {/* Optional background photo (no people) — soft, so dark text stays readable */}
+        {/* Background photo (no people) — prominent, with a lighter wash for legibility */}
         <div
           aria-hidden
-          className="absolute inset-0 bg-cover bg-center opacity-40"
+          className="absolute inset-0 bg-cover bg-center opacity-75"
           style={{ backgroundImage: "url('/hero.jpg')" }}
         />
-        {/* Cream wash over the photo for legibility */}
-        <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-beige/75 via-beige/55 to-beige/85" />
-        {/* Gold Islamic-geometric pattern + soft glows */}
-        <div aria-hidden className="absolute inset-0 bg-ornament opacity-[0.06]" />
+        {/* Cream wash so dark text stays readable over the photo */}
+        <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-beige/45 via-beige/30 to-beige/65" />
         <div aria-hidden className="absolute -top-32 left-1/2 -translate-x-1/2 h-96 w-96 rounded-full bg-amber/15 blur-3xl" />
         <div aria-hidden className="absolute -bottom-32 -right-24 h-80 w-80 rounded-full bg-teal/10 blur-3xl" />
 
@@ -233,9 +229,7 @@ export default function HomePage() {
       </section>
 
       {/* Features */}
-      <section id="features" className="relative overflow-hidden scroll-mt-24">
-        <div aria-hidden className="absolute inset-0 bg-ornament opacity-[0.03]" />
-        <div className="relative max-w-5xl mx-auto px-6 py-20">
+      <section id="features" className="relative overflow-hidden scroll-mt-24">        <div className="relative max-w-5xl mx-auto px-6 py-20">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">What&rsquo;s Included</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-clay">Everything in one place</h2>
@@ -298,9 +292,7 @@ export default function HomePage() {
       <SafetyTools />
 
       {/* Founder's note */}
-      <section aria-label="A note from our founder" className="relative overflow-hidden bg-beige-dark/60 border-y border-clay/10">
-        <div aria-hidden className="absolute inset-0 bg-ornament opacity-[0.035]" />
-        <div className="relative max-w-3xl mx-auto px-6 py-16 text-center">
+      <section aria-label="A note from our founder" className="relative overflow-hidden bg-beige-dark/60 border-y border-clay/10">        <div className="relative max-w-3xl mx-auto px-6 py-16 text-center">
           <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-6">Why Darul Haya Exists</p>
           <span aria-hidden="true" className="block font-display text-6xl leading-none text-amber select-none">&ldquo;</span>
           <blockquote className="font-display text-2xl sm:text-3xl font-semibold text-clay leading-snug text-balance -mt-4">
@@ -347,9 +339,7 @@ export default function HomePage() {
       <ValueComparison />
 
       {/* Pricing */}
-      <section id="pricing" className="relative overflow-hidden scroll-mt-24 bg-gradient-to-b from-beige to-beige-dark/50">
-        <div aria-hidden className="absolute inset-0 bg-ornament opacity-[0.03]" />
-        <div className="relative max-w-4xl mx-auto px-6 py-20">
+      <section id="pricing" className="relative overflow-hidden scroll-mt-24 bg-gradient-to-b from-beige to-beige-dark/50">        <div className="relative max-w-4xl mx-auto px-6 py-20">
           <div className="text-center mb-12 max-w-2xl mx-auto">
             <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">Tuition</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-clay">One school. One simple price.</h2>
@@ -407,9 +397,7 @@ export default function HomePage() {
       <section aria-label="Enrolment call to action" className="relative overflow-hidden bg-clay text-white">
         {/* Warm classroom photo, held well behind a deep-teal overlay so white text stays readable */}
         <div aria-hidden className="absolute inset-0 bg-cover bg-center opacity-30" style={{ backgroundImage: "url('/cta.jpg')" }} />
-        <div aria-hidden className="absolute inset-0 bg-gradient-to-br from-[#10544e]/90 via-clay/90 to-[#0b3a36]/95" />
-        <div aria-hidden className="absolute inset-0 bg-ornament-light opacity-[0.06]" />
-        <div aria-hidden className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-72 w-[36rem] rounded-full bg-teal-light/10 blur-3xl" />
+        <div aria-hidden className="absolute inset-0 bg-gradient-to-br from-[#10544e]/90 via-clay/90 to-[#0b3a36]/95" />        <div aria-hidden className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-72 w-[36rem] rounded-full bg-teal-light/10 blur-3xl" />
         <div className="relative max-w-2xl mx-auto px-6 py-20 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight text-balance">
             Ready to give your child a better school day?
