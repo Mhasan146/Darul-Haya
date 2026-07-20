@@ -144,8 +144,8 @@ export default function RootLayout({ children }) {
             className="bg-clay text-white text-center text-xs sm:text-sm py-2 px-4"
           >
             {/* TODO: Update enrolment deadline before each intake — e.g. "September 2027" */}
-            <span className="text-amber font-semibold">Founding cohort now enrolling for September 2026</span>
-            {' '}— small classes mean limited seats.{' '}
+            <span className="text-amber font-semibold">Enrolment open for September 2026</span>
+            {' '}— seats fill quickly.{' '}
             <Link href="/register" className="underline underline-offset-2 hover:text-amber transition-colors">
               Apply Now <span aria-hidden="true">→</span>
             </Link>

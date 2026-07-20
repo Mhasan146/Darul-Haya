@@ -143,7 +143,7 @@ export default function HomePage() {
 
         <div className="relative max-w-4xl mx-auto px-6 pt-14 pb-20 text-center">
           <span className="inline-flex items-center gap-2 mb-7 text-[11px] font-semibold uppercase tracking-[0.2em] text-teal bg-teal/10 ring-1 ring-teal/20 px-4 py-1.5 rounded-full">
-            <span className="h-1.5 w-1.5 rounded-full bg-teal" aria-hidden="true" /> Founding cohort · Grades 3–8
+            <span className="h-1.5 w-1.5 rounded-full bg-teal" aria-hidden="true" /> Now enrolling · Grades 3–8
           </span>
 
           {/* Full crest (transparent bg) on a soft cream halo, so it reads
@@ -348,7 +348,7 @@ export default function HomePage() {
             <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">Tuition</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-clay">One school. One simple price.</h2>
             <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
-            <p className="text-clay/80 mt-5">A complete online school for Grades 3–8 — everything included, no add-on tiers. We&rsquo;re enrolling a limited founding cohort for September 2026.</p>
+            <p className="text-clay/80 mt-5">A complete online school for Grades 3–8 — everything included, no add-on tiers.</p>
           </div>
 
           <div className="max-w-md mx-auto rounded-3xl bg-clay text-white p-8 sm:p-10 shadow-xl shadow-clay/20">
