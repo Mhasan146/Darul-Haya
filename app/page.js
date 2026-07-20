@@ -130,8 +130,8 @@ export default function HomePage() {
           drop a file at /public/hero.jpg. Until then, the warm cream + gold
           geometric treatment below shows on its own, so nothing looks broken. */}
       <section id="about" className="relative overflow-hidden scroll-mt-24 bg-beige">
-        {/* Warm light base */}
-        <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-white via-beige to-beige-dark/50" />
+        {/* Warm light base — beige so the logo's cream background blends seamlessly */}
+        <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-beige via-beige to-beige-dark/40" />
         {/* Optional background photo (no people) — soft, so dark text stays readable */}
         <div
           aria-hidden
@@ -150,21 +150,18 @@ export default function HomePage() {
             <span className="h-1.5 w-1.5 rounded-full bg-teal" aria-hidden="true" /> Founding cohort · Grades 3–8
           </span>
 
-          {/* Framed crest */}
-          <div className="mx-auto w-fit flex flex-col items-center bg-white rounded-3xl px-8 pt-6 pb-5 shadow-xl shadow-clay/10 ring-1 ring-clay/5">
-            <div className="overflow-hidden aspect-[5/4] w-44 sm:w-52">
-              <Image
-                src="/logo.png"
-                alt="Darul Haya — Academy of Learning"
-                width={208}
-                height={166}
-                priority
-                className="w-full h-auto"
-              />
-            </div>
-            <p className="text-[10px] font-semibold tracking-[0.25em] text-clay/60 mt-1 uppercase">
-              Knowledge · Character
-            </p>
+          {/* Full crest — transparent background so the hero pattern flows through
+              seamlessly (no cream square). Falls back to nothing broken; /logo.png
+              stays the boxed version used by the nav and social share. */}
+          <div className="mx-auto w-60 sm:w-72">
+            <Image
+              src="/hero-logo.png"
+              alt="Darul Haya — Academy of Learning · Faith, Knowledge, Character"
+              width={512}
+              height={512}
+              priority
+              className="w-full h-auto"
+            />
           </div>
 
           <h1 className="mt-9 text-4xl sm:text-5xl lg:text-6xl font-bold text-clay leading-[1.08] tracking-tight text-balance max-w-3xl mx-auto">
