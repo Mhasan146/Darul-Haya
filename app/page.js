@@ -184,7 +184,7 @@ export default function HomePage() {
               href="/open-house"
               className="text-clay/70 text-sm font-medium hover:text-clay transition-colors"
             >
-              or join a free online open house
+              or join a free open house
               <span aria-hidden="true"> →</span>
             </Link>
           </div>

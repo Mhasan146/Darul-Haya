@@ -38,6 +38,7 @@ export async function POST(request) {
   const email = (body.email || '').trim()
   const phone = (body.phone || '').trim()
   const grade = (body.grade || '').trim()
+  const session = (body.session || '').trim().slice(0, 60)
 
   if (!name || !email || !phone) {
     return NextResponse.json({ error: 'Please add your name, email, and WhatsApp number.' }, { status: 400 })
@@ -50,7 +51,7 @@ export async function POST(request) {
   }
 
   try {
-    const { error } = await sendOpenHouseEmail({ name, email, phone, grade })
+    const { error } = await sendOpenHouseEmail({ name, email, phone, grade, session })
     if (error) {
       return NextResponse.json({ error: 'Could not save your spot right now. Please try again.' }, { status: 502 })
     }

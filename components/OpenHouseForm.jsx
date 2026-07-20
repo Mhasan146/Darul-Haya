@@ -5,11 +5,12 @@ const inputCls =
   'w-full border border-clay/20 rounded-lg px-3 py-2.5 text-sm text-clay bg-white focus:outline-none focus:ring-2 focus:ring-teal/30'
 
 const GRADES = ['Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8', 'Not sure']
+const SESSIONS = ['Online (WhatsApp video)', 'In person', 'Either works']
 
 // Open house RSVP. Posts to /api/open-house, which emails the school via Resend
 // (the reliable pipeline) — the same one the contact form uses.
 export default function OpenHouseForm() {
-  const [form, setForm] = useState({ name: '', email: '', phone: '', grade: '', company: '' })
+  const [form, setForm] = useState({ session: SESSIONS[0], name: '', email: '', phone: '', grade: '', company: '' })
   const [status, setStatus] = useState('idle') // idle | sending | sent | error
   const [error, setError] = useState('')
 
@@ -51,7 +52,7 @@ export default function OpenHouseForm() {
         <p className="text-3xl mb-2" aria-hidden="true">🤍</p>
         <p className="text-teal font-bold text-lg">You&rsquo;re on the list</p>
         <p className="text-clay/80 text-sm mt-1">
-          We&rsquo;ll message you on WhatsApp with the join link and a reminder before the session.
+          We&rsquo;ll be in touch shortly with the details for your session.
         </p>
       </div>
     )
@@ -72,6 +73,12 @@ export default function OpenHouseForm() {
       />
 
       <div>
+        <label htmlFor="oh-session" className="block text-xs font-semibold text-clay/80 mb-1">Which session? *</label>
+        <select id="oh-session" value={form.session} onChange={set('session')} className={inputCls}>
+          {SESSIONS.map((s) => <option key={s} value={s}>{s}</option>)}
+        </select>
+      </div>
+      <div>
         <label htmlFor="oh-name" className="block text-xs font-semibold text-clay/80 mb-1">Your name *</label>
         <input id="oh-name" type="text" required value={form.name} onChange={set('name')} placeholder="Your name" className={inputCls} />
       </div>
@@ -82,7 +89,7 @@ export default function OpenHouseForm() {
       <div>
         <label htmlFor="oh-phone" className="block text-xs font-semibold text-clay/80 mb-1">WhatsApp number *</label>
         <input id="oh-phone" type="tel" required value={form.phone} onChange={set('phone')} placeholder="+1 (416) 555-1234" className={inputCls} />
-        <p className="text-[11px] text-clay/60 mt-1">We&rsquo;ll send the join link here — the open house is held over WhatsApp video.</p>
+        <p className="text-[11px] text-clay/60 mt-1">We&rsquo;ll send your session details and a reminder here.</p>
       </div>
       <div>
         <label htmlFor="oh-grade" className="block text-xs font-semibold text-clay/80 mb-1">Child&rsquo;s grade <span className="font-normal">(optional)</span></label>
