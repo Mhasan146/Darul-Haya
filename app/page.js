@@ -467,8 +467,11 @@ export default function HomePage() {
           <div className="grid gap-10 sm:grid-cols-3">
             {/* Brand */}
             <div>
-              <h2 className="font-display text-2xl font-bold tracking-wide">Darul Haya</h2>
-              <p className="text-xs uppercase tracking-[0.25em] text-amber mt-1">Knowledge · Character</p>
+              <div className="flex items-center gap-2.5">
+                <Image src="/logo-mark-light.png" alt="" width={257} height={311} className="h-10 w-auto" />
+                <h2 className="font-display text-2xl font-bold tracking-wide">Darul Haya</h2>
+              </div>
+              <p className="text-xs uppercase tracking-[0.25em] text-amber mt-2">Knowledge · Character</p>
               <p className="text-white/60 text-sm mt-4 leading-relaxed max-w-xs">
                 A structured, values-driven online school for boys and girls in Grades 3–8.
               </p>

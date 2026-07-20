@@ -119,10 +119,9 @@ export default function Navbar() {
     <nav ref={navRef} aria-label="Main" className="sticky top-0 z-40 bg-beige/85 dark:bg-[#0e2826]/85 backdrop-blur-md border-b border-amber/30 dark:border-white/10">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
         {/* Logo */}
-        <Link href="/" className="flex items-center shrink-0" onClick={() => setMobileOpen(false)}>
-          <span className="block h-12 w-[3.75rem] overflow-hidden">
-            <Image src="/logo.png" alt="Darul Haya — Academy of Learning" width={60} height={48} priority className="w-full h-auto" />
-          </span>
+        <Link href="/" className="flex items-center gap-2.5 shrink-0" onClick={() => setMobileOpen(false)} aria-label="Darul Haya — home">
+          <Image src="/logo-mark.png" alt="" width={257} height={311} priority className="h-10 w-auto" />
+          <span className="font-display text-xl font-bold text-clay tracking-tight leading-none dark:text-white">Darul Haya</span>
         </Link>
 
         {/* Desktop menus */}
