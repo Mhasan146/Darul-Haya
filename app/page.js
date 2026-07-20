@@ -180,16 +180,13 @@ export default function HomePage() {
             >
               Apply Now
             </Link>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/open-house"
               className="text-clay/70 text-sm font-medium hover:text-clay transition-colors"
             >
-              Chat on WhatsApp
-              <span className="sr-only"> (opens in a new tab)</span>
+              or join a free online open house
               <span aria-hidden="true"> →</span>
-            </a>
+            </Link>
           </div>
 
           {/* How it works — 3-step process */}
@@ -296,17 +293,18 @@ export default function HomePage() {
       <SafetyTools />
 
       {/* Founder's note */}
-      <section aria-label="A note from our founder" className="relative overflow-hidden bg-beige-dark/60 border-y border-clay/10">        <div className="relative max-w-3xl mx-auto px-6 py-16 text-center">
-          <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-6">Why Darul Haya Exists</p>
+      <section aria-label="A message from our principal" className="relative overflow-hidden bg-beige-dark/60 border-y border-clay/10">
+        <div className="relative max-w-3xl mx-auto px-6 py-16 text-center">
+          <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-6">A Message from Our Principal</p>
           <span aria-hidden="true" className="block font-display text-6xl leading-none text-amber select-none">&ldquo;</span>
           <blockquote className="font-display text-2xl sm:text-3xl font-semibold text-clay leading-snug text-balance -mt-4">
             Fifteen years in the classroom taught me exactly how children thrive: small classes,
             real attention, and truly focused learning. Darul Haya is everything I&rsquo;ve
-            learned, built into one school.
+            learned, built into one school — and I&rsquo;ll be with your child every step of the way.
           </blockquote>
           <div className="gold-rule mx-auto mt-7 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
-          <p className="mt-5 text-sm font-semibold text-clay">Founder, Darul Haya</p>
-          <p className="text-xs text-clay/70 mt-1">Classroom teacher for over 15 years</p>
+          <p className="mt-5 text-sm font-semibold text-clay">Mohammad Haaris Siddiqui</p>
+          <p className="text-xs text-clay/70 mt-1">Principal, Darul Haya · 15+ years in the classroom</p>
         </div>
       </section>
 

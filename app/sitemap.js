@@ -7,6 +7,7 @@ const ROUTES = [
   '/curriculum',
   '/faq',
   '/contact',
+  '/open-house',
   '/register',
   '/privacy',
 ]
