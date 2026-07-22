@@ -3,13 +3,13 @@ import { useState } from 'react'
 
 // "The real value" comparison. Figures are editable constants.
 // School tuition is each school's published fee for one child in the Grades
-// 3–8 range, paid over 10 monthly installments (annual = monthly × 10).
+// 2–9 range, paid over 10 monthly installments (annual = monthly × 10).
 const SCHOOLS = [
   {
     name: 'ISNA Schools',
     monthly: '~$843',
     annual: '~$8,427',
-    detail: 'In-person · Grades 3–8',
+    detail: 'In-person · Grades 2–9',
     year: '2025–26 published rates',
   },
   {
@@ -24,7 +24,7 @@ const SCHOOLS = [
 const DH = {
   monthly: '$300',
   annual: '$3,600',
-  detail: 'Live online · Grades 3–8',
+  detail: 'Live online · Grades 2–9',
   note: 'Books & technology via flat annual fees',
 }
 

@@ -4,7 +4,7 @@ import RegisterForm from '@/components/RegisterForm'
 export const metadata = {
   title: 'Apply Now — Enrolling for September 2026',
   description:
-    'Apply to Darul Haya online school for Grades 3–8. A five-minute application — tell us about your family and we will personally help you enroll.',
+    'Apply to Darul Haya online school for Grades 2–9. A five-minute application — tell us about your family and we will personally help you enroll.',
   alternates: { canonical: '/register' },
 }
 

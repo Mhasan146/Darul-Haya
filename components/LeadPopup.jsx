@@ -7,7 +7,7 @@ const STORAGE_KEY = 'dh_lead_popup'
 const SUPPRESS_DAYS = 14
 // Routes with their own dedicated lead form — don't pop the global lead form there.
 const SUPPRESS_ON_ROUTES = ['/register', '/open-house']
-const GRADES = ['Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8', 'Not sure']
+const GRADES = ['Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8', 'Grade 9', 'Not sure']
 
 function shouldShow() {
   try {

@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 
 // Real pricing: flat $300/month per child, 15% sibling discount on each
-// additional child. Same price for every grade (3–8).
+// additional child. Same price for every grade (2–9).
 const BASE = 300
 const SIBLING_RATE = 0.15
 const additionalChildPrice = Math.round(BASE * (1 - SIBLING_RATE)) // $255
@@ -21,7 +21,7 @@ export default function TuitionCalculator() {
   return (
     <div className="max-w-md mx-auto mt-8 rounded-3xl bg-white border border-beige-dark shadow-md p-7 sm:p-8">
       <p className="text-xs font-semibold uppercase tracking-widest text-teal mb-1">Estimate your tuition</p>
-      <p className="text-clay/70 text-sm mb-5">Same price for every grade (3–8). Add siblings to see the discount applied live.</p>
+      <p className="text-clay/70 text-sm mb-5">Same price for every grade (2–9). Add siblings to see the discount applied live.</p>
 
       <label className="block text-sm font-medium text-clay/80 mb-2">How many children?</label>
       <div className="flex gap-2" role="group" aria-label="Number of children">
@@ -51,7 +51,7 @@ export default function TuitionCalculator() {
         {saved > 0 ? (
           <p className="text-sm font-semibold text-teal mt-1">You save ${saved}/month with the sibling discount</p>
         ) : (
-          <p className="text-sm text-clay/60 mt-1">One child · Grades 3–8</p>
+          <p className="text-sm text-clay/60 mt-1">One child · Grades 2–9</p>
         )}
       </div>
 

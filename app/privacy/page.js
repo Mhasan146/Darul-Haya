@@ -20,7 +20,7 @@ const SECTIONS = [
   },
   {
     heading: "Children's Privacy",
-    body: `Darul Haya serves students in Grades 3–8. We collect only the minimum information required to provide educational services to your child. We do not share student data with advertisers or unrelated third parties.`,
+    body: `Darul Haya serves students in Grades 2–9. We collect only the minimum information required to provide educational services to your child. We do not share student data with advertisers or unrelated third parties.`,
   },
   {
     heading: 'Your Rights',

@@ -3,7 +3,7 @@ import PagePlaceholder from '@/components/PagePlaceholder'
 export const metadata = {
   title: 'About Us — A Smaller, Safer Online School',
   description:
-    'Why we founded Darul Haya: an online school for boys and girls in Grades 3–8 with small live classes, Arabic, and an Ontario-aligned curriculum.',
+    'Why we founded Darul Haya: an online school for boys and girls in Grades 2–9 with small live classes, Arabic, and an Ontario-aligned curriculum.',
   alternates: { canonical: '/about' },
 }
 
@@ -12,7 +12,7 @@ export default function AboutPage() {
     <PagePlaceholder
       eyebrow="About"
       title="About Darul Haya"
-      intro="Darul Haya is an online school for boys and girls in Grades 3 through 8, built around live, teacher-led classes and a complete, carefully chosen curriculum. It was founded by a teacher with more than fifteen years in the classroom — and a conviction that every child deserves small classes, real attention, and truly focused learning."
+      intro="Darul Haya is an online school for boys and girls in Grades 2 through 9, built around live, teacher-led classes and a complete, carefully chosen curriculum. It was founded by a teacher with more than fifteen years in the classroom — and a conviction that every child deserves small classes, real attention, and truly focused learning."
       sections={[
         {
           heading: 'Our Story',

@@ -24,7 +24,7 @@ const INCLUDED = [
 ]
 
 const FACTS = [
-  { value: 'Grades 3–8', label: 'Elementary & Middle School' },
+  { value: 'Grades 2–9', label: 'Elementary & Middle School' },
   { value: 'Live, daily', label: 'Real teachers, set timetable' },
   { value: 'Small classes', label: 'Known by name, fully supervised' },
   { value: 'Ontario-aligned', label: 'On track with standards' },
@@ -37,17 +37,17 @@ const TESTIMONIALS = [
   {
     body: '[ Placeholder ] A real review from one of our founding families will appear here.',
     author: 'Founding parent',
-    role: 'Elementary (Grades 3–5)',
+    role: 'Elementary (Grades 2–5)',
   },
   {
     body: '[ Placeholder ] A real review from one of our founding families will appear here.',
     author: 'Founding parent',
-    role: 'Middle School (Grades 6–8)',
+    role: 'Middle School (Grades 6–9)',
   },
   {
     body: '[ Placeholder ] A real review from one of our founding families will appear here.',
     author: 'Founding parent',
-    role: 'Elementary (Grades 3–5)',
+    role: 'Elementary (Grades 2–5)',
   },
 ]
 
@@ -158,7 +158,7 @@ export default function HomePage() {
 
         <div className="relative max-w-4xl mx-auto px-6 pt-14 pb-20 text-center">
           <span className="inline-flex items-center gap-2 mb-7 text-[11px] font-semibold uppercase tracking-[0.2em] text-teal bg-teal/10 ring-1 ring-teal/20 px-4 py-1.5 rounded-full">
-            <span className="h-1.5 w-1.5 rounded-full bg-teal" aria-hidden="true" /> Now enrolling · Grades 3–8
+            <span className="h-1.5 w-1.5 rounded-full bg-teal" aria-hidden="true" /> Now enrolling · Grades 2–9
           </span>
 
           {/* Full crest (transparent bg) on a soft cream halo, so it reads
@@ -184,7 +184,7 @@ export default function HomePage() {
           </h1>
 
           <p className="mt-5 text-lg text-clay/70 max-w-2xl mx-auto leading-relaxed">
-            Live, teacher-led classes for boys and girls in Grades 3–8 — small, closely
+            Live, teacher-led classes for boys and girls in Grades 2–9 — small, closely
             supervised, Ontario-aligned, with physical books shipped to your door.
           </p>
 
@@ -378,11 +378,11 @@ export default function HomePage() {
             <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">Tuition</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-clay">One school. One simple price.</h2>
             <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
-            <p className="text-clay/80 mt-5">A complete online school for Grades 3–8 — everything included, no add-on tiers.</p>
+            <p className="text-clay/80 mt-5">A complete online school for Grades 2–9 — everything included, no add-on tiers.</p>
           </div>
 
           <div className="max-w-md mx-auto rounded-3xl bg-clay text-white p-8 sm:p-10 shadow-xl shadow-clay/20">
-            <p className="text-xs font-semibold uppercase tracking-widest text-amber mb-2">Online School · Grades 3–8</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-amber mb-2">Online School · Grades 2–9</p>
             <div className="flex items-end gap-1.5">
               <span className="font-display text-6xl font-bold">$300</span>
               <span className="text-white/80 mb-2">/month</span>
@@ -418,7 +418,7 @@ export default function HomePage() {
       {/* Decision summary strip */}
       <section aria-label="Program highlights" className="bg-beige border-y border-clay/10 py-5">
         <ul className="max-w-3xl mx-auto px-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-clay/80 list-none">
-          {['Grades 3–8', '$300 / month', 'Live daily classes', 'Ontario-aligned', 'Books included'].map((item) => (
+          {['Grades 2–9', '$300 / month', 'Live daily classes', 'Ontario-aligned', 'Books included'].map((item) => (
             <li key={item} className="flex items-center gap-1.5">
               <span className="text-teal font-bold" aria-hidden>✓</span>
               {item}
@@ -504,7 +504,7 @@ export default function HomePage() {
               </div>
               <p className="text-xs uppercase tracking-[0.25em] text-amber mt-2">Knowledge · Character</p>
               <p className="text-white/60 text-sm mt-4 leading-relaxed max-w-xs">
-                A structured, values-driven online school for boys and girls in Grades 3–8.
+                A structured, values-driven online school for boys and girls in Grades 2–9.
               </p>
             </div>
 

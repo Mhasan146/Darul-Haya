@@ -5,7 +5,7 @@ to scale and has no proper vector source. This brief covers a focused refinement
 (not necessarily a from-scratch rebrand).
 
 ## About the school
-Darul Haya — an **online Islamic school** for boys and girls in **Grades 3–8**.
+Darul Haya — an **online Islamic school** for boys and girls in **Grades 2–9**.
 Live, teacher-led classes, Ontario-aligned, values-driven. Tone: warm, premium,
 trustworthy, family-facing.
 

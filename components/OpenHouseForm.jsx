@@ -4,7 +4,7 @@ import { useState } from 'react'
 const inputCls =
   'w-full border border-clay/20 rounded-lg px-3 py-2.5 text-sm text-clay bg-white focus:outline-none focus:ring-2 focus:ring-teal/30'
 
-const GRADES = ['Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8', 'Not sure']
+const GRADES = ['Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8', 'Grade 9', 'Not sure']
 const SESSIONS = ['Online (WhatsApp video)', 'In person', 'Either works']
 
 // Open house RSVP. Posts to /api/open-house, which emails the school via Resend

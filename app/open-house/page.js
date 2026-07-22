@@ -3,7 +3,7 @@ import OpenHouseForm from '@/components/OpenHouseForm'
 export const metadata = {
   title: 'Free Open House — Online & In Person',
   description:
-    'Join a free open house for Darul Haya — an online Islamic school for Grades 3–8. Meet Principal Mohammad Haaris Siddiqui online or in person, see how our live classes work, and ask your questions. No commitment.',
+    'Join a free open house for Darul Haya — an online Islamic school for Grades 2–9. Meet Principal Mohammad Haaris Siddiqui online or in person, see how our live classes work, and ask your questions. No commitment.',
   alternates: { canonical: '/open-house' },
 }
 

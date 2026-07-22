@@ -4,7 +4,7 @@ import ContactForm from '@/components/ContactForm'
 export const metadata = {
   title: 'Contact Us',
   description:
-    'Questions about our online school or homeschooling for Grades 3–8? Message us, email info@darulhaya.com, or chat on WhatsApp.',
+    'Questions about our online school or homeschooling for Grades 2–9? Message us, email info@darulhaya.com, or chat on WhatsApp.',
   alternates: { canonical: '/contact' },
 }
 

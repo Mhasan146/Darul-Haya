@@ -3,7 +3,7 @@ import PagePlaceholder from '@/components/PagePlaceholder'
 export const metadata = {
   title: 'Frequently Asked Questions',
   description:
-    'Answers about our online school for Grades 3–8 — live classes and homeschooling from home, supervision, tuition, Arabic, and how to enroll.',
+    'Answers about our online school for Grades 2–9 — live classes and homeschooling from home, supervision, tuition, Arabic, and how to enroll.',
   alternates: { canonical: '/faq' },
 }
 
@@ -16,7 +16,7 @@ export default function FaqPage() {
       sections={[
         {
           heading: 'What is Darul Haya?',
-          body: 'An online school for boys and girls in Grades 3 through 8, offering live, teacher-led classes and a complete, structured curriculum — all in one place.',
+          body: 'An online school for boys and girls in Grades 2 through 9, offering live, teacher-led classes and a complete, structured curriculum — all in one place.',
         },
         {
           heading: 'Are classes live or recorded?',
@@ -24,11 +24,11 @@ export default function FaqPage() {
         },
         {
           heading: 'What grades do you serve?',
-          body: 'Grades 3 through 8.',
+          body: 'Grades 2 through 9.',
         },
         {
           heading: 'Is the school co-ed?',
-          body: 'Yes. Darul Haya welcomes both boys and girls in Grades 3 through 8. In the younger grades (3–5) students learn together, and from Grade 6 onward boys and girls are taught in separate classrooms.',
+          body: 'Yes. Darul Haya welcomes both boys and girls in Grades 2 through 9. In the younger grades (2–5) students learn together, and from Grade 6 onward boys and girls are taught in separate classrooms.',
         },
         {
           heading: 'How are students supervised?',
@@ -76,7 +76,7 @@ export default function FaqPage() {
         },
         {
           heading: 'Do you offer Arabic classes?',
-          body: 'Yes. Arabic language is part of every student\'s weekly schedule from Grade 3 through Grade 8, taught live by a dedicated teacher. Classes progress through reading, writing, and conversational Arabic in a structured, grade-appropriate sequence.',
+          body: 'Yes. Arabic language is part of every student\'s weekly schedule from Grade 2 through Grade 9, taught live by a dedicated teacher. Classes progress through reading, writing, and conversational Arabic in a structured, grade-appropriate sequence.',
         },
         {
           heading: 'Do students receive physical books?',
