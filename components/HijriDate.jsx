@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 // Computed natively via Intl — no external library. Renders nothing on the
 // server (and until mounted) so the visitor's own local date is used with no
 // hydration mismatch.
-export default function HijriDate({ className = '', separator = ' · ' }) {
+export default function HijriDate({ className = '', hijriClassName = '', separator = ' · ' }) {
   const [dates, setDates] = useState(null)
 
   useEffect(() => {
@@ -33,7 +33,7 @@ export default function HijriDate({ className = '', separator = ' · ' }) {
 
   return (
     <span className={className}>
-      <span>{dates.hijri}</span>
+      <span className={hijriClassName}>{dates.hijri}</span>
       <span aria-hidden="true">{separator}</span>
       <span>{dates.gregorian}</span>
     </span>

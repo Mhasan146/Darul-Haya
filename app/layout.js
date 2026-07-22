@@ -137,23 +137,23 @@ export default function RootLayout({ children }) {
         </nav>
 
         <header>
+          {/* Today's date — Hijri + Gregorian, pinned at the very top on every screen */}
+          <div className="bg-[#0b3a36] text-center text-[11px] sm:text-xs py-1.5 px-4">
+            <HijriDate className="text-white/75" hijriClassName="text-white font-medium" />
+          </div>
           {/* Announcement banner — update text + date each enrolment cycle */}
-          <div className="relative bg-clay text-white">
-            {/* Today's date, Hijri + Gregorian (left on desktop) */}
-            <HijriDate className="hidden lg:block absolute left-5 top-1/2 -translate-y-1/2 text-white/55 text-xs pointer-events-none" />
-            <div
-              role="status"
-              aria-live="polite"
-              aria-atomic="true"
-              className="text-center text-xs sm:text-sm py-2 px-4"
-            >
-              {/* TODO: Update enrolment deadline before each intake — e.g. "September 2027" */}
-              <span className="text-amber font-semibold">Enrolment open for September 2026</span>
-              {' '}— seats fill quickly.{' '}
-              <Link href="/register" className="underline underline-offset-2 hover:text-amber transition-colors">
-                Apply Now <span aria-hidden="true">→</span>
-              </Link>
-            </div>
+          <div
+            role="status"
+            aria-live="polite"
+            aria-atomic="true"
+            className="bg-clay text-white text-center text-xs sm:text-sm py-2 px-4"
+          >
+            {/* TODO: Update enrolment deadline before each intake — e.g. "September 2027" */}
+            <span className="text-amber font-semibold">Enrolment open for September 2026</span>
+            {' '}— seats fill quickly.{' '}
+            <Link href="/register" className="underline underline-offset-2 hover:text-amber transition-colors">
+              Apply Now <span aria-hidden="true">→</span>
+            </Link>
           </div>
 
           <Navbar />
