@@ -7,6 +7,7 @@ import MobileApplyBar from '@/components/MobileApplyBar'
 import LeadPopup from '@/components/LeadPopup'
 import ScrollReveal from '@/components/ScrollReveal'
 import CookieConsent from '@/components/CookieConsent'
+import HijriDate from '@/components/HijriDate'
 
 // Google Analytics 4 — set NEXT_PUBLIC_GA_ID (e.g. G-XXXXXXXXXX) in your
 // hosting env to enable. When unset, no GA script and no cookie banner load.
@@ -137,18 +138,22 @@ export default function RootLayout({ children }) {
 
         <header>
           {/* Announcement banner — update text + date each enrolment cycle */}
-          <div
-            role="status"
-            aria-live="polite"
-            aria-atomic="true"
-            className="bg-clay text-white text-center text-xs sm:text-sm py-2 px-4"
-          >
-            {/* TODO: Update enrolment deadline before each intake — e.g. "September 2027" */}
-            <span className="text-amber font-semibold">Enrolment open for September 2026</span>
-            {' '}— seats fill quickly.{' '}
-            <Link href="/register" className="underline underline-offset-2 hover:text-amber transition-colors">
-              Apply Now <span aria-hidden="true">→</span>
-            </Link>
+          <div className="relative bg-clay text-white">
+            {/* Today's date, Hijri + Gregorian (left on desktop) */}
+            <HijriDate className="hidden lg:block absolute left-5 top-1/2 -translate-y-1/2 text-white/55 text-xs pointer-events-none" />
+            <div
+              role="status"
+              aria-live="polite"
+              aria-atomic="true"
+              className="text-center text-xs sm:text-sm py-2 px-4"
+            >
+              {/* TODO: Update enrolment deadline before each intake — e.g. "September 2027" */}
+              <span className="text-amber font-semibold">Enrolment open for September 2026</span>
+              {' '}— seats fill quickly.{' '}
+              <Link href="/register" className="underline underline-offset-2 hover:text-amber transition-colors">
+                Apply Now <span aria-hidden="true">→</span>
+              </Link>
+            </div>
           </div>
 
           <Navbar />

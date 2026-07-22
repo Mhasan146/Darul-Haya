@@ -120,7 +120,9 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 shrink-0" onClick={() => setMobileOpen(false)} aria-label="Darul Haya — home">
-          <Image src="/logo-mark.png" alt="" width={257} height={311} priority className="h-10 w-auto" />
+          {/* Teal mark on the light nav; cream (reversed) mark on the dark nav */}
+          <Image src="/logo-mark.png" alt="" width={257} height={311} priority className="h-10 w-auto dark:hidden" />
+          <Image src="/logo-mark-light.png" alt="" width={257} height={311} priority className="hidden h-10 w-auto dark:block" />
           <span className="font-display text-xl font-bold text-clay tracking-tight leading-none dark:text-white">Darul Haya</span>
         </Link>
 

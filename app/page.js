@@ -6,6 +6,7 @@ import ValueComparison from '@/components/ValueComparison'
 import TuitionCalculator from '@/components/TuitionCalculator'
 import SubjectCards from '@/components/SubjectCards'
 import EveryOpportunity from '@/components/EveryOpportunity'
+import HijriDate from '@/components/HijriDate'
 import { WHATSAPP_URL } from '@/lib/siteConfig'
 
 const INCLUDED = [
@@ -511,6 +512,7 @@ export default function HomePage() {
           </div>
 
           <div className="border-t border-white/10 mt-10 pt-6 text-center text-xs text-white/60">
+            <HijriDate className="block mb-2 text-white/50" />
             © {new Date().getFullYear()} Darul Haya. All rights reserved.
             {' · '}
             <Link href="/privacy" className="hover:text-amber transition-colors">Privacy Policy</Link>
