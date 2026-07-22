@@ -7,7 +7,6 @@ import MobileApplyBar from '@/components/MobileApplyBar'
 import LeadPopup from '@/components/LeadPopup'
 import ScrollReveal from '@/components/ScrollReveal'
 import CookieConsent from '@/components/CookieConsent'
-import HijriDate from '@/components/HijriDate'
 
 // Google Analytics 4 — set NEXT_PUBLIC_GA_ID (e.g. G-XXXXXXXXXX) in your
 // hosting env to enable. When unset, no GA script and no cookie banner load.
@@ -137,10 +136,6 @@ export default function RootLayout({ children }) {
         </nav>
 
         <header>
-          {/* Today's date — Hijri + Gregorian, pinned at the very top on every screen */}
-          <div className="bg-[#0b3a36] text-center text-[11px] sm:text-xs py-1.5 px-4">
-            <HijriDate className="text-white/75" hijriClassName="text-white font-medium" />
-          </div>
           {/* Announcement banner — update text + date each enrolment cycle */}
           <div
             role="status"

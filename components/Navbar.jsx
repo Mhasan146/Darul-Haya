@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import ThemeToggle from '@/components/ThemeToggle'
+import HijriDate from '@/components/HijriDate'
 
 // Only render Student Login once the learning platform URL is configured.
 // Set NEXT_PUBLIC_MOODLE_URL in Netlify and the link appears automatically.
@@ -108,7 +109,7 @@ export default function Navbar() {
       <Link
         href="/register"
         onClick={() => setMobileOpen(false)}
-        className="text-sm bg-clay text-white px-4 py-2 rounded-full font-semibold hover:bg-clay/80 transition-colors text-center"
+        className="text-sm bg-clay text-white px-4 py-2 rounded-full font-semibold hover:bg-clay/80 transition-colors text-center whitespace-nowrap"
       >
         Apply Now
       </Link>
@@ -118,13 +119,22 @@ export default function Navbar() {
   return (
     <nav ref={navRef} aria-label="Main" className="sticky top-0 z-40 bg-beige/85 dark:bg-[#0e2826]/85 backdrop-blur-md border-b border-amber/30 dark:border-white/10">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5 shrink-0" onClick={() => setMobileOpen(false)} aria-label="Darul Haya — home">
-          {/* Teal mark on the light nav; cream (reversed) mark on the dark nav */}
-          <Image src="/logo-mark.png" alt="" width={257} height={311} priority className="h-10 w-auto dark:hidden" />
-          <Image src="/logo-mark-light.png" alt="" width={257} height={311} priority className="hidden h-10 w-auto dark:block" />
-          <span className="font-display text-xl font-bold text-clay tracking-tight leading-none dark:text-white">Darul Haya</span>
-        </Link>
+        {/* Logo + today's date beside it */}
+        <div className="flex items-center gap-4 shrink-0">
+          <Link href="/" className="flex items-center gap-2.5 shrink-0" onClick={() => setMobileOpen(false)} aria-label="Darul Haya — home">
+            {/* Teal mark on the light nav; cream (reversed) mark on the dark nav */}
+            <Image src="/logo-mark.png" alt="" width={257} height={311} priority className="h-10 w-auto dark:hidden" />
+            <Image src="/logo-mark-light.png" alt="" width={257} height={311} priority className="hidden h-10 w-auto dark:block" />
+            <span className="font-display text-xl font-bold text-clay tracking-tight leading-none dark:text-white">Darul Haya</span>
+          </Link>
+          <HijriDate
+            stacked
+            showWeekday={false}
+            className="flex lg:hidden xl:flex shrink-0 border-l border-clay/15 dark:border-white/15 pl-3 sm:pl-4 text-[10px] sm:text-[11px]"
+            hijriClassName="text-clay dark:text-white font-semibold whitespace-nowrap"
+            gregorianClassName="text-clay/45 dark:text-white/45 whitespace-nowrap"
+          />
+        </div>
 
         {/* Desktop menus */}
         <div className="hidden lg:flex items-center gap-1">
@@ -141,7 +151,7 @@ export default function Navbar() {
                 aria-expanded={openMenu === menu.label}
                 aria-controls={`nav-${menu.label.replace(/\s+/g, '-').toLowerCase()}`}
                 onClick={() => setOpenMenu(openMenu === menu.label ? null : menu.label)}
-                className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-clay hover:text-teal transition-colors"
+                className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-clay hover:text-teal transition-colors whitespace-nowrap"
               >
                 {menu.label}
                 <ChevronDown className={`h-4 w-4 transition-transform ${openMenu === menu.label ? 'rotate-180' : ''}`} />
