@@ -47,9 +47,10 @@ function SubjectCard({ subject }) {
 export default function SubjectCards() {
   return (
     <section id="subjects" className="relative overflow-hidden bg-beige py-20 border-b border-clay/10 scroll-mt-24">
-      {/* Curriculum photo backdrop — muted so the white subject cards stay crisp */}
-      <div aria-hidden className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: "url('/curriculum.jpg')" }} />
-      <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-beige/80 via-beige/70 to-beige/85" />
+      {/* Curriculum photo backdrop — prominent, with a light wash so the heading
+          stays readable and the white subject cards still pop */}
+      <div aria-hidden className="absolute inset-0 bg-cover bg-center opacity-75" style={{ backgroundImage: "url('/curriculum.jpg')" }} />
+      <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-beige/45 via-beige/30 to-beige/65" />
       <div className="relative max-w-5xl mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">The Curriculum</p>

@@ -429,9 +429,10 @@ export default function HomePage() {
 
       {/* CTA band */}
       <section aria-label="Enrolment call to action" className="relative overflow-hidden bg-clay text-white">
-        {/* Warm classroom photo, held well behind a deep-teal overlay so white text stays readable */}
-        <div aria-hidden className="absolute inset-0 bg-cover bg-center opacity-30" style={{ backgroundImage: "url('/cta.jpg')" }} />
-        <div aria-hidden className="absolute inset-0 bg-gradient-to-br from-[#10544e]/90 via-clay/90 to-[#0b3a36]/95" />        <div aria-hidden className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-72 w-[36rem] rounded-full bg-teal-light/10 blur-3xl" />
+        {/* Warm classroom photo — prominent, with a deep-teal overlay kept strong
+            enough that the white text stays readable */}
+        <div aria-hidden className="absolute inset-0 bg-cover bg-center opacity-75" style={{ backgroundImage: "url('/cta.jpg')" }} />
+        <div aria-hidden className="absolute inset-0 bg-gradient-to-br from-[#10544e]/70 via-clay/65 to-[#0b3a36]/75" />        <div aria-hidden className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-72 w-[36rem] rounded-full bg-teal-light/10 blur-3xl" />
         <div className="relative max-w-2xl mx-auto px-6 py-20 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight text-balance">
             Ready to give your child a better school day?
