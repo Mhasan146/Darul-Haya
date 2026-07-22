@@ -4,7 +4,7 @@
 const POINTS = [
   {
     title: 'Every door stays open',
-    body: 'Our curriculum is fully Ontario-aligned, so your child stays exactly on grade level and can move to any school — or any path — whenever you choose. No university asks how a child did in Grade 5; it asks who they became.',
+    body: 'Our curriculum is accredited and fully Ontario-aligned, so your child stays exactly on grade level and can move to any school — or any path — whenever you choose. No university asks how a child did in Grade 5; it asks who they became.',
   },
   {
     title: 'Known by name',
@@ -51,6 +51,16 @@ export default function EveryOpportunity() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Track record — proof band */}
+        <div className="mt-6 rounded-2xl bg-clay text-white p-7 sm:p-8 text-center">
+          <p className="text-amber text-xs font-semibold uppercase tracking-widest mb-2">A proven track record</p>
+          <p className="text-lg sm:text-xl font-semibold leading-snug text-balance max-w-3xl mx-auto">
+            The teachers behind Darul Haya aren’t new to this. In the classrooms they come from,
+            students finish their work and move on to high school ready to succeed — that’s the
+            standard we’re built on.
+          </p>
         </div>
 
         <p className="mt-10 text-center font-display text-2xl sm:text-3xl font-semibold text-clay text-balance max-w-3xl mx-auto leading-snug">

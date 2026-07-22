@@ -44,11 +44,11 @@ export default function FaqPage() {
         },
         {
           heading: 'Will my child be at a disadvantage compared to children in regular school?',
-          body: 'Just the opposite. Because our curriculum is fully Ontario-aligned, your child stays on grade level and can transition to any school at any time — no doors close. And in a small, focused class they get attention a crowded classroom simply can\'t match. A grounded, focused child isn\'t behind; they\'re ahead.',
+          body: 'Just the opposite. Because our curriculum is accredited and fully Ontario-aligned, your child stays on grade level and can transition to any school at any time — no doors close. And in a small, focused class they get attention a crowded classroom simply can\'t match. A grounded, focused child isn\'t behind; they\'re ahead.',
         },
         {
           heading: 'Why should we trust a brand-new school with our child?',
-          body: 'It\'s a fair question, and we\'d rather earn it than argue it. Darul Haya is led by Principal Mohammad Haaris Siddiqui; classes are small and closely supervised; and the whole day is built to be transparent, so you always see what\'s taught and how your child is doing. The best way to judge us is to meet us — join a free open house, ask us anything, and decide with your own eyes.',
+          body: 'It\'s a fair question, and we\'d rather earn it than argue it. Our program is accredited and Ontario-aligned, and the teachers behind Darul Haya bring a real track record — their students finish their work and move on to high school ready to succeed. The school is led by Principal Mohammad Haaris Siddiqui, classes are small and closely supervised, and the whole day is transparent, so you always see what\'s taught and how your child is doing. The best way to judge us is to meet us — join a free open house, ask us anything, and decide with your own eyes.',
         },
         {
           heading: 'Isn\'t this too much screen time?',
