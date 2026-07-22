@@ -43,6 +43,14 @@ export default function FaqPage() {
           body: 'No. Your child learns alongside classmates every day in a live, moderated setting — seeing and speaking with their teacher and peers throughout each class. It is a calmer, kinder social circle than many larger schools, without the bullying, cliques, and pressures that worry so many families.',
         },
         {
+          heading: 'Will my child be at a disadvantage compared to children in regular school?',
+          body: 'Just the opposite. Because our curriculum is fully Ontario-aligned, your child stays on grade level and can transition to any school at any time — no doors close. And in a small, focused class they get attention a crowded classroom simply can\'t match. A grounded, focused child isn\'t behind; they\'re ahead.',
+        },
+        {
+          heading: 'Why should we trust a brand-new school with our child?',
+          body: 'It\'s a fair question, and we\'d rather earn it than argue it. Darul Haya is led by Principal Mohammad Haaris Siddiqui; classes are small and closely supervised; and the whole day is built to be transparent, so you always see what\'s taught and how your child is doing. The best way to judge us is to meet us — join a free open house, ask us anything, and decide with your own eyes.',
+        },
+        {
           heading: 'Isn\'t this too much screen time?',
           body: 'It is more balanced than parents expect, and the screen time that remains is purposeful. Guided, active online learning builds the mental pathways for using a screen to focus, think, and create — the opposite of the passive, endless scrolling that hooks so many children elsewhere. And much of the work happens off-screen entirely: every enrolled student receives physical books and materials shipped to their home, so reading, writing, and assignments happen on paper, not only on a device.',
         },
