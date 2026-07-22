@@ -7,7 +7,12 @@ import TuitionCalculator from '@/components/TuitionCalculator'
 import SubjectCards from '@/components/SubjectCards'
 import EveryOpportunity from '@/components/EveryOpportunity'
 import HijriDate from '@/components/HijriDate'
+import YouTubeEmbed from '@/components/YouTubeEmbed'
 import { WHATSAPP_URL } from '@/lib/siteConfig'
+
+// Homepage video — paste your YouTube video ID (the part after "v=" or
+// "youtu.be/"), e.g. 'dQw4w9WgXcQ'. Leave empty to hide the video section.
+const HOMEPAGE_VIDEO_ID = ''
 
 const INCLUDED = [
   'Daily live classes with real teachers',
@@ -292,6 +297,20 @@ export default function HomePage() {
         </div>
         </div>
       </section>
+
+      {/* Video — only rendered once HOMEPAGE_VIDEO_ID is set */}
+      {HOMEPAGE_VIDEO_ID && (
+        <section id="video" className="bg-beige py-16 sm:py-20 border-b border-clay/10">
+          <div className="max-w-3xl mx-auto px-6">
+            <div className="text-center max-w-2xl mx-auto mb-8">
+              <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">Watch</p>
+              <h2 className="text-3xl sm:text-4xl font-bold text-clay">See Darul Haya for yourself</h2>
+              <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
+            </div>
+            <YouTubeEmbed id={HOMEPAGE_VIDEO_ID} title="Welcome to Darul Haya" />
+          </div>
+        </section>
+      )}
 
       {/* Subject cards */}
       <SubjectCards />
