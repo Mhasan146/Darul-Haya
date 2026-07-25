@@ -88,12 +88,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <head>
-        {/* Prevent flash of unstyled theme on load — runs before paint */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `try{var t=localStorage.getItem('dh_theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark')}}catch{}`,
-          }}
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHOOL_LD) }}
@@ -114,7 +108,7 @@ export default function RootLayout({ children }) {
           </>
         )}
       </head>
-      <body className="bg-beige dark:bg-[#0a1f1d] min-h-screen">
+      <body className="bg-beige min-h-screen">
         {/* Skip navigation — visible on keyboard focus */}
         <nav
           aria-label="Skip navigation"

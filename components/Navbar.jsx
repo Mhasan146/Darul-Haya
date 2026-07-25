@@ -3,7 +3,6 @@ import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import ThemeToggle from '@/components/ThemeToggle'
 import HijriDate from '@/components/HijriDate'
 
 // Only render Student Login once the learning platform URL is configured.
@@ -93,14 +92,13 @@ export default function Navbar() {
 
   const actions = (stacked = false) => (
     <div className={stacked ? 'flex flex-col gap-2' : 'flex items-center gap-3'}>
-      {!stacked && <ThemeToggle />}
       {MOODLE && (
         <a
           href={MOODLE}
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => setMobileOpen(false)}
-          className="text-sm font-medium text-clay hover:text-teal transition-colors text-center dark:text-white/70 dark:hover:text-white"
+          className="text-sm font-medium text-clay hover:text-teal transition-colors text-center"
         >
           Student Login
           <span className="sr-only"> (opens in a new tab)</span>
@@ -117,22 +115,20 @@ export default function Navbar() {
   )
 
   return (
-    <nav ref={navRef} aria-label="Main" className="sticky top-0 z-40 bg-beige/85 dark:bg-[#0e2826]/85 backdrop-blur-md border-b border-amber/30 dark:border-white/10">
+    <nav ref={navRef} aria-label="Main" className="sticky top-0 z-40 bg-beige/85 backdrop-blur-md border-b border-amber/30">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
         {/* Logo + today's date beside it */}
         <div className="flex items-center gap-4 shrink-0">
           <Link href="/" className="flex items-center gap-2.5 shrink-0" onClick={() => setMobileOpen(false)} aria-label="Darul Haya — home">
-            {/* Teal mark on the light nav; cream (reversed) mark on the dark nav */}
-            <Image src="/logo-mark.png" alt="" width={257} height={311} priority className="h-10 w-auto dark:hidden" />
-            <Image src="/logo-mark-light.png" alt="" width={257} height={311} priority className="hidden h-10 w-auto dark:block" />
-            <span className="font-display text-xl font-bold text-clay tracking-tight leading-none dark:text-white">Darul Haya</span>
+            <Image src="/logo-mark.png" alt="" width={257} height={311} priority className="h-10 w-auto" />
+            <span className="font-display text-xl font-bold text-clay tracking-tight leading-none">Darul Haya</span>
           </Link>
           <HijriDate
             stacked
             showWeekday={false}
-            className="flex lg:hidden xl:flex shrink-0 border-l border-clay/15 dark:border-white/15 pl-3 sm:pl-4 text-[10px] sm:text-[11px]"
-            hijriClassName="text-clay dark:text-white font-semibold whitespace-nowrap"
-            gregorianClassName="text-clay/45 dark:text-white/45 whitespace-nowrap"
+            className="flex lg:hidden xl:flex shrink-0 border-l border-clay/15 pl-3 sm:pl-4 text-[10px] sm:text-[11px]"
+            hijriClassName="text-clay font-semibold whitespace-nowrap"
+            gregorianClassName="text-clay/45 whitespace-nowrap"
           />
         </div>
 
