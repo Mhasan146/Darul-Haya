@@ -50,7 +50,7 @@ export default function OpenHousePage() {
     <div className="bg-beige min-h-screen">
       {/* Header */}
       <section className="relative overflow-hidden bg-clay">
-        <div aria-hidden className="absolute inset-0 bg-gradient-to-br from-[#10544e] via-clay to-[#0b3a36]" />
+        <div aria-hidden className="absolute inset-0 bg-gradient-to-br from-[#1a6b40] via-clay to-[#0c3a23]" />
         <div className="relative max-w-3xl mx-auto px-6 pt-14 pb-16 text-center">
           <span className="inline-flex items-center gap-2 mb-6 text-[11px] font-semibold uppercase tracking-[0.2em] text-white bg-white/15 ring-1 ring-white/30 px-4 py-1.5 rounded-full">
             <span className="h-1.5 w-1.5 rounded-full bg-white" aria-hidden="true" /> Free · No commitment

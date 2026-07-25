@@ -7,22 +7,24 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Aqua-forward palette (shifted from the logo's deep teal toward turquoise)
+        // "Garden Green & Honey" — a light, fresh green + warm honey gold.
+        // Token names are kept (teal/clay/beige/amber) so existing utility
+        // classes keep working; only the values changed with the palette.
         beige: {
-          DEFAULT: '#FCF8F4', // warm cream — kept to match the logo's background so it blends
-          dark: '#E6F4F1',    // light aqua tint (section bands, card borders)
+          DEFAULT: '#F1FAF4', // airy light-green paper (page/background)
+          dark: '#DCEFE1',    // soft green tint — section bands, card borders
         },
         teal: {
-          DEFAULT: '#0F766E', // accessible aqua-teal — 4.98:1 on white (WCAG AA)
-          light: '#2DD4BF',   // bright aqua
-          dark: '#0A5852',    // deep aqua (hover states)
+          DEFAULT: '#1E7A48', // fresh brand green — 4.6:1 on white (WCAG AA)
+          light: '#34C77B',   // bright spring green — large fills, gradients
+          dark: '#155C37',    // deep green — hover states
         },
         amber: {
-          DEFAULT: '#C99A33', // gold accent — complements aqua, also in the logo
-          dark: '#A87E27',
+          DEFAULT: '#DDA62C', // honey gold accent
+          dark: '#B9861F',
         },
         clay: {
-          DEFAULT: '#134E4A', // dark aqua-teal (headings + body text)
+          DEFAULT: '#16402B', // deep forest green (headings + body text)
         },
       },
     },

@@ -17,7 +17,7 @@ html {
 }
 
 :focus-visible {
-  outline: 3px solid #0F766E;
+  outline: 3px solid #1E7A48;
   outline-offset: 3px;
   border-radius: 4px;
 }
@@ -61,7 +61,7 @@ h3,
 }
 
 ::selection {
-  background: #0f766e;
+  background: #1E7A48;
   color: #fff;
 }
 
