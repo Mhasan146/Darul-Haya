@@ -22,8 +22,8 @@ const SCHOOLS = [
 ]
 
 const DH = {
-  monthly: '$300',
-  annual: '$3,600',
+  monthly: '$225',
+  annual: '$2,700',
   detail: 'Live online · Grades 2–9',
   note: 'Books & technology via flat annual fees',
 }

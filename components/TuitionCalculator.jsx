@@ -2,11 +2,11 @@
 import { useState } from 'react'
 import Link from 'next/link'
 
-// Real pricing: flat $300/month per child, 15% sibling discount on each
+// Real pricing: flat $225/month per child, 15% sibling discount on each
 // additional child. Same price for every grade (2–9).
-const BASE = 300
+const BASE = 225
 const SIBLING_RATE = 0.15
-const additionalChildPrice = Math.round(BASE * (1 - SIBLING_RATE)) // $255
+const additionalChildPrice = Math.round(BASE * (1 - SIBLING_RATE)) // $191
 
 function monthlyTotal(children) {
   if (children <= 0) return 0

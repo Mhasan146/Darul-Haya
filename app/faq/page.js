@@ -72,7 +72,7 @@ export default function FaqPage() {
         },
         {
           heading: 'What does it cost?',
-          body: 'Tuition is a flat $300/month — one program, everything included. A 15% sibling discount applies for additional children enrolled, and there is a one-time $150 material fee and $100 technology fee at the start of each year.',
+          body: 'Tuition is a flat $225/month — one program, everything included. A 15% sibling discount applies for additional children enrolled, and there is a one-time $150 material fee and $100 technology fee at the start of each year.',
         },
         {
           heading: 'Do you offer Arabic classes?',

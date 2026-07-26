@@ -384,7 +384,7 @@ export default function HomePage() {
           <div className="max-w-md mx-auto rounded-3xl bg-clay text-white p-8 sm:p-10 shadow-xl shadow-clay/20">
             <p className="text-xs font-semibold uppercase tracking-widest text-amber mb-2">Online School · Grades 2–9</p>
             <div className="flex items-end gap-1.5">
-              <span className="font-display text-6xl font-bold">$300</span>
+              <span className="font-display text-6xl font-bold">$225</span>
               <span className="text-white/80 mb-2">/month</span>
             </div>
             <p className="text-white/80 text-sm mt-3 leading-relaxed">
@@ -418,7 +418,7 @@ export default function HomePage() {
       {/* Decision summary strip */}
       <section aria-label="Program highlights" className="bg-beige border-y border-clay/10 py-5">
         <ul className="max-w-3xl mx-auto px-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-clay/80 list-none">
-          {['Grades 2–9', '$300 / month', 'Live daily classes', 'Ontario-aligned', 'Books included'].map((item) => (
+          {['Grades 2–9', '$225 / month', 'Live daily classes', 'Ontario-aligned', 'Books included'].map((item) => (
             <li key={item} className="flex items-center gap-1.5">
               <span className="text-teal font-bold" aria-hidden>✓</span>
               {item}
