@@ -48,7 +48,7 @@ export default function FaqPage() {
         },
         {
           heading: 'Why should we trust a brand-new school with our child?',
-          body: 'It\'s a fair question, and we\'d rather earn it than argue it. Our program is accredited and Ontario-aligned, and the teachers behind Darul Haya bring a real track record — their students finish their work and move on to high school ready to succeed. The school is led by Principal Harris Mohammed, classes are small and closely supervised, and the whole day is transparent, so you always see what\'s taught and how your child is doing. The best way to judge us is to meet us — join a free open house, ask us anything, and decide with your own eyes.',
+          body: 'It\'s a fair question, and we\'d rather earn it than argue it. Our program is accredited and Ontario-aligned, and the teachers behind Darul Haya bring a real track record — their students finish their work and move on to high school ready to succeed. Our classes are small and closely supervised, and the whole day is transparent, so you always see what\'s taught and how your child is doing. The best way to judge us is to meet us — join a free open house, ask us anything, and decide with your own eyes.',
         },
         {
           heading: 'Isn\'t this too much screen time?',

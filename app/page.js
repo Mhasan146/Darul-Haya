@@ -68,7 +68,7 @@ const FAQS = [
   },
   {
     q: 'Why should we trust a brand-new school with our child?',
-    a: 'It’s a fair question, and we’d rather earn it than argue it. Our program is accredited and Ontario-aligned, and the teachers behind Darul Haya bring a real track record — their students finish their work and move on to high school ready to succeed. The school is led by Principal Harris Mohammed, classes are small and closely supervised, and the whole day is transparent, so you always see what’s taught and how your child is doing. The best way to judge us is to meet us — join a free open house, ask us anything, and decide with your own eyes.',
+    a: 'It’s a fair question, and we’d rather earn it than argue it. Our program is accredited and Ontario-aligned, and the teachers behind Darul Haya bring a real track record — their students finish their work and move on to high school ready to succeed. Our classes are small and closely supervised, and the whole day is transparent, so you always see what’s taught and how your child is doing. The best way to judge us is to meet us — join a free open house, ask us anything, and decide with your own eyes.',
   },
   {
     q: 'What time are the classes held each day?',
@@ -324,10 +324,10 @@ export default function HomePage() {
       {/* Safety tools */}
       <SafetyTools />
 
-      {/* Principal's message */}
-      <section aria-label="A message from our principal" className="relative overflow-hidden bg-beige-dark/60 border-y border-clay/10">
+      {/* Our classrooms — school voice (no named principal) */}
+      <section aria-label="Our classrooms" className="relative overflow-hidden bg-beige-dark/60 border-y border-clay/10">
         <div className="relative max-w-3xl mx-auto px-6 py-16 text-center">
-          <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-6">A Message from Our Principal</p>
+          <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-6">Inside Our Classrooms</p>
           <span aria-hidden="true" className="block font-display text-6xl leading-none text-amber select-none">&ldquo;</span>
           <blockquote className="font-display text-2xl sm:text-3xl font-semibold text-clay leading-snug text-balance -mt-4">
             A calm, respectful classroom changes everything. At Darul Haya we keep classes
@@ -335,8 +335,7 @@ export default function HomePage() {
             focus — the kind of environment where children genuinely want to learn.
           </blockquote>
           <div className="gold-rule mx-auto mt-7 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
-          <p className="mt-5 text-sm font-semibold text-clay">Harris Mohammed</p>
-          <p className="text-xs text-clay/70 mt-1">Principal, Darul Haya</p>
+          <p className="mt-5 text-sm font-semibold text-clay">The Darul Haya Team</p>
         </div>
       </section>
 
