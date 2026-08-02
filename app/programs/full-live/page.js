@@ -3,7 +3,7 @@ import PagePlaceholder from '@/components/PagePlaceholder'
 export const metadata = {
   title: 'Daily Live School — Online Classes for Grades 2–12',
   description:
-    'A complete online school: live, teacher-led classes every school day for Grades 2–12, with recordings, Arabic, Ontario-aligned curriculum, and books shipped to your door. $225/month for Grades 2–8, $250/month for Grades 9–12.',
+    'Live, teacher-led classes every school day for Grades 2–12 — Arabic, an Ontario-aligned curriculum, and books shipped to your door. From $225/month.',
   alternates: { canonical: '/programs/full-live' },
 }
 

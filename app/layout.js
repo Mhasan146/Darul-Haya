@@ -25,9 +25,12 @@ const inter = Inter({
 })
 
 const SITE_URL = (process.env.NEXT_PUBLIC_APP_URL || 'https://darulhaya.com').replace(/\/+$/, '')
-const TITLE = 'Darul Haya — Online School for Grades 2–12 | Live Classes & Homeschooling'
+// Keep TITLE under ~60 chars and DESCRIPTION under ~155. Google discards
+// over-long meta and writes its own snippet from page text instead — which
+// is how a stale, outdated description ends up in the search result.
+const TITLE = 'Darul Haya — Online Islamic School for Grades 2–12'
 const DESCRIPTION =
-  'Darul Haya is an online Islamic school for boys and girls in Grades 2–12 — live, teacher-led classes every day, Arabic, and an Ontario-aligned curriculum. A structured, faith-centered alternative to homeschooling, all from the comfort of home. Enrolling now for September 2026.'
+  'Online Islamic school for Grades 2–12. Live, teacher-led classes every day, Arabic, and an Ontario-aligned curriculum — all from home.'
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -70,18 +73,27 @@ export const metadata = {
 }
 
 // Structured data so search engines index Darul Haya as an online school.
+// This is where the grade range is stated most explicitly — search engines and
+// AI summaries read it directly, and unlike the meta description it isn't
+// length-capped, so it can carry the full picture. Keep it in sync with the site.
 const SCHOOL_LD = {
   '@context': 'https://schema.org',
   '@type': 'School',
   name: 'Darul Haya — Academy of Learning',
   alternateName: 'Darul Haya Online Islamic School',
-  description: DESCRIPTION,
+  description:
+    'Darul Haya is an online Islamic school for boys and girls in Grades 2 through 12. Students attend live, teacher-led classes every school day following an Ontario-aligned curriculum, with Arabic in the weekly timetable and physical books shipped to their home. Classes are small and closely supervised. Tuition is $225 per month for Grades 2–8 and $250 per month for Grades 9–12.',
   url: SITE_URL,
   logo: `${SITE_URL}/logo.png`,
   email: 'info@darulhaya.com',
   areaServed: { '@type': 'Country', name: 'Canada' },
-  educationalLevel: 'Grades 2–12',
-  keywords: 'online school, online Islamic school, homeschool, homeschooling, online homeschool program, Muslim homeschool, live online classes, Arabic classes, Ontario curriculum',
+  educationalLevel: 'Grades 2–12 (elementary, middle, and high school)',
+  audience: {
+    '@type': 'EducationalAudience',
+    educationalRole: 'student',
+    audienceType: 'Students in Grades 2 to 12',
+  },
+  keywords: 'online school, online Islamic school, homeschool, homeschooling, online homeschool program, Muslim homeschool, live online classes, Arabic classes, Ontario curriculum, Grades 2-12',
 }
 
 export default function RootLayout({ children }) {

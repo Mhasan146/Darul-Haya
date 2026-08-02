@@ -3,7 +3,7 @@ import PagePlaceholder from '@/components/PagePlaceholder'
 export const metadata = {
   title: 'Curriculum — Ontario-Aligned Core Subjects + Arabic',
   description:
-    'What students learn at our online school: Ontario-aligned Language Arts, Math, Science, and Social Studies for Grades 2–12, with Arabic in every weekly timetable.',
+    'What students learn at Darul Haya: Ontario-aligned Language Arts, Math, Science, and Social Studies for Grades 2–12, plus Arabic every week.',
   alternates: { canonical: '/curriculum' },
 }
 

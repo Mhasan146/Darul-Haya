@@ -3,7 +3,7 @@ import OpenHouseForm from '@/components/OpenHouseForm'
 export const metadata = {
   title: 'Free Open House — Online & In Person',
   description:
-    'Join a free open house for Darul Haya — an online Islamic school for Grades 2–12. Meet our team online or in person, see how our live classes work, and ask your questions. No commitment.',
+    'Join a free Darul Haya open house — online or in person. See how our live classes for Grades 2–12 work and ask us anything. No commitment.',
   alternates: { canonical: '/open-house' },
 }
 
