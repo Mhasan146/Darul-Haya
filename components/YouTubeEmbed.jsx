@@ -36,7 +36,7 @@ export default function YouTubeEmbed({ id, title = 'Video' }) {
           />
           <span className="absolute inset-0 bg-clay/30 transition-colors group-hover:bg-clay/20" />
           <span className="absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 shadow-lg transition-transform group-hover:scale-105">
-            <svg viewBox="0 0 24 24" fill="#1E7A48" className="h-7 w-7 translate-x-0.5" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="#238A54" className="h-7 w-7 translate-x-0.5" aria-hidden="true">
               <path d="M8 5v14l11-7z" />
             </svg>
           </span>
