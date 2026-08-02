@@ -72,7 +72,7 @@ export default function FaqPage() {
         },
         {
           heading: 'What does it cost?',
-          body: 'Tuition is $225/month for Grades 2–8 and $300/month for Grades 9–12 — everything included. A 15% sibling discount applies for additional children enrolled, and there is a one-time $150 material fee and $100 technology fee at the start of each year.',
+          body: 'Tuition is $225/month for Grades 2–8 and $250/month for Grades 9–12 — everything included. A 15% sibling discount applies for additional children enrolled, and there is a one-time $150 material fee and $100 technology fee at the start of each year.',
         },
         {
           heading: 'Do you offer Arabic classes?',

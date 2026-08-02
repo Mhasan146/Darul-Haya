@@ -393,7 +393,7 @@ export default function HomePage() {
               <div className="rounded-2xl bg-beige ring-1 ring-teal/15 p-4">
                 <p className="text-[11px] font-semibold uppercase tracking-wider text-clay/80">Grades 9–12</p>
                 <div className="flex items-end gap-1 mt-1">
-                  <span className="font-display text-4xl font-bold text-teal-dark">$300</span>
+                  <span className="font-display text-4xl font-bold text-teal-dark">$250</span>
                   <span className="text-clay/80 text-sm mb-1">/mo</span>
                 </div>
               </div>
@@ -429,7 +429,7 @@ export default function HomePage() {
       {/* Decision summary strip */}
       <section aria-label="Program highlights" className="bg-beige border-y border-clay/10 py-5">
         <ul className="max-w-3xl mx-auto px-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-clay/80 list-none">
-          {['Grades 2–12', '$225–$300 / month', 'Live daily classes', 'Ontario-aligned', 'Books included'].map((item) => (
+          {['Grades 2–12', '$225–$250 / month', 'Live daily classes', 'Ontario-aligned', 'Books included'].map((item) => (
             <li key={item} className="flex items-center gap-1.5">
               <span className="text-teal-dark font-bold" aria-hidden>✓</span>
               {item}
@@ -522,22 +522,23 @@ export default function HomePage() {
             {/* Explore */}
             <div>
               <h2 className="text-xs font-semibold uppercase tracking-widest text-clay/80 mb-4">Explore</h2>
-              <ul className="space-y-2.5 text-sm">
-                <li><Link href="/about" className="text-clay/80 hover:text-teal-dark transition-colors">About</Link></li>
-                <li><Link href="/programs/full-live" className="text-clay/80 hover:text-teal-dark transition-colors">Our Online School</Link></li>
-                <li><Link href="/curriculum" className="text-clay/80 hover:text-teal-dark transition-colors">Curriculum</Link></li>
-                <li><Link href="/faq" className="text-clay/80 hover:text-teal-dark transition-colors">FAQ</Link></li>
-                <li><Link href="/register" className="text-teal-dark font-semibold hover:text-teal-dark transition-colors">Apply Now <span aria-hidden="true">→</span></Link></li>
+              {/* inline-block + py-1 gives each link a >=24px tap target (WCAG 2.5.8) */}
+              <ul className="space-y-1 text-sm">
+                <li><Link href="/about" className="inline-block py-1 text-clay/80 hover:text-teal-dark transition-colors">About</Link></li>
+                <li><Link href="/programs/full-live" className="inline-block py-1 text-clay/80 hover:text-teal-dark transition-colors">Our Online School</Link></li>
+                <li><Link href="/curriculum" className="inline-block py-1 text-clay/80 hover:text-teal-dark transition-colors">Curriculum</Link></li>
+                <li><Link href="/faq" className="inline-block py-1 text-clay/80 hover:text-teal-dark transition-colors">FAQ</Link></li>
+                <li><Link href="/register" className="inline-block py-1 text-teal-dark font-semibold hover:underline transition-colors">Apply Now <span aria-hidden="true">→</span></Link></li>
               </ul>
             </div>
 
             {/* Contact */}
             <div>
               <h2 className="text-xs font-semibold uppercase tracking-widest text-clay/80 mb-4">Get in Touch</h2>
-              <ul className="space-y-2.5 text-sm">
-                <li><a href="mailto:info@darulhaya.com" className="text-clay/80 hover:text-teal-dark transition-colors">info@darulhaya.com</a></li>
-                <li><a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-clay/80 hover:text-teal-dark transition-colors">Chat on WhatsApp<span className="sr-only"> (opens in a new tab)</span></a></li>
-                <li><Link href="/contact" className="text-clay/80 hover:text-teal-dark transition-colors">Contact Us</Link></li>
+              <ul className="space-y-1 text-sm">
+                <li><a href="mailto:info@darulhaya.com" className="inline-block py-1 text-clay/80 hover:text-teal-dark transition-colors">info@darulhaya.com</a></li>
+                <li><a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-block py-1 text-clay/80 hover:text-teal-dark transition-colors">Chat on WhatsApp<span className="sr-only"> (opens in a new tab)</span></a></li>
+                <li><Link href="/contact" className="inline-block py-1 text-clay/80 hover:text-teal-dark transition-colors">Contact Us</Link></li>
               </ul>
             </div>
           </div>
@@ -546,7 +547,7 @@ export default function HomePage() {
             <HijriDate className="block mb-2 text-clay/80" />
             © {new Date().getFullYear()} Darul Haya. All rights reserved.
             {' · '}
-            <Link href="/privacy" className="hover:text-teal-dark transition-colors">Privacy Policy</Link>
+            <Link href="/privacy" className="inline-block py-1 hover:text-teal-dark transition-colors">Privacy Policy</Link>
           </div>
         </div>
       </footer>

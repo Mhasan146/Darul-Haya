@@ -113,7 +113,7 @@ export default function ValueComparison() {
 
         <p className="text-center text-xs text-clay/80 mt-4 max-w-2xl mx-auto">
           School figures are each institution&rsquo;s published tuition for one child, paid over 10 monthly
-          installments. Darul Haya tuition is {DH.monthly}/month for Grades 2&ndash;8 and $300/month for
+          installments. Darul Haya tuition is {DH.monthly}/month for Grades 2&ndash;8 and $250/month for
           Grades 9&ndash;12 (the figure above is the Grades 2&ndash;8 rate), plus a flat {MATERIAL_FEE} material
           fee and {TECH_FEE} technology fee at the start of each year — no per-book charges.
         </p>
