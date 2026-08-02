@@ -3,13 +3,13 @@ import { useState } from 'react'
 
 // "The real value" comparison. Figures are editable constants.
 // School tuition is each school's published fee for one child in the Grades
-// 2–9 range, paid over 10 monthly installments (annual = monthly × 10).
+// 2–12 range, paid over 10 monthly installments (annual = monthly × 10).
 const SCHOOLS = [
   {
     name: 'ISNA Schools',
     monthly: '~$843',
     annual: '~$8,427',
-    detail: 'In-person · Grades 2–9',
+    detail: 'In-person · Grades 2–12',
     year: '2025–26 published rates',
   },
   {
@@ -24,7 +24,7 @@ const SCHOOLS = [
 const DH = {
   monthly: '$225',
   annual: '$2,700',
-  detail: 'Live online · Grades 2–9',
+  detail: 'Live online · Grades 2–12',
   note: 'Books & technology via flat annual fees',
 }
 
@@ -113,8 +113,9 @@ export default function ValueComparison() {
 
         <p className="text-center text-xs text-white/50 mt-4 max-w-2xl mx-auto">
           School figures are each institution&rsquo;s published tuition for one child, paid over 10 monthly
-          installments. Darul Haya keeps it simple: a flat {MATERIAL_FEE} material fee and {TECH_FEE} technology
-          fee at the start of each year — no per-book charges.
+          installments. Darul Haya tuition is {DH.monthly}/month for Grades 2&ndash;8 and $300/month for
+          Grades 9&ndash;12 (the figure above is the Grades 2&ndash;8 rate), plus a flat {MATERIAL_FEE} material
+          fee and {TECH_FEE} technology fee at the start of each year — no per-book charges.
         </p>
 
         {/* Savings list */}

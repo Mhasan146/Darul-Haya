@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 const inputCls =
   'w-full border border-beige-dark rounded-lg px-4 py-2.5 text-clay text-sm focus:outline-none focus:ring-2 focus:ring-teal/40 focus:border-teal'
 
-const GRADES = ['Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8', 'Grade 9']
+const GRADES = ['Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8', 'Grade 9', 'Grade 10', 'Grade 11', 'Grade 12']
 
 function encode(data) {
   return Object.keys(data)
@@ -20,7 +20,7 @@ export default function RegisterForm() {
     email: '',
     phone: '',
     grade: '',
-    program: 'Online School (Grades 2–9)',
+    program: 'Online School (Grades 2–12)',
     message: '',
     'bot-field': '',
   })
