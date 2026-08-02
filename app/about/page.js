@@ -1,9 +1,9 @@
 import PagePlaceholder from '@/components/PagePlaceholder'
 
 export const metadata = {
-  title: 'About Us — A Smaller, Safer Online School',
+  title: 'About Our Online Islamic School',
   description:
-    'Why we founded Darul Haya: an online school for boys and girls in Grades 2–12 with small live classes, Arabic, and an Ontario-aligned curriculum.',
+    'Why we founded Darul Haya — an online Islamic school for Grades 2–12 with small live classes, Arabic, and an Ontario-aligned curriculum.',
   alternates: { canonical: '/about' },
 }
 

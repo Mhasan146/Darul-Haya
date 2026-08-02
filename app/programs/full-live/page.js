@@ -1,9 +1,9 @@
 import PagePlaceholder from '@/components/PagePlaceholder'
 
 export const metadata = {
-  title: 'Daily Live School — Online Classes for Grades 2–12',
+  title: 'Daily Live Islamic School, Grades 2–12',
   description:
-    'Live, teacher-led classes every school day for Grades 2–12 — Arabic, an Ontario-aligned curriculum, and books shipped to your door. From $225/month.',
+    'Live, teacher-led classes every school day at our online Islamic school, Grades 2–12 — Arabic, Ontario-aligned, books shipped. From $225/mo.',
   alternates: { canonical: '/programs/full-live' },
 }
 

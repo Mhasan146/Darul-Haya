@@ -2,9 +2,9 @@ import PagePlaceholder from '@/components/PagePlaceholder'
 import ContactForm from '@/components/ContactForm'
 
 export const metadata = {
-  title: 'Contact Us',
+  title: 'Contact Our Online Islamic School',
   description:
-    'Questions about our online school or homeschooling for Grades 2–12? Message us, email info@darulhaya.com, or chat on WhatsApp.',
+    'Questions about our online Islamic school for Grades 2–12? Message us, email info@darulhaya.com, or chat on WhatsApp.',
   alternates: { canonical: '/contact' },
 }
 

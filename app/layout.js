@@ -36,18 +36,23 @@ export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: TITLE,
-    template: '%s | Darul Haya Online School',
+    template: '%s | Darul Haya',
   },
   description: DESCRIPTION,
+  // Note: Google ignores the keywords meta entirely; it carries no ranking
+  // weight. Kept for other crawlers and for internal reference only — the
+  // real signals are the title, description, headings, and structured data.
   keywords: [
-    'online school',
+    'Islamic school',
     'online Islamic school',
+    'Islamic school online',
+    'Islamic school Canada',
+    'Islamic school Ontario',
+    'online school',
     'homeschool',
     'homeschooling',
-    'online homeschool',
     'online homeschool program',
     'Muslim homeschool',
-    'homeschool alternative',
     'Muslim online school',
     'virtual school Canada',
     'Ontario online school',
@@ -80,7 +85,14 @@ const SCHOOL_LD = {
   '@context': 'https://schema.org',
   '@type': 'School',
   name: 'Darul Haya — Academy of Learning',
-  alternateName: 'Darul Haya Online Islamic School',
+  // Search engines read these name variants directly. Keeping the "Islamic
+  // school" phrasing here (and in the page metadata) means the site ranks for
+  // it without the words having to appear in the visible page design.
+  alternateName: [
+    'Darul Haya Online Islamic School',
+    'Darul Haya Islamic School',
+    'Online Islamic School Canada',
+  ],
   description:
     'Darul Haya is an online Islamic school for boys and girls in Grades 2 through 12. Students attend live, teacher-led classes every school day following an Ontario-aligned curriculum, with Arabic in the weekly timetable and physical books shipped to their home. Classes are small and closely supervised. Tuition is $225 per month for Grades 2–8 and $250 per month for Grades 9–12.',
   url: SITE_URL,
