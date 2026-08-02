@@ -107,7 +107,7 @@ export default function Navbar() {
       <Link
         href="/register"
         onClick={() => setMobileOpen(false)}
-        className="text-sm bg-clay text-white px-4 py-2 rounded-full font-semibold hover:bg-clay/80 transition-colors text-center whitespace-nowrap"
+        className="text-sm bg-teal text-white px-4 py-2 rounded-full font-semibold hover:bg-teal-dark transition-colors text-center whitespace-nowrap"
       >
         Apply Now
       </Link>

@@ -49,16 +49,15 @@ export default function OpenHousePage() {
   return (
     <div className="bg-beige min-h-screen">
       {/* Header */}
-      <section className="relative overflow-hidden bg-clay">
-        <div aria-hidden className="absolute inset-0 bg-gradient-to-br from-[#25714C] via-clay to-[#123020]" />
+      <section className="relative overflow-hidden bg-beige-dark/40 border-b border-clay/10">
         <div className="relative max-w-3xl mx-auto px-6 pt-14 pb-16 text-center">
-          <span className="inline-flex items-center gap-2 mb-6 text-[11px] font-semibold uppercase tracking-[0.2em] text-white bg-white/15 ring-1 ring-white/30 px-4 py-1.5 rounded-full">
-            <span className="h-1.5 w-1.5 rounded-full bg-white" aria-hidden="true" /> Free · No commitment
+          <span className="inline-flex items-center gap-2 mb-6 text-[11px] font-semibold uppercase tracking-[0.2em] text-teal bg-white ring-1 ring-teal/25 px-4 py-1.5 rounded-full">
+            <span className="h-1.5 w-1.5 rounded-full bg-teal" aria-hidden="true" /> Free · No commitment
           </span>
-          <h1 className="text-4xl sm:text-5xl font-bold text-white leading-[1.1] tracking-tight text-balance">
+          <h1 className="text-4xl sm:text-5xl font-bold text-clay leading-[1.1] tracking-tight text-balance">
             Join our free open house
           </h1>
-          <p className="mt-5 text-lg text-white/70 max-w-xl mx-auto leading-relaxed">
+          <p className="mt-5 text-lg text-clay/75 max-w-xl mx-auto leading-relaxed">
             Meet our team — online or in person — see exactly how our
             live classes work, and get your questions answered before you decide anything.
           </p>

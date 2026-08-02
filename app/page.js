@@ -191,7 +191,7 @@ export default function HomePage() {
           <div className="mt-9 flex items-center justify-center gap-6 flex-wrap">
             <Link
               href="/register"
-              className="bg-clay text-white px-8 py-3.5 rounded-full font-semibold shadow-lg shadow-clay/20 hover:bg-clay/90 hover:shadow-xl active:scale-[0.98] transition-all duration-200"
+              className="bg-teal text-white px-8 py-3.5 rounded-full font-semibold shadow-lg shadow-teal/25 hover:bg-teal-dark hover:shadow-xl active:scale-[0.98] transition-all duration-200"
             >
               Apply Now
             </Link>
@@ -380,44 +380,44 @@ export default function HomePage() {
             <p className="text-clay/80 mt-5">A complete online school for Grades 2–12 — everything included, with one flat monthly price by grade level.</p>
           </div>
 
-          <div className="max-w-md mx-auto rounded-3xl bg-clay text-white p-8 sm:p-10 shadow-xl shadow-clay/20">
-            <p className="text-xs font-semibold uppercase tracking-widest text-amber mb-4">Online School · Grades 2–12</p>
+          <div className="max-w-md mx-auto rounded-3xl bg-white text-clay p-8 sm:p-10 border border-beige-dark shadow-xl shadow-clay/10">
+            <p className="text-xs font-semibold uppercase tracking-widest text-teal mb-4">Online School · Grades 2–12</p>
             <div className="grid grid-cols-2 gap-3">
-              <div className="rounded-2xl bg-white/5 ring-1 ring-white/10 p-4">
-                <p className="text-[11px] font-semibold uppercase tracking-wider text-white/60">Grades 2–8</p>
+              <div className="rounded-2xl bg-beige ring-1 ring-teal/15 p-4">
+                <p className="text-[11px] font-semibold uppercase tracking-wider text-clay/60">Grades 2–8</p>
                 <div className="flex items-end gap-1 mt-1">
-                  <span className="font-display text-4xl font-bold">$225</span>
-                  <span className="text-white/70 text-sm mb-1">/mo</span>
+                  <span className="font-display text-4xl font-bold text-teal">$225</span>
+                  <span className="text-clay/60 text-sm mb-1">/mo</span>
                 </div>
               </div>
-              <div className="rounded-2xl bg-white/5 ring-1 ring-white/10 p-4">
-                <p className="text-[11px] font-semibold uppercase tracking-wider text-white/60">Grades 9–12</p>
+              <div className="rounded-2xl bg-beige ring-1 ring-teal/15 p-4">
+                <p className="text-[11px] font-semibold uppercase tracking-wider text-clay/60">Grades 9–12</p>
                 <div className="flex items-end gap-1 mt-1">
-                  <span className="font-display text-4xl font-bold">$300</span>
-                  <span className="text-white/70 text-sm mb-1">/mo</span>
+                  <span className="font-display text-4xl font-bold text-teal">$300</span>
+                  <span className="text-clay/60 text-sm mb-1">/mo</span>
                 </div>
               </div>
             </div>
-            <p className="text-white/80 text-sm mt-4 leading-relaxed">
+            <p className="text-clay/75 text-sm mt-4 leading-relaxed">
               Daily live, teacher-led classes with a complete Ontario-aligned curriculum, Arabic, recordings, and physical books shipped to your door.
             </p>
 
             <ul className="mt-6 flex flex-col gap-3 text-sm">
               {INCLUDED.map((f) => (
                 <li key={f} className="flex items-start gap-2">
-                  <span className="text-amber mt-0.5" aria-hidden="true">✓</span>
-                  <span className="text-white/80">{f}</span>
+                  <span className="text-teal mt-0.5 font-bold" aria-hidden="true">✓</span>
+                  <span className="text-clay/80">{f}</span>
                 </li>
               ))}
             </ul>
 
             <Link
               href="/register"
-              className="mt-8 block w-full bg-white text-clay py-3.5 rounded-xl font-semibold text-center hover:bg-beige active:scale-[0.98] transition-all duration-200"
+              className="mt-8 block w-full bg-teal text-white py-3.5 rounded-xl font-semibold text-center hover:bg-teal-dark active:scale-[0.98] transition-all duration-200"
             >
               Apply Now
             </Link>
-            <p className="text-white/60 text-xs text-center mt-4 leading-relaxed">
+            <p className="text-clay/55 text-xs text-center mt-4 leading-relaxed">
               Plus a one-time $150 material fee &amp; $100 technology fee each year · 15% sibling discount
             </p>
           </div>
@@ -443,7 +443,7 @@ export default function HomePage() {
         {/* Warm classroom photo — prominent, with a deep-teal overlay kept strong
             enough that the white text stays readable */}
         <div aria-hidden className="absolute inset-0 bg-cover bg-center opacity-75" style={{ backgroundImage: "url('/cta.jpg')" }} />
-        <div aria-hidden className="absolute inset-0 bg-gradient-to-br from-[#25714C]/70 via-clay/65 to-[#123020]/75" />        <div aria-hidden className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-72 w-[36rem] rounded-full bg-teal-light/10 blur-3xl" />
+        <div aria-hidden className="absolute inset-0 bg-gradient-to-br from-[#25714C]/55 via-clay/50 to-[#123020]/60" />        <div aria-hidden className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-72 w-[36rem] rounded-full bg-teal-light/10 blur-3xl" />
         <div className="relative max-w-2xl mx-auto px-6 py-20 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight text-balance">
             Ready to give your child a better school day?
@@ -503,7 +503,7 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#123020] text-white">
+      <footer className="bg-clay text-white">
         <div aria-hidden className="h-px bg-gradient-to-r from-transparent via-amber/60 to-transparent" />
         <div className="max-w-5xl mx-auto px-6 py-14">
           <div className="grid gap-10 sm:grid-cols-3">

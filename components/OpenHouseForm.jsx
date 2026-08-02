@@ -104,7 +104,7 @@ export default function OpenHouseForm() {
       <button
         type="submit"
         disabled={status === 'sending'}
-        className="mt-1 w-full py-3 rounded-xl bg-clay text-white font-semibold text-sm hover:bg-clay/90 transition-colors disabled:opacity-60"
+        className="mt-1 w-full py-3 rounded-xl bg-teal text-white font-semibold text-sm hover:bg-teal-dark transition-colors disabled:opacity-60"
       >
         {status === 'sending' ? 'Saving your spot…' : 'Save my spot'}
       </button>

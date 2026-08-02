@@ -38,7 +38,7 @@ export default function TuitionCalculator() {
             onClick={() => setBand(key)}
             aria-pressed={band === key}
             className={`flex-1 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 active:scale-[0.97] ${
-              band === key ? 'bg-clay text-white shadow-md' : 'bg-beige text-clay hover:bg-beige-dark'
+              band === key ? 'bg-teal text-white shadow-md' : 'bg-beige text-clay hover:bg-beige-dark'
             }`}
           >
             {b.label}
@@ -56,7 +56,7 @@ export default function TuitionCalculator() {
             aria-pressed={children === n}
             className={`flex-1 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 active:scale-[0.97] ${
               children === n
-                ? 'bg-clay text-white shadow-md'
+                ? 'bg-teal text-white shadow-md'
                 : 'bg-beige text-clay hover:bg-beige-dark'
             }`}
           >

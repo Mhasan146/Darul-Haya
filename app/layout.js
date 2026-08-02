@@ -135,12 +135,12 @@ export default function RootLayout({ children }) {
             role="status"
             aria-live="polite"
             aria-atomic="true"
-            className="bg-clay text-white text-center text-xs sm:text-sm py-2 px-4"
+            className="bg-beige-dark text-clay text-center text-xs sm:text-sm py-2 px-4 border-b border-teal/15"
           >
             {/* TODO: Update enrolment deadline before each intake — e.g. "September 2027" */}
-            <span className="text-amber font-semibold">Enrolment open for September 2026</span>
+            <span className="text-teal font-semibold">Enrolment open for September 2026</span>
             {' '}— seats fill quickly.{' '}
-            <Link href="/register" className="underline underline-offset-2 hover:text-amber transition-colors">
+            <Link href="/register" className="font-semibold underline underline-offset-2 hover:text-teal transition-colors">
               Apply Now <span aria-hidden="true">→</span>
             </Link>
           </div>

@@ -90,7 +90,7 @@ export default function Benefits() {
               key={b.title}
               className="bg-white rounded-2xl p-7 shadow-md ring-1 ring-clay/5 transition-all duration-200 hover:shadow-xl hover:-translate-y-1"
             >
-              <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-clay to-[#123020] text-amber flex items-center justify-center shadow-lg shadow-clay/25">
+              <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-teal to-teal-dark text-white flex items-center justify-center shadow-lg shadow-teal/25">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -109,7 +109,7 @@ export default function Benefits() {
           ))}
 
           {/* Conversion CTA tile — also completes the 3×2 grid */}
-          <div className="rounded-2xl p-7 bg-clay text-white shadow-md flex flex-col justify-center">
+          <div className="rounded-2xl p-7 bg-teal text-white shadow-md shadow-teal/20 flex flex-col justify-center">
             <h3 className="text-xl font-bold leading-snug">
               Ready for a better school day?
             </h3>

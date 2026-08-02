@@ -54,8 +54,8 @@ export default function EveryOpportunity() {
         </div>
 
         {/* Track record — proof band */}
-        <div className="mt-6 rounded-2xl bg-clay text-white p-7 sm:p-8 text-center">
-          <p className="text-amber text-xs font-semibold uppercase tracking-widest mb-2">A proven track record</p>
+        <div className="mt-6 rounded-2xl bg-white text-clay p-7 sm:p-8 text-center border border-teal/20 shadow-sm">
+          <p className="text-teal text-xs font-semibold uppercase tracking-widest mb-2">A proven track record</p>
           <p className="text-lg sm:text-xl font-semibold leading-snug text-balance max-w-3xl mx-auto">
             The teachers behind Darul Haya aren’t new to this. In the classrooms they come from,
             students finish their work and move on to high school ready to succeed — that’s the

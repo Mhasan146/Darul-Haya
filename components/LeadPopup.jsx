@@ -287,7 +287,7 @@ export default function LeadPopup() {
               <button
                 type="submit"
                 disabled={loading}
-                className="mt-4 w-full py-2.5 rounded-xl bg-clay text-white font-semibold text-sm hover:bg-clay/80 transition-colors disabled:opacity-50"
+                className="mt-4 w-full py-2.5 rounded-xl bg-teal text-white font-semibold text-sm hover:bg-teal-dark transition-colors disabled:opacity-50"
               >
                 {loading ? 'Sending…' : 'Send my details'}
               </button>
