@@ -503,50 +503,50 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-clay text-white">
-        <div aria-hidden className="h-px bg-gradient-to-r from-transparent via-amber/60 to-transparent" />
+      <footer className="bg-beige-dark/50 text-clay border-t border-clay/10">
+        <div aria-hidden className="h-px bg-gradient-to-r from-transparent via-amber to-transparent" />
         <div className="max-w-5xl mx-auto px-6 py-14">
           <div className="grid gap-10 sm:grid-cols-3">
             {/* Brand */}
             <div>
               <div className="flex items-center gap-2.5">
-                <Image src="/logo-mark-light.png" alt="" width={257} height={311} className="h-10 w-auto" />
-                <h2 className="font-display text-2xl font-bold tracking-wide">Darul Haya</h2>
+                <Image src="/logo-mark.png" alt="" width={257} height={311} className="h-10 w-auto" />
+                <h2 className="font-display text-2xl font-bold tracking-wide text-clay">Darul Haya</h2>
               </div>
-              <p className="text-xs uppercase tracking-[0.25em] text-amber mt-2">Knowledge · Character</p>
-              <p className="text-white/60 text-sm mt-4 leading-relaxed max-w-xs">
+              <p className="text-xs uppercase tracking-[0.25em] text-teal font-semibold mt-2">Knowledge · Character</p>
+              <p className="text-clay/70 text-sm mt-4 leading-relaxed max-w-xs">
                 A structured, values-driven online school for boys and girls in Grades 2–12.
               </p>
             </div>
 
             {/* Explore */}
             <div>
-              <h2 className="text-xs font-semibold uppercase tracking-widest text-white/60 mb-4">Explore</h2>
+              <h2 className="text-xs font-semibold uppercase tracking-widest text-clay/55 mb-4">Explore</h2>
               <ul className="space-y-2.5 text-sm">
-                <li><Link href="/about" className="text-white/80 hover:text-amber transition-colors">About</Link></li>
-                <li><Link href="/programs/full-live" className="text-white/80 hover:text-amber transition-colors">Our Online School</Link></li>
-                <li><Link href="/curriculum" className="text-white/80 hover:text-amber transition-colors">Curriculum</Link></li>
-                <li><Link href="/faq" className="text-white/80 hover:text-amber transition-colors">FAQ</Link></li>
-                <li><Link href="/register" className="text-amber font-semibold hover:text-amber-dark transition-colors">Apply Now <span aria-hidden="true">→</span></Link></li>
+                <li><Link href="/about" className="text-clay/80 hover:text-teal transition-colors">About</Link></li>
+                <li><Link href="/programs/full-live" className="text-clay/80 hover:text-teal transition-colors">Our Online School</Link></li>
+                <li><Link href="/curriculum" className="text-clay/80 hover:text-teal transition-colors">Curriculum</Link></li>
+                <li><Link href="/faq" className="text-clay/80 hover:text-teal transition-colors">FAQ</Link></li>
+                <li><Link href="/register" className="text-teal font-semibold hover:text-teal-dark transition-colors">Apply Now <span aria-hidden="true">→</span></Link></li>
               </ul>
             </div>
 
             {/* Contact */}
             <div>
-              <h2 className="text-xs font-semibold uppercase tracking-widest text-white/60 mb-4">Get in Touch</h2>
+              <h2 className="text-xs font-semibold uppercase tracking-widest text-clay/55 mb-4">Get in Touch</h2>
               <ul className="space-y-2.5 text-sm">
-                <li><a href="mailto:info@darulhaya.com" className="text-white/80 hover:text-amber transition-colors">info@darulhaya.com</a></li>
-                <li><a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-amber transition-colors">Chat on WhatsApp<span className="sr-only"> (opens in a new tab)</span></a></li>
-                <li><Link href="/contact" className="text-white/80 hover:text-amber transition-colors">Contact Us</Link></li>
+                <li><a href="mailto:info@darulhaya.com" className="text-clay/80 hover:text-teal transition-colors">info@darulhaya.com</a></li>
+                <li><a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-clay/80 hover:text-teal transition-colors">Chat on WhatsApp<span className="sr-only"> (opens in a new tab)</span></a></li>
+                <li><Link href="/contact" className="text-clay/80 hover:text-teal transition-colors">Contact Us</Link></li>
               </ul>
             </div>
           </div>
 
-          <div className="border-t border-white/10 mt-10 pt-6 text-center text-xs text-white/60">
-            <HijriDate className="block mb-2 text-white/50" />
+          <div className="border-t border-clay/10 mt-10 pt-6 text-center text-xs text-clay/60">
+            <HijriDate className="block mb-2 text-clay/50" />
             © {new Date().getFullYear()} Darul Haya. All rights reserved.
             {' · '}
-            <Link href="/privacy" className="hover:text-amber transition-colors">Privacy Policy</Link>
+            <Link href="/privacy" className="hover:text-teal transition-colors">Privacy Policy</Link>
           </div>
         </div>
       </footer>
