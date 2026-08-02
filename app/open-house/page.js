@@ -51,13 +51,13 @@ export default function OpenHousePage() {
       {/* Header */}
       <section className="relative overflow-hidden bg-beige-dark/40 border-b border-clay/10">
         <div className="relative max-w-3xl mx-auto px-6 pt-14 pb-16 text-center">
-          <span className="inline-flex items-center gap-2 mb-6 text-[11px] font-semibold uppercase tracking-[0.2em] text-teal bg-white ring-1 ring-teal/25 px-4 py-1.5 rounded-full">
+          <span className="inline-flex items-center gap-2 mb-6 text-[11px] font-semibold uppercase tracking-[0.2em] text-teal-dark bg-white ring-1 ring-teal/25 px-4 py-1.5 rounded-full">
             <span className="h-1.5 w-1.5 rounded-full bg-teal" aria-hidden="true" /> Free · No commitment
           </span>
           <h1 className="text-4xl sm:text-5xl font-bold text-clay leading-[1.1] tracking-tight text-balance">
             Join our free open house
           </h1>
-          <p className="mt-5 text-lg text-clay/75 max-w-xl mx-auto leading-relaxed">
+          <p className="mt-5 text-lg text-clay/80 max-w-xl mx-auto leading-relaxed">
             Meet our team — online or in person — see exactly how our
             live classes work, and get your questions answered before you decide anything.
           </p>
@@ -67,19 +67,19 @@ export default function OpenHousePage() {
       {/* Two ways to join */}
       <section className="max-w-5xl mx-auto px-6 pt-14">
         <div className="text-center max-w-xl mx-auto mb-8">
-          <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-2">Two ways to join</p>
+          <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-2">Two ways to join</p>
           <p className="text-clay/80">Come in person to meet us face to face, or join live online — whichever suits your family.</p>
         </div>
         <div className="grid sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
           {SESSIONS.map((s) => (
             <div key={s.type} className="bg-white rounded-2xl border border-beige-dark shadow-sm p-6">
               <div className="flex items-center gap-3">
-                <span className="h-10 w-10 shrink-0 rounded-xl bg-teal/10 text-teal flex items-center justify-center" aria-hidden="true">
+                <span className="h-10 w-10 shrink-0 rounded-xl bg-teal/10 text-teal-dark flex items-center justify-center" aria-hidden="true">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.6} stroke="currentColor" className="h-5 w-5">
                     {s.icon}
                   </svg>
                 </span>
-                <p className="text-teal text-xs font-semibold uppercase tracking-widest">{s.type}</p>
+                <p className="text-teal-dark text-xs font-semibold uppercase tracking-widest">{s.type}</p>
               </div>
               <p className="font-bold text-clay mt-4">
                 {s.date ? `${s.date}${s.time ? ` · ${s.time}` : ''}` : 'Date to be announced'}
@@ -93,13 +93,13 @@ export default function OpenHousePage() {
       {/* Agenda + RSVP */}
       <section className="max-w-5xl mx-auto px-6 py-16 grid gap-10 lg:grid-cols-2 lg:gap-16 items-start">
         <div>
-          <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">What to expect</p>
+          <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">What to expect</p>
           <h2 className="text-2xl sm:text-3xl font-bold text-clay">A relaxed, honest look inside</h2>
           <div className="gold-rule mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <ul className="mt-8 flex flex-col gap-6">
             {AGENDA.map((a) => (
               <li key={a.title} className="flex items-start gap-4">
-                <span className="mt-1 h-7 w-7 shrink-0 rounded-full bg-teal/10 text-teal flex items-center justify-center" aria-hidden="true">
+                <span className="mt-1 h-7 w-7 shrink-0 rounded-full bg-teal/10 text-teal-dark flex items-center justify-center" aria-hidden="true">
                   <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4">
                     <path fillRule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-7.5 7.5a1 1 0 0 1-1.4 0l-3.5-3.5a1 1 0 1 1 1.4-1.4l2.8 2.8 6.8-6.8a1 1 0 0 1 1.4 0Z" clipRule="evenodd" />
                   </svg>
@@ -111,7 +111,7 @@ export default function OpenHousePage() {
               </li>
             ))}
           </ul>
-          <p className="mt-8 text-sm text-clay/70 bg-white rounded-xl border border-beige-dark p-4">
+          <p className="mt-8 text-sm text-clay/80 bg-white rounded-xl border border-beige-dark p-4">
             Pick the session that suits you below. We&rsquo;ll follow up with the details — the join
             link for online, or the venue and time for in person — plus a reminder.
           </p>

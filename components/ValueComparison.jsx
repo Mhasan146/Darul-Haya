@@ -52,10 +52,10 @@ export default function ValueComparison() {
 
       <div className="relative max-w-5xl mx-auto px-6 py-20">
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">The Real Value</p>
+          <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">The Real Value</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-clay">A full education, for a fraction of the cost</h2>
           <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
-          <p className="mt-5 text-clay/75 leading-relaxed">
+          <p className="mt-5 text-clay/80 leading-relaxed">
             Comparable Islamic day schools run roughly $8,400–$9,550 a year. Darul Haya delivers a complete,
             faith-centered education — live, every day — for less than half the cost.
           </p>
@@ -74,7 +74,7 @@ export default function ValueComparison() {
                 onClick={() => setView(opt.key)}
                 aria-pressed={view === opt.key}
                 className={`px-5 py-1.5 rounded-full text-sm font-semibold transition-all duration-200 ${
-                  view === opt.key ? 'bg-teal text-white shadow' : 'text-clay/60 hover:text-clay'
+                  view === opt.key ? 'bg-teal text-white shadow' : 'text-clay/80 hover:text-clay'
                 }`}
               >
                 {opt.label}
@@ -89,17 +89,17 @@ export default function ValueComparison() {
             <div key={s.name} className="bg-white ring-1 ring-clay/10 rounded-2xl p-6 text-center flex flex-col">
               <h3 className="font-bold text-clay text-base">{s.name}</h3>
               <div className="mt-3 flex items-end justify-center gap-1">
-                <span className="text-3xl font-bold text-clay/70">{big(s)}</span>
-                <span className="text-sm text-clay/50 mb-1">{unit}</span>
+                <span className="text-3xl font-bold text-clay/80">{big(s)}</span>
+                <span className="text-sm text-clay/80 mb-1">{unit}</span>
               </div>
-              <p className="text-xs text-clay/50 mt-1">{sub(s)}</p>
-              <p className="text-sm text-clay/60 mt-4">{s.detail}</p>
-              <p className="text-[11px] text-clay/50 mt-auto pt-4">{s.year}</p>
+              <p className="text-xs text-clay/80 mt-1">{sub(s)}</p>
+              <p className="text-sm text-clay/80 mt-4">{s.detail}</p>
+              <p className="text-[11px] text-clay/80 mt-auto pt-4">{s.year}</p>
             </div>
           ))}
 
           {/* Darul Haya — green highlight */}
-          <div className="bg-teal text-white rounded-2xl p-6 text-center flex flex-col ring-2 ring-amber shadow-xl shadow-teal/25">
+          <div className="bg-teal-dark text-white rounded-2xl p-6 text-center flex flex-col ring-2 ring-amber shadow-xl shadow-teal/25">
             <h3 className="font-bold text-white text-base">Darul Haya</h3>
             <div className="mt-3 flex items-end justify-center gap-1">
               <span className="text-4xl font-bold text-white">{big(DH)}</span>
@@ -107,11 +107,11 @@ export default function ValueComparison() {
             </div>
             <p className="text-xs text-white/80 mt-1">{DH.note}</p>
             <p className="text-sm text-white/85 mt-4">{DH.detail}</p>
-            <p className="text-[11px] text-amber font-semibold mt-auto pt-4">★ Best value</p>
+            <p className="text-[11px] text-white font-semibold mt-auto pt-4">★ Best value</p>
           </div>
         </div>
 
-        <p className="text-center text-xs text-clay/55 mt-4 max-w-2xl mx-auto">
+        <p className="text-center text-xs text-clay/80 mt-4 max-w-2xl mx-auto">
           School figures are each institution&rsquo;s published tuition for one child, paid over 10 monthly
           installments. Darul Haya tuition is {DH.monthly}/month for Grades 2&ndash;8 and $300/month for
           Grades 9&ndash;12 (the figure above is the Grades 2&ndash;8 rate), plus a flat {MATERIAL_FEE} material
@@ -124,8 +124,8 @@ export default function ValueComparison() {
           <div className="grid sm:grid-cols-2 gap-3">
             {SAVINGS.map((s) => (
               <div key={s} className="flex items-start gap-3 bg-white ring-1 ring-clay/10 rounded-xl p-4">
-                <span className="text-teal mt-0.5 shrink-0 font-bold" aria-hidden="true">✓</span>
-                <span className="text-sm text-clay/75 leading-relaxed">{s}</span>
+                <span className="text-teal-dark mt-0.5 shrink-0 font-bold" aria-hidden="true">✓</span>
+                <span className="text-sm text-clay/80 leading-relaxed">{s}</span>
               </div>
             ))}
           </div>

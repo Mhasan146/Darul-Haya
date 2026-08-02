@@ -70,7 +70,7 @@ export default function Benefits() {
     <section id="benefits" className="relative overflow-hidden bg-beige-dark border-y border-clay/5 scroll-mt-24">      <div className="relative max-w-6xl mx-auto px-6 py-20">
         {/* Heading */}
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">
+          <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">
             The Darul Haya Advantage
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-clay">
@@ -109,7 +109,7 @@ export default function Benefits() {
           ))}
 
           {/* Conversion CTA tile — also completes the 3×2 grid */}
-          <div className="rounded-2xl p-7 bg-teal text-white shadow-md shadow-teal/20 flex flex-col justify-center">
+          <div className="rounded-2xl p-7 bg-teal-dark text-white shadow-md shadow-teal/20 flex flex-col justify-center">
             <h3 className="text-xl font-bold leading-snug">
               Ready for a better school day?
             </h3>

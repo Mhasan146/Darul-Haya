@@ -157,7 +157,7 @@ export default function HomePage() {
         <div aria-hidden className="absolute -bottom-32 -right-24 h-80 w-80 rounded-full bg-teal/10 blur-3xl" />
 
         <div className="relative max-w-4xl mx-auto px-6 pt-14 pb-20 text-center">
-          <span className="inline-flex items-center gap-2 mb-7 text-[11px] font-semibold uppercase tracking-[0.2em] text-teal bg-teal/10 ring-1 ring-teal/20 px-4 py-1.5 rounded-full">
+          <span className="inline-flex items-center gap-2 mb-7 text-[11px] font-semibold uppercase tracking-[0.2em] text-teal-dark bg-teal/10 ring-1 ring-teal/20 px-4 py-1.5 rounded-full">
             <span className="h-1.5 w-1.5 rounded-full bg-teal" aria-hidden="true" /> Now enrolling · Grades 2–12
           </span>
 
@@ -183,7 +183,7 @@ export default function HomePage() {
             {HERO_HEADLINE}
           </h1>
 
-          <p className="mt-5 text-lg text-clay/70 max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-5 text-lg text-clay/80 max-w-2xl mx-auto leading-relaxed">
             Live, teacher-led classes for boys and girls in Grades 2–12 — small, closely
             supervised, Ontario-aligned, with physical books shipped to your door.
           </p>
@@ -197,7 +197,7 @@ export default function HomePage() {
             </Link>
             <Link
               href="/open-house"
-              className="text-clay/70 text-sm font-medium hover:text-clay transition-colors"
+              className="text-clay/80 text-sm font-medium hover:text-clay transition-colors"
             >
               or join a free open house
               <span aria-hidden="true"> →</span>
@@ -205,7 +205,7 @@ export default function HomePage() {
           </div>
 
           {/* How it works — 3-step process */}
-          <div className="mt-8 flex items-center justify-center gap-2 sm:gap-3 flex-wrap text-clay/60 text-xs">
+          <div className="mt-8 flex items-center justify-center gap-2 sm:gap-3 flex-wrap text-clay/80 text-xs">
             {[
               'Apply online (5 min)',
               'Personal call from our team',
@@ -236,7 +236,7 @@ export default function HomePage() {
       {/* Trust bar */}
       <section aria-label="Curriculum alignment" className="bg-beige py-12 border-b border-clay/10">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <p className="text-xs font-semibold uppercase tracking-widest text-clay/60 mb-6">Curriculum aligned with</p>
+          <p className="text-xs font-semibold uppercase tracking-widest text-clay/80 mb-6">Curriculum aligned with</p>
           <div className="flex items-center justify-center gap-12 flex-wrap">
             <Image src="/ontario-edu.png" alt="Ontario Ministry of Education" width={200} height={56} className="h-14 w-auto opacity-90 hover:opacity-100 transition-all" />
             <Image src="/canada.png" alt="Government of Canada" width={200} height={40} className="h-10 w-auto opacity-90 hover:opacity-100 transition-all" />
@@ -247,7 +247,7 @@ export default function HomePage() {
       {/* Features */}
       <section id="features" className="relative overflow-hidden scroll-mt-24">        <div className="relative max-w-5xl mx-auto px-6 py-20">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">What&rsquo;s Included</p>
+          <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">What&rsquo;s Included</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-clay">Everything in one place</h2>
           <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <p className="mt-4 text-clay/80 leading-relaxed">Curriculum, technology, and physical materials — all included from day one.</p>
@@ -303,7 +303,7 @@ export default function HomePage() {
         <section id="video" className="bg-beige py-16 sm:py-20 border-b border-clay/10">
           <div className="max-w-3xl mx-auto px-6">
             <div className="text-center max-w-2xl mx-auto mb-8">
-              <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">Watch</p>
+              <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">Watch</p>
               <h2 className="text-3xl sm:text-4xl font-bold text-clay">See Darul Haya for yourself</h2>
               <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
             </div>
@@ -327,7 +327,7 @@ export default function HomePage() {
       {/* Our classrooms — school voice (no named principal) */}
       <section aria-label="Our classrooms" className="relative overflow-hidden bg-beige-dark/60 border-y border-clay/10">
         <div className="relative max-w-3xl mx-auto px-6 py-16 text-center">
-          <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-6">Inside Our Classrooms</p>
+          <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-6">Inside Our Classrooms</p>
           <span aria-hidden="true" className="block font-display text-6xl leading-none text-amber select-none">&ldquo;</span>
           <blockquote className="font-display text-2xl sm:text-3xl font-semibold text-clay leading-snug text-balance -mt-4">
             A calm, respectful classroom changes everything. At Darul Haya we keep classes
@@ -344,7 +344,7 @@ export default function HomePage() {
         <section id="testimonials" className="bg-beige py-20 border-b border-clay/10">
           <div className="max-w-5xl mx-auto px-6">
             <div className="text-center max-w-2xl mx-auto mb-12">
-              <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">Parent Voices</p>
+              <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">Parent Voices</p>
               <h2 className="text-3xl sm:text-4xl font-bold text-clay">What families are saying</h2>
               <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
             </div>
@@ -374,38 +374,38 @@ export default function HomePage() {
       {/* Pricing */}
       <section id="pricing" className="relative overflow-hidden scroll-mt-24 bg-gradient-to-b from-beige to-beige-dark/50">        <div className="relative max-w-4xl mx-auto px-6 py-20">
           <div className="text-center mb-12 max-w-2xl mx-auto">
-            <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">Tuition</p>
+            <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">Tuition</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-clay">One school. Straightforward pricing.</h2>
             <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
             <p className="text-clay/80 mt-5">A complete online school for Grades 2–12 — everything included, with one flat monthly price by grade level.</p>
           </div>
 
           <div className="max-w-md mx-auto rounded-3xl bg-white text-clay p-8 sm:p-10 border border-beige-dark shadow-xl shadow-clay/10">
-            <p className="text-xs font-semibold uppercase tracking-widest text-teal mb-4">Online School · Grades 2–12</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-teal-dark mb-4">Online School · Grades 2–12</p>
             <div className="grid grid-cols-2 gap-3">
               <div className="rounded-2xl bg-beige ring-1 ring-teal/15 p-4">
-                <p className="text-[11px] font-semibold uppercase tracking-wider text-clay/60">Grades 2–8</p>
+                <p className="text-[11px] font-semibold uppercase tracking-wider text-clay/80">Grades 2–8</p>
                 <div className="flex items-end gap-1 mt-1">
-                  <span className="font-display text-4xl font-bold text-teal">$225</span>
-                  <span className="text-clay/60 text-sm mb-1">/mo</span>
+                  <span className="font-display text-4xl font-bold text-teal-dark">$225</span>
+                  <span className="text-clay/80 text-sm mb-1">/mo</span>
                 </div>
               </div>
               <div className="rounded-2xl bg-beige ring-1 ring-teal/15 p-4">
-                <p className="text-[11px] font-semibold uppercase tracking-wider text-clay/60">Grades 9–12</p>
+                <p className="text-[11px] font-semibold uppercase tracking-wider text-clay/80">Grades 9–12</p>
                 <div className="flex items-end gap-1 mt-1">
-                  <span className="font-display text-4xl font-bold text-teal">$300</span>
-                  <span className="text-clay/60 text-sm mb-1">/mo</span>
+                  <span className="font-display text-4xl font-bold text-teal-dark">$300</span>
+                  <span className="text-clay/80 text-sm mb-1">/mo</span>
                 </div>
               </div>
             </div>
-            <p className="text-clay/75 text-sm mt-4 leading-relaxed">
+            <p className="text-clay/80 text-sm mt-4 leading-relaxed">
               Daily live, teacher-led classes with a complete Ontario-aligned curriculum, Arabic, recordings, and physical books shipped to your door.
             </p>
 
             <ul className="mt-6 flex flex-col gap-3 text-sm">
               {INCLUDED.map((f) => (
                 <li key={f} className="flex items-start gap-2">
-                  <span className="text-teal mt-0.5 font-bold" aria-hidden="true">✓</span>
+                  <span className="text-teal-dark mt-0.5 font-bold" aria-hidden="true">✓</span>
                   <span className="text-clay/80">{f}</span>
                 </li>
               ))}
@@ -417,7 +417,7 @@ export default function HomePage() {
             >
               Apply Now
             </Link>
-            <p className="text-clay/55 text-xs text-center mt-4 leading-relaxed">
+            <p className="text-clay/80 text-xs text-center mt-4 leading-relaxed">
               Plus a one-time $150 material fee &amp; $100 technology fee each year · 15% sibling discount
             </p>
           </div>
@@ -431,7 +431,7 @@ export default function HomePage() {
         <ul className="max-w-3xl mx-auto px-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-clay/80 list-none">
           {['Grades 2–12', '$225–$300 / month', 'Live daily classes', 'Ontario-aligned', 'Books included'].map((item) => (
             <li key={item} className="flex items-center gap-1.5">
-              <span className="text-teal font-bold" aria-hidden>✓</span>
+              <span className="text-teal-dark font-bold" aria-hidden>✓</span>
               {item}
             </li>
           ))}
@@ -477,7 +477,7 @@ export default function HomePage() {
       <section id="faq" className="bg-beige py-16 border-b border-clay/10">
         <div className="max-w-3xl mx-auto px-6">
           <div className="text-center mb-10">
-            <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">Common Questions</p>
+            <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">Common Questions</p>
             <h2 className="text-2xl sm:text-3xl font-bold text-clay">Quick answers for curious parents</h2>
             <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           </div>
@@ -486,7 +486,7 @@ export default function HomePage() {
               <details key={faq.q} className="group bg-white rounded-2xl border border-beige-dark shadow-sm">
                 <summary className="flex items-center justify-between px-6 py-4 cursor-pointer font-semibold text-clay text-sm select-none [&::-webkit-details-marker]:hidden [&::marker]:hidden">
                   <span>{faq.q}</span>
-                  <svg className="h-5 w-5 text-teal shrink-0 ml-3 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <svg className="h-5 w-5 text-teal-dark shrink-0 ml-3 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.06l3.71-3.83a.75.75 0 1 1 1.08 1.04l-4.25 4.38a.75.75 0 0 1-1.08 0L5.21 8.27a.75.75 0 0 1 .02-1.06Z" clipRule="evenodd" />
                   </svg>
                 </summary>
@@ -495,7 +495,7 @@ export default function HomePage() {
             ))}
           </div>
           <div className="mt-8 text-center">
-            <Link href="/faq" className="text-teal text-sm font-medium hover:text-teal-dark transition-colors">
+            <Link href="/faq" className="text-teal-dark text-sm font-medium hover:text-teal-dark transition-colors">
               See all questions <span aria-hidden="true">→</span>
             </Link>
           </div>
@@ -513,40 +513,40 @@ export default function HomePage() {
                 <Image src="/logo-mark.png" alt="" width={257} height={311} className="h-10 w-auto" />
                 <h2 className="font-display text-2xl font-bold tracking-wide text-clay">Darul Haya</h2>
               </div>
-              <p className="text-xs uppercase tracking-[0.25em] text-teal font-semibold mt-2">Knowledge · Character</p>
-              <p className="text-clay/70 text-sm mt-4 leading-relaxed max-w-xs">
+              <p className="text-xs uppercase tracking-[0.25em] text-teal-dark font-semibold mt-2">Knowledge · Character</p>
+              <p className="text-clay/80 text-sm mt-4 leading-relaxed max-w-xs">
                 A structured, values-driven online school for boys and girls in Grades 2–12.
               </p>
             </div>
 
             {/* Explore */}
             <div>
-              <h2 className="text-xs font-semibold uppercase tracking-widest text-clay/55 mb-4">Explore</h2>
+              <h2 className="text-xs font-semibold uppercase tracking-widest text-clay/80 mb-4">Explore</h2>
               <ul className="space-y-2.5 text-sm">
-                <li><Link href="/about" className="text-clay/80 hover:text-teal transition-colors">About</Link></li>
-                <li><Link href="/programs/full-live" className="text-clay/80 hover:text-teal transition-colors">Our Online School</Link></li>
-                <li><Link href="/curriculum" className="text-clay/80 hover:text-teal transition-colors">Curriculum</Link></li>
-                <li><Link href="/faq" className="text-clay/80 hover:text-teal transition-colors">FAQ</Link></li>
-                <li><Link href="/register" className="text-teal font-semibold hover:text-teal-dark transition-colors">Apply Now <span aria-hidden="true">→</span></Link></li>
+                <li><Link href="/about" className="text-clay/80 hover:text-teal-dark transition-colors">About</Link></li>
+                <li><Link href="/programs/full-live" className="text-clay/80 hover:text-teal-dark transition-colors">Our Online School</Link></li>
+                <li><Link href="/curriculum" className="text-clay/80 hover:text-teal-dark transition-colors">Curriculum</Link></li>
+                <li><Link href="/faq" className="text-clay/80 hover:text-teal-dark transition-colors">FAQ</Link></li>
+                <li><Link href="/register" className="text-teal-dark font-semibold hover:text-teal-dark transition-colors">Apply Now <span aria-hidden="true">→</span></Link></li>
               </ul>
             </div>
 
             {/* Contact */}
             <div>
-              <h2 className="text-xs font-semibold uppercase tracking-widest text-clay/55 mb-4">Get in Touch</h2>
+              <h2 className="text-xs font-semibold uppercase tracking-widest text-clay/80 mb-4">Get in Touch</h2>
               <ul className="space-y-2.5 text-sm">
-                <li><a href="mailto:info@darulhaya.com" className="text-clay/80 hover:text-teal transition-colors">info@darulhaya.com</a></li>
-                <li><a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-clay/80 hover:text-teal transition-colors">Chat on WhatsApp<span className="sr-only"> (opens in a new tab)</span></a></li>
-                <li><Link href="/contact" className="text-clay/80 hover:text-teal transition-colors">Contact Us</Link></li>
+                <li><a href="mailto:info@darulhaya.com" className="text-clay/80 hover:text-teal-dark transition-colors">info@darulhaya.com</a></li>
+                <li><a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-clay/80 hover:text-teal-dark transition-colors">Chat on WhatsApp<span className="sr-only"> (opens in a new tab)</span></a></li>
+                <li><Link href="/contact" className="text-clay/80 hover:text-teal-dark transition-colors">Contact Us</Link></li>
               </ul>
             </div>
           </div>
 
-          <div className="border-t border-clay/10 mt-10 pt-6 text-center text-xs text-clay/60">
-            <HijriDate className="block mb-2 text-clay/50" />
+          <div className="border-t border-clay/10 mt-10 pt-6 text-center text-xs text-clay/80">
+            <HijriDate className="block mb-2 text-clay/80" />
             © {new Date().getFullYear()} Darul Haya. All rights reserved.
             {' · '}
-            <Link href="/privacy" className="hover:text-teal transition-colors">Privacy Policy</Link>
+            <Link href="/privacy" className="hover:text-teal-dark transition-colors">Privacy Policy</Link>
           </div>
         </div>
       </footer>

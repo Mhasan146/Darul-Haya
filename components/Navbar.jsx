@@ -59,7 +59,7 @@ function MenuLink({ item, onClick }) {
     !item.href.startsWith('mailto:') &&
     (pathname === basePath || (basePath.length > 1 && pathname.startsWith(basePath)))
   const cls = `block px-4 py-2.5 text-sm transition-colors ${
-    isActive ? 'text-teal font-semibold bg-beige/80' : 'text-clay hover:bg-beige-dark hover:text-teal'
+    isActive ? 'text-teal-dark font-semibold bg-beige/80' : 'text-clay hover:bg-beige-dark hover:text-teal-dark'
   }`
   return item.external ? (
     <a href={item.href} target="_blank" rel="noopener noreferrer" className={cls} onClick={onClick}>
@@ -98,7 +98,7 @@ export default function Navbar() {
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => setMobileOpen(false)}
-          className="text-sm font-medium text-clay hover:text-teal transition-colors text-center"
+          className="text-sm font-medium text-clay hover:text-teal-dark transition-colors text-center"
         >
           Student Login
           <span className="sr-only"> (opens in a new tab)</span>
@@ -128,7 +128,7 @@ export default function Navbar() {
             showWeekday={false}
             className="flex lg:hidden xl:flex shrink-0 border-l border-clay/15 pl-3 sm:pl-4 text-[10px] sm:text-[11px]"
             hijriClassName="text-clay font-semibold whitespace-nowrap"
-            gregorianClassName="text-clay/45 whitespace-nowrap"
+            gregorianClassName="text-clay/80 whitespace-nowrap"
           />
         </div>
 
@@ -147,7 +147,7 @@ export default function Navbar() {
                 aria-expanded={openMenu === menu.label}
                 aria-controls={`nav-${menu.label.replace(/\s+/g, '-').toLowerCase()}`}
                 onClick={() => setOpenMenu(openMenu === menu.label ? null : menu.label)}
-                className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-clay hover:text-teal transition-colors whitespace-nowrap"
+                className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-clay hover:text-teal-dark transition-colors whitespace-nowrap"
               >
                 {menu.label}
                 <ChevronDown className={`h-4 w-4 transition-transform ${openMenu === menu.label ? 'rotate-180' : ''}`} />

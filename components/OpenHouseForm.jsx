@@ -50,7 +50,7 @@ export default function OpenHouseForm() {
     return (
       <div className="rounded-2xl border border-teal/30 bg-teal/5 p-6 text-center">
         <p className="text-3xl mb-2" aria-hidden="true">🤍</p>
-        <p className="text-teal font-bold text-lg">You&rsquo;re on the list</p>
+        <p className="text-teal-dark font-bold text-lg">You&rsquo;re on the list</p>
         <p className="text-clay/80 text-sm mt-1">
           We&rsquo;ll be in touch shortly with the details for your session.
         </p>
@@ -89,7 +89,7 @@ export default function OpenHouseForm() {
       <div>
         <label htmlFor="oh-phone" className="block text-xs font-semibold text-clay/80 mb-1">WhatsApp number *</label>
         <input id="oh-phone" type="tel" required value={form.phone} onChange={set('phone')} placeholder="+1 (416) 555-1234" className={inputCls} />
-        <p className="text-[11px] text-clay/60 mt-1">We&rsquo;ll send your session details and a reminder here.</p>
+        <p className="text-[11px] text-clay/80 mt-1">We&rsquo;ll send your session details and a reminder here.</p>
       </div>
       <div>
         <label htmlFor="oh-grade" className="block text-xs font-semibold text-clay/80 mb-1">Child&rsquo;s grade <span className="font-normal">(optional)</span></label>
@@ -108,7 +108,7 @@ export default function OpenHouseForm() {
       >
         {status === 'sending' ? 'Saving your spot…' : 'Save my spot'}
       </button>
-      <p className="text-center text-[10px] text-clay/60">Free · no commitment · we&rsquo;ll only use your details for the open house.</p>
+      <p className="text-center text-[10px] text-clay/80">Free · no commitment · we&rsquo;ll only use your details for the open house.</p>
     </form>
   )
 }

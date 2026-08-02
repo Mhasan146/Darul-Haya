@@ -37,7 +37,7 @@ export default function ContactForm() {
   if (status === 'sent') {
     return (
       <div className="rounded-xl border border-teal/30 bg-teal/5 p-6 text-center">
-        <p className="text-teal font-semibold">Thank you for reaching out! 🌙</p>
+        <p className="text-teal-dark font-semibold">Thank you for reaching out! 🌙</p>
         <p className="text-clay/80 text-sm mt-1">We&rsquo;ve received your message and will get back to you soon.</p>
       </div>
     )
@@ -57,12 +57,12 @@ export default function ContactForm() {
         aria-hidden="true"
       />
       <p id="contact-required-note" className="text-xs text-clay/80 -mb-1">
-        Fields marked <span aria-hidden="true" className="text-teal">*</span>
+        Fields marked <span aria-hidden="true" className="text-teal-dark">*</span>
         <span className="sr-only"> with an asterisk</span> are required.
       </p>
       <div>
         <label htmlFor="contact-name" className="text-sm font-medium text-clay/80 block mb-1">
-          Name <span aria-hidden="true" className="text-teal">*</span>
+          Name <span aria-hidden="true" className="text-teal-dark">*</span>
         </label>
         <input
           id="contact-name"
@@ -77,7 +77,7 @@ export default function ContactForm() {
       </div>
       <div>
         <label htmlFor="contact-email" className="text-sm font-medium text-clay/80 block mb-1">
-          Email <span aria-hidden="true" className="text-teal">*</span>
+          Email <span aria-hidden="true" className="text-teal-dark">*</span>
         </label>
         <input
           id="contact-email"
@@ -93,7 +93,7 @@ export default function ContactForm() {
       </div>
       <div>
         <label htmlFor="contact-message" className="text-sm font-medium text-clay/80 block mb-1">
-          Message <span aria-hidden="true" className="text-teal">*</span>
+          Message <span aria-hidden="true" className="text-teal-dark">*</span>
         </label>
         <textarea
           id="contact-message"

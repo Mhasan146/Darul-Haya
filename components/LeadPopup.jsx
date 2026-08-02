@@ -176,7 +176,7 @@ export default function LeadPopup() {
           type="button"
           onClick={close}
           aria-label="Close"
-          className="absolute top-4 right-4 text-clay/60 hover:text-clay text-lg leading-none"
+          className="absolute top-4 right-4 text-clay/80 hover:text-clay text-lg leading-none"
         >
           <span aria-hidden="true">✕</span>
         </button>

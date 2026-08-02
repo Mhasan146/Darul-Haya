@@ -25,7 +25,7 @@ export default function EveryOpportunity() {
     <section id="opportunity" className="bg-beige-dark border-y border-clay/5 scroll-mt-24">
       <div className="max-w-5xl mx-auto px-6 py-20">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <p className="text-teal text-sm font-semibold uppercase tracking-widest mb-3">Your child’s future</p>
+          <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">Your child’s future</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-clay">Will they still have every opportunity?</h2>
           <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <p className="mt-5 text-clay/80 leading-relaxed">
@@ -39,7 +39,7 @@ export default function EveryOpportunity() {
           {POINTS.map((p) => (
             <div key={p.title} className="bg-white rounded-2xl p-7 shadow-md ring-1 ring-clay/5">
               <div className="flex items-start gap-3">
-                <span className="mt-0.5 h-6 w-6 shrink-0 rounded-full bg-teal/10 text-teal flex items-center justify-center" aria-hidden="true">
+                <span className="mt-0.5 h-6 w-6 shrink-0 rounded-full bg-teal/10 text-teal-dark flex items-center justify-center" aria-hidden="true">
                   <svg viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5">
                     <path fillRule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-7.5 7.5a1 1 0 0 1-1.4 0l-3.5-3.5a1 1 0 1 1 1.4-1.4l2.8 2.8 6.8-6.8a1 1 0 0 1 1.4 0Z" clipRule="evenodd" />
                   </svg>
@@ -55,7 +55,7 @@ export default function EveryOpportunity() {
 
         {/* Track record — proof band */}
         <div className="mt-6 rounded-2xl bg-white text-clay p-7 sm:p-8 text-center border border-teal/20 shadow-sm">
-          <p className="text-teal text-xs font-semibold uppercase tracking-widest mb-2">A proven track record</p>
+          <p className="text-teal-dark text-xs font-semibold uppercase tracking-widest mb-2">A proven track record</p>
           <p className="text-lg sm:text-xl font-semibold leading-snug text-balance max-w-3xl mx-auto">
             The teachers behind Darul Haya aren’t new to this. In the classrooms they come from,
             students finish their work and move on to high school ready to succeed — that’s the

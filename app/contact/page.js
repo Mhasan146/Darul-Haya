@@ -20,9 +20,9 @@ export default function ContactPage() {
         <ContactForm />
       </div>
 
-      <p className="text-center text-sm text-clay/70">
+      <p className="text-center text-sm text-clay/80">
         Prefer email?{' '}
-        <a href="mailto:info@darulhaya.com" className="text-teal font-medium hover:underline">info@darulhaya.com</a>
+        <a href="mailto:info@darulhaya.com" className="text-teal-dark font-medium hover:underline">info@darulhaya.com</a>
       </p>
     </PagePlaceholder>
   )

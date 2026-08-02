@@ -28,7 +28,7 @@ export default function MobileApplyBar() {
   if (!visible || pathname === '/register') return null
 
   return (
-    <div className="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-teal backdrop-blur-sm border-t border-white/10 px-5 py-3 flex items-center justify-between gap-4">
+    <div className="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-teal-dark backdrop-blur-sm border-t border-white/10 px-5 py-3 flex items-center justify-between gap-4">
       <a
         href={WHATSAPP_URL}
         target="_blank"

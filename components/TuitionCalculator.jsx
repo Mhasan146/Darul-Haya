@@ -26,8 +26,8 @@ export default function TuitionCalculator() {
 
   return (
     <div className="max-w-md mx-auto mt-8 rounded-3xl bg-white border border-beige-dark shadow-md p-7 sm:p-8">
-      <p className="text-xs font-semibold uppercase tracking-widest text-teal mb-1">Estimate your tuition</p>
-      <p className="text-clay/70 text-sm mb-5">Pick a grade band and number of children to see the price, with the sibling discount applied live.</p>
+      <p className="text-xs font-semibold uppercase tracking-widest text-teal-dark mb-1">Estimate your tuition</p>
+      <p className="text-clay/80 text-sm mb-5">Pick a grade band and number of children to see the price, with the sibling discount applied live.</p>
 
       <label className="block text-sm font-medium text-clay/80 mb-2">Grade level</label>
       <div className="flex gap-2 mb-5" role="group" aria-label="Grade band">
@@ -69,17 +69,17 @@ export default function TuitionCalculator() {
       <div className="mt-6 rounded-2xl bg-beige-dark/50 p-5 text-center" aria-live="polite">
         <div className="flex items-end justify-center gap-1.5">
           <span className="font-display text-5xl font-bold text-clay">${total.toLocaleString()}</span>
-          <span className="text-clay/70 mb-1.5">/month</span>
+          <span className="text-clay/80 mb-1.5">/month</span>
         </div>
         {saved > 0 ? (
-          <p className="text-sm font-semibold text-teal mt-1">You save ${saved}/month with the sibling discount</p>
+          <p className="text-sm font-semibold text-teal-dark mt-1">You save ${saved}/month with the sibling discount</p>
         ) : (
-          <p className="text-sm text-clay/60 mt-1">One child · {BANDS[band].label}</p>
+          <p className="text-sm text-clay/80 mt-1">One child · {BANDS[band].label}</p>
         )}
       </div>
 
       {children > 1 && (
-        <ul className="mt-4 text-xs text-clay/70 space-y-1">
+        <ul className="mt-4 text-xs text-clay/80 space-y-1">
           <li className="flex justify-between"><span>First child</span><span>${base}/mo</span></li>
           <li className="flex justify-between">
             <span>{children - 1} sibling{children - 1 > 1 ? 's' : ''} (15% off each)</span>
@@ -88,7 +88,7 @@ export default function TuitionCalculator() {
         </ul>
       )}
 
-      <p className="text-[11px] text-clay/50 mt-4 leading-relaxed text-center">
+      <p className="text-[11px] text-clay/80 mt-4 leading-relaxed text-center">
         Estimate only. Plus a one-time $150 material fee &amp; $100 technology fee per child each year.
       </p>
 

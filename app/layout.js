@@ -138,16 +138,18 @@ export default function RootLayout({ children }) {
             className="bg-beige-dark text-clay text-center text-xs sm:text-sm py-2 px-4 border-b border-teal/15"
           >
             {/* TODO: Update enrolment deadline before each intake — e.g. "September 2027" */}
-            <span className="text-teal font-semibold">Enrolment open for September 2026</span>
+            <span className="text-teal-dark font-semibold">Enrolment open for September 2026</span>
             {' '}— seats fill quickly.{' '}
-            <Link href="/register" className="font-semibold underline underline-offset-2 hover:text-teal transition-colors">
+            <Link href="/register" className="font-semibold underline underline-offset-2 hover:text-teal-dark transition-colors">
               Apply Now <span aria-hidden="true">→</span>
             </Link>
           </div>
 
           <Navbar />
         </header>
-        <main id="main-content">{children}</main>
+        {/* Bottom padding clears the fixed mobile apply bar so the end of the
+            page (footer links, copyright) is never hidden behind it. */}
+        <main id="main-content" className="pb-20 lg:pb-0">{children}</main>
         <ScrollReveal />
         <MobileApplyBar />
         <WhatsAppButton />

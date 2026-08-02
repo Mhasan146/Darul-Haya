@@ -17,7 +17,7 @@ module.exports = {
           dark: '#D8EDDF',    // soft green tint — section bands, card borders
         },
         teal: {
-          DEFAULT: '#238A54', // primary — fresh brand green
+          DEFAULT: '#21804E', // primary — fresh brand green
           light: '#3FBE7B',   // bright spring green — large fills, gradients
           dark: '#1A6B41',    // deep green — hover states
         },
