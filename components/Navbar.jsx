@@ -119,7 +119,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
         {/* Logo + today's date beside it */}
         <div className="flex items-center gap-4 shrink-0">
-          <Link href="/" className="flex items-center gap-2.5 shrink-0" onClick={() => setMobileOpen(false)} aria-label="Darul Haya — home">
+          <Link href="/" className="flex items-center gap-2.5 shrink-0" onClick={() => setMobileOpen(false)} aria-label="Darul Haya, home">
             <Image src="/logo-mark.png" alt="" width={257} height={311} priority className="h-10 w-auto" />
             <span className="font-display text-xl font-bold text-clay tracking-tight leading-none">Darul Haya</span>
           </Link>
@@ -188,7 +188,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile panel — always in DOM so aria-controls target always exists */}
+      {/* Mobile panel, always in DOM so aria-controls target always exists */}
       <div
         id="mobile-menu-panel"
         hidden={!mobileOpen}

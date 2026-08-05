@@ -1,22 +1,22 @@
 // Answers the biggest silent objection: "Will a smaller, faith-centered,
 // online school leave my child behind?" Reframes it from "same chances" to
-// "a better chance" — deen and future together.
+// "a better chance", deen and future together.
 const POINTS = [
   {
     title: 'Every door stays open',
-    body: 'Our curriculum is accredited and fully Ontario-aligned, so your child stays exactly on grade level and can move to any school — or any path — whenever you choose. No university asks how a child did in Grade 5; it asks who they became.',
+    body: 'Our curriculum is accredited and fully Ontario-aligned, so your child stays exactly on grade level and can move to any school, or any path, whenever you choose. No university asks how a child did in Grade 5; it asks who they became.',
   },
   {
     title: 'Known by name',
-    body: 'In a small class, nothing is missed and nothing is faked. Gaps close the day they appear — the kind of attention a crowded classroom can’t give at any price.',
+    body: 'In a small class, nothing is missed and nothing is faked. Gaps close the day they appear, which is hard to manage in a crowded classroom.',
   },
   {
     title: 'Character is the advantage',
-    body: 'In a generation of distracted, anxious children, one who is focused, grounded, and sure of who they are isn’t behind — they’re ahead. That’s the edge that lasts in university, in work, and in life.',
+    body: 'A child who is focused and sure of who they are does better, and that steadiness carries into university, in work, and in life.',
   },
   {
     title: 'Faith and future, together',
-    body: 'You’re not choosing between your child’s deen and their success. Darul Haya is built so they keep both — a real education and a strong sense of who they are.',
+    body: 'You’re not choosing between your child’s deen and their success. Darul Haya is built so they keep both: a real education and a strong sense of who they are.',
   },
 ]
 
@@ -30,8 +30,8 @@ export default function EveryOpportunity() {
           <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <p className="mt-5 text-clay/80 leading-relaxed">
             It’s the honest worry behind every school decision: does a smaller, faith-centered
-            school mean your child gives something up? No — here’s why they gain an edge, not a
-            handicap.
+            school mean your child gives something up? Here is why we think they gain an edge
+            rather than a handicap.
           </p>
         </div>
 
@@ -53,18 +53,18 @@ export default function EveryOpportunity() {
           ))}
         </div>
 
-        {/* Track record — proof band */}
+        {/* Track record, proof band */}
         <div className="mt-6 rounded-2xl bg-white text-clay p-7 sm:p-8 text-center border border-teal/20 shadow-sm">
           <p className="text-teal-dark text-xs font-semibold uppercase tracking-widest mb-2">A proven track record</p>
           <p className="text-lg sm:text-xl font-semibold leading-snug text-balance max-w-3xl mx-auto">
             The teachers behind Darul Haya aren’t new to this. In the classrooms they come from,
-            students finish their work and move on to high school ready to succeed — that’s the
+            students finish their work and move on to high school ready. That is the
             standard we’re built on.
           </p>
         </div>
 
         <p className="mt-10 text-center font-display text-2xl sm:text-3xl font-semibold text-clay text-balance max-w-3xl mx-auto leading-snug">
-          You’re not choosing between your child’s faith and their future — this is how they keep both.
+          You are not choosing between your child’s faith and their future. This is how they keep both.
         </p>
       </div>
     </section>

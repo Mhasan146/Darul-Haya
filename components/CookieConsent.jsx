@@ -16,7 +16,7 @@ export default function CookieConsent() {
     try {
       if (!localStorage.getItem(STORAGE_KEY)) setShow(true)
     } catch {
-      // localStorage blocked — don't nag; simply don't show the banner.
+      // localStorage blocked, don't nag; simply don't show the banner.
     }
   }, [])
 

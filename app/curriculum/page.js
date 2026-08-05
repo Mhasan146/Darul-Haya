@@ -1,9 +1,9 @@
 import PagePlaceholder from '@/components/PagePlaceholder'
 
 export const metadata = {
-  title: 'Islamic School Curriculum, Grades 2–12',
+  title: 'Ontario Curriculum, Online Islamic School',
   description:
-    'What students learn at our online Islamic school: Ontario-aligned Language Arts, Math, Science and Social Studies, Grades 2–12, plus Arabic.',
+    'Our Grades 2-12 program follows the Ontario curriculum: Language Arts, Math, Science and Social Studies, plus Arabic every week.',
   alternates: { canonical: '/curriculum' },
 }
 
@@ -16,8 +16,8 @@ export default function CurriculumPage() {
       sections={[
         {
           id: 'grades',
-          heading: 'Grade Levels (2–12)',
-          body: 'Elementary (Grades 2–5) focuses on building strong foundations — fluent reading and writing, number sense and core math, and curiosity about the world through science and social studies — all at a pace that lets younger students feel secure and supported. At this stage boys and girls learn together.\n\nMiddle School (Grades 6–8) builds on those foundations with more advanced material, greater independence, and stronger study skills, in a focused, supervised environment. From Grade 6, boys and girls are taught in separate classrooms.\n\nHigh School (Grades 9–12) continues with a rigorous, Ontario-aligned program that keeps students on track toward graduation and their next steps, taught in the same small, closely supervised classes.',
+          heading: 'Grade Levels (2-12)',
+          body: 'Elementary (Grades 2-5) focuses on building strong foundations: fluent reading and writing, number sense and core math, and curiosity about the world through science and social studies, all at a pace that lets younger students feel secure and supported. At this stage boys and girls learn together.\n\nMiddle School (Grades 6-8) builds on those foundations with more advanced material, greater independence, and stronger study skills, in a focused, supervised environment. From Grade 6, boys and girls are taught in separate classrooms.\n\nHigh School (Grades 9-12) continues with a rigorous, Ontario-aligned program that keeps students on track toward graduation and their next steps, taught in the same small, closely supervised classes.',
         },
         {
           id: 'islamic',
@@ -26,7 +26,7 @@ export default function CurriculumPage() {
         },
         {
           heading: 'Core Subjects',
-          body: 'Language Arts (reading, writing, grammar, and comprehension), Mathematics, Science, and Social Studies — with additional enrichment and skills woven in across the year.',
+          body: 'Language Arts (reading, writing, grammar, and comprehension), Mathematics, Science, and Social Studies, with additional enrichment and skills woven in across the year.',
         },
         {
           heading: 'Arabic Language',

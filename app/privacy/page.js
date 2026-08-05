@@ -1,14 +1,14 @@
 import PagePlaceholder from '@/components/PagePlaceholder'
 
 export const metadata = {
-  title: 'Privacy Policy — Darul Haya',
+  title: 'Privacy Policy',
   description: 'How Darul Haya collects, uses, and protects your personal information.',
 }
 
 const SECTIONS = [
   {
     heading: 'Information We Collect',
-    body: `We collect information you provide directly when you register, contact us, or use our learning platform — including your name, email address, your child's name and grade level, and communication preferences.`,
+    body: `We collect information you provide directly when you register, contact us, or use our learning platform, including your name, email address, your child's name and grade level, and communication preferences.`,
   },
   {
     heading: 'How We Use Your Information',
@@ -20,7 +20,7 @@ const SECTIONS = [
   },
   {
     heading: "Children's Privacy",
-    body: `Darul Haya serves students in Grades 2–12. We collect only the minimum information required to provide educational services to your child. We do not share student data with advertisers or unrelated third parties.`,
+    body: `Darul Haya serves students in Grades 2-12. We collect only the minimum information required to provide educational services to your child. We do not share student data with advertisers or unrelated third parties.`,
   },
   {
     heading: 'Your Rights',

@@ -47,7 +47,7 @@ export async function POST(request) {
     return NextResponse.json({ error: 'Please enter a valid email address.' }, { status: 400 })
   }
   if (name.length > 120 || phone.length > 40 || grade.length > 40) {
-    return NextResponse.json({ error: 'That doesn’t look right — please check your details.' }, { status: 400 })
+    return NextResponse.json({ error: 'That doesn’t look right. Please check your details.' }, { status: 400 })
   }
 
   try {

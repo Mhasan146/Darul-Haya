@@ -1,12 +1,12 @@
 // Conversion-focused "Benefits of Online Schooling" section.
-// Server component (no client JS needed) — uses the shared brand tokens
+// Server component (no client JS needed), uses the shared brand tokens
 // (clay / teal / amber / beige) and the same card language as the rest of the site.
 
 const BENEFITS = [
   {
     title: 'Reclaim Your Time & Budget',
     body:
-      'Cut the gas money, the chaotic school-zone runs, and the white-knuckle winter drives. With zero commute, those lost hours — and dollars — go straight back to your family.',
+      'Cut the gas money, the chaotic school-zone runs, and the white-knuckle winter drives. With zero commute, those lost hours, and the money, go straight back to your family.',
     icon: (
       <path
         strokeLinecap="round"
@@ -18,7 +18,7 @@ const BENEFITS = [
   {
     title: 'A Safe, Curated Social Circle',
     body:
-      'Trade toxic peer pressure and bullying for a calm, moderated community — where your child connects with peers who genuinely value respect, kindness, and character.',
+      'No toxic peer pressure and no bullying. Your child sits with a small, moderated group where respect and good manners are the norm.',
     icon: (
       <path
         strokeLinecap="round"
@@ -30,7 +30,7 @@ const BENEFITS = [
   {
     title: 'Mastery-Based Learning Pace',
     body:
-      'Our learning platform lets your child pause, rewind, or race ahead through the Ontario-standard curriculum — so they are never bored waiting, and never left behind.',
+      'Our learning platform lets your child pause, rewind, or race ahead through the Ontario curriculum, so they are never stuck waiting and never left behind.',
     icon: (
       <path
         strokeLinecap="round"
@@ -42,7 +42,7 @@ const BENEFITS = [
   {
     title: 'Total Curriculum Transparency',
     body:
-      'You see exactly what is being taught — no hidden agendas, ever. Grades and teacher feedback are always one click away, so you are never left in the dark.',
+      'You see exactly what is being taught, with no hidden agenda. Grades and teacher feedback are always one click away.',
     icon: (
       <path
         strokeLinecap="round"
@@ -54,7 +54,7 @@ const BENEFITS = [
   {
     title: 'Lifestyle & Family Flexibility',
     body:
-      'Live classes blend with recorded lessons, so your family sets the schedule. Travel, holidays, and activities fit around your life — not a rigid school bell.',
+      'Live classes blend with recorded lessons, so your family sets the schedule. Travel, holidays, and activities fit around your life instead of a school bell.',
     icon: (
       <path
         strokeLinecap="round"
@@ -78,7 +78,7 @@ export default function Benefits() {
           </h2>
           <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <p className="mt-5 text-clay/80 leading-relaxed">
-            The practical, day-to-day differences families notice most — beyond what&rsquo;s
+            The practical, day-to-day differences families notice most, beyond what&rsquo;s
             in the curriculum.
           </p>
         </div>
@@ -108,7 +108,7 @@ export default function Benefits() {
             </div>
           ))}
 
-          {/* Conversion CTA tile — also completes the 3×2 grid */}
+          {/* Conversion CTA tile, also completes the 3×2 grid */}
           <div className="rounded-2xl p-7 bg-teal-dark text-white shadow-md shadow-teal/20 flex flex-col justify-center">
             <h3 className="text-xl font-bold leading-snug">
               Ready for a better school day?

@@ -20,7 +20,7 @@ export default function RegisterForm() {
     email: '',
     phone: '',
     grade: '',
-    program: 'Online School (Grades 2–12)',
+    program: 'Online School (Grades 2-12)',
     message: '',
     'bot-field': '',
   })
@@ -43,7 +43,7 @@ export default function RegisterForm() {
       if (!res.ok) throw new Error('Submit failed')
       router.push('/thank-you')
     } catch {
-      setError('Sorry — we could not submit your application. Please try again, or email us at info@darulhaya.com.')
+      setError('Sorry, we could not submit your application. Please try again, or email us at info@darulhaya.com.')
       setStatus('idle')
     }
   }
@@ -60,7 +60,7 @@ export default function RegisterForm() {
     >
       <input type="hidden" name="form-name" value="registration" />
 
-      {/* Spam honeypot — hidden from real users */}
+      {/* Spam honeypot, hidden from real users */}
       <p className="hidden" aria-hidden="true">
         <label>
           Leave this empty:
@@ -102,7 +102,7 @@ export default function RegisterForm() {
           {GRADES.map((g) => <option key={g}>{g}</option>)}
         </select>
       </div>
-      {/* Program is fixed (online school only) — submitted as a hidden field for the notification email */}
+      {/* Program is fixed (online school only), submitted as a hidden field for the notification email */}
       <input type="hidden" name="program" value={form.program} />
 
       <div>

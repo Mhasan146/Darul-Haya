@@ -8,7 +8,7 @@ const GRADES = ['Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7'
 const SESSIONS = ['Online (WhatsApp video)', 'In person', 'Either works']
 
 // Open house RSVP. Posts to /api/open-house, which emails the school via Resend
-// (the reliable pipeline) — the same one the contact form uses.
+// (the reliable pipeline), the same one the contact form uses.
 export default function OpenHouseForm() {
   const [form, setForm] = useState({ session: SESSIONS[0], name: '', email: '', phone: '', grade: '', company: '' })
   const [status, setStatus] = useState('idle') // idle | sending | sent | error

@@ -10,21 +10,21 @@ import HijriDate from '@/components/HijriDate'
 import YouTubeEmbed from '@/components/YouTubeEmbed'
 import { WHATSAPP_URL } from '@/lib/siteConfig'
 
-// Homepage video — paste your YouTube video ID (the part after "v=" or
+// Homepage video, paste your YouTube video ID (the part after "v=" or
 // "youtu.be/"), e.g. 'dQw4w9WgXcQ'. Leave empty to hide the video section.
 const HOMEPAGE_VIDEO_ID = ''
 
 const INCLUDED = [
   'Daily live classes with real teachers',
   'Complete Ontario-aligned curriculum, plus Arabic',
-  'Full recording library — never miss a lesson',
+  'Full recording library so no one misses a lesson',
   'Physical books shipped to your door',
   'Student dashboard & progress tracking',
   'Priority teacher support',
 ]
 
 const FACTS = [
-  { value: 'Grades 2–12', label: 'Elementary to High School' },
+  { value: 'Grades 2-12', label: 'Elementary to High School' },
   { value: 'Live, daily', label: 'Real teachers, set timetable' },
   { value: 'Small classes', label: 'Known by name, fully supervised' },
   { value: 'Ontario-aligned', label: 'On track with standards' },
@@ -37,17 +37,17 @@ const TESTIMONIALS = [
   {
     body: '[ Placeholder ] A real review from one of our founding families will appear here.',
     author: 'Founding parent',
-    role: 'Elementary (Grades 2–5)',
+    role: 'Elementary (Grades 2-5)',
   },
   {
     body: '[ Placeholder ] A real review from one of our founding families will appear here.',
     author: 'Founding parent',
-    role: 'Middle School (Grades 6–8)',
+    role: 'Middle School (Grades 6-8)',
   },
   {
     body: '[ Placeholder ] A real review from one of our founding families will appear here.',
     author: 'Founding parent',
-    role: 'Elementary (Grades 2–5)',
+    role: 'Elementary (Grades 2-5)',
   },
 ]
 
@@ -56,19 +56,19 @@ const REAL_TESTIMONIALS = TESTIMONIALS.filter((t) => !t.body.startsWith('[ Place
 const FAQS = [
   {
     q: 'Is online school really as effective as in-person?',
-    a: 'For many children, it can be more effective. Classes are live and small, so teachers give each student real attention and notice right away when someone needs help — something that is hard to do in a crowded classroom. Participation and attendance are tracked every day, and every lesson is recorded so nothing is missed.',
+    a: 'For a lot of children it works better. Classes are live and small, so a teacher notices right away when someone is stuck. That is hard to do in a room of thirty. We take attendance daily, track participation, and record every lesson so nothing gets missed.',
   },
   {
     q: 'Will my child be socially isolated?',
-    a: 'No. Your child learns alongside classmates every day in a live, moderated setting — seeing and speaking with their teacher and peers throughout each class. It is a calmer, kinder social circle than many larger schools, without the bullying, cliques, and pressures that worry so many families.',
+    a: 'No. Your child is in class with the same group every day, seeing and speaking with their teacher and classmates throughout the lesson. The circle is smaller and calmer than a big school, without the cliques and bullying that worry most parents.',
   },
   {
     q: 'Will my child be at a disadvantage compared to children in regular school?',
-    a: 'Just the opposite. Because our curriculum is accredited and fully Ontario-aligned, your child stays on grade level and can transition to any school at any time — no doors close. And in a small, focused class they get attention a crowded classroom simply can’t match. A grounded, focused child isn’t behind; they’re ahead.',
+    a: 'We think it is the other way around. Our program is accredited and follows the Ontario curriculum, so your child stays on grade level and can move to another school whenever you choose. In a class this small they also get far more of the teacher’s time than they would in a full classroom.',
   },
   {
     q: 'Why should we trust a brand-new school with our child?',
-    a: 'It’s a fair question, and we’d rather earn it than argue it. Our program is accredited and Ontario-aligned, and the teachers behind Darul Haya bring a real track record — their students finish their work and move on to high school ready to succeed. Our classes are small and closely supervised, and the whole day is transparent, so you always see what’s taught and how your child is doing. The best way to judge us is to meet us — join a free open house, ask us anything, and decide with your own eyes.',
+    a: 'That is a fair thing to ask. Our program is accredited and follows the Ontario curriculum, and the teachers here have a track record: their students finish their work and go on to high school ready. Classes are small and closely supervised, and the whole day is open to you, so you can see what is being taught and how your child is doing. Come to a free open house and ask us whatever you want.',
   },
   {
     q: 'What time are the classes held each day?',
@@ -76,7 +76,7 @@ const FAQS = [
   },
   {
     q: "Isn't this too much screen time?",
-    a: 'It is more balanced than parents expect, and the screen time that remains is purposeful. Guided, active online learning builds the mental pathways for using a screen to focus, think, and create — the opposite of the passive, endless scrolling that hooks so many children elsewhere. And much of the work happens off-screen entirely: every enrolled student receives physical books and materials shipped to their home, so reading, writing, and assignments happen on paper, not only on a device.',
+    a: 'Less than parents expect, and the time on screen is spent working rather than scrolling. Lessons are guided and active, so your child is using the screen to think and produce something. A good part of the day is off the screen anyway. Every student gets physical books and materials shipped home, so reading, writing, and assignments happen on paper.',
   },
   {
     q: "How is my child's progress tracked and reported?",
@@ -88,17 +88,17 @@ const FAQS = [
   },
   {
     q: 'Do you follow the Ontario curriculum, and can my child return to a regular school later?',
-    a: 'Yes — core academic subjects are Ontario-aligned, so your child stays on track with provincial expectations and can transition to any Ontario school at their grade level. Arabic is integrated into the timetable alongside the core curriculum.',
+    a: 'Yes. Core academic subjects follow the Ontario curriculum, so your child stays on track with provincial expectations and can move to any Ontario school at their grade level. Arabic sits in the timetable alongside the core subjects.',
   },
   {
     q: "What if it's not the right fit for us?",
-    a: 'Reach out before you enrol — we are glad to talk through whether Darul Haya suits your child, answer your questions, and walk you through a typical school day, so you can decide with confidence.',
+    a: 'Talk to us before you enrol. We are happy to go through whether Darul Haya suits your child, answer your questions, and walk you through a normal school day so you can decide properly.',
   },
 ]
 
-const HERO_HEADLINE = 'A smaller, safer school — taught live, every day.'
+const HERO_HEADLINE = 'A smaller, safer school. Taught live, every day.'
 
-// FAQ rich-result markup — mirrors the on-page FAQ section below.
+// FAQ rich-result markup, mirrors the on-page FAQ section below.
 const FAQ_LD = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -117,7 +117,7 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_LD) }}
       />
 
-      {/* Hidden forms — required for Netlify to detect and process form submissions.
+      {/* Hidden forms, required for Netlify to detect and process form submissions.
           These are never visible; the real forms are in RegisterForm.jsx and LeadPopup.jsx. */}
       <form name="registration" data-netlify="true" data-netlify-honeypot="bot-field" data-netlify-recaptcha="true" hidden>
         <input type="hidden" name="form-name" value="registration" />
@@ -141,11 +141,11 @@ export default function HomePage() {
         <input name="page_url" />
       </form>
 
-      {/* Hero — light & photo-led (public/hero.jpg). */}
+      {/* Hero, light & photo-led (public/hero.jpg). */}
       <section id="about" className="relative overflow-hidden scroll-mt-24 bg-beige">
-        {/* Warm light base — beige so the logo's transparent background blends */}
+        {/* Warm light base, beige so the logo's transparent background blends */}
         <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-beige via-beige to-beige-dark/40" />
-        {/* Background photo (no people) — prominent, with a lighter wash for legibility */}
+        {/* Background photo (no people), prominent, with a lighter wash for legibility */}
         <div
           aria-hidden
           className="absolute inset-0 bg-cover bg-center opacity-75"
@@ -158,7 +158,7 @@ export default function HomePage() {
 
         <div className="relative max-w-4xl mx-auto px-6 pt-14 pb-20 text-center">
           <span className="inline-flex items-center gap-2 mb-7 text-[11px] font-semibold uppercase tracking-[0.2em] text-teal-dark bg-teal/10 ring-1 ring-teal/20 px-4 py-1.5 rounded-full">
-            <span className="h-1.5 w-1.5 rounded-full bg-teal" aria-hidden="true" /> Now enrolling · Grades 2–12
+            <span className="h-1.5 w-1.5 rounded-full bg-teal" aria-hidden="true" /> Now enrolling · Grades 2-12
           </span>
 
           {/* Full crest (transparent bg) on a soft cream halo, so it reads
@@ -171,7 +171,7 @@ export default function HomePage() {
             />
             <Image
               src="/hero-logo.png"
-              alt="Darul Haya — Academy of Learning"
+              alt="Darul Haya Academy of Learning"
               width={512}
               height={512}
               priority
@@ -184,7 +184,7 @@ export default function HomePage() {
           </h1>
 
           <p className="mt-5 text-lg text-clay/80 max-w-2xl mx-auto leading-relaxed">
-            Live, teacher-led classes for boys and girls in Grades 2–12 — small, closely
+            Live, teacher-led classes for boys and girls in Grades 2-12. Small classes, close
             supervised, Ontario-aligned, with physical books shipped to your door.
           </p>
 
@@ -204,7 +204,7 @@ export default function HomePage() {
             </Link>
           </div>
 
-          {/* How it works — 3-step process */}
+          {/* How it works, 3-step process */}
           <div className="mt-8 flex items-center justify-center gap-2 sm:gap-3 flex-wrap text-clay/80 text-xs">
             {[
               'Apply online (5 min)',
@@ -250,7 +250,7 @@ export default function HomePage() {
           <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">What&rsquo;s Included</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-clay">Everything in one place</h2>
           <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
-          <p className="mt-4 text-clay/80 leading-relaxed">Curriculum, technology, and physical materials — all included from day one.</p>
+          <p className="mt-4 text-clay/80 leading-relaxed">Curriculum, technology, and physical materials, all included from day one.</p>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5">
           {[
@@ -298,7 +298,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Video — only rendered once HOMEPAGE_VIDEO_ID is set */}
+      {/* Video, only rendered once HOMEPAGE_VIDEO_ID is set */}
       {HOMEPAGE_VIDEO_ID && (
         <section id="video" className="bg-beige py-16 sm:py-20 border-b border-clay/10">
           <div className="max-w-3xl mx-auto px-6">
@@ -324,7 +324,7 @@ export default function HomePage() {
       {/* Safety tools */}
       <SafetyTools />
 
-      {/* Our classrooms — school voice (no named principal) */}
+      {/* Our classrooms, school voice (no named principal) */}
       <section aria-label="Our classrooms" className="relative overflow-hidden bg-beige-dark/60 border-y border-clay/10">
         <div className="relative max-w-3xl mx-auto px-6 py-16 text-center">
           <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-6">Inside Our Classrooms</p>
@@ -332,14 +332,14 @@ export default function HomePage() {
           <blockquote className="font-display text-2xl sm:text-3xl font-semibold text-clay leading-snug text-balance -mt-4">
             A calm, respectful classroom changes everything. At Darul Haya we keep classes
             small and closely supervised, so every child feels safe, settled, and free to
-            focus — the kind of environment where children genuinely want to learn.
+            focus and actually learn.
           </blockquote>
           <div className="gold-rule mx-auto mt-7 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <p className="mt-5 text-sm font-semibold text-clay">The Darul Haya Team</p>
         </div>
       </section>
 
-      {/* Testimonials — only shown once real reviews exist */}
+      {/* Testimonials, only shown once real reviews exist */}
       {REAL_TESTIMONIALS.length > 0 && (
         <section id="testimonials" className="bg-beige py-20 border-b border-clay/10">
           <div className="max-w-5xl mx-auto px-6">
@@ -377,21 +377,21 @@ export default function HomePage() {
             <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">Tuition</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-clay">One school. Straightforward pricing.</h2>
             <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
-            <p className="text-clay/80 mt-5">A complete online school for Grades 2–12 — everything included, with one flat monthly price by grade level.</p>
+            <p className="text-clay/80 mt-5">A complete online school for Grades 2-12. Everything included, at one flat monthly price by grade level.</p>
           </div>
 
           <div className="max-w-md mx-auto rounded-3xl bg-white text-clay p-8 sm:p-10 border border-beige-dark shadow-xl shadow-clay/10">
-            <p className="text-xs font-semibold uppercase tracking-widest text-teal-dark mb-4">Online School · Grades 2–12</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-teal-dark mb-4">Online School · Grades 2-12</p>
             <div className="grid grid-cols-2 gap-3">
               <div className="rounded-2xl bg-beige ring-1 ring-teal/15 p-4">
-                <p className="text-[11px] font-semibold uppercase tracking-wider text-clay/80">Grades 2–8</p>
+                <p className="text-[11px] font-semibold uppercase tracking-wider text-clay/80">Grades 2-8</p>
                 <div className="flex items-end gap-1 mt-1">
                   <span className="font-display text-4xl font-bold text-teal-dark">$225</span>
                   <span className="text-clay/80 text-sm mb-1">/mo</span>
                 </div>
               </div>
               <div className="rounded-2xl bg-beige ring-1 ring-teal/15 p-4">
-                <p className="text-[11px] font-semibold uppercase tracking-wider text-clay/80">Grades 9–12</p>
+                <p className="text-[11px] font-semibold uppercase tracking-wider text-clay/80">Grades 9-12</p>
                 <div className="flex items-end gap-1 mt-1">
                   <span className="font-display text-4xl font-bold text-teal-dark">$250</span>
                   <span className="text-clay/80 text-sm mb-1">/mo</span>
@@ -429,7 +429,7 @@ export default function HomePage() {
       {/* Decision summary strip */}
       <section aria-label="Program highlights" className="bg-beige border-y border-clay/10 py-5">
         <ul className="max-w-3xl mx-auto px-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-clay/80 list-none">
-          {['Grades 2–12', '$225–$250 / month', 'Live daily classes', 'Ontario-aligned', 'Books included'].map((item) => (
+          {['Grades 2-12', '$225-$250 / month', 'Live daily classes', 'Ontario-aligned', 'Books included'].map((item) => (
             <li key={item} className="flex items-center gap-1.5">
               <span className="text-teal-dark font-bold" aria-hidden>✓</span>
               {item}
@@ -440,7 +440,7 @@ export default function HomePage() {
 
       {/* CTA band */}
       <section aria-label="Enrolment call to action" className="relative overflow-hidden bg-clay text-white">
-        {/* Warm classroom photo — prominent, with a deep-teal overlay kept strong
+        {/* Warm classroom photo, prominent, with a deep-teal overlay kept strong
             enough that the white text stays readable */}
         <div aria-hidden className="absolute inset-0 bg-cover bg-center opacity-75" style={{ backgroundImage: "url('/cta.jpg')" }} />
         <div aria-hidden className="absolute inset-0 bg-gradient-to-br from-[#25714C]/55 via-clay/50 to-[#123020]/60" />        <div aria-hidden className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-72 w-[36rem] rounded-full bg-teal-light/10 blur-3xl" />
@@ -450,7 +450,7 @@ export default function HomePage() {
           </h2>
           <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <p className="mt-5 text-white/70 leading-relaxed">
-            Apply in minutes and we&rsquo;ll personally help you get enrolled — or reach out on WhatsApp with any questions.
+            Apply in minutes and we&rsquo;ll personally help you get enrolled. Or message us on WhatsApp if you have questions first.
           </p>
           <div className="mt-8 flex items-center justify-center gap-6 flex-wrap">
             <Link
@@ -515,7 +515,7 @@ export default function HomePage() {
               </div>
               <p className="text-xs uppercase tracking-[0.25em] text-teal-dark font-semibold mt-2">Knowledge · Character</p>
               <p className="text-clay/80 text-sm mt-4 leading-relaxed max-w-xs">
-                A structured, values-driven online school for boys and girls in Grades 2–12.
+                A structured, values-driven online school for boys and girls in Grades 2-12.
               </p>
             </div>
 

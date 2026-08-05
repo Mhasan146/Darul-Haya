@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export const metadata = { title: 'Application received — Darul Haya' }
+export const metadata = { title: 'Application received' }
 
 export default function ThankYouPage() {
   return (

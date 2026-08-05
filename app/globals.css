@@ -35,7 +35,7 @@ html {
 }
 
 /* Gold divider lines draw themselves out from the centre as their section reveals.
-   Only hidden when JS has marked the section (reveal-init) — no-JS/reduced-motion
+   Only hidden when JS has marked the section (reveal-init), no-JS/reduced-motion
    users always see the full line. */
 .reveal-init .gold-rule {
   transform: scaleX(0);
@@ -104,7 +104,7 @@ h3,
 }
 
 /* Parallax: the geometric star patterns stay anchored to the viewport so they
-   drift slower than the content scrolling over them. Desktop only — mobile
+   drift slower than the content scrolling over them. Desktop only, mobile
    browsers fall back to a normal scrolling pattern (no harm). */
 @media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
   .bg-ornament,

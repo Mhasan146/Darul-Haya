@@ -1,9 +1,9 @@
 import OpenHouseForm from '@/components/OpenHouseForm'
 
 export const metadata = {
-  title: 'Free Open House — Islamic School',
+  title: 'Free Open House, Online Islamic School',
   description:
-    'Join a free open house at our online Islamic school, online or in person. See how live classes for Grades 2–12 work. No commitment.',
+    'Join a free open house at our online Islamic school, online or in person. See how live classes for Grades 2-12 work. No commitment.',
   alternates: { canonical: '/open-house' },
 }
 
@@ -41,7 +41,7 @@ const AGENDA = [
   },
   {
     title: 'Ask anything',
-    body: 'Fees, fit for your child, schedules, how to enrol — bring your questions, no pressure to sign up.',
+    body: 'Fees, fit for your child, schedules, how to enrol. Bring your questions, there is no pressure to sign up.',
   },
 ]
 
@@ -58,7 +58,7 @@ export default function OpenHousePage() {
             Join our free open house
           </h1>
           <p className="mt-5 text-lg text-clay/80 max-w-xl mx-auto leading-relaxed">
-            Meet our team — online or in person — see exactly how our
+            Meet our team, online or in person, and see exactly how our
             live classes work, and get your questions answered before you decide anything.
           </p>
         </div>
@@ -68,7 +68,7 @@ export default function OpenHousePage() {
       <section className="max-w-5xl mx-auto px-6 pt-14">
         <div className="text-center max-w-xl mx-auto mb-8">
           <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-2">Two ways to join</p>
-          <p className="text-clay/80">Come in person to meet us face to face, or join live online — whichever suits your family.</p>
+          <p className="text-clay/80">Come in person to meet us face to face, or join live online, whichever suits your family.</p>
         </div>
         <div className="grid sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
           {SESSIONS.map((s) => (
@@ -112,15 +112,15 @@ export default function OpenHousePage() {
             ))}
           </ul>
           <p className="mt-8 text-sm text-clay/80 bg-white rounded-xl border border-beige-dark p-4">
-            Pick the session that suits you below. We&rsquo;ll follow up with the details — the join
-            link for online, or the venue and time for in person — plus a reminder.
+            Pick the session that suits you below. We&rsquo;ll follow up with the details, either the join
+            link for online or the venue and time for in person, plus a reminder.
           </p>
         </div>
 
         {/* Form card */}
         <div className="bg-white rounded-3xl border border-beige-dark shadow-xl shadow-clay/10 p-7 sm:p-8">
           <h2 className="text-xl font-bold text-clay mb-1">Save your spot</h2>
-          <p className="text-clay/80 text-sm mb-6">Choose a session and leave your details — we&rsquo;ll send you what you need.</p>
+          <p className="text-clay/80 text-sm mb-6">Choose a session and leave your details, and we&rsquo;ll send you what you need.</p>
           <OpenHouseForm />
         </div>
       </section>

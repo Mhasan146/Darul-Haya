@@ -4,7 +4,7 @@ import ContactForm from '@/components/ContactForm'
 export const metadata = {
   title: 'Contact Our Online Islamic School',
   description:
-    'Questions about our online Islamic school for Grades 2–12? Message us, email info@darulhaya.com, or chat on WhatsApp.',
+    'Questions about our online Islamic school for Grades 2-12? Message us, email info@darulhaya.com, or chat on WhatsApp.',
   alternates: { canonical: '/contact' },
 }
 
@@ -13,7 +13,7 @@ export default function ContactPage() {
     <PagePlaceholder
       eyebrow="Contact Us"
       title="Get in Touch"
-      intro="We'd love to hear from you — send us a message and we'll get back to you soon."
+      intro="We'd love to hear from you. Send us a message and we'll get back to you soon."
     >
       <div className="bg-white rounded-2xl border border-beige-dark shadow-sm p-6 sm:p-8">
         <h2 className="text-2xl font-bold text-clay mb-5">Send us a message</h2>

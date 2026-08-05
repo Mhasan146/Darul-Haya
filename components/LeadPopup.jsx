@@ -5,7 +5,7 @@ import { WHATSAPP_URL } from '@/lib/siteConfig'
 
 const STORAGE_KEY = 'dh_lead_popup'
 const SUPPRESS_DAYS = 14
-// Routes with their own dedicated lead form — don't pop the global lead form there.
+// Routes with their own dedicated lead form, don't pop the global lead form there.
 const SUPPRESS_ON_ROUTES = ['/register', '/open-house']
 const GRADES = ['Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8', 'Grade 9', 'Grade 10', 'Grade 11', 'Grade 12', 'Not sure']
 
@@ -153,14 +153,14 @@ export default function LeadPopup() {
 
   return (
     <>
-      {/* Backdrop — dimmed on desktop, invisible on mobile */}
+      {/* Backdrop, dimmed on desktop, invisible on mobile */}
       <div
         className="fixed inset-0 z-50 lg:bg-black/40"
         onClick={close}
         aria-hidden="true"
       />
 
-      {/* Panel — slide-up banner on mobile, centered modal on desktop */}
+      {/* Panel, slide-up banner on mobile, centered modal on desktop */}
       <div
         ref={dialogRef}
         role="dialog"
@@ -215,7 +215,7 @@ export default function LeadPopup() {
             </div>
 
             <form onSubmit={handleSubmit} noValidate data-netlify="true" data-netlify-recaptcha="true" name="darul-haya-lead">
-              {/* Honeypot — hidden from real users */}
+              {/* Honeypot, hidden from real users */}
               <input
                 type="text"
                 name="bot-field"

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 // Reusable on-brand page scaffold for content pages (about, FAQ, privacy, etc.).
-// Pass real content — this component renders it styled and structured, not as a placeholder.
+// Pass real content, this component renders it styled and structured, not as a placeholder.
 export default function PagePlaceholder({ eyebrow, title, intro, sections = [], cta, children }) {
   const btn =
     'inline-block bg-teal text-white px-7 py-3 rounded-full font-semibold hover:bg-teal-dark transition-colors'

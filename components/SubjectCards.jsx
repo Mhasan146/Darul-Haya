@@ -2,13 +2,13 @@
 import { useState } from 'react'
 
 // Front = subject; back = what it covers. Descriptions reflect the public
-// Ontario curriculum strands — kept general and accurate.
+// Ontario curriculum strands, kept general and accurate.
 const SUBJECTS = [
-  { name: 'Mathematics', tag: 'Core Subject', back: 'Number sense, algebra, data, and spatial reasoning — aligned to the Ontario curriculum.' },
+  { name: 'Mathematics', tag: 'Core Subject', back: 'Number sense, algebra, data, and spatial reasoning, following the Ontario curriculum.' },
   { name: 'English Language Arts', tag: 'Core Subject', back: 'Reading, writing, grammar, and oral communication, built on the Ontario language curriculum.' },
-  { name: 'Science', tag: 'Core Subject', back: 'Life systems, matter and energy, structures, and earth and space — following Ontario expectations.' },
+  { name: 'Science', tag: 'Core Subject', back: 'Life systems, matter and energy, structures, and earth and space, following Ontario expectations.' },
   { name: 'Social Studies', tag: 'Core Subject', back: 'History, geography, and citizenship through the Ontario social studies curriculum.' },
-  { name: 'Arabic', tag: 'Language', back: 'Reading, writing, and conversational Arabic — taught live and woven into the weekly timetable.' },
+  { name: 'Arabic', tag: 'Language', back: 'Reading, writing, and conversational Arabic, taught live in the weekly timetable.' },
   { name: 'Character & Values', tag: 'Every Day', back: 'Good character, manners, and values reinforced gently throughout the school day.' },
 ]
 
@@ -37,7 +37,7 @@ function SubjectCard({ subject }) {
         {/* Back */}
         <div className="flip-face flip-back rounded-2xl bg-teal-dark text-white p-6 flex flex-col justify-center text-left">
           <p className="text-sm leading-relaxed text-white/85">{subject.back}</p>
-          <span className="mt-3 text-[11px] text-white font-semibold">Grades 2–12 · Ontario-aligned</span>
+          <span className="mt-3 text-[11px] text-white font-semibold">Grades 2-12 · Ontario-aligned</span>
         </div>
       </div>
     </button>
@@ -47,7 +47,7 @@ function SubjectCard({ subject }) {
 export default function SubjectCards() {
   return (
     <section id="subjects" className="relative overflow-hidden bg-beige py-20 border-b border-clay/10 scroll-mt-24">
-      {/* Curriculum photo backdrop — prominent, with a light wash so the heading
+      {/* Curriculum photo backdrop, prominent, with a light wash so the heading
           stays readable and the white subject cards still pop */}
       <div aria-hidden className="absolute inset-0 bg-cover bg-center opacity-75" style={{ backgroundImage: "url('/curriculum.jpg')" }} />
       <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-beige/45 via-beige/30 to-beige/65" />
@@ -56,7 +56,7 @@ export default function SubjectCards() {
           <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">The Curriculum</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-clay">What your child studies</h2>
           <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
-          <p className="mt-5 text-clay/80 leading-relaxed">A full course load — hover or tap each subject to see what&rsquo;s covered.</p>
+          <p className="mt-5 text-clay/80 leading-relaxed">A full course load. Hover or tap each subject to see what&rsquo;s covered.</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {SUBJECTS.map((s) => (

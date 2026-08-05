@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 // Lightweight, mobile-friendly YouTube embed. Shows the poster image + a play
 // button, and only loads the (heavy) YouTube player iframe once the visitor
-// taps play — so it doesn't slow the page down, especially on mobile. Uses the
+// taps play, so it doesn't slow the page down, especially on mobile. Uses the
 // privacy-friendly youtube-nocookie domain (no cookies set until playback).
 export default function YouTubeEmbed({ id, title = 'Video' }) {
   const [play, setPlay] = useState(false)

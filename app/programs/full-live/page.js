@@ -1,9 +1,9 @@
 import PagePlaceholder from '@/components/PagePlaceholder'
 
 export const metadata = {
-  title: 'Daily Live Islamic School, Grades 2–12',
+  title: 'Live Islamic School, Ontario Curriculum',
   description:
-    'Live, teacher-led classes every school day at our online Islamic school, Grades 2–12 — Arabic, Ontario-aligned, books shipped. From $225/mo.',
+    'Live, teacher-led classes every school day, Grades 2-12, following the Ontario curriculum. Arabic included, books shipped. From $225/mo.',
   alternates: { canonical: '/programs/full-live' },
 }
 
@@ -12,11 +12,11 @@ export default function FullLivePage() {
     <PagePlaceholder
       eyebrow="Our Online School"
       title="Daily Live School"
-      intro="Darul Haya is a complete online school: your child joins live, teacher-led classes every school day, following a structured timetable across all their subjects. It's a full education delivered in real time — the structure and accountability of a traditional school, with the safety and focus of a small, supervised online classroom."
+      intro="Darul Haya is a complete online school: your child joins live, teacher-led classes every school day, following a structured timetable across all their subjects. It is a full education delivered in real time: the structure and accountability of a traditional school, with the safety and focus of a small, supervised classroom."
       sections={[
         {
           heading: 'Daily Live Classes',
-          body: 'Each day follows a clear, predictable timetable. Students log in to live classes led by their teachers, move through their subjects on a set schedule, and have built-in breaks between sessions. Teachers take attendance, teach the lesson directly, answer questions in the moment, and assign and review work — just like a classroom, only smaller and calmer. Because everything happens live and on schedule, students stay in a steady routine, and parents always know where their child should be and what they\'re working on.',
+          body: 'Each day follows a clear, predictable timetable. Students log in to live classes led by their teachers, move through their subjects on a set schedule, and have built-in breaks between sessions. Teachers take attendance, teach the lesson directly, answer questions in the moment, and assign and review work, just like a classroom, only smaller and calmer. Because everything happens live and on schedule, students stay in a steady routine, and parents always know where their child should be and what they\'re working on.',
         },
         {
           heading: 'The Curriculum',
@@ -24,7 +24,7 @@ export default function FullLivePage() {
         },
         {
           heading: "What's Included",
-          body: "Everything your child needs for the full school year:\n\n• Access to our LMS — your child's online classroom where all lessons, assignments, and resources live in one place\n• Daily live classes across all core subjects\n• Full lesson recordings to review or catch up on missed sessions\n• A complete, structured daily timetable\n• All learning materials and worksheets, available through the LMS\n• Assignment submission and grading through the platform\n• Regular assessments and progress reports\n• A parent-facing dashboard so you always know where your child stands\n• Direct teacher support\n\nTuition is $225/month for Grades 2–8 and $250/month for Grades 9–12. A 15% sibling discount applies for additional children enrolled. There is also a $150 material fee and a $100 technology fee at the start of each year.",
+          body: "Everything your child needs for the full school year:\n\n• Access to our LMS, your child's online classroom where all lessons, assignments, and resources live in one place\n• Daily live classes across all core subjects\n• Full lesson recordings to review or catch up on missed sessions\n• A complete, structured daily timetable\n• All learning materials and worksheets, available through the LMS\n• Assignment submission and grading through the platform\n• Regular assessments and progress reports\n• A parent-facing dashboard so you always know where your child stands\n• Direct teacher support\n\nTuition is $225/month for Grades 2-8 and $250/month for Grades 9-12. A 15% sibling discount applies for additional children enrolled. There is also a $150 material fee and a $100 technology fee at the start of each year.",
         },
         {
           heading: "Who It's For",

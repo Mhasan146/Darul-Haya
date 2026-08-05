@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react'
 
 // Shows today's date in both the Islamic (Umm al-Qura) and Gregorian calendars.
-// Computed natively via Intl — no external library. Renders nothing on the
+// Computed natively via Intl, no external library. Renders nothing on the
 // server (and until mounted) so the visitor's own local date is used with no
 // hydration mismatch.
 export default function HijriDate({

@@ -3,28 +3,28 @@ import { useState } from 'react'
 
 // "The real value" comparison. Figures are editable constants.
 // School tuition is each school's published fee for one child in the Grades
-// 2–12 range, paid over 10 monthly installments (annual = monthly × 10).
+// 2-12 range, paid over 10 monthly installments (annual = monthly × 10).
 const SCHOOLS = [
   {
     name: 'ISNA Schools',
     monthly: '~$843',
     annual: '~$8,427',
-    detail: 'In-person · Grades 2–12',
-    year: '2025–26 published rates',
+    detail: 'In-person · Grades 2-12',
+    year: '2025-26 published rates',
   },
   {
     name: 'Olive Grove School',
     monthly: '~$955',
     annual: '~$9,550',
-    detail: 'In-person · Grades 1–8',
-    year: '2026–27 published rates',
+    detail: 'In-person · Grades 1-8',
+    year: '2026-27 published rates',
   },
 ]
 
 const DH = {
   monthly: '$225',
   annual: '$2,700',
-  detail: 'Live online · Grades 2–12',
+  detail: 'Live online · Grades 2-12',
   note: 'Books & technology via flat annual fees',
 }
 
@@ -32,9 +32,9 @@ const MATERIAL_FEE = '$150'
 const TECH_FEE = '$100'
 
 const SAVINGS = [
-  'No daily commute — save on gas, time, and the school-run stress',
-  'No separate tutoring fees — every subject and Arabic are included',
-  'No surprise book bills — one flat material fee covers everything',
+  'No daily commute, so you save on gas, time, and the school run',
+  'No separate tutoring fees. Every subject and Arabic are included',
+  'No surprise book bills. One flat material fee covers everything',
   'No uniforms, lunches, or before/after-care costs',
 ]
 
@@ -56,8 +56,8 @@ export default function ValueComparison() {
           <h2 className="text-3xl sm:text-4xl font-bold text-clay">A full education, for a fraction of the cost</h2>
           <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <p className="mt-5 text-clay/80 leading-relaxed">
-            Comparable Islamic day schools run roughly $8,400–$9,550 a year. Darul Haya delivers a complete,
-            faith-centered education — live, every day — for less than half the cost.
+            Comparable Islamic day schools run roughly $8,400-$9,550 a year. Darul Haya delivers a complete,
+            faith-centered education, live every day, for less than half the cost.
           </p>
         </div>
 
@@ -83,7 +83,7 @@ export default function ValueComparison() {
           </div>
         </div>
 
-        {/* Price comparison grid — comparable schools + Darul Haya */}
+        {/* Price comparison grid, comparable schools + Darul Haya */}
         <div className="mx-auto grid w-full max-w-3xl grid-cols-1 justify-center gap-5 sm:grid-cols-3">
           {SCHOOLS.map((s) => (
             <div key={s.name} className="bg-white ring-1 ring-clay/10 rounded-2xl p-6 text-center flex flex-col">
@@ -98,7 +98,7 @@ export default function ValueComparison() {
             </div>
           ))}
 
-          {/* Darul Haya — green highlight */}
+          {/* Darul Haya, green highlight */}
           <div className="bg-teal-dark text-white rounded-2xl p-6 text-center flex flex-col ring-2 ring-amber shadow-xl shadow-teal/25">
             <h3 className="font-bold text-white text-base">Darul Haya</h3>
             <div className="mt-3 flex items-end justify-center gap-1">
@@ -113,9 +113,9 @@ export default function ValueComparison() {
 
         <p className="text-center text-xs text-clay/80 mt-4 max-w-2xl mx-auto">
           School figures are each institution&rsquo;s published tuition for one child, paid over 10 monthly
-          installments. Darul Haya tuition is {DH.monthly}/month for Grades 2&ndash;8 and $250/month for
-          Grades 9&ndash;12 (the figure above is the Grades 2&ndash;8 rate), plus a flat {MATERIAL_FEE} material
-          fee and {TECH_FEE} technology fee at the start of each year — no per-book charges.
+          installments. Darul Haya tuition is {DH.monthly}/month for Grades 2-8 and $250/month for
+          Grades 9-12 (the figure above is the Grades 2-8 rate), plus a flat {MATERIAL_FEE} material
+          fee and {TECH_FEE} technology fee at the start of each year, with no per-book charges.
         </p>
 
         {/* Savings list */}

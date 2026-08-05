@@ -2,9 +2,9 @@ import { Suspense } from 'react'
 import RegisterForm from '@/components/RegisterForm'
 
 export const metadata = {
-  title: 'Apply — Online Islamic School Enrolment',
+  title: 'Apply: Islamic School, Ontario Curriculum',
   description:
-    'Apply to Darul Haya, an online Islamic school for Grades 2–12. A five-minute application — we will personally help you enrol.',
+    'Apply to Darul Haya, an online Islamic school for Grades 2-12 following the Ontario curriculum. A five-minute application.',
   alternates: { canonical: '/register' },
 }
 

@@ -45,7 +45,7 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-4" aria-describedby="contact-required-note">
-      {/* Honeypot — hidden from real users; bots that fill it are rejected */}
+      {/* Honeypot, hidden from real users; bots that fill it are rejected */}
       <input
         type="text"
         name="company"

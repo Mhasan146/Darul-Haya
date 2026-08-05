@@ -1,9 +1,9 @@
 import PagePlaceholder from '@/components/PagePlaceholder'
 
 export const metadata = {
-  title: 'FAQ — Online Islamic School',
+  title: 'FAQ: Islamic School, Ontario Curriculum',
   description:
-    'Answers about our online Islamic school for Grades 2–12 — live classes, supervision, tuition, Arabic, and how to enrol.',
+    'Answers about our online Islamic school for Grades 2-12: the Ontario curriculum, live classes, supervision, tuition, and how to enrol.',
   alternates: { canonical: '/faq' },
 }
 
@@ -16,7 +16,7 @@ export default function FaqPage() {
       sections={[
         {
           heading: 'What is Darul Haya?',
-          body: 'An online school for boys and girls in Grades 2 through 12, offering live, teacher-led classes and a complete, structured curriculum — all in one place.',
+          body: 'An online school for boys and girls in Grades 2 through 12, offering live, teacher-led classes and a complete, structured curriculum, all in one place.',
         },
         {
           heading: 'Are classes live or recorded?',
@@ -28,31 +28,31 @@ export default function FaqPage() {
         },
         {
           heading: 'Is the school co-ed?',
-          body: 'Yes. Darul Haya welcomes both boys and girls in Grades 2 through 12. In the younger grades (2–5) students learn together, and from Grade 6 onward boys and girls are taught in separate classrooms.',
+          body: 'Yes. Darul Haya welcomes both boys and girls in Grades 2 through 12. In the younger grades (2-5) students learn together, and from Grade 6 onward boys and girls are taught in separate classrooms.',
         },
         {
           heading: 'How are students supervised?',
-          body: 'Classes are small, attendance and participation are tracked, and teachers are present throughout every session. There is no unsupervised private messaging between students and teachers — all communication happens in monitored class spaces. Because the environment is small and fully supervised, the social pressures and distractions common in larger settings aren\'t part of your child\'s day.',
+          body: 'Classes are small, attendance and participation are tracked, and teachers are present throughout every session. There is no unsupervised private messaging between students and teachers. All communication happens in monitored class spaces. Because the environment is small and fully supervised, the social pressures and distractions common in larger settings aren\'t part of your child\'s day.',
         },
         {
           heading: 'Is online school really as effective as in-person?',
-          body: 'For many children, it can be more effective. Classes are live and small, so teachers give each student real attention and notice right away when someone needs help — something that is hard to do in a crowded classroom. Participation and attendance are tracked every day, and every lesson is recorded so nothing is missed.',
+          body: 'For a lot of children it works better. Classes are live and small, so a teacher notices right away when someone is stuck. That is hard to do in a room of thirty. We take attendance daily, track participation, and record every lesson so nothing gets missed.',
         },
         {
           heading: 'Will my child be socially isolated?',
-          body: 'No. Your child learns alongside classmates every day in a live, moderated setting — seeing and speaking with their teacher and peers throughout each class. It is a calmer, kinder social circle than many larger schools, without the bullying, cliques, and pressures that worry so many families.',
+          body: 'No. Your child is in class with the same group every day, seeing and speaking with their teacher and classmates throughout the lesson. The circle is smaller and calmer than a big school, without the cliques and bullying that worry most parents.',
         },
         {
           heading: 'Will my child be at a disadvantage compared to children in regular school?',
-          body: 'Just the opposite. Because our curriculum is accredited and fully Ontario-aligned, your child stays on grade level and can transition to any school at any time — no doors close. And in a small, focused class they get attention a crowded classroom simply can\'t match. A grounded, focused child isn\'t behind; they\'re ahead.',
+          body: 'We think it is the other way around. Our program is accredited and follows the Ontario curriculum, so your child stays on grade level and can move to another school whenever you choose. In a class this small they also get far more of the teacher\'s time than they would in a full classroom.',
         },
         {
           heading: 'Why should we trust a brand-new school with our child?',
-          body: 'It\'s a fair question, and we\'d rather earn it than argue it. Our program is accredited and Ontario-aligned, and the teachers behind Darul Haya bring a real track record — their students finish their work and move on to high school ready to succeed. Our classes are small and closely supervised, and the whole day is transparent, so you always see what\'s taught and how your child is doing. The best way to judge us is to meet us — join a free open house, ask us anything, and decide with your own eyes.',
+          body: 'That is a fair thing to ask. Our program is accredited and follows the Ontario curriculum, and the teachers here have a track record: their students finish their work and go on to high school ready. Classes are small and closely supervised, and the whole day is open to you, so you can see what is being taught and how your child is doing. Come to a free open house and ask us whatever you want.',
         },
         {
           heading: 'Isn\'t this too much screen time?',
-          body: 'It is more balanced than parents expect, and the screen time that remains is purposeful. Guided, active online learning builds the mental pathways for using a screen to focus, think, and create — the opposite of the passive, endless scrolling that hooks so many children elsewhere. And much of the work happens off-screen entirely: every enrolled student receives physical books and materials shipped to their home, so reading, writing, and assignments happen on paper, not only on a device.',
+          body: 'Less than parents expect, and the time on screen is spent working rather than scrolling. Lessons are guided and active, so your child is using the screen to think and produce something. A good part of the day is off the screen anyway. Every student gets physical books and materials shipped home, so reading, writing, and assignments happen on paper.',
         },
         {
           heading: 'Can my child return to a regular school later?',
@@ -60,7 +60,7 @@ export default function FaqPage() {
         },
         {
           heading: 'What if it\'s not the right fit for us?',
-          body: 'Reach out before you enrol — we are glad to talk through whether Darul Haya suits your child, answer your questions, and walk you through a typical school day, so you can decide with confidence.',
+          body: 'Talk to us before you enrol. We are happy to go through whether Darul Haya suits your child, answer your questions, and walk you through a normal school day so you can decide properly.',
         },
         {
           heading: 'Is the curriculum aligned to provincial standards?',
@@ -72,7 +72,7 @@ export default function FaqPage() {
         },
         {
           heading: 'What does it cost?',
-          body: 'Tuition is $225/month for Grades 2–8 and $250/month for Grades 9–12 — everything included. A 15% sibling discount applies for additional children enrolled, and there is a one-time $150 material fee and $100 technology fee at the start of each year.',
+          body: 'Tuition is $225/month for Grades 2-8 and $250/month for Grades 9-12. Everything is included. A 15% sibling discount applies for additional children enrolled, and there is a one-time $150 material fee and $100 technology fee at the start of each year.',
         },
         {
           heading: 'Do you offer Arabic classes?',
@@ -80,7 +80,7 @@ export default function FaqPage() {
         },
         {
           heading: 'Do students receive physical books?',
-          body: 'Yes. Every enrolled student receives a set of physical books and materials shipped directly to their home — no printing needed.',
+          body: 'Yes. Every enrolled student receives a set of physical books and materials shipped directly to their home, so there is no printing to do.',
         },
         {
           heading: 'How do we enroll?',
