@@ -1,30 +1,30 @@
 import PagePlaceholder from '@/components/PagePlaceholder'
 
 export const metadata = {
-  title: 'About: Islamic School, Ontario Curriculum',
+  title: 'About Darul Haya: Safe, Live Online Islamic School',
   description:
-    'Why we founded Darul Haya, an online Islamic school for Grades 2-12 with small live classes, Arabic, and the Ontario curriculum.',
+    'Founded by veteran educators to solve crowded classroom failure. Discover our live, Ontario-aligned online Islamic school for Grades 2-12.',
   alternates: { canonical: '/about' },
 }
 
 export default function AboutPage() {
   return (
     <PagePlaceholder
-      eyebrow="About"
-      title="About Darul Haya"
-      intro="Darul Haya is an online school for boys and girls in Grades 2 through 12, built around live, teacher-led classes and a complete, carefully chosen curriculum. It was founded by a teacher with more than fifteen years in the classroom, who believed every child deserves small classes and real attention."
+      eyebrow="Our Background"
+      title="About Darul Haya: Restoring Purpose to Education"
+      intro="Darul Haya is a structured online school for boys and girls in Grades 2 through 12. Built on small live classes and rigorous Ontario academic standards, we were established by veteran educators to provide the high-touch instruction that crowded physical classrooms can no longer deliver."
       sections={[
         {
           heading: 'Our Story',
-          body: 'Darul Haya was founded by a teacher who spent over fifteen years in the classroom. Year after year, the same pattern appeared: capable, curious children who were not really learning. Not because they could not, but because crowded classrooms made it nearly impossible. Overstretched teachers had no time to give each child real attention, distractions pulled students off course, and bullying too often went unaddressed. Bright kids were coming home discouraged instead of growing.\n\nAfter fifteen years of watching children slip through the cracks of a system that was supposed to serve them, the answer became clear: build something different. Darul Haya is that answer: a small, structured online school where every student is known personally, every lesson is taught live by a real teacher, and the entire day is designed around the one thing crowded classrooms can\'t offer: focus.',
+          body: "Darul Haya was born out of frustration. After spending over fifteen years in traditional classrooms, our founder witnessed a heartbreaking, recurring pattern: talented, bright students falling behind simply because physical classrooms were too crowded, chaotic, and distracted. Overwhelmed teachers were forced to teach to the middle, leaving struggling students behind and advanced students bored, all while peer pressure and bullying eroded confidence.\n\nThe solution was clear: eliminate the classroom chaos and focus entirely on learning. Darul Haya was built from the ground up as a small, highly structured online environment where every student is known by name, every lesson is taught live by an expert, and moral safety is unconditionally protected.",
         },
         {
           heading: 'Our Mission',
-          body: 'Our mission is to give every student a strong academic foundation inside an environment that is safe, supervised, and focused. We want children to finish each year more confident and more capable, and we want parents to feel sure their child is in good hands and learning the right things.',
+          body: 'Our mission is to equip students with an unshakeable academic foundation and exemplary moral character inside a secure, focused learning environment. We measure our success by the confidence of our students and the peace of mind experienced by their parents.',
         },
         {
           heading: 'Our Approach',
-          body: 'We teach in small, live classes led by real teachers, not pre-recorded videos or busywork. Lessons are interactive, attendance and participation are tracked, and progress stays visible to parents throughout. Because classes are small and closely supervised, students get attention they\'d never receive in a crowded room, and the social pressures, distractions, and negative influences that worry so many families simply aren\'t part of the day. The result is a calm setting where children can concentrate, ask questions freely, and grow at their own best pace.',
+          body: 'We reject passive, pre-recorded video learning. Every class at Darul Haya is taught live by real certified educators who track attendance, encourage live dialogue, and assess comprehension in real time. By maintaining small group sizes and deploying proactive screen supervision, we eliminate negative social pressures and technical distractions, allowing students to focus, ask questions, and excel.',
         },
       ]}
       cta={{ label: 'View Plans', href: '/#pricing' }}

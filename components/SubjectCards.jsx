@@ -4,12 +4,12 @@ import { useState } from 'react'
 // Front = subject; back = what it covers. Descriptions reflect the public
 // Ontario curriculum strands, kept general and accurate.
 const SUBJECTS = [
-  { name: 'Mathematics', tag: 'Core Subject', back: 'Number sense, algebra, data, and spatial reasoning, following the Ontario curriculum.' },
-  { name: 'English Language Arts', tag: 'Core Subject', back: 'Reading, writing, grammar, and oral communication, built on the Ontario language curriculum.' },
-  { name: 'Science', tag: 'Core Subject', back: 'Life systems, matter and energy, structures, and earth and space, following Ontario expectations.' },
-  { name: 'Social Studies', tag: 'Core Subject', back: 'History, geography, and citizenship through the Ontario social studies curriculum.' },
-  { name: 'Arabic', tag: 'Language', back: 'Reading, writing, and conversational Arabic, taught live in the weekly timetable.' },
-  { name: 'Character & Values', tag: 'Every Day', back: 'Good character, manners, and values reinforced gently throughout the school day.' },
+  { name: 'Mathematics', tag: 'Core Foundation', back: 'Advanced problem solving, algebra, data management, and spatial reasoning aligned with Ontario benchmarks.' },
+  { name: 'English Language Arts', tag: 'Core Foundation', back: 'Reading comprehension, persuasive writing, essay structure, and public speaking mastery.' },
+  { name: 'Science & Tech', tag: 'Core Foundation', back: 'Comprehensive coverage of life systems, chemistry, physics, and environmental science.' },
+  { name: 'Social Studies', tag: 'Core Foundation', back: 'History, geography, global citizenship, and critical thinking grounded in objective facts.' },
+  { name: 'Arabic Language', tag: 'Live Daily Track', back: 'Structured reading, writing, and fluent conversational Arabic taught live every week.' },
+  { name: 'Character & Ethics', tag: 'Integrated Daily', back: 'Daily reinforcement of Islamic manners, integrity, and leadership habits throughout the school day.' },
 ]
 
 function SubjectCard({ subject }) {
@@ -53,10 +53,10 @@ export default function SubjectCards() {
       <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-beige/45 via-beige/30 to-beige/65" />
       <div className="relative max-w-5xl mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">The Curriculum</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-clay">What your child studies</h2>
+          <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">Academic Standards</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-clay">Built for top-tier academic performance</h2>
           <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
-          <p className="mt-5 text-clay/80 leading-relaxed">A full course load. Hover or tap each subject to see what&rsquo;s covered.</p>
+          <p className="mt-5 text-clay/80 leading-relaxed">Complete provincial curriculum coverage paired with Islamic character building. Hover or tap each subject to explore.</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {SUBJECTS.map((s) => (

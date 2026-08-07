@@ -3,20 +3,20 @@
 // "a better chance", deen and future together.
 const POINTS = [
   {
-    title: 'Every door stays open',
-    body: 'Our curriculum is accredited and fully Ontario-aligned, so your child stays exactly on grade level and can move to any school, or any path, whenever you choose. No university asks how a child did in Grade 5; it asks who they became.',
+    title: 'Every Post-Secondary Door Open',
+    body: 'Our curriculum strictly adheres to official Ontario requirements. Your child stays 100 percent on track for top university programs in STEM, business, or the arts.',
   },
   {
-    title: 'Known by name',
-    body: 'In a small class, nothing is missed and nothing is faked. Gaps close the day they appear, which is hard to manage in a crowded classroom.',
+    title: 'Personalized Attention That Closes Gaps',
+    body: 'In crowded 30-student classrooms, learning gaps go unnoticed until report cards arrive. In our small live groups, teachers catch and resolve confusion instantly.',
   },
   {
-    title: 'Character is the advantage',
-    body: 'A child who is focused and sure of who they are does better, and that steadiness carries into university, in work, and in life.',
+    title: 'Unshakable Personal Character',
+    body: 'Technical skills get interviews, but character builds lifetime success. Our students graduate disciplined, articulate, and confident in who they are.',
   },
   {
-    title: 'Faith and future, together',
-    body: 'You’re not choosing between your child’s deen and their success. Darul Haya is built so they keep both: a real education and a strong sense of who they are.',
+    title: 'Faith and Academic Excellence Together',
+    body: "You never have to choose between your child's Islamic identity and top-tier academics. At Darul Haya, they master both.",
   },
 ]
 
@@ -25,13 +25,13 @@ export default function EveryOpportunity() {
     <section id="opportunity" className="bg-beige-dark border-y border-clay/5 scroll-mt-24">
       <div className="max-w-5xl mx-auto px-6 py-20">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">Your child’s future</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-clay">Will they still have every opportunity?</h2>
+          <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">Future Preparedness</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-clay">Will your child still get into top universities?</h2>
           <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <p className="mt-5 text-clay/80 leading-relaxed">
-            It’s the honest worry behind every school decision: does a smaller, faith-centered
-            school mean your child gives something up? Here is why we think they gain an edge
-            rather than a handicap.
+            The biggest fear parents face: &ldquo;Am I sacrificing my child&rsquo;s career prospects by
+            choosing a values-focused school?&rdquo; Here is why Darul Haya graduates hold a distinct
+            competitive edge.
           </p>
         </div>
 
@@ -55,16 +55,15 @@ export default function EveryOpportunity() {
 
         {/* Track record, proof band */}
         <div className="mt-6 rounded-2xl bg-white text-clay p-7 sm:p-8 text-center border border-teal/20 shadow-sm">
-          <p className="text-teal-dark text-xs font-semibold uppercase tracking-widest mb-2">A proven track record</p>
+          <p className="text-teal-dark text-xs font-semibold uppercase tracking-widest mb-2">Proven Educational Leadership</p>
           <p className="text-lg sm:text-xl font-semibold leading-snug text-balance max-w-3xl mx-auto">
-            The teachers behind Darul Haya aren’t new to this. In the classrooms they come from,
-            students finish their work and move on to high school ready. That is the
-            standard we’re built on.
+            Designed and led by veteran Ontario educators with over 15 years of classroom
+            experience. We bring real-world academic rigor directly to your living room.
           </p>
         </div>
 
         <p className="mt-10 text-center font-display text-2xl sm:text-3xl font-semibold text-clay text-balance max-w-3xl mx-auto leading-snug">
-          You are not choosing between your child’s faith and their future. This is how they keep both.
+          Stop choosing between your child’s faith and their future. Give them the platform to excel at both.
         </p>
       </div>
     </section>

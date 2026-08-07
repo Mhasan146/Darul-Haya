@@ -43,7 +43,7 @@ export default function RegisterForm() {
       if (!res.ok) throw new Error('Submit failed')
       router.push('/thank-you')
     } catch {
-      setError('Sorry, we could not submit your application. Please try again, or email us at info@darulhaya.com.')
+      setError('Submission failed. Please try again or email info@darulhaya.com immediately.')
       setStatus('idle')
     }
   }
@@ -70,14 +70,14 @@ export default function RegisterForm() {
 
       <div>
         <label htmlFor="student-name" className="text-sm font-medium text-clay/80 block mb-1">
-          Student&rsquo;s full name <span className="text-teal-dark">*</span>
+          Student&rsquo;s Full Name <span className="text-teal-dark">*</span>
         </label>
         <input id="student-name" name="student-name" className={inputCls} value={form['student-name']} onChange={update('student-name')} required placeholder="Student's name" />
       </div>
 
       <div>
         <label htmlFor="guardian-name" className="text-sm font-medium text-clay/80 block mb-1">
-          Parent / guardian name <span className="text-teal-dark">*</span>
+          Parent or Guardian Name <span className="text-teal-dark">*</span>
         </label>
         <input id="guardian-name" name="guardian-name" className={inputCls} value={form['guardian-name']} onChange={update('guardian-name')} required placeholder="Your name" />
       </div>
@@ -85,18 +85,18 @@ export default function RegisterForm() {
       <div className="grid sm:grid-cols-2 gap-4">
         <div>
           <label htmlFor="email" className="text-sm font-medium text-clay/80 block mb-1">
-            Email <span className="text-teal-dark">*</span>
+            Email Address <span className="text-teal-dark">*</span>
           </label>
           <input id="email" type="email" name="email" className={inputCls} value={form.email} onChange={update('email')} required placeholder="you@example.com" />
         </div>
         <div>
-          <label htmlFor="phone" className="text-sm font-medium text-clay/80 block mb-1">Phone</label>
+          <label htmlFor="phone" className="text-sm font-medium text-clay/80 block mb-1">Phone Number</label>
           <input id="phone" type="tel" name="phone" className={inputCls} value={form.phone} onChange={update('phone')} placeholder="(optional)" />
         </div>
       </div>
 
       <div>
-        <label htmlFor="grade" className="text-sm font-medium text-clay/80 block mb-1">Student&rsquo;s grade level</label>
+        <label htmlFor="grade" className="text-sm font-medium text-clay/80 block mb-1">Student&rsquo;s Grade Level</label>
         <select id="grade" name="grade" className={inputCls} value={form.grade} onChange={update('grade')}>
           <option value="">Select…</option>
           {GRADES.map((g) => <option key={g}>{g}</option>)}
@@ -106,8 +106,8 @@ export default function RegisterForm() {
       <input type="hidden" name="program" value={form.program} />
 
       <div>
-        <label htmlFor="message" className="text-sm font-medium text-clay/80 block mb-1">Anything we should know?</label>
-        <textarea id="message" name="message" rows={4} className={`${inputCls} resize-y`} value={form.message} onChange={update('message')} placeholder="Questions, your child's needs, anything helpful…" />
+        <label htmlFor="message" className="text-sm font-medium text-clay/80 block mb-1">Notes or Questions</label>
+        <textarea id="message" name="message" rows={4} className={`${inputCls} resize-y`} value={form.message} onChange={update('message')} placeholder="Mention any specific learning needs or questions..." />
       </div>
 
       <div data-netlify-recaptcha="true" />
@@ -119,7 +119,7 @@ export default function RegisterForm() {
         disabled={status === 'sending'}
         className="bg-amber text-clay py-3 rounded-full font-semibold text-sm hover:bg-amber-dark transition-colors disabled:opacity-60"
       >
-        {status === 'sending' ? 'Submitting…' : 'Submit application'}
+        {status === 'sending' ? 'Submitting…' : 'Submit Application Now'}
       </button>
     </form>
   )

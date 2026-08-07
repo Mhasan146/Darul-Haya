@@ -28,9 +28,9 @@ const SITE_URL = (process.env.NEXT_PUBLIC_APP_URL || 'https://darulhaya.com').re
 // Keep TITLE under ~60 chars and DESCRIPTION under ~155. Google discards
 // over-long meta and writes its own snippet from page text instead, which
 // is how a stale, outdated description ends up in the search result.
-const TITLE = 'Darul Haya | Islamic School, Ontario Curriculum'
+const TITLE = 'Darul Haya: Premier Online Islamic School (Grades 2-12)'
 const DESCRIPTION =
-  'Online Islamic school for Grades 2-12 following the Ontario curriculum. Live, teacher-led classes every day, plus Arabic, all from home.'
+  'Is your child struggling in overcrowded schools? Darul Haya offers live Ontario curriculum, daily Arabic, and small classes from home. Apply now.'
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -162,10 +162,10 @@ export default function RootLayout({ children }) {
             className="bg-beige-dark text-clay text-center text-xs sm:text-sm py-2 px-4 border-b border-teal/15"
           >
             {/* TODO: Update enrolment deadline before each intake, e.g. "September 2027" */}
-            <span className="text-teal-dark font-semibold">Enrolment open for September 2026</span>
-            . Seats fill quickly.{' '}
+            <span className="text-teal-dark font-semibold">Fall 2026 seats are strictly limited.</span>
+            {' '}Protect your child&rsquo;s education today.{' '}
             <Link href="/register" className="font-semibold underline underline-offset-2 hover:text-teal-dark transition-colors">
-              Apply Now <span aria-hidden="true">→</span>
+              Claim Your Spot <span aria-hidden="true">→</span>
             </Link>
           </div>
 

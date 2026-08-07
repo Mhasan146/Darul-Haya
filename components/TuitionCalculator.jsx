@@ -26,10 +26,10 @@ export default function TuitionCalculator() {
 
   return (
     <div className="max-w-md mx-auto mt-8 rounded-3xl bg-white border border-beige-dark shadow-md p-7 sm:p-8">
-      <p className="text-xs font-semibold uppercase tracking-widest text-teal-dark mb-1">Estimate your tuition</p>
-      <p className="text-clay/80 text-sm mb-5">Pick a grade band and number of children to see the price, with the sibling discount applied live.</p>
+      <p className="text-xs font-semibold uppercase tracking-widest text-teal-dark mb-1">Tuition Savings Calculator</p>
+      <p className="text-clay/80 text-sm mb-5">Calculate your exact monthly investment including automatic sibling discounts.</p>
 
-      <label className="block text-sm font-medium text-clay/80 mb-2">Grade level</label>
+      <label className="block text-sm font-medium text-clay/80 mb-2">Select Grade Band</label>
       <div className="flex gap-2 mb-5" role="group" aria-label="Grade band">
         {Object.entries(BANDS).map(([key, b]) => (
           <button
@@ -46,7 +46,7 @@ export default function TuitionCalculator() {
         ))}
       </div>
 
-      <label className="block text-sm font-medium text-clay/80 mb-2">How many children?</label>
+      <label className="block text-sm font-medium text-clay/80 mb-2">Number of Children</label>
       <div className="flex gap-2" role="group" aria-label="Number of children">
         {[1, 2, 3, 4].map((n) => (
           <button
@@ -72,9 +72,9 @@ export default function TuitionCalculator() {
           <span className="text-clay/80 mb-1.5">/month</span>
         </div>
         {saved > 0 ? (
-          <p className="text-sm font-semibold text-teal-dark mt-1">You save ${saved}/month with the sibling discount</p>
+          <p className="text-sm font-semibold text-teal-dark mt-1">You save ${saved}/month automatically with our family discount</p>
         ) : (
-          <p className="text-sm text-clay/80 mt-1">One child · {BANDS[band].label}</p>
+          <p className="text-sm text-clay/80 mt-1">One child · {BANDS[band].label} (${base}/mo)</p>
         )}
       </div>
 
@@ -89,14 +89,14 @@ export default function TuitionCalculator() {
       )}
 
       <p className="text-[11px] text-clay/80 mt-4 leading-relaxed text-center">
-        Estimate only. Plus a one-time $150 material fee &amp; $100 technology fee per child each year.
+        Plus annual flat $150 material fee &amp; $100 tech fee per child.
       </p>
 
       <Link
         href="/register"
         className="mt-5 block w-full bg-amber text-clay py-3 rounded-xl font-semibold text-sm text-center hover:bg-amber-dark active:scale-[0.98] transition-all duration-200"
       >
-        Apply Now
+        Lock In Your Rate &amp; Apply Now
       </Link>
     </div>
   )

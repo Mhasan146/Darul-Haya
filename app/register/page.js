@@ -2,9 +2,9 @@ import { Suspense } from 'react'
 import RegisterForm from '@/components/RegisterForm'
 
 export const metadata = {
-  title: 'Apply: Islamic School, Ontario Curriculum',
+  title: 'Apply to Darul Haya: 5-Minute Enrollment Form',
   description:
-    'Apply to Darul Haya, an online Islamic school for Grades 2-12 following the Ontario curriculum. A five-minute application.',
+    'Secure your child\'s seat for September 2026. Quick 5-minute application for live online Islamic schooling (Grades 2-12).',
   alternates: { canonical: '/register' },
 }
 
@@ -13,10 +13,10 @@ export default function RegisterPage() {
     <div className="min-h-screen bg-beige">
       <section className="max-w-2xl mx-auto px-6 pt-16 pb-16">
         <div className="text-center mb-8">
-          <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">Admissions</p>
-          <h1 className="text-4xl sm:text-5xl font-bold text-clay leading-tight">Apply to Darul Haya</h1>
+          <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">Enrollment</p>
+          <h1 className="text-4xl sm:text-5xl font-bold text-clay leading-tight">Apply to Darul Haya (Takes 5 Minutes)</h1>
           <p className="mt-4 text-clay/80 leading-relaxed">
-            Tell us about your family and we&rsquo;ll follow up by email to help you get enrolled. It only takes a minute.
+            Secure your child&rsquo;s seat for Fall 2026. Complete the brief form below and our admissions team will reach out to schedule your strategy call.
           </p>
         </div>
 

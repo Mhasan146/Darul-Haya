@@ -4,9 +4,9 @@
 
 const BENEFITS = [
   {
-    title: 'Reclaim Your Time & Budget',
+    title: 'Reclaim 10+ Hours & $3,000+ Every Year',
     body:
-      'Cut the gas money, the chaotic school-zone runs, and the white-knuckle winter drives. With zero commute, those lost hours, and the money, go straight back to your family.',
+      'Eliminate hazardous winter driving, stressful traffic runs, and hundreds in gas money. Reinvest those reclaimed hours directly back into family time.',
     icon: (
       <path
         strokeLinecap="round"
@@ -16,9 +16,9 @@ const BENEFITS = [
     ),
   },
   {
-    title: 'A Safe, Curated Social Circle',
+    title: 'Guaranteed Safe Social Setting',
     body:
-      'No toxic peer pressure and no bullying. Your child sits with a small, moderated group where respect and good manners are the norm.',
+      'Zero toxic peer pressure, zero screen misconduct, and zero bullying. Your child learns in a moderated, respectful micro-environment.',
     icon: (
       <path
         strokeLinecap="round"
@@ -28,9 +28,9 @@ const BENEFITS = [
     ),
   },
   {
-    title: 'Mastery-Based Learning Pace',
+    title: 'Accelerated Mastery Pace',
     body:
-      'Our learning platform lets your child pause, rewind, or race ahead through the Ontario curriculum, so they are never stuck waiting and never left behind.',
+      'Never let your child get dragged down by slow classrooms or left behind when confused. Our small live sessions ensure instant feedback and steady pacing.',
     icon: (
       <path
         strokeLinecap="round"
@@ -40,9 +40,9 @@ const BENEFITS = [
     ),
   },
   {
-    title: 'Total Curriculum Transparency',
+    title: 'Total Curriculum Control',
     body:
-      'You see exactly what is being taught, with no hidden agenda. Grades and teacher feedback are always one click away.',
+      'Know exactly what your child is learning every single day. No hidden agendas, no questionable materials, and full grade transparency.',
     icon: (
       <path
         strokeLinecap="round"
@@ -52,9 +52,9 @@ const BENEFITS = [
     ),
   },
   {
-    title: 'Lifestyle & Family Flexibility',
+    title: 'Unmatched Family Freedom',
     body:
-      'Live classes blend with recorded lessons, so your family sets the schedule. Travel, holidays, and activities fit around your life instead of a school bell.',
+      "Blended live and recorded lessons give your family its life back. Travel and manage schedules without damaging your child's GPA.",
     icon: (
       <path
         strokeLinecap="round"
@@ -74,12 +74,11 @@ export default function Benefits() {
             The Darul Haya Advantage
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-clay">
-            How Darul Haya changes your family&rsquo;s everyday
+            The end of morning chaos and classroom peer pressure
           </h2>
           <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <p className="mt-5 text-clay/80 leading-relaxed">
-            The practical, day-to-day differences families notice most, beyond what&rsquo;s
-            in the curriculum.
+            The immediate lifestyle and academic upgrades your family experiences from day one:
           </p>
         </div>
 
@@ -111,16 +110,16 @@ export default function Benefits() {
           {/* Conversion CTA tile, also completes the 3×2 grid */}
           <div className="rounded-2xl p-7 bg-teal-dark text-white shadow-md shadow-teal/20 flex flex-col justify-center">
             <h3 className="text-xl font-bold leading-snug">
-              Ready for a better school day?
+              Ready to experience stress-free, elite education?
             </h3>
             <p className="mt-2 text-sm text-white/80 leading-relaxed">
-              Pick the plan that fits your family and enroll in minutes.
+              Secure your child&rsquo;s spot in our Fall 2026 intake before registration closes.
             </p>
             <a
               href="#pricing"
               className="mt-5 self-start inline-flex items-center gap-2 bg-white text-clay font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-beige transition-colors"
             >
-              View Plans
+              View Transparent Plans
               <span aria-hidden="true">→</span>
             </a>
           </div>

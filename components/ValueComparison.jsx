@@ -25,17 +25,17 @@ const DH = {
   monthly: '$225',
   annual: '$2,700',
   detail: 'Live online · Grades 2-12',
-  note: 'Books & technology via flat annual fees',
+  note: 'Includes live Arabic & shipped books',
 }
 
 const MATERIAL_FEE = '$150'
 const TECH_FEE = '$100'
 
 const SAVINGS = [
-  'No daily commute, so you save on gas, time, and the school run',
-  'No separate tutoring fees. Every subject and Arabic are included',
-  'No surprise book bills. One flat material fee covers everything',
-  'No uniforms, lunches, or before/after-care costs',
+  'Save $1,500+ annually on gas, vehicle wear, and commute time',
+  'Save $1,000+ on private subject tutoring (all included live)',
+  'Save $500+ on textbooks with our flat physical workbook package',
+  'Zero mandatory uniform, hot lunch, or school fundraising fees',
 ]
 
 export default function ValueComparison() {
@@ -52,12 +52,12 @@ export default function ValueComparison() {
 
       <div className="relative max-w-5xl mx-auto px-6 py-20">
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">The Real Value</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-clay">A full education, for a fraction of the cost</h2>
+          <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">Massive Financial Savings</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-clay">Elite private education at 70 percent less cost</h2>
           <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <p className="mt-5 text-clay/80 leading-relaxed">
-            Comparable Islamic day schools run roughly $8,400-$9,550 a year. Darul Haya delivers a complete,
-            faith-centered education, live every day, for less than half the cost.
+            Traditional brick-and-mortar Islamic schools cost up to $9,550 per child annually. Darul Haya
+            delivers higher individual teacher attention for less than one-third of the price.
           </p>
         </div>
 
@@ -107,20 +107,19 @@ export default function ValueComparison() {
             </div>
             <p className="text-xs text-white/80 mt-1">{DH.note}</p>
             <p className="text-sm text-white/85 mt-4">{DH.detail}</p>
-            <p className="text-[11px] text-white font-semibold mt-auto pt-4">★ Best value</p>
+            <p className="text-[11px] text-white font-semibold mt-auto pt-4">★ Unbeatable Value</p>
           </div>
         </div>
 
         <p className="text-center text-xs text-clay/80 mt-4 max-w-2xl mx-auto">
-          School figures are each institution&rsquo;s published tuition for one child, paid over 10 monthly
-          installments. Darul Haya tuition is {DH.monthly}/month for Grades 2-8 and $250/month for
-          Grades 9-12 (the figure above is the Grades 2-8 rate), plus a flat {MATERIAL_FEE} material
-          fee and {TECH_FEE} technology fee at the start of each year, with no per-book charges.
+          Published figures represent standard tuition paid over 10 installments. Darul Haya rates:
+          {DH.monthly}/mo (Grades 2-8) and $250/mo (Grades 9-12). Annual {MATERIAL_FEE} material fee
+          (covers physical shipped textbooks) and {TECH_FEE} technology fee per student.
         </p>
 
         {/* Savings list */}
         <div className="max-w-3xl mx-auto mt-10">
-          <p className="text-center text-clay font-semibold mb-5">And the everyday savings add up:</p>
+          <p className="text-center text-clay font-semibold mb-5">Direct family savings breakdown:</p>
           <div className="grid sm:grid-cols-2 gap-3">
             {SAVINGS.map((s) => (
               <div key={s} className="flex items-start gap-3 bg-white ring-1 ring-clay/10 rounded-xl p-4">

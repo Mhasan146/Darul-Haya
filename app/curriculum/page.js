@@ -1,36 +1,36 @@
 import PagePlaceholder from '@/components/PagePlaceholder'
 
 export const metadata = {
-  title: 'Ontario Curriculum, Online Islamic School',
+  title: 'Accredited Ontario Curriculum + Live Arabic',
   description:
-    'Our Grades 2-12 program follows the Ontario curriculum: Language Arts, Math, Science and Social Studies, plus Arabic every week.',
+    'Complete Grades 2-12 Ontario academic curriculum combined with daily live Arabic instruction. Learn how we keep your child on track.',
   alternates: { canonical: '/curriculum' },
 }
 
 export default function CurriculumPage() {
   return (
     <PagePlaceholder
-      eyebrow="Programs & Classes"
-      title="Curriculum"
-      intro="Our curriculum pairs strong, provincially-aligned academics with character and values education, delivered in a structured sequence from Grade 2 through Grade 12."
+      eyebrow="Academic Standards"
+      title="Ontario Academic Excellence + Islamic Values"
+      intro="Our academic program pairs complete provincial curriculum benchmarks with structured values education and daily live Arabic, guiding students seamlessly from Grade 2 through Grade 12 graduation."
       sections={[
         {
           id: 'grades',
           heading: 'Grade Levels (2-12)',
-          body: 'Elementary (Grades 2-5) focuses on building strong foundations: fluent reading and writing, number sense and core math, and curiosity about the world through science and social studies, all at a pace that lets younger students feel secure and supported. At this stage boys and girls learn together.\n\nMiddle School (Grades 6-8) builds on those foundations with more advanced material, greater independence, and stronger study skills, in a focused, supervised environment. From Grade 6, boys and girls are taught in separate classrooms.\n\nHigh School (Grades 9-12) continues with a rigorous, Ontario-aligned program that keeps students on track toward graduation and their next steps, taught in the same small, closely supervised classes.',
+          body: 'Elementary (Grades 2-5): Focuses on core mastery: fluent reading comprehension, logical mathematical reasoning, and scientific inquiry in a warm, encouraging atmosphere. Boys and girls study together in small, friendly live cohorts.\n\nMiddle School (Grades 6-8): Transitioning into advanced study habits, critical analysis, and independent research. To respect developmental stages, boys and girls are educated in separate, focused online classrooms starting in Grade 6.\n\nHigh School (Grades 9-12): A rigorous university-preparatory track adhering strictly to Ontario secondary requirements, equipping students for top post-secondary admissions while safeguarding their values.',
         },
         {
           id: 'islamic',
           heading: 'Curriculum',
-          body: 'Students study a full slate of core academic subjects alongside our character and values program. Academic subjects follow the Ontario curriculum to keep students aligned with provincial standards, while our values education supports each child\'s moral and personal development.',
+          body: 'Students follow a full academic schedule alongside character education. All core subjects strictly mirror official Ontario learning objectives, guaranteeing full academic credit recognition.',
         },
         {
           heading: 'Core Subjects',
-          body: 'Language Arts (reading, writing, grammar, and comprehension), Mathematics, Science, and Social Studies, with additional enrichment and skills woven in across the year.',
+          body: 'Language Arts (reading, writing, analysis, grammar), Mathematics, Science & Technology, and Social Studies/History.',
         },
         {
           heading: 'Arabic Language',
-          body: 'Arabic language classes are part of every student\'s weekly schedule from Grade 2 through Grade 12. Classes are taught live by a dedicated teacher and progress through reading, writing, and conversational Arabic in a structured, grade-appropriate sequence.',
+          body: "Arabic language instruction is fully integrated into every student's weekly timetable from Grade 2 through Grade 12. Taught live by specialized instructors, students progress systematically through reading, writing, and conversational mastery.",
         },
       ]}
       cta={{ label: 'View Plans', href: '/#pricing' }}

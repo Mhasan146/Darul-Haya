@@ -50,9 +50,9 @@ export default function OpenHouseForm() {
     return (
       <div className="rounded-2xl border border-teal/30 bg-teal/5 p-6 text-center">
         <p className="text-3xl mb-2" aria-hidden="true">🤍</p>
-        <p className="text-teal-dark font-bold text-lg">You&rsquo;re on the list</p>
+        <p className="text-teal-dark font-bold text-lg">You are registered!</p>
         <p className="text-clay/80 text-sm mt-1">
-          We&rsquo;ll be in touch shortly with the details for your session.
+          Check your email and WhatsApp for session access links.
         </p>
       </div>
     )
@@ -73,13 +73,13 @@ export default function OpenHouseForm() {
       />
 
       <div>
-        <label htmlFor="oh-session" className="block text-xs font-semibold text-clay/80 mb-1">Which session? *</label>
+        <label htmlFor="oh-session" className="block text-xs font-semibold text-clay/80 mb-1">Select Session *</label>
         <select id="oh-session" value={form.session} onChange={set('session')} className={inputCls}>
           {SESSIONS.map((s) => <option key={s} value={s}>{s}</option>)}
         </select>
       </div>
       <div>
-        <label htmlFor="oh-name" className="block text-xs font-semibold text-clay/80 mb-1">Your name *</label>
+        <label htmlFor="oh-name" className="block text-xs font-semibold text-clay/80 mb-1">Your Name *</label>
         <input id="oh-name" type="text" required value={form.name} onChange={set('name')} placeholder="Your name" className={inputCls} />
       </div>
       <div>
@@ -87,12 +87,12 @@ export default function OpenHouseForm() {
         <input id="oh-email" type="email" required value={form.email} onChange={set('email')} placeholder="you@email.com" className={inputCls} />
       </div>
       <div>
-        <label htmlFor="oh-phone" className="block text-xs font-semibold text-clay/80 mb-1">WhatsApp number *</label>
+        <label htmlFor="oh-phone" className="block text-xs font-semibold text-clay/80 mb-1">WhatsApp Number *</label>
         <input id="oh-phone" type="tel" required value={form.phone} onChange={set('phone')} placeholder="+1 (416) 555-1234" className={inputCls} />
-        <p className="text-[11px] text-clay/80 mt-1">We&rsquo;ll send your session details and a reminder here.</p>
+        <p className="text-[11px] text-clay/80 mt-1">We will send meeting links and calendar reminders to this number.</p>
       </div>
       <div>
-        <label htmlFor="oh-grade" className="block text-xs font-semibold text-clay/80 mb-1">Child&rsquo;s grade <span className="font-normal">(optional)</span></label>
+        <label htmlFor="oh-grade" className="block text-xs font-semibold text-clay/80 mb-1">Child&rsquo;s Grade <span className="font-normal">(optional)</span></label>
         <select id="oh-grade" value={form.grade} onChange={set('grade')} className={inputCls}>
           <option value="">Select a grade</option>
           {GRADES.map((g) => <option key={g} value={g}>{g}</option>)}
@@ -106,9 +106,9 @@ export default function OpenHouseForm() {
         disabled={status === 'sending'}
         className="mt-1 w-full py-3 rounded-xl bg-teal text-white font-semibold text-sm hover:bg-teal-dark transition-colors disabled:opacity-60"
       >
-        {status === 'sending' ? 'Saving your spot…' : 'Save my spot'}
+        {status === 'sending' ? 'Saving your spot…' : 'Reserve My Free Spot Now'}
       </button>
-      <p className="text-center text-[10px] text-clay/80">Free · no commitment · we&rsquo;ll only use your details for the open house.</p>
+      <p className="text-center text-[10px] text-clay/80">100% free with zero obligation. Your information remains completely private.</p>
     </form>
   )
 }

@@ -1,9 +1,9 @@
 import OpenHouseForm from '@/components/OpenHouseForm'
 
 export const metadata = {
-  title: 'Free Open House, Online Islamic School',
+  title: 'Free Open House: Tour Our Live Online Islamic School',
   description:
-    'Join a free open house at our online Islamic school, online or in person. See how live classes for Grades 2-12 work. No commitment.',
+    'Experience live classroom demos and meet our faculty. Zero commitment, 100 percent transparency. Reserve your free Open House spot today.',
   alternates: { canonical: '/open-house' },
 }
 
@@ -32,16 +32,16 @@ const SESSIONS = [
 
 const AGENDA = [
   {
-    title: 'Meet the team',
-    body: 'Hear directly from our team on the calm, respectful environment Darul Haya creates for your child.',
+    title: 'Meet Founding Faculty',
+    body: 'Discover how our certified educators maintain high engagement and moral discipline in online classrooms.',
   },
   {
-    title: 'See how a school day works',
-    body: 'Live daily classes, the timetable, Arabic, the platform, and how progress and safety are handled.',
+    title: 'Live System Tour',
+    body: 'Watch a live demonstration of our classroom software, screen safety monitoring, and student portal.',
   },
   {
-    title: 'Ask anything',
-    body: 'Fees, fit for your child, schedules, how to enrol. Bring your questions, there is no pressure to sign up.',
+    title: 'Open Q&A Session',
+    body: 'Get direct answers regarding tuition, curriculum, transferability, and daily schedules with zero sales pressure.',
   },
 ]
 
@@ -52,14 +52,14 @@ export default function OpenHousePage() {
       <section className="relative overflow-hidden bg-beige-dark/40 border-b border-clay/10">
         <div className="relative max-w-3xl mx-auto px-6 pt-14 pb-16 text-center">
           <span className="inline-flex items-center gap-2 mb-6 text-[11px] font-semibold uppercase tracking-[0.2em] text-teal-dark bg-white ring-1 ring-teal/25 px-4 py-1.5 rounded-full">
-            <span className="h-1.5 w-1.5 rounded-full bg-teal" aria-hidden="true" /> Free · No commitment
+            <span className="h-1.5 w-1.5 rounded-full bg-teal" aria-hidden="true" /> 100% Free · Zero Commitment
           </span>
           <h1 className="text-4xl sm:text-5xl font-bold text-clay leading-[1.1] tracking-tight text-balance">
-            Join our free open house
+            Experience a Live Class at Our Free Open House
           </h1>
           <p className="mt-5 text-lg text-clay/80 max-w-xl mx-auto leading-relaxed">
-            Meet our team, online or in person, and see exactly how our
-            live classes work, and get your questions answered before you decide anything.
+            See how our live classroom software works, inspect our curriculum, meet our founding
+            faculty, and ask your tough questions in a zero-pressure environment.
           </p>
         </div>
       </section>
@@ -67,8 +67,8 @@ export default function OpenHousePage() {
       {/* Two ways to join */}
       <section className="max-w-5xl mx-auto px-6 pt-14">
         <div className="text-center max-w-xl mx-auto mb-8">
-          <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-2">Two ways to join</p>
-          <p className="text-clay/80">Come in person to meet us face to face, or join live online, whichever suits your family.</p>
+          <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-2">Two Flexible Options</p>
+          <p className="text-clay/80">Attend online from home or join us in person to meet our leadership team.</p>
         </div>
         <div className="grid sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
           {SESSIONS.map((s) => (
@@ -93,8 +93,8 @@ export default function OpenHousePage() {
       {/* Agenda + RSVP */}
       <section className="max-w-5xl mx-auto px-6 py-16 grid gap-10 lg:grid-cols-2 lg:gap-16 items-start">
         <div>
-          <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">What to expect</p>
-          <h2 className="text-2xl sm:text-3xl font-bold text-clay">A relaxed, honest look inside</h2>
+          <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">Agenda</p>
+          <h2 className="text-2xl sm:text-3xl font-bold text-clay">Inside our Open House event</h2>
           <div className="gold-rule mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <ul className="mt-8 flex flex-col gap-6">
             {AGENDA.map((a) => (
@@ -112,15 +112,15 @@ export default function OpenHousePage() {
             ))}
           </ul>
           <p className="mt-8 text-sm text-clay/80 bg-white rounded-xl border border-beige-dark p-4">
-            Pick the session that suits you below. We&rsquo;ll follow up with the details, either the join
-            link for online or the venue and time for in person, plus a reminder.
+            Select your preferred session below. We will send full access links and reminders
+            straight to your phone.
           </p>
         </div>
 
         {/* Form card */}
         <div className="bg-white rounded-3xl border border-beige-dark shadow-xl shadow-clay/10 p-7 sm:p-8">
-          <h2 className="text-xl font-bold text-clay mb-1">Save your spot</h2>
-          <p className="text-clay/80 text-sm mb-6">Choose a session and leave your details, and we&rsquo;ll send you what you need.</p>
+          <h2 className="text-xl font-bold text-clay mb-1">Reserve Your Spot (Limited Space)</h2>
+          <p className="text-clay/80 text-sm mb-6">Choose your session and enter your details below.</p>
           <OpenHouseForm />
         </div>
       </section>
