@@ -185,7 +185,7 @@ export default function HomePage() {
 
           <p className="mt-5 text-lg text-clay/80 max-w-2xl mx-auto leading-relaxed">
             Live, teacher-led classes for boys and girls in Grades 2-12. Small classes, close
-            supervised, Ontario-aligned, with physical books shipped to your door.
+            supervision, the Ontario curriculum, and physical books shipped to your door.
           </p>
 
           <div className="mt-9 flex items-center justify-center gap-6 flex-wrap">
