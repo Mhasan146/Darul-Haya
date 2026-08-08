@@ -65,7 +65,10 @@ export const metadata = {
     description: DESCRIPTION,
     url: SITE_URL,
     siteName: 'Darul Haya',
-    images: [{ url: '/logo.png', width: 512, height: 512, alt: 'Darul Haya' }],
+    // 1200x630 share card. WhatsApp, Facebook, LinkedIn, and iMessage all read
+    // this. A square logo gets cropped or shown as a small thumbnail instead of
+    // a full-width preview, which is why this is a purpose-built landscape card.
+    images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'Darul Haya, online Islamic school for Grades 2 to 12' }],
     locale: 'en_CA',
     type: 'website',
   },
@@ -73,7 +76,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: TITLE,
     description: DESCRIPTION,
-    images: ['/logo.png'],
+    images: ['/og.jpg'],
   },
 }
 
