@@ -418,7 +418,7 @@ export default function HomePage() {
               Apply Now (Takes 5 Mins)
             </Link>
             <p className="text-clay/80 text-xs text-center mt-4 leading-relaxed">
-              Flat $150 material fee &amp; $100 tech fee per year · 15% automatic sibling discount
+              Material fees confirmed once book &amp; shipping costs are set · 15% automatic sibling discount
             </p>
           </div>
 

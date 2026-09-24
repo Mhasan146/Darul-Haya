@@ -68,7 +68,7 @@ export default function FaqPage() {
         },
         {
           heading: 'What is the complete cost?',
-          body: 'Tuition is $225/month for Grades 2-8 and $250/month for Grades 9-12. Sibling discount is 15%. Annual flat $150 material fee (covers shipped books) and $100 tech fee per child.',
+          body: 'Tuition is $225/month for Grades 2-8 and $250/month for Grades 9-12. Sibling discount is 15%. Material fees are billed separately once we know the book and shipping costs for your child\'s grade, and we confirm the exact amount with you before you pay anything.',
         },
         {
           heading: 'Do you teach Arabic?',

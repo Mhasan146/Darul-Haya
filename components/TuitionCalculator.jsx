@@ -89,7 +89,7 @@ export default function TuitionCalculator() {
       )}
 
       <p className="text-[11px] text-clay/80 mt-4 leading-relaxed text-center">
-        Plus annual flat $150 material fee &amp; $100 tech fee per child.
+        Material fees are extra. We confirm the amount once book and shipping costs are determined.
       </p>
 
       <Link

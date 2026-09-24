@@ -24,7 +24,7 @@ export default function FullLivePage() {
         },
         {
           heading: "What's Included",
-          body: "Everything required for a successful academic year:\n\n• Full access to our secure Learning Management System (LMS)\n• Daily live interactive classes with certified teachers\n• On-demand access to full class recordings for easy revision\n• Physical textbooks and workbooks shipped directly to your door\n• Real-time Parent Portal for tracking grades, attendance, and work\n• Built-in live Arabic language curriculum\n• Direct email and messaging support with your child's teachers\n\nTransparent Tuition: $225/month (Grades 2-8) or $250/month (Grades 9-12). Automatic 15% discount for additional siblings. Annual flat $150 material fee and $100 technology fee per student.",
+          body: "Everything required for a successful academic year:\n\n• Full access to our secure Learning Management System (LMS)\n• Daily live interactive classes with certified teachers\n• On-demand access to full class recordings for easy revision\n• Physical textbooks and workbooks shipped directly to your door\n• Real-time Parent Portal for tracking grades, attendance, and work\n• Built-in live Arabic language curriculum\n• Direct email and messaging support with your child's teachers\n\nTransparent Tuition: $225/month (Grades 2-8) or $250/month (Grades 9-12). Automatic 15% discount for additional siblings. Material fees are separate and we confirm the amount with you once the book and shipping costs for your child's grade are determined.",
         },
         {
           heading: "Who It's For",
