@@ -1,0 +1,139 @@
+{
+  "_comment": "Single source of truth for the 2026-27 school calendar. Read by app/calendar/page.js, components/MonthGrid.jsx and the PDF generator, so the website and the printed handouts cannot drift apart. Statutory holidays are deliberately not named: only Eid carries a name.",
+  "year": "2026-27",
+  "firstDay": "2026-09-08",
+  "lastDay": "2027-06-29",
+  "hijriOffsetDays": -1,
+  "hijriMonthStarts": [
+    { "name": "Rabi al-Awwal", "year": 1448, "gregorian": "2026-08-15" },
+    { "name": "Rabi al-Thani", "year": 1448, "gregorian": "2026-09-13" },
+    { "name": "Jumada al-Ula", "year": 1448, "gregorian": "2026-10-13" },
+    { "name": "Jumada al-Akhirah", "year": 1448, "gregorian": "2026-11-12" },
+    { "name": "Rajab", "year": 1448, "gregorian": "2026-12-11" },
+    { "name": "Shaban", "year": 1448, "gregorian": "2027-01-10" },
+    { "name": "Ramadan", "year": 1448, "gregorian": "2027-02-09" },
+    { "name": "Shawwal", "year": 1448, "gregorian": "2027-03-10" },
+    { "name": "Dhul Qadah", "year": 1448, "gregorian": "2027-04-09" },
+    { "name": "Dhul Hijjah", "year": 1448, "gregorian": "2027-05-08" },
+    { "name": "Muharram", "year": 1449, "gregorian": "2027-06-07" },
+    { "name": "Safar", "year": 1449, "gregorian": "2027-07-06" }
+  ],
+  "events": [
+    {
+      "start": "2026-09-07",
+      "end": "2026-09-07",
+      "kind": "holiday",
+      "label": "Statutory holiday",
+      "note": "School closed. Classes begin the next morning."
+    },
+    {
+      "start": "2026-09-08",
+      "end": "2026-09-08",
+      "kind": "term",
+      "label": "First day of classes",
+      "note": "Live classes begin for every grade."
+    },
+    {
+      "start": "2026-10-12",
+      "end": "2026-10-12",
+      "kind": "holiday",
+      "label": "Statutory holiday",
+      "note": "School closed."
+    },
+    {
+      "start": "2026-12-18",
+      "end": "2026-12-18",
+      "kind": "term",
+      "label": "Last day before the winter break",
+      "note": "Classes run as normal."
+    },
+    {
+      "start": "2026-12-21",
+      "end": "2027-01-01",
+      "kind": "break",
+      "label": "Winter break",
+      "note": "Two weeks off. Three statutory holidays fall inside the break."
+    },
+    {
+      "start": "2027-01-04",
+      "end": "2027-01-04",
+      "kind": "term",
+      "label": "Classes resume",
+      "note": "Back to the normal timetable."
+    },
+    {
+      "start": "2027-02-15",
+      "end": "2027-02-15",
+      "kind": "holiday",
+      "label": "Statutory holiday",
+      "note": "School closed, in the first week of Ramadan."
+    },
+    {
+      "start": "2027-03-09",
+      "end": "2027-03-10",
+      "kind": "eid",
+      "label": "Eid al-Fitr",
+      "note": "School closed on the day Eid falls. Which of these two days it is depends on the sighting of the Shawwal moon, and we confirm it with families as soon as it is announced."
+    },
+    {
+      "start": "2027-03-15",
+      "end": "2027-03-19",
+      "kind": "break",
+      "label": "March Break",
+      "note": "One full week off, matching the Ontario March Break."
+    },
+    {
+      "start": "2027-03-26",
+      "end": "2027-03-26",
+      "kind": "holiday",
+      "label": "Statutory holiday",
+      "note": "School closed."
+    },
+    {
+      "start": "2027-03-29",
+      "end": "2027-03-29",
+      "kind": "closed",
+      "label": "School closed",
+      "note": "Not a statutory holiday, but Ontario schools close and so do we."
+    },
+    {
+      "start": "2027-05-16",
+      "end": "2027-05-17",
+      "kind": "eid",
+      "label": "Eid al-Adha",
+      "note": "If Eid falls on the Sunday, no class day is affected. If the moon sighting puts it on the Monday, that Monday is closed."
+    },
+    {
+      "start": "2027-05-24",
+      "end": "2027-05-24",
+      "kind": "holiday",
+      "label": "Statutory holiday",
+      "note": "School closed."
+    },
+    {
+      "start": "2027-06-29",
+      "end": "2027-06-29",
+      "kind": "term",
+      "label": "Last day of classes",
+      "note": "Final reports go home to parents."
+    },
+    {
+      "start": "2027-07-01",
+      "end": "2027-07-01",
+      "kind": "holiday",
+      "label": "Statutory holiday",
+      "note": "Falls after the school year has ended."
+    }
+  ],
+  "statutoryHolidays": [
+    { "date": "2026-09-07", "effect": "Day before classes begin" },
+    { "date": "2026-10-12", "effect": "School closed" },
+    { "date": "2026-12-25", "effect": "Inside the winter break" },
+    { "date": "2026-12-26", "effect": "Inside the winter break" },
+    { "date": "2027-01-01", "effect": "Inside the winter break" },
+    { "date": "2027-02-15", "effect": "School closed" },
+    { "date": "2027-03-26", "effect": "School closed" },
+    { "date": "2027-05-24", "effect": "School closed" },
+    { "date": "2027-07-01", "effect": "After the school year ends" }
+  ]
+}
