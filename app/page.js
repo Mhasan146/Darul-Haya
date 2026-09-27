@@ -545,7 +545,7 @@ export default function HomePage() {
           </div>
 
           <div className="border-t border-clay/10 mt-10 pt-6 text-center text-xs text-clay/80">
-            <HijriDate className="block mb-2 text-clay/80" />
+            <HijriDate className="block mb-2 text-clay/80" showNote noteClassName="block text-[11px] text-clay/80 mt-0.5" />
             © {new Date().getFullYear()} Darul Haya. All rights reserved.
             {' · '}
             <Link href="/privacy" className="inline-block py-1 hover:text-teal-dark transition-colors">Privacy Policy</Link>

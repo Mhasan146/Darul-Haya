@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { WHATSAPP_URL } from '@/lib/siteConfig'
+import { WHATSAPP_URL, MOON_SIGHTING_NOTE } from '@/lib/siteConfig'
 
 export const metadata = {
   title: 'School Calendar 2026-27 | Darul Haya Online School',
@@ -9,98 +9,129 @@ export const metadata = {
 }
 
 // Every closure and milestone in the 2026-27 year, in order.
-// kind drives the colour of the pill beside each row.
+// kind drives the colour of the pill beside each row. Hijri readings are
+// Umm al-Qura adjusted to local sighting (see HIJRI_OFFSET_DAYS in siteConfig).
 const DATES = [
   {
     kind: 'holiday',
     date: 'Monday, September 7, 2026',
+    hijri: '24 Rabi al-Awwal 1448',
     label: 'Labour Day',
     note: 'Statutory holiday. Classes begin the next morning.',
   },
   {
     kind: 'term',
     date: 'Tuesday, September 8, 2026',
+    hijri: '25 Rabi al-Awwal 1448',
     label: 'First day of classes',
     note: 'Live classes start for every grade.',
   },
   {
     kind: 'holiday',
     date: 'Monday, October 12, 2026',
+    hijri: '30 Rabi al-Thani 1448',
     label: 'Thanksgiving Day',
     note: 'Statutory holiday. School closed.',
   },
   {
     kind: 'term',
     date: 'Friday, December 18, 2026',
+    hijri: '8 Rajab 1448',
     label: 'Last day before the winter break',
     note: 'Classes run as normal.',
   },
   {
     kind: 'break',
     date: 'Monday, December 21, 2026 to Friday, January 1, 2027',
+    hijri: '11 to 22 Rajab 1448',
     label: 'Winter break',
     note: 'Two weeks off. Christmas Day, Boxing Day and New Year’s Day all fall inside the break.',
   },
   {
     kind: 'term',
     date: 'Monday, January 4, 2027',
+    hijri: '25 Rajab 1448',
     label: 'Classes resume',
     note: 'Back to the normal timetable.',
   },
   {
     kind: 'holiday',
     date: 'Monday, February 15, 2027',
+    hijri: '7 Ramadan 1448',
     label: 'Family Day',
-    note: 'Statutory holiday. School closed.',
+    note: 'Statutory holiday. School closed, in the first week of Ramadan.',
   },
   {
     kind: 'eid',
-    date: 'Tuesday, March 9, 2027 (expected)',
+    date: 'Tuesday, March 9 or Wednesday, March 10, 2027',
+    hijri: '1 Shawwal 1448',
     label: 'Eid al-Fitr',
-    note: 'School closed. The date depends on the sighting of the Shawwal moon, so it may move to Wednesday, March 10.',
+    note: 'School closed on the day Eid falls. Which of the two days it is depends on the sighting of the Shawwal moon, and we confirm it with families as soon as it is announced.',
   },
   {
     kind: 'break',
     date: 'Monday, March 15 to Friday, March 19, 2027',
+    hijri: '6 to 10 Shawwal 1448',
     label: 'March Break',
     note: 'One full week off, matching the Ontario March Break.',
   },
   {
     kind: 'holiday',
     date: 'Friday, March 26, 2027',
+    hijri: '17 Shawwal 1448',
     label: 'Good Friday',
     note: 'Statutory holiday. School closed.',
   },
   {
     kind: 'holiday',
     date: 'Monday, March 29, 2027',
+    hijri: '20 Shawwal 1448',
     label: 'Easter Monday',
     note: 'Not a statutory holiday in Ontario, but schools close and so do we.',
   },
   {
     kind: 'eid',
-    date: 'Sunday, May 16, 2027 (expected)',
+    date: 'Sunday, May 16 or Monday, May 17, 2027',
+    hijri: '10 Dhul Hijjah 1448',
     label: 'Eid al-Adha',
-    note: 'Expected on a Sunday, so no class day is lost. If the moon sighting moves it to Monday, May 17, that Monday is closed.',
+    note: 'If Eid falls on the Sunday, no class day is affected. If the moon sighting puts it on the Monday, that Monday is closed.',
   },
   {
     kind: 'holiday',
     date: 'Monday, May 24, 2027',
+    hijri: '17 Dhul Hijjah 1448',
     label: 'Victoria Day',
     note: 'Statutory holiday. School closed.',
   },
   {
     kind: 'term',
     date: 'Tuesday, June 29, 2027',
+    hijri: '23 Muharram 1449',
     label: 'Last day of classes',
     note: 'Final reports go home to parents.',
   },
   {
     kind: 'holiday',
     date: 'Thursday, July 1, 2027',
+    hijri: '25 Muharram 1449',
     label: 'Canada Day',
     note: 'Statutory holiday, after the school year has ended.',
   },
+]
+
+// When each Hijri month of the school year begins. Expected dates: the moon
+// decides, so any of these can land a day either side.
+const HIJRI_MONTHS = [
+  ['Rabi al-Thani 1448', 'Sun, Sep 13, 2026'],
+  ['Jumada al-Ula 1448', 'Tue, Oct 13, 2026'],
+  ['Jumada al-Akhirah 1448', 'Thu, Nov 12, 2026'],
+  ['Rajab 1448', 'Fri, Dec 11, 2026'],
+  ['Shaban 1448', 'Sun, Jan 10, 2027'],
+  ['Ramadan 1448', 'Tue, Feb 9, 2027'],
+  ['Shawwal 1448', 'Wed, Mar 10, 2027'],
+  ['Dhul Qadah 1448', 'Fri, Apr 9, 2027'],
+  ['Dhul Hijjah 1448', 'Sat, May 8, 2027'],
+  ['Muharram 1449', 'Mon, Jun 7, 2027'],
 ]
 
 // The nine public holidays under Ontario's Employment Standards Act,
@@ -170,12 +201,13 @@ export default function CalendarPage() {
               <MoonIcon className="h-6 w-6" />
             </span>
             <div>
-              <h2 className="font-display text-xl font-bold text-clay">Eid dates depend on the moon</h2>
+              <h2 className="font-display text-xl font-bold text-clay">Every Hijri month begins with the moon</h2>
               <p className="mt-1.5 text-sm text-clay/80 leading-relaxed">
-                The two Eid dates below are the expected ones. Eid is confirmed by the sighting of the
-                moon, so the actual day can shift by one. We confirm each Eid closure with families by
-                email and WhatsApp as soon as it is announced, and we never expect a child in class on
-                Eid.
+                All Hijri dates on this page, including both Eids and the start of Ramadan, are the
+                expected ones. Each month begins only when the moon is sighted, so any of them can
+                land a day either side of what is printed here. We confirm every Eid closure with
+                families by email and WhatsApp as soon as it is announced, and we never expect a child
+                in class on Eid.
               </p>
             </div>
           </div>
@@ -196,6 +228,7 @@ export default function CalendarPage() {
                     {pill.text}
                   </span>
                   <p className="mt-2 text-sm font-semibold text-clay leading-snug">{d.date}</p>
+                  <p className="mt-0.5 text-xs text-clay/80 leading-snug">{d.hijri}</p>
                 </div>
                 <div className="mt-2 sm:mt-0 min-w-0">
                   <h3 className="font-semibold text-clay flex items-center gap-2">
@@ -208,6 +241,24 @@ export default function CalendarPage() {
             )
           })}
         </ul>
+
+        {/* Hijri months across the school year */}
+        <h2 className="mt-12 text-2xl sm:text-3xl font-bold text-clay">Hijri months this school year</h2>
+        <p className="mt-3 text-clay/80 leading-relaxed">
+          {MOON_SIGHTING_NOTE} The dates below are what we expect, and we will tell you if a month
+          starts a day later than printed.
+        </p>
+        <div className="mt-5 grid gap-2.5 sm:grid-cols-2">
+          {HIJRI_MONTHS.map(([name, when]) => (
+            <div
+              key={name}
+              className="flex items-center justify-between gap-4 rounded-xl bg-white border border-beige-dark px-4 py-3"
+            >
+              <span className="text-sm font-semibold text-clay">{name}</span>
+              <span className="text-sm text-clay/80 whitespace-nowrap">begins {when}</span>
+            </div>
+          ))}
+        </div>
 
         {/* Statutory holidays */}
         <h2 className="mt-12 text-2xl sm:text-3xl font-bold text-clay">Ontario statutory holidays</h2>
@@ -261,6 +312,14 @@ export default function CalendarPage() {
             </li>
           </ul>
           <div className="mt-5 flex flex-wrap gap-3">
+            <a
+              href="/Darul-Haya-School-Calendar-2026-27.pdf"
+              download
+              className="inline-flex items-center gap-2 rounded-full bg-clay text-white px-5 py-2.5 text-sm font-semibold hover:bg-teal-dark transition-colors"
+            >
+              Print the calendar
+              <span className="text-white/80 font-normal">PDF</span>
+            </a>
             <a
               href={WHATSAPP_URL}
               target="_blank"
