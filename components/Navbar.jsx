@@ -25,6 +25,7 @@ const MENUS = [
       { label: 'Our Online School', href: '/programs/full-live' },
       { label: 'Grade Levels', href: '/curriculum#grades' },
       { label: 'Curriculum', href: '/curriculum#islamic' },
+      { label: 'School Calendar', href: '/calendar' },
     ],
   },
   {

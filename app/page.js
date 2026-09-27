@@ -527,6 +527,7 @@ export default function HomePage() {
                 <li><Link href="/about" className="inline-block py-1 text-clay/80 hover:text-teal-dark transition-colors">About</Link></li>
                 <li><Link href="/programs/full-live" className="inline-block py-1 text-clay/80 hover:text-teal-dark transition-colors">Our Online School</Link></li>
                 <li><Link href="/curriculum" className="inline-block py-1 text-clay/80 hover:text-teal-dark transition-colors">Curriculum</Link></li>
+                <li><Link href="/calendar" className="inline-block py-1 text-clay/80 hover:text-teal-dark transition-colors">School Calendar</Link></li>
                 <li><Link href="/faq" className="inline-block py-1 text-clay/80 hover:text-teal-dark transition-colors">FAQ</Link></li>
                 <li><Link href="/register" className="inline-block py-1 text-teal-dark font-semibold hover:underline transition-colors">Apply Now <span aria-hidden="true">→</span></Link></li>
               </ul>
