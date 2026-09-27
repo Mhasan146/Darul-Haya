@@ -45,7 +45,7 @@ const ROWS = [
     label: 'Your family calendar',
     icon: 'calendar',
     now: 'The school bell owns your schedule. Travel means missed work and catch-up. A sick day means a lost day.',
-    dh: 'Every live class is recorded. Travel, appointments, and sick days stop costing your child their place in the lesson.',
+    dh: 'School travels with you. Wherever there is a laptop and internet, your child is in class, so a trip or a morning appointment does not turn into weeks of missed work.',
   },
 ]
 

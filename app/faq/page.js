@@ -20,7 +20,7 @@ export default function FaqPage() {
         },
         {
           heading: 'Are classes live or pre-recorded?',
-          body: 'All core classes are 100 percent live and interactive. Class recordings are archived afterwards so students can review lessons before tests or catch up after an illness.',
+          body: 'Every core class is live and interactive. Your child sits in a real classroom with a teacher who can see them, call on them, and answer their question in the moment. We do not use pre-recorded video lessons, and we do not record our classes.',
         },
         {
           heading: 'What grades do you accept?',
@@ -36,7 +36,7 @@ export default function FaqPage() {
         },
         {
           heading: 'Is online school really as effective as in-person?',
-          body: 'It is often vastly more effective. In a 30-student brick-and-mortar room, quiet kids get ignored and distracted kids fall behind. Our live classes are kept small so teachers actively engage every student. With daily attendance, live monitoring, and full recordings, zero learning gaps occur.',
+          body: 'It is often vastly more effective. In a 30-student brick-and-mortar room, quiet kids get ignored and distracted kids fall behind. Our live classes are kept small so teachers actively engage every student. With daily attendance and live monitoring, gaps get caught the week they appear instead of at the report card.',
         },
         {
           heading: 'Will my child lose social development?',

@@ -17,7 +17,7 @@ const HOMEPAGE_VIDEO_ID = ''
 const INCLUDED = [
   'Daily live instruction by certified educators',
   'Complete Ontario curriculum + daily live Arabic',
-  '100% recorded classes for study and catch-up',
+  'Small classes where every student is known by name',
   'Physical textbooks & workbooks shipped home',
   'Parent real-time grade & attendance portal',
   'Direct access teacher support',
@@ -56,7 +56,7 @@ const REAL_TESTIMONIALS = TESTIMONIALS.filter((t) => !t.body.startsWith('[ Place
 const FAQS = [
   {
     q: 'Is online school really as effective as in-person?',
-    a: 'It is often vastly more effective. In a 30-student brick-and-mortar room, quiet kids get ignored and distracted kids fall behind. Our live classes are kept small so teachers actively engage every student. With daily attendance, live monitoring, and full recordings, zero learning gaps occur.',
+    a: 'It is often vastly more effective. In a 30-student brick-and-mortar room, quiet kids get ignored and distracted kids fall behind. Our live classes are kept small so teachers actively engage every student. With daily attendance and live monitoring, gaps get caught the week they appear instead of at the report card.',
   },
   {
     q: 'Will my child lose social development?',
@@ -72,7 +72,7 @@ const FAQS = [
   },
   {
     q: 'What is the daily class schedule?',
-    a: 'Classes run during standard school hours (Eastern Time) on weekdays. You receive a structured schedule prior to day one. If your child misses a session due to illness or travel, full recordings are archived instantly.',
+    a: 'Classes run during standard school hours (Eastern Time) on weekdays. You receive a structured schedule prior to day one. If your child misses a session due to illness or travel, tell the teacher and they will let you know what was covered and what to work on.',
   },
   {
     q: 'Is this going to cause screen fatigue?',
@@ -257,7 +257,7 @@ export default function HomePage() {
           {[
             {
               title: 'Live Classes',
-              body: 'Daily instruction delivered live, with recordings available any time.',
+              body: 'Daily instruction delivered live by certified teachers.',
               icon: <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z" />,
             },
             {
