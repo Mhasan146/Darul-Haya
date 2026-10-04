@@ -21,7 +21,7 @@ const ROWS = [
     label: 'The morning run',
     icon: 'clock',
     now: '6:40am alarm. Lunches packed in a rush, boots and coats by the door, ice scraped off the windshield, then 25 minutes of traffic each way. Two hours of your day gone before work even starts.',
-    dh: '8:20am. Breakfast at your own table. Logged in and learning by 8:30. The commute is a staircase, and the gas money stays in your account.',
+    dh: '7:45am. Breakfast at your own table. Logged in and learning by 8. The commute is a staircase, and the gas money stays in your account.',
   },
   {
     label: 'Who they sit with',

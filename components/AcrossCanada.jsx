@@ -1,18 +1,5 @@
 import { WHATSAPP_URL } from '@/lib/siteConfig'
 
-// Classes start at 8:30 a.m. Eastern. These are the equivalent local start
-// times in provinces whose clocks move with Ontario's, so the gap is the same
-// all year. Saskatchewan and Yukon keep one clock year-round and are handled
-// in the note below the table instead.
-const ZONES = [
-  { zone: 'Newfoundland', where: 'Newfoundland', start: '10:00 a.m.' },
-  { zone: 'Atlantic', where: 'New Brunswick, Nova Scotia, PEI, Labrador', start: '9:30 a.m.' },
-  { zone: 'Eastern', where: 'Ontario, Quebec', start: '8:30 a.m.', home: true },
-  { zone: 'Central', where: 'Manitoba', start: '7:30 a.m.' },
-  { zone: 'Mountain', where: 'Alberta, Northwest Territories', start: '6:30 a.m.' },
-  { zone: 'Pacific', where: 'British Columbia', start: '5:30 a.m.' },
-]
-
 const POINTS = [
   {
     title: 'The Ontario curriculum',
@@ -23,9 +10,9 @@ const POINTS = [
     ),
   },
   {
-    title: 'Your postal code decides nothing',
+    title: 'No catchment, no waiting list',
     body:
-      'Every class is live and online, so a family in Surrey and a family in Scarborough sit in the same small classroom. No catchment, no waiting list, no move required.',
+      'Every class is live and online, so getting a seat does not depend on which street you live on or how long the list is at the school down the road.',
     icon: (
       <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9 9 0 100-18 9 9 0 000 18zm0 0c2.5-2.5 3.75-5.5 3.75-9S14.5 5.5 12 3m0 18c-2.5-2.5-3.75-5.5-3.75-9S9.5 5.5 12 3M3.6 9h16.8M3.6 15h16.8" />
     ),
@@ -50,16 +37,16 @@ export default function AcrossCanada() {
       <div className="max-w-5xl mx-auto px-6 py-20">
         <div className="text-center max-w-2xl mx-auto">
           <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">
-            Across Canada
+            A Canadian school
           </p>
           <h2 id="canada-heading" className="text-3xl sm:text-4xl font-bold text-clay">
-            An Ontario school your child can attend from any province
+            Ontario curriculum, taught live from your own home
           </h2>
           <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <p className="mt-5 text-clay/80 leading-relaxed">
-            We are based in Ontario and we teach the Ontario curriculum. Because every class is live
-            and online, families join us from across the country without moving house or driving
-            anywhere.
+            We are a Canadian school based in Ontario, teaching the Ontario curriculum on a real
+            timetable. Classes run on Eastern Time and the school day begins at 8:00 a.m., so your
+            child starts the morning at their own table instead of in traffic.
           </p>
         </div>
 
@@ -80,59 +67,14 @@ export default function AcrossCanada() {
           ))}
         </div>
 
-        {/* Time zones, so a family out west knows exactly what they are signing up for */}
-        <div className="mt-12">
-          <h3 className="text-2xl font-bold text-clay">The school morning where you live</h3>
-          <p className="mt-3 text-clay/80 leading-relaxed max-w-2xl">
-            Classes run on Eastern Time and the school day begins at 8:30 a.m. That is an easy
-            morning in Halifax and an early one in Vancouver, so here is what it looks like on your
-            own clock before you decide.
-          </p>
-
-          <div className="mt-5 overflow-x-auto rounded-2xl border border-beige-dark bg-white">
-            <table className="w-full text-[13px] sm:text-sm">
-              <caption className="sr-only">
-                Local start time of the school day in each Canadian time zone
-              </caption>
-              <thead>
-                <tr className="bg-beige-dark/60 text-left">
-                  <th scope="col" className="px-3 sm:px-5 py-3 font-semibold text-clay">Time zone</th>
-                  <th scope="col" className="px-3 sm:px-5 py-3 font-semibold text-clay">Where</th>
-                  <th scope="col" className="px-3 sm:px-5 py-3 font-semibold text-clay">Class starts</th>
-                </tr>
-              </thead>
-              <tbody>
-                {ZONES.map((z, i) => (
-                  <tr key={z.zone} className={z.home ? 'bg-beige-dark/40' : i % 2 ? 'bg-beige/40' : ''}>
-                    <th scope="row" className="px-3 sm:px-5 py-3 text-left font-medium text-clay align-top">
-                      {z.zone}
-                      {z.home && <span className="sr-only"> (our own time zone)</span>}
-                    </th>
-                    <td className="px-3 sm:px-5 py-3 text-clay/80 align-top">{z.where}</td>
-                    <td className="px-3 sm:px-5 py-3 font-semibold text-clay align-top whitespace-nowrap">
-                      {z.start}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-          <p className="mt-4 text-sm text-clay/80 leading-relaxed">
-            Saskatchewan and Yukon keep the same clock all year while Ontario changes twice, so their
-            start time moves. In Saskatchewan the day begins at 7:30 a.m. through the winter and 6:30
-            a.m. the rest of the school year. In Yukon it is 6:30 a.m. through the winter and 5:30
-            a.m. the rest of the year. If you are in Nunavut or anywhere else not listed here, ask us
-            and we will work it out with you.
-          </p>
-
+        <div className="mt-10 text-center">
           <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 inline-flex items-center rounded-full bg-teal text-white px-5 py-2.5 text-sm font-semibold hover:bg-teal-dark transition-colors"
+            className="inline-flex items-center rounded-full bg-teal text-white px-5 py-2.5 text-sm font-semibold hover:bg-teal-dark transition-colors"
           >
-            Ask how the day would work for us
+            Ask how the school day would work for us
             <span className="sr-only"> (opens WhatsApp in a new tab)</span>
           </a>
         </div>
