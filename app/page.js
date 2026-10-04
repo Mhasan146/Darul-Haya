@@ -6,6 +6,7 @@ import ValueComparison from '@/components/ValueComparison'
 import TuitionCalculator from '@/components/TuitionCalculator'
 import SubjectCards from '@/components/SubjectCards'
 import EveryOpportunity from '@/components/EveryOpportunity'
+import AcrossCanada from '@/components/AcrossCanada'
 import HijriDate from '@/components/HijriDate'
 import YouTubeEmbed from '@/components/YouTubeEmbed'
 import { WHATSAPP_URL } from '@/lib/siteConfig'
@@ -234,16 +235,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Trust bar */}
-      <section aria-label="Curriculum alignment" className="bg-beige py-12 border-b border-clay/10">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <p className="text-xs font-semibold uppercase tracking-widest text-clay/80 mb-6">Accredited standards strictly aligned with</p>
-          <div className="flex items-center justify-center gap-12 flex-wrap">
-            <Image src="/ontario-edu.png" alt="Ontario Ministry of Education" width={200} height={56} className="h-14 w-auto opacity-90 hover:opacity-100 transition-all" />
-            <Image src="/canada.png" alt="Government of Canada" width={200} height={40} className="h-10 w-auto opacity-90 hover:opacity-100 transition-all" />
-          </div>
-        </div>
-      </section>
+      {/* Canadian reach, time zones and curriculum */}
+      <AcrossCanada />
 
       {/* Features */}
       <section id="features" className="relative overflow-hidden scroll-mt-24">        <div className="relative max-w-5xl mx-auto px-6 py-20">
