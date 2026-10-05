@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { WHATSAPP_URL } from '@/lib/siteConfig'
 
 const POINTS = [
@@ -67,7 +68,34 @@ export default function AcrossCanada() {
           ))}
         </div>
 
-        <div className="mt-10 text-center">
+        {/* Caption states curriculum alignment only. These are official
+            government identifiers, so nothing here should read as a claim of
+            accreditation, endorsement or affiliation. */}
+        <div className="mt-12 pt-10 border-t border-clay/10 text-center">
+          <p className="text-xs font-semibold uppercase tracking-widest text-clay/80 mb-6">
+            Teaching the curriculum of
+          </p>
+          <div className="flex items-center justify-center gap-12 flex-wrap">
+            <Image
+              src="/ontario-edu.png"
+              alt="Ontario Ministry of Education"
+              width={200}
+              height={56}
+              // Both files are opaque PNGs; multiply drops the white box into
+              // the beige section instead of leaving a card floating on it.
+              className="h-14 w-auto mix-blend-multiply opacity-90 hover:opacity-100 transition-opacity"
+            />
+            <Image
+              src="/canada.png"
+              alt="Government of Canada"
+              width={200}
+              height={40}
+              className="h-10 w-auto mix-blend-multiply opacity-90 hover:opacity-100 transition-opacity"
+            />
+          </div>
+        </div>
+
+        <div className="mt-12 text-center">
           <a
             href={WHATSAPP_URL}
             target="_blank"

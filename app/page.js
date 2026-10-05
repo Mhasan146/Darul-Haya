@@ -16,7 +16,7 @@ import { WHATSAPP_URL } from '@/lib/siteConfig'
 const HOMEPAGE_VIDEO_ID = ''
 
 const INCLUDED = [
-  'Daily live instruction by certified educators',
+  'Daily live instruction by real teachers',
   'Complete Ontario curriculum + daily live Arabic',
   'Small classes where every student is known by name',
   'Physical textbooks & workbooks shipped home',
@@ -26,7 +26,7 @@ const INCLUDED = [
 
 const FACTS = [
   { value: 'Grades 2-12', label: 'Complete Elementary to High School pathway' },
-  { value: 'Live & Daily', label: 'Real certified teachers, zero pre-recorded boredom' },
+  { value: 'Live & Daily', label: 'Real teachers, zero pre-recorded boredom' },
   { value: 'Small Classes', label: '100% supervised, known by name, zero bullying' },
   { value: 'Ontario Aligned', label: 'Official curriculum standards guaranteed' },
 ]
@@ -250,7 +250,7 @@ export default function HomePage() {
           {[
             {
               title: 'Live Classes',
-              body: 'Daily instruction delivered live by certified teachers.',
+              body: 'Daily instruction delivered live by real teachers.',
               icon: <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z" />,
             },
             {

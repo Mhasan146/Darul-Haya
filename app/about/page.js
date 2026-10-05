@@ -24,7 +24,7 @@ export default function AboutPage() {
         },
         {
           heading: 'Our Approach',
-          body: 'We reject passive, pre-recorded video learning. Every class at Darul Haya is taught live by real certified educators who track attendance, encourage live dialogue, and assess comprehension in real time. By maintaining small group sizes and deploying proactive screen supervision, we eliminate negative social pressures and technical distractions, allowing students to focus, ask questions, and excel.',
+          body: 'We reject passive, pre-recorded video learning. Every class at Darul Haya is taught live by real teachers who track attendance, encourage live dialogue, and assess comprehension in real time. By maintaining small group sizes and deploying proactive screen supervision, we eliminate negative social pressures and technical distractions, allowing students to focus, ask questions, and excel.',
         },
       ]}
       cta={{ label: 'View Plans', href: '/#pricing' }}

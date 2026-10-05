@@ -33,7 +33,7 @@ const SESSIONS = [
 const AGENDA = [
   {
     title: 'Meet Founding Faculty',
-    body: 'Discover how our certified educators maintain high engagement and moral discipline in online classrooms.',
+    body: 'Discover how our real teachers maintain high engagement and moral discipline in online classrooms.',
   },
   {
     title: 'Live System Tour',
