@@ -20,7 +20,7 @@ export default function FullLivePage() {
         },
         {
           heading: 'The Curriculum',
-          body: 'Complete curriculum coverage across Language Arts, Mathematics, Science, Social Studies, Arabic, and Character Development. Every course complies with provincial expectations, giving your child an accredited, seamless path forward.',
+          body: 'Complete curriculum coverage across Language Arts, Mathematics, Science, Social Studies, Arabic, and Character Development. Every course is taught to the curriculum expectations the Province of Ontario publishes for that grade, so your child covers the same ground as students in any Ontario classroom.',
         },
         {
           heading: "What's Included",

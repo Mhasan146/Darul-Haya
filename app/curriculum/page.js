@@ -1,7 +1,7 @@
 import PagePlaceholder from '@/components/PagePlaceholder'
 
 export const metadata = {
-  title: 'Accredited Ontario Curriculum + Live Arabic',
+  title: 'Ontario Curriculum + Live Daily Arabic (Grades 2-12)',
   description:
     'Complete Grades 2-12 Ontario academic curriculum combined with daily live Arabic instruction. Learn how we keep your child on track.',
   alternates: { canonical: '/curriculum' },

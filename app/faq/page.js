@@ -48,7 +48,7 @@ export default function FaqPage() {
         },
         {
           heading: 'Why should we trust a newer online school?',
-          body: 'Our founders bring over 15 years of Ontario classroom experience. We combine accredited provincial learning standards, active screen monitoring (Classroom.cloud), and complete parent portal access so you can inspect learning in real time.',
+          body: 'Our founders bring over 15 years of Ontario classroom experience. We teach the Ontario curriculum, monitor screens actively with Classroom.cloud, and give you full parent portal access so you can inspect the learning in real time.',
         },
         {
           heading: 'Is this going to cause screen fatigue?',
@@ -59,8 +59,8 @@ export default function FaqPage() {
           body: 'Yes. Because our academic courses follow the official Ontario curriculum, your child can seamlessly transfer back to any public or private school at their current grade level.',
         },
         {
-          heading: 'Is the curriculum accredited to provincial standards?',
-          body: 'Yes. All core subjects align directly with Ontario Ministry of Education standards.',
+          heading: 'Does the curriculum follow Ontario standards?',
+          body: 'Yes. Every core subject is taught to the curriculum expectations the Ontario Ministry of Education publishes for that grade, so the material matches what schools across the province are teaching.',
         },
         {
           heading: 'What computer equipment do we need?',

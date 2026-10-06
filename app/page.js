@@ -69,7 +69,7 @@ const FAQS = [
   },
   {
     q: 'Why should we trust a newer online school?',
-    a: 'Our founders bring over 15 years of Ontario classroom experience. We combine accredited provincial learning standards, active screen monitoring (Classroom.cloud), and complete parent portal access so you can inspect learning in real time.',
+    a: 'Our founders bring over 15 years of Ontario classroom experience. We teach the Ontario curriculum, monitor screens actively with Classroom.cloud, and give you full parent portal access so you can inspect the learning in real time.',
   },
   {
     q: 'What is the daily class schedule?',
