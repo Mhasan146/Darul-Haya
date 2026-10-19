@@ -59,8 +59,8 @@ export default function FaqPage() {
           body: 'Yes. Because our academic courses follow the official Ontario curriculum, your child can seamlessly transfer back to any public or private school at their current grade level.',
         },
         {
-          heading: 'Does the curriculum follow Ontario standards?',
-          body: 'Yes. Every core subject is taught to the curriculum expectations the Ontario Ministry of Education publishes for that grade, so the material matches what schools across the province are teaching.',
+          heading: 'Is Darul Haya registered with the Ministry of Education?',
+          body: 'Yes. Our application was approved and the Ministry issued us school number (BSID) 885538, under board B78599, CR Private Inspected. We are an inspected private school on the provincial register, and every core subject is taught to the curriculum expectations the Ministry publishes for that grade. Registration and inspection are not an endorsement, since the Ministry does not endorse private schools, but you can quote our school number when you check us.',
         },
         {
           heading: 'What computer equipment do we need?',

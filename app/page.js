@@ -7,6 +7,7 @@ import TuitionCalculator from '@/components/TuitionCalculator'
 import SubjectCards from '@/components/SubjectCards'
 import EveryOpportunity from '@/components/EveryOpportunity'
 import AcrossCanada from '@/components/AcrossCanada'
+import MinistryBadge from '@/components/MinistryBadge'
 import HijriDate from '@/components/HijriDate'
 import YouTubeEmbed from '@/components/YouTubeEmbed'
 import { WHATSAPP_URL } from '@/lib/siteConfig'
@@ -222,6 +223,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Ministry registration, placed directly under the hero */}
+      <MinistryBadge />
 
       {/* Facts strip */}
       <section id="grades" aria-label="School at a glance" className="bg-beige border-b border-clay/10 py-8 scroll-mt-24">
