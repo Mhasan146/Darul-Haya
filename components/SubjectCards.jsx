@@ -9,7 +9,7 @@ const SUBJECTS = [
   { name: 'Science & Tech', tag: 'Core Foundation', back: 'Comprehensive coverage of life systems, chemistry, physics, and environmental science.' },
   { name: 'Social Studies', tag: 'Core Foundation', back: 'History, geography, global citizenship, and critical thinking grounded in objective facts.' },
   { name: 'Arabic Language', tag: 'Live Daily Track', back: 'Structured reading, writing, and fluent conversational Arabic taught live every week.' },
-  { name: 'Character & Ethics', tag: 'Integrated Daily', back: 'Daily reinforcement of Islamic manners, integrity, and leadership habits throughout the school day.' },
+  { name: 'Character & Ethics', tag: 'Integrated Daily', back: 'Daily reinforcement of good manners, integrity, and leadership habits throughout the school day.' },
 ]
 
 function SubjectCard({ subject }) {
@@ -56,7 +56,7 @@ export default function SubjectCards() {
           <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">Academic Standards</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-clay">Built for top-tier academic performance</h2>
           <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
-          <p className="mt-5 text-clay/80 leading-relaxed">Complete provincial curriculum coverage paired with Islamic character building. Hover or tap each subject to explore.</p>
+          <p className="mt-5 text-clay/80 leading-relaxed">Complete provincial curriculum coverage paired with daily character building. Hover or tap each subject to explore.</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {SUBJECTS.map((s) => (

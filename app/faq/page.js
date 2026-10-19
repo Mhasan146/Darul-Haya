@@ -3,7 +3,7 @@ import PagePlaceholder from '@/components/PagePlaceholder'
 export const metadata = {
   title: 'Darul Haya FAQ: Tuition, Curriculum & Daily Schedule',
   description:
-    'Got questions about online Islamic schooling? Learn about our Ontario curriculum standards, daily live schedules, and tuition rates.',
+    'Got questions about live online schooling? Learn about our Ontario curriculum standards, daily live schedules, and tuition rates.',
   alternates: { canonical: '/faq' },
 }
 

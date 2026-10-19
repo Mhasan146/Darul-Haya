@@ -53,7 +53,7 @@ export default function ValueComparison() {
           <h2 className="text-3xl sm:text-4xl font-bold text-clay">Elite private education at 70 percent less cost</h2>
           <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <p className="mt-5 text-clay/80 leading-relaxed">
-            Traditional brick-and-mortar Islamic schools cost up to $9,550 per child annually. Darul Haya
+            Traditional brick-and-mortar private schools cost up to $9,550 per child annually. Darul Haya
             delivers higher individual teacher attention for less than one-third of the price.
           </p>
         </div>

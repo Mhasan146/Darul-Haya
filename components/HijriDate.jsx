@@ -19,7 +19,7 @@ const HIJRI_MONTHS = [
   'Dhul Hijjah',
 ]
 
-// Shows today's date in both the Islamic (Umm al-Qura, nudged by
+// Shows today's date in both the Hijri (Umm al-Qura, nudged by
 // HIJRI_OFFSET_DAYS to match local sighting) and Gregorian calendars.
 // Computed natively via Intl, no external library. Renders nothing on the
 // server (and until mounted) so the visitor's own local date is used with no
@@ -43,6 +43,9 @@ export default function HijriDate({
       const shifted = new Date(now)
       shifted.setDate(shifted.getDate() + HIJRI_OFFSET_DAYS)
 
+      // 'islamic-umalqura' is the BCP-47 calendar identifier the Intl API
+      // requires. It is not display copy and never reaches the page; renaming
+      // it would simply stop the Hijri date from resolving.
       const parts = new Intl.DateTimeFormat('en-GB-u-ca-islamic-umalqura', {
         day: 'numeric',
         month: 'numeric',

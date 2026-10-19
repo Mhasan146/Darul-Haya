@@ -16,7 +16,7 @@ const POINTS = [
   },
   {
     title: 'Faith and Academic Excellence Together',
-    body: "You never have to choose between your child's Islamic identity and top-tier academics. At Darul Haya, they master both.",
+    body: "You never have to choose between your child's faith and top-tier academics. At Darul Haya, they master both.",
   },
 ]
 

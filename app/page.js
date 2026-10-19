@@ -508,7 +508,7 @@ export default function HomePage() {
               </div>
               <p className="text-xs uppercase tracking-[0.25em] text-teal-dark font-semibold mt-2">Knowledge, Character, Leadership</p>
               <p className="text-clay/80 text-sm mt-4 leading-relaxed max-w-xs">
-                Stop compromising between academic excellence and Islamic values. A structured, live online school for boys and girls in Grades 2-12.
+                Stop compromising between academic excellence and your family’s values. A structured, live online school for boys and girls in Grades 2-12.
               </p>
             </div>
 
