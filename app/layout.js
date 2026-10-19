@@ -28,7 +28,7 @@ const SITE_URL = (process.env.NEXT_PUBLIC_APP_URL || 'https://darulhaya.com').re
 // Keep TITLE under ~60 chars and DESCRIPTION under ~155. Google discards
 // over-long meta and writes its own snippet from page text instead, which
 // is how a stale, outdated description ends up in the search result.
-const TITLE = 'Darul Haya: Premier Online School (Grades 2-12)'
+const TITLE = 'Darul Haya: Premier Online Islamic School (Grades 2-12)'
 const DESCRIPTION =
   'Is your child struggling in overcrowded schools? Darul Haya offers live Ontario curriculum, daily Arabic, and small classes from home. Apply now.'
 
@@ -43,6 +43,11 @@ export const metadata = {
   // weight. Kept for other crawlers and for internal reference only, the
   // real signals are the title, description, headings, and structured data.
   keywords: [
+    'Islamic school',
+    'online Islamic school',
+    'Islamic school online',
+    'Islamic school Canada',
+    'Islamic school Ontario',
     'online school',
     'homeschool',
     'homeschooling',
@@ -63,7 +68,7 @@ export const metadata = {
     // 1200x630 share card. WhatsApp, Facebook, LinkedIn, and iMessage all read
     // this. A square logo gets cropped or shown as a small thumbnail instead of
     // a full-width preview, which is why this is a purpose-built landscape card.
-    images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'Darul Haya, live online school for Grades 2 to 12' }],
+    images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'Darul Haya, online Islamic school for Grades 2 to 12' }],
     locale: 'en_CA',
     type: 'website',
   },
@@ -83,15 +88,19 @@ const SCHOOL_LD = {
   '@context': 'https://schema.org',
   '@type': 'School',
   name: 'Darul Haya Academy of Learning',
-  // Search engines read these name variants directly, which is how the site
-  // ranks for phrasings that never appear in the visible page design.
+  // Search engines read these name variants directly. This is where the
+  // "Islamic school" phrasing lives, along with the page titles and meta
+  // descriptions, so the site ranks for it without the words appearing in
+  // the visible page copy. Do not blend these words into the page body:
+  // hidden or disguised text breaks Google's spam policy and risks the
+  // whole domain being demoted.
   alternateName: [
-    'Darul Haya Online School',
-    'Darul Haya Academy of Learning Online School',
-    'Online School Canada Grades 2-12',
+    'Darul Haya Online Islamic School',
+    'Darul Haya Islamic School',
+    'Online Islamic School Canada',
   ],
   description:
-    'Darul Haya is a live online school for boys and girls in Grades 2 through 12. Students attend live, teacher-led classes every school day following an Ontario-aligned curriculum, with Arabic in the weekly timetable and physical books shipped to their home. Classes are small and closely supervised. Tuition is $225 per month for Grades 2-8 and $250 per month for Grades 9-12.',
+    'Darul Haya is an online Islamic school for boys and girls in Grades 2 through 12. Students attend live, teacher-led classes every school day following an Ontario-aligned curriculum, with Arabic in the weekly timetable and physical books shipped to their home. Classes are small and closely supervised. Tuition is $225 per month for Grades 2-8 and $250 per month for Grades 9-12.',
   url: SITE_URL,
   logo: `${SITE_URL}/logo.png`,
   email: 'info@darulhaya.com',
@@ -102,7 +111,7 @@ const SCHOOL_LD = {
     educationalRole: 'student',
     audienceType: 'Students in Grades 2 to 12',
   },
-  keywords: 'online school, live online school, homeschool, homeschooling, online homeschool program, Muslim homeschool, live online classes, Arabic classes, Ontario curriculum, Grades 2-12',
+  keywords: 'online school, online Islamic school, homeschool, homeschooling, online homeschool program, Muslim homeschool, live online classes, Arabic classes, Ontario curriculum, Grades 2-12',
 }
 
 export default function RootLayout({ children }) {

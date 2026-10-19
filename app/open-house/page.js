@@ -1,7 +1,7 @@
 import OpenHouseForm from '@/components/OpenHouseForm'
 
 export const metadata = {
-  title: 'Free Open House: Tour Our Live Online School',
+  title: 'Free Open House: Tour Our Live Online Islamic School',
   description:
     'Experience live classroom demos and meet our faculty. Zero commitment, 100 percent transparency. Reserve your free Open House spot today.',
   alternates: { canonical: '/open-house' },

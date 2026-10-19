@@ -1,7 +1,7 @@
 import PagePlaceholder from '@/components/PagePlaceholder'
 
 export const metadata = {
-  title: 'Live Online School: Ontario Curriculum, $225/mo',
+  title: 'Live Islamic School: Ontario Curriculum, $225/mo',
   description:
     'Daily teacher-led live classes, shipped physical books, and small class sizes for Grades 2-12. Save thousands over traditional private school.',
   alternates: { canonical: '/programs/full-live' },

@@ -4,7 +4,7 @@ import MonthGrid from '@/components/MonthGrid'
 import { CALENDAR, hijri, hijriLabel } from '@/lib/schoolCalendar'
 
 export const metadata = {
-  title: 'School Calendar 2026-27 | Darul Haya Online School',
+  title: 'School Calendar 2026-27, Ontario Terms and Eid',
   description:
     'Darul Haya 2026-27 school year calendar, aligned to the Ontario school year. First day, last day, winter break, March Break, statutory holidays and Eid closures, with Hijri dates.',
   alternates: { canonical: '/calendar' },

@@ -4,7 +4,7 @@ import RegisterForm from '@/components/RegisterForm'
 export const metadata = {
   title: 'Apply to Darul Haya: 5-Minute Enrollment Form',
   description:
-    'Secure your child\'s seat for September 2026. Quick 5-minute application for live online schooling (Grades 2-12).',
+    'Secure your child\'s seat for September 2026. Quick 5-minute application for live online Islamic schooling (Grades 2-12).',
   alternates: { canonical: '/register' },
 }
 
