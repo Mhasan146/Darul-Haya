@@ -32,13 +32,14 @@ export default function MinistryBadge() {
                 Ontario Ministry of Education
               </p>
               <h2 id="ministry-heading" className="mt-2 font-display text-2xl sm:text-3xl font-bold text-clay leading-tight">
-                An approved inspected private school in Ontario
+                Inspected to grant OSSD credits
               </h2>
               <p className="mt-3 text-sm sm:text-base text-clay/80 leading-relaxed">
                 Darul Haya operates as a brand of <strong className="font-semibold text-clay">{MINISTRY.registeredName}</strong>,
-                which the Ministry has approved as an inspected private school and issued its own
-                school number. That registration sits on the provincial register and covers the
-                classrooms your child learns in, which not every private school in Ontario can say.
+                an inspected private school on the provincial register with its own Ministry school
+                number. Inspected status is what lets us grant credits toward the Ontario Secondary
+                School Diploma, so the work your child does in Grades 9 to 12 counts toward the
+                diploma itself.
               </p>
 
               <dl className="mt-6 grid gap-4 grid-cols-2 lg:grid-cols-4 text-center sm:text-left">
@@ -78,9 +79,10 @@ export default function MinistryBadge() {
               </dl>
 
               <p className="mt-5 text-xs text-clay/80 leading-relaxed">
-                Quote the school number when you ask the Ministry about us. Registration and
-                inspection are not an endorsement, and the Ministry does not recommend private
-                schools.
+                Quote the school number when you ask the Ministry about us. The diploma also
+                requires the provincial literacy test and 40 hours of community involvement, which
+                every Ontario student completes. Registration and inspection are not an
+                endorsement, and the Ministry does not recommend private schools.
               </p>
             </div>
           </div>

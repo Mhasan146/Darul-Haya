@@ -59,6 +59,10 @@ export default function FaqPage() {
           body: 'Yes. Because our academic courses follow the official Ontario curriculum, your child can seamlessly transfer back to any public or private school at their current grade level.',
         },
         {
+          heading: 'Does my child earn OSSD credits?',
+          body: 'Yes, in Grades 9 to 12. LearnHaven Ontario is an inspected private school, and inspection is what allows a private school to grant credits that count toward the Ontario Secondary School Diploma. Those credits go on an Ontario Student Transcript and are recognised by universities, colleges and other schools. The diploma itself also requires the provincial literacy test and 40 hours of community involvement, which every student in Ontario completes wherever they study.',
+        },
+        {
           heading: 'Is Darul Haya registered with the Ministry of Education?',
           body: 'Yes. Darul Haya operates as a brand of LearnHaven Ontario, which the Ministry approved as an inspected private school and issued school number (BSID) 885538, under board B78599, CR Private Inspected. Every core subject is taught to the curriculum expectations the Ministry publishes for that grade. Registration and inspection are not an endorsement, since the Ministry does not endorse private schools, but you can quote the school number when you check us.',
         },

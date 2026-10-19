@@ -393,6 +393,7 @@ export default function HomePage() {
                   <span className="font-display text-4xl font-bold text-teal-dark">$250</span>
                   <span className="text-clay/80 text-sm mb-1">/mo</span>
                 </div>
+                <p className="mt-1.5 text-[11px] font-semibold text-teal-dark leading-snug">Earns OSSD credits</p>
               </div>
             </div>
             <p className="text-clay/80 text-sm mt-4 leading-relaxed">
