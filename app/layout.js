@@ -100,15 +100,21 @@ const SCHOOL_LD = {
     'Online Islamic School Canada',
   ],
   description:
-    'Darul Haya is an online Islamic school for boys and girls in Grades 2 through 12, an inspected private school approved by the Ontario Ministry of Education under school number 885538. Students attend live, teacher-led classes every school day following an Ontario-aligned curriculum, with Arabic in the weekly timetable and physical books shipped to their home. Classes are small and closely supervised. Tuition is $225 per month for Grades 2-8 and $250 per month for Grades 9-12.',
+    'Darul Haya is an online Islamic school for boys and girls in Grades 2 through 12, operating as a brand of LearnHaven Ontario, an inspected private school approved by the Ontario Ministry of Education under school number 885538. Students attend live, teacher-led classes every school day following an Ontario-aligned curriculum, with Arabic in the weekly timetable and physical books shipped to their home. Classes are small and closely supervised. Tuition is $225 per month for Grades 2-8 and $250 per month for Grades 9-12.',
   url: SITE_URL,
   logo: `${SITE_URL}/logo.png`,
-  // Ministry of Education school number, the one verifiable identifier the
-  // school has. Search engines and AI summaries read this directly.
-  identifier: {
-    '@type': 'PropertyValue',
-    name: 'Ontario Ministry of Education school number (BSID)',
-    value: '885538',
+  // Darul Haya is a brand of LearnHaven Ontario, and the Ministry
+  // registration belongs to LearnHaven, so the school number hangs off the
+  // parent and not off Darul Haya. Search engines and AI summaries read
+  // this directly, so the attribution has to be right here too.
+  parentOrganization: {
+    '@type': 'EducationalOrganization',
+    name: 'LearnHaven Ontario',
+    identifier: {
+      '@type': 'PropertyValue',
+      name: 'Ontario Ministry of Education school number (BSID)',
+      value: '885538',
+    },
   },
   email: 'info@darulhaya.com',
   areaServed: { '@type': 'Country', name: 'Canada' },

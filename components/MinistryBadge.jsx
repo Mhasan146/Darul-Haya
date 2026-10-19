@@ -32,15 +32,24 @@ export default function MinistryBadge() {
                 Ontario Ministry of Education
               </p>
               <h2 id="ministry-heading" className="mt-2 font-display text-2xl sm:text-3xl font-bold text-clay leading-tight">
-                Darul Haya is an approved inspected private school
+                An approved inspected private school in Ontario
               </h2>
               <p className="mt-3 text-sm sm:text-base text-clay/80 leading-relaxed">
-                Our application was approved by the Ministry and we were issued our own school
-                number. We sit on the provincial register and are inspected under it, which not
-                every private school in Ontario can say.
+                Darul Haya operates as a brand of <strong className="font-semibold text-clay">{MINISTRY.registeredName}</strong>,
+                which the Ministry has approved as an inspected private school and issued its own
+                school number. That registration sits on the provincial register and covers the
+                classrooms your child learns in, which not every private school in Ontario can say.
               </p>
 
-              <dl className="mt-6 grid gap-4 sm:grid-cols-3 text-center sm:text-left">
+              <dl className="mt-6 grid gap-4 grid-cols-2 lg:grid-cols-4 text-center sm:text-left">
+                <div className="rounded-xl bg-beige px-4 py-3">
+                  <dt className="text-[10px] font-semibold uppercase tracking-widest text-clay/80">
+                    Registered as
+                  </dt>
+                  <dd className="mt-1 font-display text-base font-bold text-clay leading-snug">
+                    {MINISTRY.registeredName}
+                  </dd>
+                </div>
                 <div className="rounded-xl bg-beige px-4 py-3">
                   <dt className="text-[10px] font-semibold uppercase tracking-widest text-clay/80">
                     School number (BSID)
@@ -69,7 +78,7 @@ export default function MinistryBadge() {
               </dl>
 
               <p className="mt-5 text-xs text-clay/80 leading-relaxed">
-                Quote our school number when you ask the Ministry about us. Registration and
+                Quote the school number when you ask the Ministry about us. Registration and
                 inspection are not an endorsement, and the Ministry does not recommend private
                 schools.
               </p>

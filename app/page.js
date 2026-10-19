@@ -10,7 +10,7 @@ import AcrossCanada from '@/components/AcrossCanada'
 import MinistryBadge from '@/components/MinistryBadge'
 import HijriDate from '@/components/HijriDate'
 import YouTubeEmbed from '@/components/YouTubeEmbed'
-import { WHATSAPP_URL } from '@/lib/siteConfig'
+import { WHATSAPP_URL, BRAND_OF_LINE, MINISTRY } from '@/lib/siteConfig'
 
 // Homepage video, paste your YouTube video ID (the part after "v=" or
 // "youtu.be/"), e.g. 'dQw4w9WgXcQ'. Leave empty to hide the video section.
@@ -543,6 +543,9 @@ export default function HomePage() {
 
           <div className="border-t border-clay/10 mt-10 pt-6 text-center text-xs text-clay/80">
             <HijriDate className="block mb-2 text-clay/80" showNote noteClassName="block text-[11px] text-clay/80 mt-0.5" />
+            <span className="block mb-2">
+              {BRAND_OF_LINE} Ontario Ministry of Education school number {MINISTRY.bsid}.
+            </span>
             © {new Date().getFullYear()} Darul Haya. All rights reserved.
             {' · '}
             <Link href="/privacy" className="inline-block py-1 hover:text-teal-dark transition-colors">Privacy Policy</Link>
