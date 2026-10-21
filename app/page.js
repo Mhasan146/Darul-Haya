@@ -164,7 +164,7 @@ export default function HomePage() {
           </span>
 
           {/* Full crest (transparent bg) on a soft cream halo, so it reads
-              cleanly over the photo without a hard square box. /logo.png stays
+              cleanly over the photo without a hard square box. /logo-v2.png stays
               the boxed version used by the nav and social share. */}
           <div className="relative mx-auto w-60 sm:w-72">
             <div
@@ -172,7 +172,7 @@ export default function HomePage() {
               className="absolute inset-0 -m-8 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(252,248,244,0.94)_40%,rgba(252,248,244,0)_72%)]"
             />
             <Image
-              src="/hero-logo.png"
+              src="/hero-logo-v2.png"
               alt="Darul Haya Academy of Learning"
               width={512}
               height={512}
@@ -508,7 +508,7 @@ export default function HomePage() {
             {/* Brand */}
             <div>
               <div className="flex items-center gap-2.5">
-                <Image src="/logo-mark.png" alt="" width={526} height={622} className="h-10 w-auto" />
+                <Image src="/logo-mark-v2.png" alt="" width={526} height={622} className="h-10 w-auto" />
                 <h2 className="font-display text-2xl font-bold tracking-wide text-clay">Darul Haya</h2>
               </div>
               <p className="text-xs uppercase tracking-[0.25em] text-teal-dark font-semibold mt-2">Knowledge, Character, Leadership</p>

@@ -68,7 +68,7 @@ export const metadata = {
     // 1200x630 share card. WhatsApp, Facebook, LinkedIn, and iMessage all read
     // this. A square logo gets cropped or shown as a small thumbnail instead of
     // a full-width preview, which is why this is a purpose-built landscape card.
-    images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'Darul Haya, online Islamic school for Grades 2 to 12' }],
+    images: [{ url: '/og-v2.jpg', width: 1200, height: 630, alt: 'Darul Haya, online Islamic school for Grades 2 to 12' }],
     locale: 'en_CA',
     type: 'website',
   },
@@ -76,7 +76,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: TITLE,
     description: DESCRIPTION,
-    images: ['/og.jpg'],
+    images: ['/og-v2.jpg'],
   },
 }
 
@@ -102,7 +102,7 @@ const SCHOOL_LD = {
   description:
     'Darul Haya is an online Islamic school for boys and girls in Grades 2 through 12, operating as a brand of LearnHaven Ontario, an inspected private school approved by the Ontario Ministry of Education under school number 885538 and inspected to grant credits toward the Ontario Secondary School Diploma (OSSD). Students attend live, teacher-led classes every school day following an Ontario-aligned curriculum, with Arabic in the weekly timetable and physical books shipped to their home. Classes are small and closely supervised. Tuition is $225 per month for Grades 2-8 and $250 per month for Grades 9-12.',
   url: SITE_URL,
-  logo: `${SITE_URL}/logo.png`,
+  logo: `${SITE_URL}/logo-v2.png`,
   // Darul Haya is a brand of LearnHaven Ontario, and the Ministry
   // registration belongs to LearnHaven, so the school number hangs off the
   // parent and not off Darul Haya. Search engines and AI summaries read
