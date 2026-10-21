@@ -29,6 +29,7 @@ const SITE_URL = (process.env.NEXT_PUBLIC_APP_URL || 'https://darulhaya.com').re
 // over-long meta and writes its own snippet from page text instead, which
 // is how a stale, outdated description ends up in the search result.
 const TITLE = 'Darul Haya: Premier Online Islamic School (Grades 2-12)'
+const SHARE_TITLE = 'Darul Haya: Live Online School for Grades 2 to 12'
 const DESCRIPTION =
   'Is your child struggling in overcrowded schools? Darul Haya offers live Ontario curriculum, daily Arabic, and small classes from home. Apply now.'
 
@@ -61,22 +62,25 @@ export const metadata = {
   ],
   alternates: { canonical: '/' },
   openGraph: {
-    title: TITLE,
+    // Deliberately not TITLE. This is the line WhatsApp and Facebook print
+    // under the preview image, where the search phrasing would be visible
+    // writing. The HTML <title> above keeps it for Google.
+    title: SHARE_TITLE,
     description: DESCRIPTION,
     url: SITE_URL,
     siteName: 'Darul Haya',
     // 1200x630 share card. WhatsApp, Facebook, LinkedIn, and iMessage all read
     // this. A square logo gets cropped or shown as a small thumbnail instead of
     // a full-width preview, which is why this is a purpose-built landscape card.
-    images: [{ url: '/og-v2.jpg', width: 1200, height: 630, alt: 'Darul Haya, online Islamic school for Grades 2 to 12' }],
+    images: [{ url: '/og-v3.jpg', width: 1200, height: 630, alt: 'Darul Haya, live online school for Grades 2 to 12, an Ontario inspected private school granting OSSD credits' }],
     locale: 'en_CA',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: TITLE,
+    title: SHARE_TITLE,
     description: DESCRIPTION,
-    images: ['/og-v2.jpg'],
+    images: ['/og-v3.jpg'],
   },
 }
 
