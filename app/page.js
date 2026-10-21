@@ -508,7 +508,7 @@ export default function HomePage() {
             {/* Brand */}
             <div>
               <div className="flex items-center gap-2.5">
-                <Image src="/logo-mark.png" alt="" width={257} height={311} className="h-10 w-auto" />
+                <Image src="/logo-mark.png" alt="" width={526} height={622} className="h-10 w-auto" />
                 <h2 className="font-display text-2xl font-bold tracking-wide text-clay">Darul Haya</h2>
               </div>
               <p className="text-xs uppercase tracking-[0.25em] text-teal-dark font-semibold mt-2">Knowledge, Character, Leadership</p>
