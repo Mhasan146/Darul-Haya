@@ -176,8 +176,8 @@ export default function RootLayout({ children }) {
           ))}
         </nav>
 
-        <header>
-          {/* Announcement banner, update text + date each enrolment cycle */}
+        {/* Announcement banner, update text + date each enrolment cycle. Sits
+            above the header so it scrolls away while the nav stays pinned. */}
           <div
             role="status"
             aria-live="polite"
@@ -192,6 +192,10 @@ export default function RootLayout({ children }) {
             </Link>
           </div>
 
+        {/* The header is the sticky element. The nav used to be sticky inside a
+            header that only wrapped itself and the banner, so it could never
+            stick past its own parent and scrolled off with the page. */}
+        <header className="sticky top-0 z-40">
           <Navbar />
         </header>
         {/* Bottom padding clears the fixed mobile apply bar so the end of the

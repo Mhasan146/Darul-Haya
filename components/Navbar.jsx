@@ -77,6 +77,31 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [mobileSection, setMobileSection] = useState(null)
   const navRef = useRef(null)
+  const progressRef = useRef(null)
+
+  // Scroll state: compact nav with a hairline once the visitor is reading,
+  // plus a thin progress line. One rAF-throttled passive listener.
+  useEffect(() => {
+    const nav = navRef.current
+    if (!nav) return
+    let frame = 0
+    const update = () => {
+      frame = 0
+      const y = window.scrollY
+      nav.classList.toggle('is-scrolled', y > 12)
+      const max = document.documentElement.scrollHeight - window.innerHeight
+      if (progressRef.current) {
+        progressRef.current.style.setProperty('--progress', max > 0 ? String(Math.min(1, y / max)) : '0')
+      }
+    }
+    const onScroll = () => { if (!frame) frame = requestAnimationFrame(update) }
+    update()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      if (frame) cancelAnimationFrame(frame)
+    }
+  }, [])
 
   useEffect(() => {
     if (!mobileOpen) return
@@ -108,7 +133,7 @@ export default function Navbar() {
       <Link
         href="/register"
         onClick={() => setMobileOpen(false)}
-        className="text-sm bg-teal text-white px-4 py-2 rounded-full font-semibold hover:bg-teal-dark transition-colors text-center whitespace-nowrap"
+        className="btn btn-primary !px-5 !py-2.5 text-[13.5px] whitespace-nowrap"
       >
         Apply Now
       </Link>
@@ -116,8 +141,11 @@ export default function Navbar() {
   )
 
   return (
-    <nav ref={navRef} aria-label="Main" className="sticky top-0 z-40 bg-beige/85 backdrop-blur-md border-b border-amber/30">
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
+    <nav ref={navRef} aria-label="Main" className="site-nav relative bg-beige border-b border-transparent">
+      <div aria-hidden className="absolute left-0 right-0 bottom-[-1px] h-px">
+        <div ref={progressRef} className="scroll-progress h-full bg-amber-dark/70" />
+      </div>
+      <div className="nav-row max-w-6xl mx-auto px-6 py-5 flex items-center justify-between gap-4">
         {/* Logo + today's date beside it */}
         <div className="flex items-center gap-4 shrink-0">
           <Link href="/" className="flex items-center gap-2.5 shrink-0" onClick={() => setMobileOpen(false)} aria-label="Darul Haya, home">
@@ -148,7 +176,7 @@ export default function Navbar() {
                 aria-expanded={openMenu === menu.label}
                 aria-controls={`nav-${menu.label.replace(/\s+/g, '-').toLowerCase()}`}
                 onClick={() => setOpenMenu(openMenu === menu.label ? null : menu.label)}
-                className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-clay hover:text-teal-dark transition-colors whitespace-nowrap"
+                className="group/nav flex items-center gap-1 px-3 py-2 text-[13.5px] font-medium tracking-[0.01em] text-clay hover:text-teal-dark transition-colors duration-200 whitespace-nowrap"
               >
                 {menu.label}
                 <ChevronDown className={`h-4 w-4 transition-transform ${openMenu === menu.label ? 'rotate-180' : ''}`} />
@@ -159,7 +187,7 @@ export default function Navbar() {
                 hidden={openMenu !== menu.label}
                 className="absolute left-0 top-full pt-2 w-56"
               >
-                <div className="bg-white rounded-xl shadow-lg ring-1 ring-clay/5 py-2 overflow-hidden">
+                <div className="bg-white rounded-lg border border-beige-dark shadow-lg py-2 overflow-hidden origin-top animate-[rise_320ms_cubic-bezier(0.16,1,0.3,1)]">
                   {menu.items.map((item) => (
                     <MenuLink key={item.label} item={item} onClick={() => setOpenMenu(null)} />
                   ))}

@@ -42,7 +42,7 @@ export default function MinistryBadge() {
                 diploma itself.
               </p>
 
-              <dl className="mt-6 grid gap-4 grid-cols-2 lg:grid-cols-4 text-center sm:text-left">
+              <dl className="stagger mt-7 grid gap-4 grid-cols-2 lg:grid-cols-4 text-center sm:text-left">
                 <div className="rounded-xl bg-beige px-4 py-3">
                   <dt className="text-[10px] font-semibold uppercase tracking-widest text-clay/80">
                     Registered as

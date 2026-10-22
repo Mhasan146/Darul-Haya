@@ -7,6 +7,7 @@ import TuitionCalculator from '@/components/TuitionCalculator'
 import SubjectCards from '@/components/SubjectCards'
 import EveryOpportunity from '@/components/EveryOpportunity'
 import AcrossCanada from '@/components/AcrossCanada'
+import HeroCrest from '@/components/HeroCrest'
 import MinistryBadge from '@/components/MinistryBadge'
 import HijriDate from '@/components/HijriDate'
 import YouTubeEmbed from '@/components/YouTubeEmbed'
@@ -143,84 +144,68 @@ export default function HomePage() {
         <input name="page_url" />
       </form>
 
-      {/* Hero, light & photo-led (public/hero.jpg). */}
+      {/* Hero. One photograph, one wash, one crest: no decorative blobs. The
+          content plays in on load (.hero-seq) and the crest tilts toward the
+          pointer on its own perspective stage (HeroCrest). */}
       <section id="about" className="relative overflow-hidden scroll-mt-24 bg-beige">
-        {/* Warm light base, beige so the logo's transparent background blends */}
-        <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-beige via-beige to-beige-dark/40" />
-        {/* Background photo (no people), prominent, with a lighter wash for legibility */}
         <div
           aria-hidden
-          className="absolute inset-0 bg-cover bg-center opacity-75"
+          className="hero-photo absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/hero.jpg')" }}
         />
-        {/* Cream wash so dark text stays readable over the photo */}
-        <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-beige/45 via-beige/30 to-beige/65" />
-        <div aria-hidden className="absolute -top-32 left-1/2 -translate-x-1/2 h-96 w-96 rounded-full bg-amber/15 blur-3xl" />
-        <div aria-hidden className="absolute -bottom-32 -right-24 h-80 w-80 rounded-full bg-teal/10 blur-3xl" />
+        {/* Single cream wash, heavier toward the bottom where the copy sits */}
+        <div aria-hidden className="absolute inset-0 bg-[linear-gradient(180deg,rgba(238,248,240,0.55)_0%,rgba(238,248,240,0.62)_45%,rgba(238,248,240,0.92)_100%)]" />
 
-        <div className="relative max-w-4xl mx-auto px-6 pt-14 pb-20 text-center">
-          <span className="inline-flex items-center gap-2 mb-7 text-[11px] font-semibold uppercase tracking-[0.2em] text-teal-dark bg-teal/10 ring-1 ring-teal/20 px-4 py-1.5 rounded-full">
-            <span className="h-1.5 w-1.5 rounded-full bg-teal" aria-hidden="true" /> Fall 2026 Registration Open: Grades 2-12
-          </span>
+        <div className="hero-seq relative max-w-4xl mx-auto px-6 pt-16 sm:pt-20 pb-24 sm:pb-28 text-center">
+          {/* One text run so it wraps as a sentence on phones; the framing
+              ticks only appear once there is room for them. */}
+          <p className="eyebrow justify-center">
+            <span>
+              Fall 2026 registration open
+              <span aria-hidden="true" className="mx-2 text-clay/40">&middot;</span>
+              Grades 2-12
+            </span>
+          </p>
 
-          {/* Full crest (transparent bg) on a soft cream halo, so it reads
-              cleanly over the photo without a hard square box. /logo-v2.png stays
-              the boxed version used by the nav and social share. */}
-          <div className="relative mx-auto w-60 sm:w-72">
-            <div
-              aria-hidden
-              className="absolute inset-0 -m-8 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(252,248,244,0.94)_40%,rgba(252,248,244,0)_72%)]"
-            />
-            <Image
-              src="/hero-logo-v2.png"
-              alt="Darul Haya Academy of Learning"
-              width={512}
-              height={512}
-              priority
-              className="relative w-full h-auto"
-            />
+          <div className="mt-10">
+            <HeroCrest />
           </div>
 
-          <h1 className="mt-9 text-4xl sm:text-5xl lg:text-6xl font-bold text-clay leading-[1.08] tracking-tight text-balance max-w-3xl mx-auto">
+          <h1 className="mt-10 text-[2.1rem] sm:text-6xl lg:text-[4.25rem] font-bold text-clay leading-[1.06] sm:leading-[1.04] max-w-3xl mx-auto">
             {HERO_HEADLINE}
           </h1>
 
-          <p className="mt-5 text-lg text-clay/80 max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-7 text-[1.075rem] sm:text-lg text-clay/80 max-w-prose mx-auto leading-[1.7]">
             Protect your child&rsquo;s values without sacrificing their academic future. Live, expert-led
             online classes for Grades 2-12 featuring small group sizes, total screen supervision, full
             Ontario curriculum alignment, and physical textbooks shipped straight to your door.
           </p>
 
-          <div className="mt-9 flex items-center justify-center gap-6 flex-wrap">
-            <Link
-              href="/register"
-              className="bg-teal text-white px-8 py-3.5 rounded-full font-semibold shadow-lg shadow-teal/25 hover:bg-teal-dark hover:shadow-xl active:scale-[0.98] transition-all duration-200"
-            >
+          <div className="mt-11 flex items-center justify-center gap-x-8 gap-y-5 flex-wrap">
+            <Link href="/register" className="btn btn-primary">
               Enroll Your Child Today
+              <span aria-hidden="true" className="btn-arrow">&rarr;</span>
             </Link>
-            <Link
-              href="/open-house"
-              className="text-clay/80 text-sm font-medium hover:text-clay transition-colors"
-            >
+            <Link href="/open-house" className="link-underline text-sm font-medium text-clay/80 hover:text-clay">
               or reserve a free open house spot
-              <span aria-hidden="true"> →</span>
             </Link>
           </div>
 
-          {/* How it works, 3-step process */}
-          <div className="mt-8 flex items-center justify-center gap-2 sm:gap-3 flex-wrap text-clay/80 text-xs">
+          {/* How it works: three numbered steps on a hairline */}
+          <ol className="mt-14 mx-auto max-w-3xl grid sm:grid-cols-3 border-t border-clay/15 text-left">
             {[
               'Submit 5-minute application',
               '1-on-1 strategy call with our team',
               'Start live classes with physical books in hand',
             ].map((step, i) => (
-              <span key={step} className="flex items-center gap-1.5 sm:gap-2">
-                {i > 0 && <span aria-hidden="true" className="text-clay/25 hidden sm:inline">→</span>}
-                <span className="h-4 w-4 rounded-full bg-clay/10 text-clay text-[9px] font-bold inline-flex items-center justify-center shrink-0" aria-hidden="true">{i + 1}</span>
-                <span>{step}</span>
-              </span>
+              <li key={step} className="flex items-baseline gap-3 pt-5 pb-1 sm:px-5 first:sm:pl-0 last:sm:pr-0">
+                <span className="font-display text-sm font-bold text-amber-dark tabular-nums" aria-hidden="true">
+                  0{i + 1}
+                </span>
+                <span className="text-[13px] leading-snug text-clay/80">{step}</span>
+              </li>
             ))}
-          </div>
+          </ol>
         </div>
       </section>
 
@@ -228,12 +213,12 @@ export default function HomePage() {
       <MinistryBadge />
 
       {/* Facts strip */}
-      <section id="grades" aria-label="School at a glance" className="bg-beige border-b border-clay/10 py-8 scroll-mt-24">
-        <div className="max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-8 text-center md:divide-x divide-clay/10">
+      <section id="grades" aria-label="School at a glance" className="bg-beige border-b border-clay/10 py-14 sm:py-16 scroll-mt-24">
+        <div className="stagger max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-10 text-center md:divide-x divide-clay/10">
           {FACTS.map((f) => (
-            <div key={f.value} className="md:px-4">
-              <p className="font-display text-xl sm:text-2xl font-bold text-clay">{f.value}</p>
-              <p className="text-xs text-clay/80 mt-1.5 leading-snug">{f.label}</p>
+            <div key={f.value} className="md:px-3">
+              <p className="font-display text-[1.45rem] sm:text-[1.75rem] font-bold text-clay leading-none md:whitespace-nowrap">{f.value}</p>
+              <p className="text-[13px] text-clay/80 mt-3 leading-snug max-w-[22ch] mx-auto">{f.label}</p>
             </div>
           ))}
         </div>
@@ -243,14 +228,15 @@ export default function HomePage() {
       <AcrossCanada />
 
       {/* Features */}
-      <section id="features" className="relative overflow-hidden scroll-mt-24">        <div className="relative max-w-5xl mx-auto px-6 py-20">
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">Total Value Package</p>
+      <section id="features" className="relative overflow-hidden scroll-mt-24">
+        <div className="relative max-w-6xl mx-auto px-6 py-24 lg:py-32">
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <p className="eyebrow mb-4">Total Value Package</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-clay">Everything your child needs to succeed (Zero hidden fees)</h2>
           <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <p className="mt-4 text-clay/80 leading-relaxed">Complete curriculum, premium educational software, and physical textbooks delivered to your doorstep from day one.</p>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5">
+        <div className="stagger grid grid-cols-2 lg:grid-cols-5 gap-px bg-beige-dark border border-beige-dark rounded-2xl overflow-hidden">
           {[
             {
               title: 'Live Classes',
@@ -278,8 +264,8 @@ export default function HomePage() {
               arabic: true,
             },
           ].map((f) => (
-            <div key={f.title} className="bg-white rounded-2xl p-6 border border-beige-dark shadow-md hover:shadow-xl hover:-translate-y-1 transition-all text-center flex flex-col items-center">
-              <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-teal to-teal-light text-white flex items-center justify-center mb-4 shadow-lg shadow-teal/30">
+            <div key={f.title} className="group bg-white px-6 py-9 text-center flex flex-col items-center transition-colors duration-300 hover:bg-[#FBFDFB] last:col-span-2 lg:last:col-span-1">
+              <div className="icon-tile h-12 w-12 rounded-full bg-beige text-teal-dark flex items-center justify-center mb-5">
                 {f.arabic ? (
                   <span className="font-display text-2xl leading-none -translate-y-1" aria-hidden="true">ج</span>
                 ) : (
@@ -288,8 +274,8 @@ export default function HomePage() {
                   </svg>
                 )}
               </div>
-              <h3 className="font-bold text-clay mb-1 text-sm">{f.title}</h3>
-              <p className="text-clay/80 text-xs leading-relaxed">{f.body}</p>
+              <h3 className="font-display font-bold text-clay mb-2 text-[1.05rem]">{f.title}</h3>
+              <p className="text-clay/80 text-[13px] leading-relaxed">{f.body}</p>
             </div>
           ))}
         </div>
@@ -301,7 +287,7 @@ export default function HomePage() {
         <section id="video" className="bg-beige py-16 sm:py-20 border-b border-clay/10">
           <div className="max-w-3xl mx-auto px-6">
             <div className="text-center max-w-2xl mx-auto mb-8">
-              <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">Watch</p>
+              <p className="eyebrow mb-4">Watch</p>
               <h2 className="text-3xl sm:text-4xl font-bold text-clay">See Darul Haya for yourself</h2>
               <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
             </div>
@@ -324,10 +310,10 @@ export default function HomePage() {
 
       {/* Our classrooms, school voice (no named principal) */}
       <section aria-label="Our classrooms" className="relative overflow-hidden bg-beige-dark/60 border-y border-clay/10">
-        <div className="relative max-w-3xl mx-auto px-6 py-16 text-center">
-          <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-6">Our Educational Philosophy</p>
-          <span aria-hidden="true" className="block font-display text-6xl leading-none text-amber select-none">&ldquo;</span>
-          <blockquote className="font-display text-2xl sm:text-3xl font-semibold text-clay leading-snug text-balance -mt-4">
+        <div className="relative max-w-4xl mx-auto px-6 py-24 lg:py-32 text-center">
+          <p className="eyebrow mb-8">Our Educational Philosophy</p>
+          <span aria-hidden="true" className="block font-display text-[5.5rem] leading-[0.6] text-amber-dark/80 select-none">&ldquo;</span>
+          <blockquote className="font-display text-[1.7rem] sm:text-[2.35rem] font-medium text-clay leading-[1.28] tracking-[-0.015em] mt-6">
             An anxious or distracted child cannot learn. By creating a calm, highly supervised,
             and morally protective environment, we unlock a student&rsquo;s natural desire to excel.
           </blockquote>
@@ -338,10 +324,10 @@ export default function HomePage() {
 
       {/* Testimonials, only shown once real reviews exist */}
       {REAL_TESTIMONIALS.length > 0 && (
-        <section id="testimonials" className="bg-beige py-20 border-b border-clay/10">
+        <section id="testimonials" className="bg-beige py-24 lg:py-32 border-b border-clay/10">
           <div className="max-w-5xl mx-auto px-6">
             <div className="text-center max-w-2xl mx-auto mb-12">
-              <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">Parent Voices</p>
+              <p className="eyebrow mb-4">Parent Voices</p>
               <h2 className="text-3xl sm:text-4xl font-bold text-clay">What families are saying</h2>
               <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
             </div>
@@ -369,15 +355,16 @@ export default function HomePage() {
       <ValueComparison />
 
       {/* Pricing */}
-      <section id="pricing" className="relative overflow-hidden scroll-mt-24 bg-gradient-to-b from-beige to-beige-dark/50">        <div className="relative max-w-4xl mx-auto px-6 py-20">
+      <section id="pricing" className="relative overflow-hidden scroll-mt-24 bg-beige-dark/40 border-y border-clay/10">
+        <div className="relative max-w-4xl mx-auto px-6 py-24 lg:py-32">
           <div className="text-center mb-12 max-w-2xl mx-auto">
-            <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">Simple Pricing</p>
+            <p className="eyebrow mb-4">Simple Pricing</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-clay">All-inclusive tuition. Zero surprises.</h2>
             <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
             <p className="text-clay/80 mt-5">Complete live schooling, Ontario curriculum, live Arabic, software access, and physical books bundled into one transparent monthly rate.</p>
           </div>
 
-          <div className="max-w-md mx-auto rounded-3xl bg-white text-clay p-8 sm:p-10 border border-beige-dark shadow-xl shadow-clay/10">
+          <div className="max-w-md mx-auto rounded-2xl bg-white text-clay p-8 sm:p-10 border border-beige-dark shadow-xl">
             <p className="text-xs font-semibold uppercase tracking-widest text-teal-dark mb-4">Live Online School · Grades 2-12</p>
             <div className="grid grid-cols-2 gap-3">
               <div className="rounded-2xl bg-beige ring-1 ring-teal/15 p-4">
@@ -400,7 +387,7 @@ export default function HomePage() {
               Lock in your rate for the full 2026 school year.
             </p>
 
-            <ul className="mt-6 flex flex-col gap-3 text-sm">
+            <ul className="mt-7 flex flex-col gap-3.5 text-sm border-t border-beige-dark pt-7">
               {INCLUDED.map((f) => (
                 <li key={f} className="flex items-start gap-2">
                   <span className="text-teal-dark mt-0.5 font-bold" aria-hidden="true">✓</span>
@@ -409,11 +396,9 @@ export default function HomePage() {
               ))}
             </ul>
 
-            <Link
-              href="/register"
-              className="mt-8 block w-full bg-teal text-white py-3.5 rounded-xl font-semibold text-center hover:bg-teal-dark active:scale-[0.98] transition-all duration-200"
-            >
+            <Link href="/register" className="btn btn-primary mt-9 w-full">
               Apply Now (Takes 5 Mins)
+              <span aria-hidden="true" className="btn-arrow">&rarr;</span>
             </Link>
             <p className="text-clay/80 text-xs text-center mt-4 leading-relaxed">
               Material fees confirmed once book &amp; shipping costs are set · 15% automatic sibling discount
@@ -426,7 +411,7 @@ export default function HomePage() {
 
       {/* Decision summary strip */}
       <section aria-label="Program highlights" className="bg-beige border-y border-clay/10 py-5">
-        <ul className="max-w-3xl mx-auto px-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-clay/80 list-none">
+        <ul className="max-w-5xl mx-auto px-6 flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-[13.5px] text-clay/80 list-none">
           {['Grades 2-12', 'From $225 / month', '100% Live Daily Classes', 'Ontario Aligned', 'Textbooks Included'].map((item) => (
             <li key={item} className="flex items-center gap-1.5">
               <span className="text-teal-dark font-bold" aria-hidden>✓</span>
@@ -440,61 +425,59 @@ export default function HomePage() {
       <section aria-label="Enrolment call to action" className="relative overflow-hidden bg-clay text-white">
         {/* Warm classroom photo, prominent, with a deep-teal overlay kept strong
             enough that the white text stays readable */}
-        <div aria-hidden className="absolute inset-0 bg-cover bg-center opacity-75" style={{ backgroundImage: "url('/cta.jpg')" }} />
-        <div aria-hidden className="absolute inset-0 bg-gradient-to-br from-[#25714C]/55 via-clay/50 to-[#123020]/60" />        <div aria-hidden className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-72 w-[36rem] rounded-full bg-teal-light/10 blur-3xl" />
-        <div className="relative max-w-2xl mx-auto px-6 py-20 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight text-balance">
+        <div aria-hidden className="parallax-img absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/cta.jpg')" }} />
+        <div aria-hidden className="absolute inset-0 bg-clay/80" />
+        <div className="relative max-w-2xl mx-auto px-6 py-28 lg:py-36 text-center">
+          <h2 className="text-[2.1rem] sm:text-5xl font-bold text-white leading-[1.1]">
             Give your child the education they deserve this September.
           </h2>
           <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
-          <p className="mt-5 text-white/70 leading-relaxed">
+          <p className="mt-6 text-white/80 leading-relaxed max-w-prose mx-auto">
             Application takes under 5 minutes. Secure your child&rsquo;s seat today before classes reach maximum capacity.
           </p>
-          <div className="mt-8 flex items-center justify-center gap-6 flex-wrap">
-            <Link
-              href="/register"
-              className="bg-white text-clay px-8 py-3.5 rounded-full font-semibold shadow-lg shadow-black/20 hover:bg-beige hover:shadow-xl active:scale-[0.98] transition-all duration-200"
-            >
+          <div className="mt-11 flex items-center justify-center gap-x-8 gap-y-5 flex-wrap">
+            <Link href="/register" className="btn btn-light">
               Apply Now
+              <span aria-hidden="true" className="btn-arrow">&rarr;</span>
             </Link>
             <a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/80 text-sm font-medium hover:text-white transition-colors"
+              className="link-underline text-white/85 text-sm font-medium hover:text-white"
             >
               Chat on WhatsApp
               <span className="sr-only"> (opens in a new tab)</span>
-              <span aria-hidden="true"> →</span>
             </a>
           </div>
         </div>
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="bg-beige py-16 border-b border-clay/10">
+      <section id="faq" className="bg-beige py-24 lg:py-32 border-b border-clay/10">
         <div className="max-w-3xl mx-auto px-6">
-          <div className="text-center mb-10">
-            <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">Parent Reassurance</p>
+          <div className="text-center mb-14">
+            <p className="eyebrow mb-4">Parent Reassurance</p>
             <h2 className="text-2xl sm:text-3xl font-bold text-clay">Frequently asked questions about Darul Haya</h2>
             <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           </div>
-          <div className="space-y-3">
+          <div className="stagger border-t border-clay/15">
             {FAQS.map((faq) => (
-              <details key={faq.q} className="group bg-white rounded-2xl border border-beige-dark shadow-sm">
-                <summary className="flex items-center justify-between px-6 py-4 cursor-pointer font-semibold text-clay text-sm select-none [&::-webkit-details-marker]:hidden [&::marker]:hidden">
+              <details key={faq.q} className="group border-b border-clay/15">
+                <summary className="flex items-center justify-between gap-6 py-6 cursor-pointer font-display font-semibold text-clay text-[1.08rem] leading-snug select-none transition-colors duration-200 hover:text-teal-dark [&::-webkit-details-marker]:hidden [&::marker]:hidden">
                   <span>{faq.q}</span>
-                  <svg className="h-5 w-5 text-teal-dark shrink-0 ml-3 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.06l3.71-3.83a.75.75 0 1 1 1.08 1.04l-4.25 4.38a.75.75 0 0 1-1.08 0L5.21 8.27a.75.75 0 0 1 .02-1.06Z" clipRule="evenodd" />
-                  </svg>
+                  <span aria-hidden="true" className="relative h-4 w-4 shrink-0 text-teal-dark">
+                    <span className="absolute left-0 top-1/2 h-px w-4 -translate-y-1/2 bg-current" />
+                    <span className="absolute left-1/2 top-0 h-4 w-px -translate-x-1/2 bg-current transition-transform duration-500 ease-out group-open:rotate-90 group-open:opacity-0" />
+                  </span>
                 </summary>
-                <p className="px-6 pt-4 pb-5 text-clay/80 text-sm leading-relaxed border-t border-beige-dark/40">{faq.a}</p>
+                <p className="pb-7 pr-10 text-clay/80 text-[15px] leading-[1.75] max-w-prose">{faq.a}</p>
               </details>
             ))}
           </div>
           <div className="mt-8 text-center">
-            <Link href="/faq" className="text-teal-dark text-sm font-medium hover:text-teal-dark transition-colors">
-              See all questions <span aria-hidden="true">→</span>
+            <Link href="/faq" className="link-arrow link-underline text-teal-dark text-sm font-medium">
+              See all questions <span aria-hidden="true" className="btn-arrow">&rarr;</span>
             </Link>
           </div>
         </div>

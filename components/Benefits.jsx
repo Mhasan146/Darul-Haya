@@ -70,10 +70,10 @@ export default function Benefits() {
 
   return (
     <section id="benefits" className="relative overflow-hidden bg-beige-dark border-y border-clay/5 scroll-mt-24">
-      <div className="relative max-w-6xl mx-auto px-6 py-20">
+      <div className="relative max-w-6xl mx-auto px-6 py-24 lg:py-32">
         {/* Heading */}
         <div className="text-center max-w-2xl mx-auto mb-9">
-          <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">
+          <p className="eyebrow mb-4">
             The Darul Haya Advantage
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-clay">
@@ -141,7 +141,7 @@ export default function Benefits() {
                   className={`h-11 w-11 shrink-0 rounded-xl flex items-center justify-center ${
                     isNow
                       ? 'bg-clay/10 text-clay/45'
-                      : 'bg-gradient-to-br from-teal to-teal-dark text-white shadow shadow-teal/25'
+                      : 'bg-teal-dark text-white shadow'
                   }`}
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.6} stroke="currentColor" className="h-5 w-5">

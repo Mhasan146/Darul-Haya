@@ -23,9 +23,9 @@ const POINTS = [
 export default function EveryOpportunity() {
   return (
     <section id="opportunity" className="bg-beige-dark border-y border-clay/5 scroll-mt-24">
-      <div className="max-w-5xl mx-auto px-6 py-20">
+      <div className="max-w-5xl mx-auto px-6 py-24 lg:py-32">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">Future Preparedness</p>
+          <p className="eyebrow mb-4">Future Preparedness</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-clay">Will your child still get into top universities?</h2>
           <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <p className="mt-5 text-clay/80 leading-relaxed">
@@ -35,7 +35,7 @@ export default function EveryOpportunity() {
           </p>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2">
+        <div className="stagger grid gap-6 sm:grid-cols-2">
           {POINTS.map((p) => (
             <div key={p.title} className="bg-white rounded-2xl p-7 shadow-md ring-1 ring-clay/5">
               <div className="flex items-start gap-3">

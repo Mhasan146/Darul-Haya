@@ -13,7 +13,7 @@ export default function RegisterPage() {
     <div className="min-h-screen bg-beige">
       <section className="max-w-2xl mx-auto px-6 pt-16 pb-16">
         <div className="text-center mb-8">
-          <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">Enrollment</p>
+          <p className="eyebrow mb-4">Enrollment</p>
           <h1 className="text-4xl sm:text-5xl font-bold text-clay leading-tight">Apply to Darul Haya (Takes 5 Minutes)</h1>
           <p className="mt-4 text-clay/80 leading-relaxed">
             Secure your child&rsquo;s seat for Fall 2026. Complete the brief form below and our admissions team will reach out to schedule your strategy call.

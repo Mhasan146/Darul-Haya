@@ -77,7 +77,7 @@ export default function CalendarPage() {
     <div className="min-h-screen bg-beige">
       <section className="max-w-5xl mx-auto px-6 pt-16 pb-20">
         <div className="text-center max-w-2xl mx-auto">
-          <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">School Year</p>
+          <p className="eyebrow mb-4">School Year</p>
           <h1 className="text-4xl sm:text-5xl font-bold text-clay leading-tight">
             2026-27 School Calendar
           </h1>

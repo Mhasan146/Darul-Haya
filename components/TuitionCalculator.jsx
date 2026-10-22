@@ -94,9 +94,10 @@ export default function TuitionCalculator() {
 
       <Link
         href="/register"
-        className="mt-5 block w-full bg-amber text-clay py-3 rounded-xl font-semibold text-sm text-center hover:bg-amber-dark active:scale-[0.98] transition-all duration-200"
+        className="btn mt-6 w-full bg-amber text-clay text-sm hover:bg-amber-dark hover:-translate-y-0.5"
       >
         Lock In Your Rate &amp; Apply Now
+        <span aria-hidden="true" className="btn-arrow">&rarr;</span>
       </Link>
     </div>
   )

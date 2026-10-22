@@ -1,49 +1,54 @@
 import Link from 'next/link'
 
-// Reusable on-brand page scaffold for content pages (about, FAQ, privacy, etc.).
-// Pass real content, this component renders it styled and structured, not as a placeholder.
+// Reusable on-brand page scaffold for content pages (about, FAQ, curriculum,
+// programmes, privacy). Laid out editorially: a generous header, then each
+// section on a hairline with its number and heading set beside the body,
+// rather than a stack of identical white cards. Section ids are kept so deep
+// links such as /curriculum#character still land.
 export default function PagePlaceholder({ eyebrow, title, intro, sections = [], cta, children }) {
-  const btn =
-    'inline-block bg-teal text-white px-7 py-3 rounded-full font-semibold hover:bg-teal-dark transition-colors'
+  const Cta = cta && (cta.href.startsWith('/') ? Link : 'a')
 
   return (
     <div className="min-h-screen bg-beige">
-      {/* Premium page header */}
-      <section className="relative overflow-hidden">
-        <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-beige-dark/60 via-beige to-beige" />        <div aria-hidden className="absolute -top-24 left-1/2 -translate-x-1/2 h-64 w-64 rounded-full bg-teal/10 blur-3xl" />
-        <div className="relative max-w-4xl mx-auto px-6 pt-20 pb-12 text-center">
-          {eyebrow && (
-            <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">{eyebrow}</p>
-          )}
-          <h1 className="text-4xl sm:text-5xl font-bold text-clay leading-tight">{title}</h1>
-          <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
+      <section className="relative border-b border-clay/10">
+        <div className="relative max-w-5xl mx-auto px-6 pt-20 sm:pt-28 pb-16 sm:pb-20">
+          {eyebrow && <p className="eyebrow mb-6">{eyebrow}</p>}
+          <h1 className="text-[2.6rem] sm:text-6xl font-bold text-clay leading-[1.05] max-w-[20ch]">{title}</h1>
           {intro && (
-            <p className="mt-5 text-lg text-clay/80 max-w-2xl mx-auto leading-relaxed">{intro}</p>
+            <p className="mt-8 text-lg sm:text-xl text-clay/80 max-w-[58ch] leading-[1.65]">{intro}</p>
           )}
         </div>
       </section>
 
-      <section className="max-w-3xl mx-auto px-6 py-16 space-y-8">
-        {sections.map((s, i) => (
-          <div
-            key={i}
-            id={s.id}
-            className={`bg-white rounded-2xl p-7 border border-beige-dark shadow-sm ${s.id ? 'scroll-mt-24' : ''}`}
-          >
-            <h2 className="text-2xl font-bold text-clay mb-3">{s.heading}</h2>
-            <p className="text-clay/80 leading-relaxed whitespace-pre-line">{s.body}</p>
-          </div>
-        ))}
+      <section className="max-w-5xl mx-auto px-6 py-16 sm:py-24">
+        <div className="stagger">
+          {sections.map((s, i) => (
+            <article
+              key={i}
+              id={s.id}
+              className={`grid lg:grid-cols-12 gap-x-10 gap-y-4 border-t border-clay/15 py-10 sm:py-12 first:border-t-0 first:pt-0 ${s.id ? 'scroll-mt-28' : ''}`}
+            >
+              <div className="lg:col-span-5 flex gap-5">
+                <span aria-hidden="true" className="font-display text-sm font-bold text-amber-dark tabular-nums pt-1.5">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <h2 className="text-[1.55rem] sm:text-[1.8rem] font-bold text-clay leading-[1.18]">{s.heading}</h2>
+              </div>
+              <p className="lg:col-span-7 text-clay/80 text-[1.02rem] leading-[1.8] whitespace-pre-line max-w-prose">
+                {s.body}
+              </p>
+            </article>
+          ))}
+        </div>
 
-        {children}
+        {children && <div className="mt-12">{children}</div>}
 
         {cta && (
-          <div className="text-center pt-2">
-            {cta.href.startsWith('/') ? (
-              <Link href={cta.href} className={btn}>{cta.label}</Link>
-            ) : (
-              <a href={cta.href} className={btn}>{cta.label}</a>
-            )}
+          <div className="border-t border-clay/15 pt-14 mt-2 flex">
+            <Cta href={cta.href} className="btn btn-primary">
+              {cta.label}
+              <span aria-hidden="true" className="btn-arrow">&rarr;</span>
+            </Cta>
           </div>
         )}
       </section>

@@ -7,7 +7,7 @@ export default function ThankYouPage() {
     <div className="min-h-screen bg-beige flex items-center justify-center px-6 py-24">
       <div className="max-w-lg text-center">
         <div className="text-5xl mb-4">🌙</div>
-        <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">Application received</p>
+        <p className="eyebrow mb-4">Application received</p>
         <h1 className="text-4xl font-bold text-clay">Thank you!</h1>
         <p className="mt-4 text-clay/80 leading-relaxed">
           We&rsquo;ve received your application for Darul Haya. Our team will review it and reach out by

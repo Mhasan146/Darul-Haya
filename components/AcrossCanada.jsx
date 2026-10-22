@@ -35,9 +35,9 @@ export default function AcrossCanada() {
       aria-labelledby="canada-heading"
       className="bg-beige border-b border-clay/10 scroll-mt-24"
     >
-      <div className="max-w-5xl mx-auto px-6 py-20">
+      <div className="max-w-5xl mx-auto px-6 py-24 lg:py-32">
         <div className="text-center max-w-2xl mx-auto">
-          <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">
+          <p className="eyebrow mb-4">
             A Canadian school
           </p>
           <h2 id="canada-heading" className="text-3xl sm:text-4xl font-bold text-clay">
@@ -51,7 +51,7 @@ export default function AcrossCanada() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-5 sm:grid-cols-3">
+        <div className="stagger mt-14 grid gap-5 sm:grid-cols-3">
           {POINTS.map((p) => (
             <div key={p.title} className="bg-white rounded-2xl border border-beige-dark p-6">
               <span

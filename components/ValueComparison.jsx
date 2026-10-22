@@ -44,12 +44,10 @@ export default function ValueComparison() {
 
   return (
     <section id="value" className="relative overflow-hidden bg-beige-dark/40 scroll-mt-24 border-y border-clay/10">
-      <div aria-hidden className="absolute -top-32 -left-24 h-80 w-80 rounded-full bg-teal-light/10 blur-3xl" />
-      <div aria-hidden className="absolute -bottom-32 -right-24 h-80 w-80 rounded-full bg-amber/10 blur-3xl" />
 
-      <div className="relative max-w-5xl mx-auto px-6 py-20">
+      <div className="relative max-w-5xl mx-auto px-6 py-24 lg:py-32">
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">Massive Financial Savings</p>
+          <p className="eyebrow mb-4">Massive Financial Savings</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-clay">Elite private education at 70 percent less cost</h2>
           <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <p className="mt-5 text-clay/80 leading-relaxed">
@@ -81,7 +79,7 @@ export default function ValueComparison() {
         </div>
 
         {/* Price comparison grid, comparable schools + Darul Haya */}
-        <div className="mx-auto grid w-full max-w-3xl grid-cols-1 justify-center gap-5 sm:grid-cols-3">
+        <div className="stagger mx-auto grid w-full max-w-3xl grid-cols-1 justify-center gap-5 sm:grid-cols-3">
           {SCHOOLS.map((s) => (
             <div key={s.name} className="bg-white ring-1 ring-clay/10 rounded-2xl p-6 text-center flex flex-col">
               <h3 className="font-bold text-clay text-base">{s.name}</h3>
@@ -96,7 +94,7 @@ export default function ValueComparison() {
           ))}
 
           {/* Darul Haya, green highlight */}
-          <div className="bg-teal-dark text-white rounded-2xl p-6 text-center flex flex-col ring-2 ring-amber shadow-xl shadow-teal/25">
+          <div className="bg-teal-dark text-white rounded-2xl p-6 text-center flex flex-col ring-1 ring-amber/70 shadow-xl">
             <h3 className="font-bold text-white text-base">Darul Haya</h3>
             <div className="mt-3 flex items-end justify-center gap-1">
               <span className="text-4xl font-bold text-white">{big(DH)}</span>
@@ -118,7 +116,7 @@ export default function ValueComparison() {
         {/* Savings list */}
         <div className="max-w-3xl mx-auto mt-10">
           <p className="text-center text-clay font-semibold mb-5">Direct family savings breakdown:</p>
-          <div className="grid sm:grid-cols-2 gap-3">
+          <div className="stagger grid sm:grid-cols-2 gap-3">
             {SAVINGS.map((s) => (
               <div key={s} className="flex items-start gap-3 bg-white ring-1 ring-clay/10 rounded-xl p-4">
                 <span className="text-teal-dark mt-0.5 shrink-0 font-bold" aria-hidden="true">✓</span>

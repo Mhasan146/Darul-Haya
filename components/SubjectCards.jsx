@@ -46,19 +46,19 @@ function SubjectCard({ subject }) {
 
 export default function SubjectCards() {
   return (
-    <section id="subjects" className="relative overflow-hidden bg-beige py-20 border-b border-clay/10 scroll-mt-24">
+    <section id="subjects" className="relative overflow-hidden bg-beige py-24 lg:py-32 border-b border-clay/10 scroll-mt-24">
       {/* Curriculum photo backdrop, prominent, with a light wash so the heading
           stays readable and the white subject cards still pop */}
-      <div aria-hidden className="absolute inset-0 bg-cover bg-center opacity-75" style={{ backgroundImage: "url('/curriculum.jpg')" }} />
+      <div aria-hidden className="parallax-img absolute inset-0 bg-cover bg-center opacity-75" style={{ backgroundImage: "url('/curriculum.jpg')" }} />
       <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-beige/45 via-beige/30 to-beige/65" />
       <div className="relative max-w-5xl mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">Academic Standards</p>
+          <p className="eyebrow mb-4">Academic Standards</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-clay">Built for top-tier academic performance</h2>
           <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <p className="mt-5 text-clay/80 leading-relaxed">Complete provincial curriculum coverage paired with daily character building. Hover or tap each subject to explore.</p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="stagger grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {SUBJECTS.map((s) => (
             <SubjectCard key={s.name} subject={s} />
           ))}

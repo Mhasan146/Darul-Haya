@@ -2,8 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ─────────────────────────────────────────────────────────────────
+   Motion tokens. One easing family and three durations for the whole
+   site, so every movement feels like it belongs to the same hand.
+   ───────────────────────────────────────────────────────────────── */
+:root {
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 180ms;
+  --dur-base: 420ms;
+  --dur-slow: 900ms;
+}
+
 html {
   scroll-behavior: smooth;
+  /* Anchor jumps land below the sticky nav instead of under it. */
+  scroll-padding-top: 6rem;
+  /* Lets <details> animate to its natural height (progressive). */
+  interpolate-size: allow-keywords;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -17,52 +33,340 @@ html {
 }
 
 :focus-visible {
-  outline: 3px solid #21804E;
+  outline: 2px solid #21804E;
   outline-offset: 3px;
   border-radius: 4px;
 }
 
-/* Scroll-reveal (applied by ScrollReveal.jsx; never hides content for no-JS/reduced-motion) */
+/* ─────────────────────────────────────────────────────────────────
+   Typography
+   ───────────────────────────────────────────────────────────────── */
+body {
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  /* Inter: open digits and a straight-sided "l" read as more refined. */
+  font-feature-settings: 'cv11', 'ss01', 'ss03';
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-playfair), Georgia, 'Times New Roman', serif;
+  font-feature-settings: 'kern', 'liga', 'lnum';
+  text-wrap: balance;
+}
+
+/* Display sizes get tighter tracking as they grow; small serif text keeps
+   its natural spacing so it stays legible. */
+h1 { letter-spacing: -0.025em; }
+h2 { letter-spacing: -0.018em; }
+h3 { letter-spacing: -0.008em; }
+
+/* Body copy avoids orphaned last words. */
+p, li, blockquote, dd {
+  text-wrap: pretty;
+}
+
+/* Prices and numbers line up in columns. */
+.tabular-nums,
+.font-display .tabular-nums {
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+::selection {
+  background: #21804E;
+  color: #fff;
+}
+
+/* Eyebrow label: the small uppercase line above every section heading.
+   Tracked out and paired with a short gold tick so it reads as a deliberate
+   typographic device rather than a stray caption. */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #1A6B41;
+}
+.eyebrow::before,
+.eyebrow::after {
+  content: '';
+  width: 1.5rem;
+  height: 1px;
+  background: #D3A63A;
+}
+/* Left-aligned eyebrows lead with a tick; centred ones are framed by two,
+   so the label sits balanced on its axis instead of leaning left. */
+.eyebrow::after { display: none; }
+.text-center .eyebrow::after,
+.eyebrow.justify-center::after { display: block; }
+/* The hero label is long enough to wrap on phones; drop its ticks there so
+   it reads as a centred sentence rather than three cramped columns. */
+@media (max-width: 639px) {
+  .eyebrow.justify-center::before,
+  .eyebrow.justify-center::after { display: none; }
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Calls to action
+   ───────────────────────────────────────────────────────────────── */
+@layer components {
+  .btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.005em;
+    border-radius: 999px;
+    padding: 0.95rem 1.9rem;
+    transition:
+      background-color var(--dur-fast) var(--ease-out),
+      color var(--dur-fast) var(--ease-out),
+      box-shadow var(--dur-base) var(--ease-out),
+      transform var(--dur-base) var(--ease-out);
+    will-change: transform;
+  }
+  .btn:active { transform: translateY(0) scale(0.985); transition-duration: 90ms; }
+
+  .btn-primary {
+    background: #21804E;
+    color: #fff;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.12) inset, 0 8px 20px -10px rgba(26,107,65,0.55);
+  }
+  .btn-primary:hover {
+    background: #1A6B41;
+    transform: translateY(-2px);
+    box-shadow: 0 1px 0 rgba(255,255,255,0.12) inset, 0 16px 30px -14px rgba(26,107,65,0.6);
+  }
+
+  .btn-light {
+    background: #FCF9F4;
+    color: #1E4A35;
+    box-shadow: 0 10px 28px -14px rgba(0,0,0,0.45);
+  }
+  .btn-light:hover {
+    background: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 18px 36px -16px rgba(0,0,0,0.5);
+  }
+
+  /* Arrow that travels on hover: the one piece of motion that tells a
+     visitor "this goes somewhere". */
+  .btn-arrow {
+    display: inline-block;
+    transition: transform var(--dur-base) var(--ease-out);
+  }
+  .btn:hover .btn-arrow,
+  .link-arrow:hover .btn-arrow { transform: translateX(4px); }
+
+  /* Text link whose underline draws in from the left. */
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    padding-bottom: 2px;
+    transition: background-size var(--dur-base) var(--ease-out), color var(--dur-fast) var(--ease-out);
+  }
+  .link-underline:hover,
+  .link-underline:focus-visible { background-size: 100% 1px; }
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Scroll reveal and motion hierarchy
+   Sections rise as a block; inside, the heading group settles first and the
+   content items follow in a short cascade. Applied by ScrollReveal.jsx only
+   after hydration, so no-JS and reduced-motion visitors see everything.
+   ───────────────────────────────────────────────────────────────── */
 .reveal-init {
   opacity: 0;
-  transform: translateY(26px);
-  will-change: opacity, transform;
+  transform: translateY(18px);
 }
 .reveal-in {
   opacity: 1;
   transform: none;
-  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition:
+    opacity var(--dur-slow) var(--ease-out),
+    transform var(--dur-slow) var(--ease-out);
 }
 
-/* Gold divider lines draw themselves out from the centre as their section reveals.
-   Only hidden when JS has marked the section (reveal-init), no-JS/reduced-motion
-   users always see the full line. */
+/* Children of any grid or list marked .stagger cascade in, 70ms apart. */
+.reveal-init .stagger > * {
+  opacity: 0;
+  transform: translateY(14px);
+}
+.reveal-in .stagger > * {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 700ms var(--ease-out),
+    transform 700ms var(--ease-out);
+  transition-delay: calc(140ms + var(--i, 0) * 70ms);
+}
+
+/* Gold divider lines draw themselves out from the centre as their section
+   reveals. */
 .reveal-init .gold-rule {
   transform: scaleX(0);
   transform-origin: center;
 }
 .reveal-in .gold-rule {
   transform: scaleX(1);
-  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.15s;
+  transition: transform 1100ms var(--ease-out) 200ms;
 }
 
-body {
-  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
-  -webkit-font-smoothing: antialiased;
+/* ─────────────────────────────────────────────────────────────────
+   Hero entrance choreography. The hero is above the fold, so instead of
+   waiting on scroll it plays once on load: label, crest, headline, body,
+   actions, in that order.
+   ───────────────────────────────────────────────────────────────── */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes settle {
+  from { opacity: 0; transform: translateY(10px) scale(0.965); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes photo-in {
+  from { opacity: 0; transform: scale(1.06); }
+  to   { opacity: 0.72; transform: scale(1); }
+}
+.hero-seq > * {
+  animation: rise 1000ms var(--ease-out) both;
+}
+.hero-seq > :nth-child(1) { animation-delay: 80ms; }
+.hero-seq > :nth-child(2) { animation-name: settle; animation-duration: 1300ms; animation-delay: 160ms; }
+.hero-seq > :nth-child(3) { animation-delay: 320ms; }
+.hero-seq > :nth-child(4) { animation-delay: 430ms; }
+.hero-seq > :nth-child(5) { animation-delay: 540ms; }
+.hero-seq > :nth-child(6) { animation-delay: 640ms; }
+.hero-photo {
+  animation: photo-in 2200ms var(--ease-out) both;
+  transform-origin: 50% 40%;
 }
 
-/* Elegant serif for headings across the site */
-h1,
-h2,
-h3,
-.font-display {
-  font-family: var(--font-playfair), Georgia, 'Times New Roman', serif;
-  letter-spacing: -0.01em;
+/* ─────────────────────────────────────────────────────────────────
+   Crest depth. The hero crest sits in a perspective stage and tilts a few
+   degrees toward the pointer (driven by HeroCrest.jsx), with the halo
+   moving on a different plane so the two separate in space.
+   ───────────────────────────────────────────────────────────────── */
+.crest-stage {
+  perspective: 900px;
+}
+.crest-tilt {
+  transform-style: preserve-3d;
+  transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform 900ms var(--ease-out);
+}
+.crest-tilt.is-tracking { transition-duration: 220ms; }
+.crest-halo  { transform: translateZ(-40px) scale(1.08); }
+.crest-art   { transform: translateZ(28px); }
+
+/* ─────────────────────────────────────────────────────────────────
+   Image depth on scroll. Background photos drift slower than the content
+   over them, using native scroll-driven animations: no scroll listeners,
+   no layout work. Browsers without support simply show a still image.
+   ───────────────────────────────────────────────────────────────── */
+.parallax-img {
+  inset: -9% 0 !important;
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .parallax-img {
+      animation: drift linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+    }
+    @keyframes drift {
+      from { transform: translateY(-6%); }
+      to   { transform: translateY(6%); }
+    }
+  }
 }
 
-::selection {
-  background: #21804E;
+/* ─────────────────────────────────────────────────────────────────
+   Navigation: generous and quiet at the top of the page, compact with a
+   hairline once the visitor starts reading.
+   ───────────────────────────────────────────────────────────────── */
+.site-nav {
+  transition:
+    background-color var(--dur-base) var(--ease-out),
+    box-shadow var(--dur-base) var(--ease-out),
+    border-color var(--dur-base) var(--ease-out);
+}
+.site-nav .nav-row {
+  transition: padding var(--dur-base) var(--ease-out);
+}
+.site-nav.is-scrolled {
+  /* Opaque: content ghosting through a translucent bar reads as noise. */
+  background-color: #EEF8F0;
+  border-color: rgba(30, 74, 53, 0.1);
+  box-shadow: 0 10px 30px -24px rgba(30, 74, 53, 0.35);
+}
+.site-nav.is-scrolled .nav-row {
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+}
+
+/* Thin reading-progress line under the nav. */
+.scroll-progress {
+  transform-origin: 0 50%;
+  transform: scaleX(var(--progress, 0));
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   FAQ disclosure: the answer opens to its natural height instead of
+   snapping (progressive; Chromium 131+, others open instantly).
+   ───────────────────────────────────────────────────────────────── */
+details::details-content {
+  block-size: 0;
+  overflow: clip;
+  transition:
+    block-size 480ms var(--ease-out),
+    content-visibility 480ms allow-discrete;
+}
+details[open]::details-content {
+  block-size: auto;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Surfaces
+   ───────────────────────────────────────────────────────────────── */
+.surface {
+  background: #fff;
+  border: 1px solid #D8EDDF;
+  transition:
+    border-color var(--dur-base) var(--ease-out),
+    box-shadow var(--dur-base) var(--ease-out),
+    transform var(--dur-base) var(--ease-out);
+}
+.surface-hover:hover {
+  border-color: rgba(33, 128, 78, 0.35);
+  box-shadow: 0 2px 4px rgba(30,74,53,0.04), 0 18px 34px -20px rgba(30,74,53,0.22);
+  transform: translateY(-3px);
+}
+
+/* Feature icon tile: flat at rest, fills on hover. */
+.icon-tile {
+  transition:
+    background-color var(--dur-base) var(--ease-out),
+    color var(--dur-base) var(--ease-out),
+    transform var(--dur-base) var(--ease-out);
+}
+.group:hover .icon-tile {
+  background-color: #21804E;
   color: #fff;
+  transform: translateY(-2px);
 }
 
 /* Subtle geometric ornament (overlapping-square star motif) for premium section backgrounds */
@@ -79,14 +383,14 @@ h3,
 
 /* Hover/tap-flip subject cards */
 .flip-card {
-  perspective: 1200px;
+  perspective: 1400px;
 }
 .flip-inner {
   position: relative;
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 900ms var(--ease-out);
 }
 .flip-card:hover .flip-inner,
 .flip-card:focus-visible .flip-inner,
@@ -103,9 +407,6 @@ h3,
   transform: rotateY(180deg);
 }
 
-/* Parallax: the geometric star patterns stay anchored to the viewport so they
-   drift slower than the content scrolling over them. Desktop only, mobile
-   browsers fall back to a normal scrolling pattern (no harm). */
 @media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
   .bg-ornament,
   .bg-ornament-light {
@@ -113,12 +414,11 @@ h3,
   }
 }
 
-/* Before/after card swap in the Benefits section. The global
-   prefers-reduced-motion block above already neutralises this. */
+/* Before/after card swap in the Benefits section. */
 @keyframes swapIn {
   from { opacity: 0; transform: translateY(8px); }
   to   { opacity: 1; transform: none; }
 }
 .swap-in {
-  animation: swapIn 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+  animation: swapIn 420ms var(--ease-out);
 }

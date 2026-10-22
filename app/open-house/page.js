@@ -67,7 +67,7 @@ export default function OpenHousePage() {
       {/* Two ways to join */}
       <section className="max-w-5xl mx-auto px-6 pt-14">
         <div className="text-center max-w-xl mx-auto mb-8">
-          <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-2">Two Flexible Options</p>
+          <p className="eyebrow mb-4">Two Flexible Options</p>
           <p className="text-clay/80">Attend online from home or join us in person to meet our leadership team.</p>
         </div>
         <div className="grid sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
@@ -93,7 +93,7 @@ export default function OpenHousePage() {
       {/* Agenda + RSVP */}
       <section className="max-w-5xl mx-auto px-6 py-16 grid gap-10 lg:grid-cols-2 lg:gap-16 items-start">
         <div>
-          <p className="text-teal-dark text-sm font-semibold uppercase tracking-widest mb-3">Agenda</p>
+          <p className="eyebrow mb-4">Agenda</p>
           <h2 className="text-2xl sm:text-3xl font-bold text-clay">Inside our Open House event</h2>
           <div className="gold-rule mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <ul className="mt-8 flex flex-col gap-6">
