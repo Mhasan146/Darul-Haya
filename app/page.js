@@ -150,8 +150,8 @@ export default function HomePage() {
       <section id="about" className="relative overflow-hidden scroll-mt-24 bg-beige">
         <div
           aria-hidden
-          className="hero-photo absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/hero.jpg')" }}
+          className="hero-photo absolute inset-0 bg-cover bg-[center_38%]"
+          style={{ backgroundImage: "url('/hero-v2.jpg')" }}
         />
         {/* Single cream wash, heavier toward the bottom where the copy sits */}
         <div aria-hidden className="absolute inset-0 bg-[linear-gradient(180deg,rgba(238,248,240,0.55)_0%,rgba(238,248,240,0.62)_45%,rgba(238,248,240,0.92)_100%)]" />
@@ -163,7 +163,7 @@ export default function HomePage() {
             <span>
               Fall 2026 registration open
               <span aria-hidden="true" className="mx-2 text-clay/40">&middot;</span>
-              Grades 2-12
+              <span className="whitespace-nowrap">Grades 2-12</span>
             </span>
           </p>
 
