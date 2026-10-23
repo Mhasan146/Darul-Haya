@@ -72,7 +72,7 @@ export const metadata = {
     // 1200x630 share card. WhatsApp, Facebook, LinkedIn, and iMessage all read
     // this. A square logo gets cropped or shown as a small thumbnail instead of
     // a full-width preview, which is why this is a purpose-built landscape card.
-    images: [{ url: '/og-v3.jpg', width: 1200, height: 630, alt: 'Darul Haya, live online school for Grades 2 to 12, an Ontario inspected private school granting OSSD credits' }],
+    images: [{ url: '/og-v4.jpg', width: 1200, height: 630, alt: 'Darul Haya, live online school for Grades 2 to 12, an Ontario inspected private school granting OSSD credits' }],
     locale: 'en_CA',
     type: 'website',
   },
@@ -80,7 +80,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: SHARE_TITLE,
     description: DESCRIPTION,
-    images: ['/og-v3.jpg'],
+    images: ['/og-v4.jpg'],
   },
 }
 
