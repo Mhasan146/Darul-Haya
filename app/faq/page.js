@@ -56,7 +56,7 @@ export default function FaqPage() {
         },
         {
           heading: 'Can my child return to a regular brick-and-mortar school later?',
-          body: 'Yes. Because our academic courses follow the official Ontario curriculum, your child can seamlessly transfer back to any public or private school at their current grade level.',
+          body: 'Yes. Our courses follow the Ontario curriculum, and high school credits go on an Ontario Student Transcript, so moving to a public or private school is usually straightforward. As with any transfer, the receiving school makes the final decision on placement.',
         },
         {
           heading: 'Does my child earn OSSD credits?',

@@ -189,7 +189,7 @@ export default function LeadPopup() {
           </div>
         ) : (
           <>
-            <h2 id="lead-popup-title" className="text-xl font-bold text-clay mb-1 pr-6">Have questions about Fall 2026 registration?</h2>
+            <h2 id="lead-popup-title" className="text-xl font-bold text-clay mb-1 pr-6">Have questions about enrolling?</h2>
             <p className="text-clay/80 text-sm mb-5">
               Get instant answers regarding tuition, schedules, or curriculum directly from our team on WhatsApp.
             </p>

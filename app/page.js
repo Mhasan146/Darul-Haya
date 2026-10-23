@@ -29,8 +29,8 @@ const INCLUDED = [
 const FACTS = [
   { value: 'Grades 2-12', label: 'Complete Elementary to High School pathway' },
   { value: 'Live & Daily', label: 'Real teachers, zero pre-recorded boredom' },
-  { value: 'Small Classes', label: '100% supervised, known by name, zero bullying' },
-  { value: 'Ontario Aligned', label: 'Official curriculum standards guaranteed' },
+  { value: 'Small Classes', label: 'Supervised throughout the day, every child known by name' },
+  { value: 'Ontario Aligned', label: 'Taught to the Ontario curriculum for every grade' },
 ]
 
 // Swap the placeholder bodies below for real parent reviews as founding families
@@ -161,7 +161,7 @@ export default function HomePage() {
               ticks only appear once there is room for them. */}
           <p className="eyebrow justify-center">
             <span>
-              Fall 2026 registration open
+              Now enrolling for 2026-27
               <span aria-hidden="true" className="mx-2 text-clay/40">&middot;</span>
               <span className="whitespace-nowrap">Grades 2-12</span>
             </span>
@@ -384,7 +384,7 @@ export default function HomePage() {
               </div>
             </div>
             <p className="text-clay/80 text-sm mt-4 leading-relaxed">
-              Lock in your rate for the full 2026 school year.
+              Lock in your rate for the rest of the 2026-27 school year.
             </p>
 
             <ul className="mt-7 flex flex-col gap-3.5 text-sm border-t border-beige-dark pt-7">
@@ -429,11 +429,11 @@ export default function HomePage() {
         <div aria-hidden className="absolute inset-0 bg-clay/80" />
         <div className="relative max-w-2xl mx-auto px-6 py-28 lg:py-36 text-center">
           <h2 className="text-[2.1rem] sm:text-5xl font-bold text-white leading-[1.1]">
-            Give your child the education they deserve this September.
+            Give your child the education they deserve, starting this month.
           </h2>
           <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
           <p className="mt-6 text-white/80 leading-relaxed max-w-prose mx-auto">
-            Application takes under 5 minutes. Secure your child&rsquo;s seat today before classes reach maximum capacity.
+            Application takes under 5 minutes. Classes are kept small, so seats in each grade are limited.
           </p>
           <div className="mt-11 flex items-center justify-center gap-x-8 gap-y-5 flex-wrap">
             <Link href="/register" className="btn btn-light">

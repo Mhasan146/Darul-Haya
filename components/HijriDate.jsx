@@ -1,34 +1,18 @@
 'use client'
 import { useEffect, useState } from 'react'
-import { HIJRI_OFFSET_DAYS, MOON_SIGHTING_NOTE } from '@/lib/siteConfig'
+import { MOON_SIGHTING_NOTE } from '@/lib/siteConfig'
+import { hijriNow, sunsetToday } from '@/lib/hijri'
 
-// Month names we control, rather than Intl's "Rabiʻ II" / "Dhuʻl-Qiʻdah",
-// which is not how families here say them. Indexed by Hijri month number.
-const HIJRI_MONTHS = [
-  'Muharram',
-  'Safar',
-  'Rabi al-Awwal',
-  'Rabi al-Thani',
-  'Jumada al-Ula',
-  'Jumada al-Akhirah',
-  'Rajab',
-  'Shaban',
-  'Ramadan',
-  'Shawwal',
-  'Dhul Qadah',
-  'Dhul Hijjah',
-]
-
-// Shows today's date in both the Hijri (Umm al-Qura, nudged by
-// HIJRI_OFFSET_DAYS to match local sighting) and Gregorian calendars.
-// Computed natively via Intl, no external library. Renders nothing on the
-// server (and until mounted) so the visitor's own local date is used with no
-// hydration mismatch.
+// Shows today's date in both the Hijri and Gregorian calendars. The Hijri
+// date turns over at sunset in Toronto, as the Islamic day does, rather than
+// at midnight (lib/hijri.js), and is nudged by HIJRI_OFFSET_DAYS to match
+// local moon sighting. Renders nothing on the server (and until mounted) so
+// the visitor's own clock is used with no hydration mismatch.
 export default function HijriDate({
   className = '',
   hijriClassName = '',
   gregorianClassName = '',
-  separator = ' · ',
+  separator = ' \u00b7 ',
   stacked = false,
   showWeekday = true,
   showNote = false,
@@ -37,35 +21,30 @@ export default function HijriDate({
   const [dates, setDates] = useState(null)
 
   useEffect(() => {
-    const now = new Date()
-    try {
-      // Offset applies to the Hijri reading only; the Gregorian date is today's.
-      const shifted = new Date(now)
-      shifted.setDate(shifted.getDate() + HIJRI_OFFSET_DAYS)
-
-      // 'islamic-umalqura' is the BCP-47 calendar identifier the Intl API
-      // requires. It is not display copy and never reaches the page; renaming
-      // it would simply stop the Hijri date from resolving.
-      const parts = new Intl.DateTimeFormat('en-GB-u-ca-islamic-umalqura', {
-        day: 'numeric',
-        month: 'numeric',
-        year: 'numeric',
-      }).formatToParts(shifted)
-      const part = (type) => parts.find((p) => p.type === type)?.value
-      const month = HIJRI_MONTHS[Number(part('month')) - 1]
-      if (!month) throw new Error('unrecognised Hijri month')
-      const hijri = `${Number(part('day'))} ${month} ${Number(part('year'))} AH`
-
-      const gregorian = new Intl.DateTimeFormat('en-GB', {
-        ...(showWeekday ? { weekday: 'long' } : {}),
-        day: 'numeric',
-        month: 'long',
-        year: 'numeric',
-      }).format(now)
-      setDates({ hijri, gregorian })
-    } catch {
-      setDates(null)
+    let timer
+    const render = () => {
+      const now = new Date()
+      try {
+        const h = hijriNow(now)
+        if (!h) throw new Error('unrecognised Hijri month')
+        const gregorian = new Intl.DateTimeFormat('en-GB', {
+          ...(showWeekday ? { weekday: 'long' } : {}),
+          day: 'numeric',
+          month: 'long',
+          year: 'numeric',
+        }).format(now)
+        setDates({ hijri: `${h.day} ${h.month} ${h.year} AH`, gregorian })
+      } catch {
+        setDates(null)
+      }
+      // If the page is still open at Maghrib, turn the date over right then
+      // instead of waiting for a reload.
+      const sunset = sunsetToday(now)
+      const wait = sunset ? sunset.getTime() - now.getTime() : -1
+      if (wait > 0 && wait < 864e5) timer = setTimeout(render, wait + 1000)
     }
+    render()
+    return () => clearTimeout(timer)
   }, [showWeekday])
 
   if (!dates) return null

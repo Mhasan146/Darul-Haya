@@ -164,7 +164,7 @@ export default function Benefits() {
               Ready to experience stress-free, elite education?
             </h3>
             <p className="mt-2 text-sm text-white/80 leading-relaxed">
-              Secure your child&rsquo;s spot in our Fall 2026 intake before registration closes.
+              Classes are small, so seats in each grade fill up. Secure your child&rsquo;s spot today.
             </p>
             <a
               href="#pricing"

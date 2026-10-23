@@ -184,8 +184,9 @@ export default function RootLayout({ children }) {
             aria-atomic="true"
             className="bg-beige-dark text-clay text-center text-xs sm:text-sm py-2 px-4 border-b border-teal/15"
           >
-            {/* TODO: Update enrolment deadline before each intake, e.g. "September 2027" */}
-            <span className="text-teal-dark font-semibold">Fall 2026 seats are strictly limited.</span>
+            {/* Worded as rolling admission with no fixed month so it cannot go stale
+                mid-year. Only the school year needs changing each summer, e.g. "2027-28". */}
+            <span className="text-teal-dark font-semibold">Now enrolling for 2026-27, mid-year starts welcome.</span>
             {' '}Protect your child&rsquo;s education today.{' '}
             <Link href="/register" className="font-semibold underline underline-offset-2 hover:text-teal-dark transition-colors">
               Claim Your Spot <span aria-hidden="true">→</span>

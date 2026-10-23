@@ -17,7 +17,7 @@ export default function SafetyTools() {
         <h2 className="text-3xl sm:text-4xl font-bold text-clay">Proactive screen monitoring and digital protection</h2>
         <div className="gold-rule mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent" />
         <p className="text-clay/80 max-w-2xl mx-auto mt-5 mb-10 leading-relaxed">
-          We utilize bank-grade educational monitoring tech to ensure your child remains focused, safe, and protected every minute they are online.
+          We use Classroom.cloud, purpose-built school monitoring software, so teachers can see student screens, filter the web, and step in the moment a child drifts off task.
         </p>
 
         <div className="flex flex-col items-center gap-6 max-w-2xl mx-auto">

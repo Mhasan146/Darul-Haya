@@ -4,7 +4,7 @@ import RegisterForm from '@/components/RegisterForm'
 export const metadata = {
   title: 'Apply to Darul Haya: 5-Minute Enrollment Form',
   description:
-    'Secure your child\'s seat for September 2026. Quick 5-minute application for live online Islamic schooling (Grades 2-12).',
+    'Now enrolling for 2026-27, mid-year starts welcome. Quick 5-minute application for live online Islamic schooling (Grades 2-12).',
   alternates: { canonical: '/register' },
 }
 
@@ -16,7 +16,7 @@ export default function RegisterPage() {
           <p className="eyebrow mb-4">Enrollment</p>
           <h1 className="text-4xl sm:text-5xl font-bold text-clay leading-tight">Apply to Darul Haya (Takes 5 Minutes)</h1>
           <p className="mt-4 text-clay/80 leading-relaxed">
-            Secure your child&rsquo;s seat for Fall 2026. Complete the brief form below and our admissions team will reach out to schedule your strategy call.
+            We welcome new students throughout the 2026-27 school year. Complete the brief form below and our admissions team will reach out to schedule your strategy call.
           </p>
         </div>
 
