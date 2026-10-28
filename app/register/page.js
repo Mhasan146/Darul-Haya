@@ -4,7 +4,7 @@ import RegisterForm from '@/components/RegisterForm'
 export const metadata = {
   title: 'Apply to Darul Haya: 5-Minute Enrollment Form',
   description:
-    'Now enrolling for 2026-27, mid-year starts welcome. Quick 5-minute application for live online Islamic schooling (Grades 2-12).',
+    'Now enrolling for 2026-27, mid-year starts welcome. Quick 5-minute application for live online Islamic schooling (Grades 1-12).',
   alternates: { canonical: '/register' },
 }
 
@@ -47,7 +47,7 @@ export default function RegisterPage() {
                 className="mt-4 inline-flex items-center gap-2 rounded-full bg-teal text-white px-5 py-2.5 text-sm font-semibold hover:bg-teal-dark transition-colors"
               >
                 Download the admission form
-                <span className="text-white/80 font-normal">PDF, 78 KB</span>
+                <span className="text-white/80 font-normal">PDF, 79 KB</span>
               </a>
             </div>
           </div>

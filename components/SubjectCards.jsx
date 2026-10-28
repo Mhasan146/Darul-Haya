@@ -37,7 +37,7 @@ function SubjectCard({ subject }) {
         {/* Back */}
         <div className="flip-face flip-back rounded-2xl bg-teal-dark text-white p-6 flex flex-col justify-center text-left">
           <p className="text-sm leading-relaxed text-white/85">{subject.back}</p>
-          <span className="mt-3 text-[11px] text-white font-semibold">Grades 2-12 · Ontario-aligned</span>
+          <span className="mt-3 text-[11px] text-white font-semibold">Grades 1-12 · Ontario-aligned</span>
         </div>
       </div>
     </button>

@@ -16,7 +16,7 @@ export default function FaqPage() {
       sections={[
         {
           heading: 'What is Darul Haya?',
-          body: 'A structured, live online school for boys and girls in Grades 2-12 offering complete Ontario curriculum instruction, live Arabic classes, and small group attention.',
+          body: 'A structured, live online school for boys and girls in Grades 1-12 offering complete Ontario curriculum instruction, live Arabic classes, and small group attention.',
         },
         {
           heading: 'Are classes live or pre-recorded?',
@@ -24,11 +24,11 @@ export default function FaqPage() {
         },
         {
           heading: 'What grades do you accept?',
-          body: 'We accept students in Grades 2 through 12.',
+          body: 'We accept students in Grades 1 through 12.',
         },
         {
           heading: 'Is the school co-educational?',
-          body: 'Yes. In Grades 2-5, boys and girls learn together in small cohorts. Starting in Grade 6 through Grade 12, boys and girls are taught in separate, dedicated live classrooms.',
+          body: 'Yes. In Grades 1-5, boys and girls learn together in small cohorts. Starting in Grade 6 through Grade 12, boys and girls are taught in separate, dedicated live classrooms.',
         },
         {
           heading: 'How are students monitored and supervised online?',
@@ -72,7 +72,7 @@ export default function FaqPage() {
         },
         {
           heading: 'What is the complete cost?',
-          body: 'Tuition is $225/month for Grades 2-8 and $250/month for Grades 9-12. Sibling discount is 15%. Material fees are billed separately once we know the book and shipping costs for your child\'s grade, and we confirm the exact amount with you before you pay anything.',
+          body: 'Tuition is $225/month for Grades 1-8 and $250/month for Grades 9-12. Sibling discount is 15%. Material fees are billed separately once we know the book and shipping costs for your child\'s grade, and we confirm the exact amount with you before you pay anything.',
         },
         {
           heading: 'Do you teach Arabic?',

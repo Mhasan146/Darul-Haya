@@ -28,8 +28,8 @@ const SITE_URL = (process.env.NEXT_PUBLIC_APP_URL || 'https://darulhaya.com').re
 // Keep TITLE under ~60 chars and DESCRIPTION under ~155. Google discards
 // over-long meta and writes its own snippet from page text instead, which
 // is how a stale, outdated description ends up in the search result.
-const TITLE = 'Darul Haya: Premier Online Islamic School (Grades 2-12)'
-const SHARE_TITLE = 'Darul Haya: Live Online School for Grades 2 to 12'
+const TITLE = 'Darul Haya: Premier Online Islamic School (Grades 1-12)'
+const SHARE_TITLE = 'Darul Haya: Live Online School for Grades 1 to 12'
 const DESCRIPTION =
   'Is your child struggling in overcrowded schools? Darul Haya offers live Ontario curriculum, daily Arabic, and small classes from home. Apply now.'
 
@@ -57,7 +57,7 @@ export const metadata = {
     'Muslim online school',
     'virtual school Canada',
     'Ontario online school',
-    'live online classes Grades 2-12',
+    'live online classes Grades 1-12',
     'online school for Muslim kids',
   ],
   alternates: { canonical: '/' },
@@ -72,7 +72,7 @@ export const metadata = {
     // 1200x630 share card. WhatsApp, Facebook, LinkedIn, and iMessage all read
     // this. A square logo gets cropped or shown as a small thumbnail instead of
     // a full-width preview, which is why this is a purpose-built landscape card.
-    images: [{ url: '/og-v4.jpg', width: 1200, height: 630, alt: 'Darul Haya, live online school for Grades 2 to 12, an Ontario inspected private school granting OSSD credits' }],
+    images: [{ url: '/og-v5.jpg', width: 1200, height: 630, alt: 'Darul Haya, live online school for Grades 1 to 12, an Ontario inspected private school granting OSSD credits' }],
     locale: 'en_CA',
     type: 'website',
   },
@@ -80,7 +80,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: SHARE_TITLE,
     description: DESCRIPTION,
-    images: ['/og-v4.jpg'],
+    images: ['/og-v5.jpg'],
   },
 }
 
@@ -104,7 +104,7 @@ const SCHOOL_LD = {
     'Online Islamic School Canada',
   ],
   description:
-    'Darul Haya is an online Islamic school for boys and girls in Grades 2 through 12, operating as a brand of LearnHaven Ontario, an inspected private school approved by the Ontario Ministry of Education under school number 885538 and inspected to grant credits toward the Ontario Secondary School Diploma (OSSD). Students attend live, teacher-led classes every school day following an Ontario-aligned curriculum, with Arabic in the weekly timetable and physical books shipped to their home. Classes are small and closely supervised. Tuition is $225 per month for Grades 2-8 and $250 per month for Grades 9-12.',
+    'Darul Haya is an online Islamic school for boys and girls in Grades 1 through 12, operating as a brand of LearnHaven Ontario, an inspected private school approved by the Ontario Ministry of Education under school number 885538 and inspected to grant credits toward the Ontario Secondary School Diploma (OSSD). Students attend live, teacher-led classes every school day following an Ontario-aligned curriculum, with Arabic in the weekly timetable and physical books shipped to their home. Classes are small and closely supervised. Tuition is $225 per month for Grades 1-8 and $250 per month for Grades 9-12.',
   url: SITE_URL,
   logo: `${SITE_URL}/logo-v2.png`,
   // Darul Haya is a brand of LearnHaven Ontario, and the Ministry
@@ -122,13 +122,13 @@ const SCHOOL_LD = {
   },
   email: 'info@darulhaya.com',
   areaServed: { '@type': 'Country', name: 'Canada' },
-  educationalLevel: 'Grades 2-12 (elementary, middle, and high school)',
+  educationalLevel: 'Grades 1-12 (elementary, middle, and high school)',
   audience: {
     '@type': 'EducationalAudience',
     educationalRole: 'student',
-    audienceType: 'Students in Grades 2 to 12',
+    audienceType: 'Students in Grades 1 to 12',
   },
-  keywords: 'online school, online Islamic school, homeschool, homeschooling, online homeschool program, Muslim homeschool, live online classes, Arabic classes, Ontario curriculum, Grades 2-12',
+  keywords: 'online school, online Islamic school, homeschool, homeschooling, online homeschool program, Muslim homeschool, live online classes, Arabic classes, Ontario curriculum, Grades 1-12',
 }
 
 export default function RootLayout({ children }) {

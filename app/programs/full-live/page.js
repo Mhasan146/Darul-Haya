@@ -3,7 +3,7 @@ import PagePlaceholder from '@/components/PagePlaceholder'
 export const metadata = {
   title: 'Live Islamic School: Ontario Curriculum, $225/mo',
   description:
-    'Daily teacher-led live classes, shipped physical books, and small class sizes for Grades 2-12. Save thousands over traditional private school.',
+    'Daily teacher-led live classes, shipped physical books, and small class sizes for Grades 1-12. Save thousands over traditional private school.',
   alternates: { canonical: '/programs/full-live' },
 }
 
@@ -24,7 +24,7 @@ export default function FullLivePage() {
         },
         {
           heading: "What's Included",
-          body: "Everything required for a successful academic year:\n\n• Full access to our secure Learning Management System (LMS)\n• Daily live interactive classes with real teachers\n• Small class sizes with live teacher supervision all day\n• Physical textbooks and workbooks shipped directly to your door\n• Real-time Parent Portal for tracking grades, attendance, and work\n• Built-in live Arabic language curriculum\n• Direct email and messaging support with your child's teachers\n\nTransparent Tuition: $225/month (Grades 2-8) or $250/month (Grades 9-12). Automatic 15% discount for additional siblings. Material fees are separate and we confirm the amount with you once the book and shipping costs for your child's grade are determined.",
+          body: "Everything required for a successful academic year:\n\n• Full access to our secure Learning Management System (LMS)\n• Daily live interactive classes with real teachers\n• Small class sizes with live teacher supervision all day\n• Physical textbooks and workbooks shipped directly to your door\n• Real-time Parent Portal for tracking grades, attendance, and work\n• Built-in live Arabic language curriculum\n• Direct email and messaging support with your child's teachers\n\nTransparent Tuition: $225/month (Grades 1-8) or $250/month (Grades 9-12). Automatic 15% discount for additional siblings. Material fees are separate and we confirm the amount with you once the book and shipping costs for your child's grade are determined.",
         },
         {
           heading: "Who It's For",

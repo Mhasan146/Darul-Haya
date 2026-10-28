@@ -2,10 +2,10 @@
 import { useState } from 'react'
 import Link from 'next/link'
 
-// Tiered pricing: $225/month for Grades 2-8, $250/month for Grades 9-12.
+// Tiered pricing: $225/month for Grades 1-8, $250/month for Grades 9-12.
 // 15% sibling discount on each additional child (at the selected band's rate).
 const BANDS = {
-  junior: { label: 'Grades 2-8', base: 225 },
+  junior: { label: 'Grades 1-8', base: 225 },
   senior: { label: 'Grades 9-12', base: 250 },
 }
 const SIBLING_RATE = 0.15

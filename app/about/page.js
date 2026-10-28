@@ -3,7 +3,7 @@ import PagePlaceholder from '@/components/PagePlaceholder'
 export const metadata = {
   title: 'About Darul Haya: Safe, Live Online Islamic School',
   description:
-    'Founded by veteran educators to solve crowded classroom failure. Discover our live, Ontario-aligned online Islamic school for Grades 2-12.',
+    'Founded by veteran educators to solve crowded classroom failure. Discover our live, Ontario-aligned online Islamic school for Grades 1-12.',
   alternates: { canonical: '/about' },
 }
 
@@ -12,7 +12,7 @@ export default function AboutPage() {
     <PagePlaceholder
       eyebrow="Our Background"
       title="About Darul Haya: Restoring Purpose to Education"
-      intro="Darul Haya is a structured online school for boys and girls in Grades 2 through 12. Built on small live classes and rigorous Ontario academic standards, we were established by veteran educators to provide the high-touch instruction that crowded physical classrooms can no longer deliver."
+      intro="Darul Haya is a structured online school for boys and girls in Grades 1 through 12. Built on small live classes and rigorous Ontario academic standards, we were established by veteran educators to provide the high-touch instruction that crowded physical classrooms can no longer deliver."
       sections={[
         {
           heading: 'Our Story',

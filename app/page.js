@@ -27,7 +27,7 @@ const INCLUDED = [
 ]
 
 const FACTS = [
-  { value: 'Grades 2-12', label: 'Complete Elementary to High School pathway' },
+  { value: 'Grades 1-12', label: 'Complete Elementary to High School pathway' },
   { value: 'Live & Daily', label: 'Real teachers, zero pre-recorded boredom' },
   { value: 'Small Classes', label: 'Supervised throughout the day, every child known by name' },
   { value: 'Ontario Aligned', label: 'Taught to the Ontario curriculum for every grade' },
@@ -40,7 +40,7 @@ const TESTIMONIALS = [
   {
     body: '[ Placeholder ] A real review from one of our founding families will appear here.',
     author: 'Founding parent',
-    role: 'Elementary (Grades 2-5)',
+    role: 'Elementary (Grades 1-5)',
   },
   {
     body: '[ Placeholder ] A real review from one of our founding families will appear here.',
@@ -50,7 +50,7 @@ const TESTIMONIALS = [
   {
     body: '[ Placeholder ] A real review from one of our founding families will appear here.',
     author: 'Founding parent',
-    role: 'Elementary (Grades 2-5)',
+    role: 'Elementary (Grades 1-5)',
   },
 ]
 
@@ -163,7 +163,7 @@ export default function HomePage() {
             <span>
               Now enrolling for 2026-27
               <span aria-hidden="true" className="mx-2 text-clay/40">&middot;</span>
-              <span className="whitespace-nowrap">Grades 2-12</span>
+              <span className="whitespace-nowrap">Grades 1-12</span>
             </span>
           </p>
 
@@ -177,7 +177,7 @@ export default function HomePage() {
 
           <p className="mt-7 text-[1.075rem] sm:text-lg text-clay/80 max-w-prose mx-auto leading-[1.7]">
             Protect your child&rsquo;s values without sacrificing their academic future. Live, expert-led
-            online classes for Grades 2-12 featuring small group sizes, total screen supervision, full
+            online classes for Grades 1-12 featuring small group sizes, total screen supervision, full
             Ontario curriculum alignment, and physical textbooks shipped straight to your door.
           </p>
 
@@ -365,10 +365,10 @@ export default function HomePage() {
           </div>
 
           <div className="max-w-md mx-auto rounded-2xl bg-white text-clay p-8 sm:p-10 border border-beige-dark shadow-xl">
-            <p className="text-xs font-semibold uppercase tracking-widest text-teal-dark mb-4">Live Online School · Grades 2-12</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-teal-dark mb-4">Live Online School · Grades 1-12</p>
             <div className="grid grid-cols-2 gap-3">
               <div className="rounded-2xl bg-beige ring-1 ring-teal/15 p-4">
-                <p className="text-[11px] font-semibold uppercase tracking-wider text-clay/80">Grades 2-8</p>
+                <p className="text-[11px] font-semibold uppercase tracking-wider text-clay/80">Grades 1-8</p>
                 <div className="flex items-end gap-1 mt-1">
                   <span className="font-display text-4xl font-bold text-teal-dark">$225</span>
                   <span className="text-clay/80 text-sm mb-1">/mo</span>
@@ -412,7 +412,7 @@ export default function HomePage() {
       {/* Decision summary strip */}
       <section aria-label="Program highlights" className="bg-beige border-y border-clay/10 py-5">
         <ul className="max-w-5xl mx-auto px-6 flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-[13.5px] text-clay/80 list-none">
-          {['Grades 2-12', 'From $225 / month', '100% Live Daily Classes', 'Ontario Aligned', 'Textbooks Included'].map((item) => (
+          {['Grades 1-12', 'From $225 / month', '100% Live Daily Classes', 'Ontario Aligned', 'Textbooks Included'].map((item) => (
             <li key={item} className="flex items-center gap-1.5">
               <span className="text-teal-dark font-bold" aria-hidden>✓</span>
               {item}
@@ -496,7 +496,7 @@ export default function HomePage() {
               </div>
               <p className="text-xs uppercase tracking-[0.25em] text-teal-dark font-semibold mt-2">Knowledge, Character, Leadership</p>
               <p className="text-clay/80 text-sm mt-4 leading-relaxed max-w-xs">
-                Stop compromising between academic excellence and your family’s values. A structured, live online school for boys and girls in Grades 2-12.
+                Stop compromising between academic excellence and your family’s values. A structured, live online school for boys and girls in Grades 1-12.
               </p>
             </div>
 
